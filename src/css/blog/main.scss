@@ -1,0 +1,77 @@
+@import 'config';
+@import 'nav';
+@import 'header';
+@import 'Paragraph1';
+@import '../blog/Art/tree';
+@import 'articles';
+@import 'shopping';
+@import 'counselling';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow-x:hidden;
+    // background: $abstract;
+
+    button:hover{
+        box-shadow: -5px 5px 50px 1px $orange;
+    }
+    button:focus{
+        box-shadow: 0 0 0 0 ;
+    }
+
+}
+
+.move-right{
+    animation: moveRight 1s ease forwards infinite;
+}
+
+@keyframes moveRight{
+    
+
+    25%{
+        position: relative;
+        left:0;
+    }
+
+    50%{
+        position: relative;
+        left: 10px;
+    }
+     75%{
+        position: relative;
+        left: 0px;
+    }
+}
+
+@keyframes showUp{
+    0%{
+        opacity:0;
+        visibility: hidden;
+    }
+    100%{
+        opacity: 1;
+        display: flex;
+        // right: 75%;
+        visibility: visible;
+        // position: relative;
+    }
+}
+
+@keyframes moveLeft{
+    0%{
+        // opacity:0;
+
+ 
+    }
+    100%{
+        display: block;
+        right: 65%;
+ 
+        // position: relative;
+    }
+}

@@ -1,0 +1,51 @@
+@import 'logo';
+
+.nav{
+    display: flex;
+    width: 100vw;
+    height: 80px;
+    flex-direction: row;
+    justify-content: space-between;
+    @include border;
+    padding: 1rem;
+    // background-color: rgb(46, 91, 214);
+    // background: linear-gradient(to right, $primary-blue, rebeccapurple, $secondary-blue);;
+    background: #fff;
+    // color: rgb(35, 92, 199);
+    color: $orange;
+
+    &__list{
+        @include border;
+        width: 600px;
+        height: 80px;
+        padding: .3rem;
+
+        
+
+        &__con{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-around;
+            padding: .5rem;
+            @include border;
+
+
+             li{
+                list-style-type: none;
+                cursor: pointer;
+                transition: border-bottom ease .5s;
+
+                &:hover{
+                    color: $orange;
+                    border-bottom: 1px solid $red;
+                }
+                &:focus{
+                    color: $orange;
+                }
+            }
+           
+        }
+    }
+
+}

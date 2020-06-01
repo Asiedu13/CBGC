@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+    
+    
+}
+div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+button{
+    /* width: 10vw; */
+    height: 10vh;
+    font-size: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+}
