@@ -28,12 +28,11 @@ import ReactDom from 'react-dom';
 // import Meme from './Meme';
 // import App7 from './App7';
 import App8 from './App8';
-// import './css/main.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee, faHome, faAngleRight, faUser, faNewspaper, faHeart, faShoppingCart, faInfo, faQuoteLeft, faQuoteRight, faCloud, faArrowCircleRight, faArrowCircleLeft, faLongArrowAltLeft, faSadCry, faSadTear, faHeartBroken, faLowVision } from '@fortawesome/free-solid-svg-icons'
+import { faCheckSquare, faCoffee, faHome, faAngleRight, faUser, faNewspaper, faHeart, faShoppingCart, faInfo, faQuoteLeft, faQuoteRight, faCloud, faArrowCircleRight, faArrowCircleLeft, faLongArrowAltLeft, faSadCry, faSadTear, faHeartBroken, faLowVision, faAppleAlt } from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab, faCheckSquare, faCoffee, faHome, faAngleRight, faUser, faNewspaper, faHeart, faShoppingCart, faInfo, faQuoteLeft, faQuoteRight, faCloud, faArrowCircleRight,  faArrowCircleLeft, faLongArrowAltLeft,faSadCry, faSadTear, faHeartBroken, faLowVision )
+library.add(fab, faCheckSquare, faCoffee, faHome, faAngleRight, faUser, faNewspaper, faHeart, faShoppingCart, faInfo, faQuoteLeft, faQuoteRight, faCloud, faArrowCircleRight,  faArrowCircleLeft, faLongArrowAltLeft,faSadCry, faSadTear, faHeartBroken, faLowVision, faAppleAlt )
 
 
 ReactDom.render(<App8 />, document.getElementById('root'));
