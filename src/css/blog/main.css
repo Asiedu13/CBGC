@@ -423,7 +423,7 @@
 .shopping {
   background: #23343b;
   width: 100vw;
-  height: 600px;
+  height: 650px;
   position: relative;
   overflow: hidden;
   -webkit-transition: All 1s ease forwards;
@@ -445,13 +445,13 @@
 
 .shopping__slider__children {
   width: 100vw;
-  height: 600px;
+  height: inherit;
   background-color: rebeccapurple;
   color: #fff;
 }
 
 .shopping__slider__children h2 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .shopping__slider__info {
@@ -624,9 +624,123 @@
 
 .counselling {
   width: 100vw;
-  height: 700px;
+  height: 800px;
   background: black;
   margin-top: 2vh;
+  color: #fff;
+}
+
+.counselling__header {
+  height: 300px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.counselling__header__name {
+  width: 500px;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  border-right: 5px solid red;
+}
+
+.counselling__header__name h1 {
+  font-size: 2rem;
+  font-weight: 100;
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+.counselling__header__name h1 b {
+  color: grey;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.counselling__header__name h2 {
+  color: #34a2e2;
+}
+
+.counselling__body {
+  width: inherit;
+  height: 500px;
+  background: url("../../pics/Counselling.jpg") no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.counselling__body__intro {
+  width: 90%;
+  height: 90%;
+  background: rgba(102, 51, 153, 0.61);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.counselling__body__intro h2 {
+  font-size: 2rem;
+}
+
+.counselling__body__intro h1 {
+  font-size: 3rem;
+  color: yellow;
+  text-decoration: underline;
+}
+
+.counselling__body__intro h3 {
+  margin: 10px 0 50px 0;
 }
 
 * {

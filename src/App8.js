@@ -16,7 +16,6 @@ function App8(){
                     <Route path="/" exact component={Home} />
                     <Route path='/articles' component={Article} />
                 </Switch>
-                
             </section>
         </Router>
        

@@ -1,7 +1,7 @@
 .shopping{
     background: #23343b;
-   width: 100vw;
-    height: 600px;
+    width: 100vw;
+    height: 650px;
     position: relative;
     overflow: hidden;
     transition: All 1s ease forwards;
@@ -19,14 +19,13 @@
         
         &__children{
             width: 100vw;
-            height: 600px;
+            height: inherit;
             background-color: rebeccapurple;
-            
             color: #fff;
             
 
             h2{
-                font-size: 2rem;
+                font-size: 3rem;
             }
 
             

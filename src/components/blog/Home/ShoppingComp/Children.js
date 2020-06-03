@@ -30,13 +30,8 @@ export class ChildTwo extends React.Component {
     constructor(props){
         super();
     }
-
     render(){
-        
-      
         return(
-    
-
             <div style={ChildTwoStyle}>
                 <div className='childTwoHeader' >
                     <h2>Shop Here at Clarkson's</h2>

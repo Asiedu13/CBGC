@@ -1,5 +1,5 @@
 import React from 'react'
-import { Head, ChildTwo, ChildThree } from './Shopping/Children'
+import { Head, ChildTwo, ChildThree } from './ShoppingComp/Children'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
