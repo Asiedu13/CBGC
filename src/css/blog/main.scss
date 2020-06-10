@@ -1,77 +1,119 @@
-@import 'config';
-@import 'nav';
-@import 'header';
-@import 'Paragraph1';
-@import '../blog/Art/tree';
-@import 'articles';
-@import 'shopping';
-@import 'counselling';
-@import 'footer';
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import "config";
+@import "nav";
+@import "header";
+@import "Paragraph1";
+@import "../blog/Art/tree";
+@import "articles";
+@import "shopping";
+@import "counselling";
+@import "footer";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    overflow-x:hidden;
-    // background: $abstract;
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  // background: $abstract;
 
-    button:hover{
-        box-shadow: -5px 5px 50px 1px $orange;
-    }
-    button:focus{
-        box-shadow: 0 0 0 0 ;
-    }
-
-}
-
-.move-right{
-    animation: moveRight 1s ease forwards infinite;
+  button:hover {
+    box-shadow: -5px 5px 50px 1px $orange;
+  }
+  button:focus {
+    box-shadow: 0 0 0 0;
+  }
 }
 
-@keyframes moveRight{
-    
-
-    25%{
-        position: relative;
-        left:0;
-    }
-
-    50%{
-        position: relative;
-        left: 10px;
-    }
-     75%{
-        position: relative;
-        left: 0px;
-    }
+.move-right {
+  animation: moveRight 1s ease forwards infinite;
+}
+.bounce {
+    animation: "bounce 5s ease forwards";
+    transition: "1s ease-in-out forwards"
+}
+.feelingDisp {
+  animation: feelingDisp 0.5s ease-in forwards;
+}
+.showBorder {
+  animation: showBorder 1s ease-in-out forwards 1s;
 }
 
-@keyframes showUp{
-    0%{
-        opacity:0;
-        visibility: hidden;
-    }
-    100%{
-        opacity: 1;
-        display: flex;
-        // right: 75%;
-        visibility: visible;
-        // position: relative;
-    }
+@keyframes moveRight {
+  25% {
+    position: relative;
+    left: 0;
+  }
+
+  50% {
+    position: relative;
+    left: 10px;
+  }
+  75% {
+    position: relative;
+    left: 0px;
+  }
 }
 
-@keyframes moveLeft{
-    0%{
-        // opacity:0;
+@keyframes showUp {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    display: flex;
+    // right: 75%;
+    visibility: visible;
+    // position: relative;
+  }
+}
 
- 
-    }
-    100%{
-        display: block;
-        right: 65%;
- 
-        // position: relative;
-    }
+@keyframes moveLeft {
+  0% {
+    // opacity:0;
+  }
+  100% {
+    display: block;
+    right: 65%;
+
+    // position: relative;
+  }
+}
+@keyframes bounce {
+  0% {
+    opacity: 0;
+  }
+
+  30%,
+  50% {
+    opacity: 0;
+  }
+
+  55%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showBorder {
+  from {
+    width: 600px;
+    border-right: none;
+  }
+  to {
+    width: 490px;
+    border-right: 5px solid red;
+  }
+}
+@keyframes feelingDisp {
+  from {
+    top: 100px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
 }

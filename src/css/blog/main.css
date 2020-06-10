@@ -1,6 +1,10 @@
 .logo {
-  height: inherit;
-  padding: .0rem;
+  height: 60px;
+  width: 60px;
+  padding: .5rem;
+  -webkit-box-shadow: 1px 2px 20px 2px #8a8c8d;
+          box-shadow: 1px 2px 20px 2px #8a8c8d;
+  border-radius: 5px;
 }
 
 .logo h1 {
@@ -18,7 +22,7 @@
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  height: 80px;
+  height: 100px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -32,9 +36,9 @@
 }
 
 .nav__list {
-  width: 600px;
+  width: 650px;
   height: 80px;
-  padding: .3rem;
+  padding: 0.3rem;
 }
 
 .nav__list__con {
@@ -50,14 +54,20 @@
           align-items: flex-start;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .nav__list__con li {
   list-style-type: none;
   cursor: pointer;
-  -webkit-transition: border-bottom ease .5s;
-  transition: border-bottom ease .5s;
+  color: #0689c4;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  -webkit-text-decoration: strike-through;
+          text-decoration: strike-through;
+  -webkit-transition: border-bottom ease 0.5s;
+  transition: border-bottom ease 0.5s;
+  margin-right: 1rem;
 }
 
 .nav__list__con li:hover {
@@ -73,6 +83,7 @@
   width: 100vw;
   height: 600px;
   color: #fff;
+  margin: 5vh 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -200,31 +211,50 @@
 }
 
 .paragraph_1 p {
-  width: 40vw;
-  height: 200px;
+  width: 43vw;
+  height: 400px;
   margin: 5vh 40px;
   font-size: 2rem;
+  position: relative;
   padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: 1/1;
 }
 
+.paragraph_1 p #q-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .paragraph_1 p #q-right {
-  position: relative;
-  left: 300px;
-  top: 100px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .paragraph_1 p .quote-item {
-  position: relative;
-  top: 40px;
   padding: 1rem;
-  color: grey;
+  color: red;
 }
 
 .paragraph_1 p i {
   font-size: 1rem;
+  color: grey;
 }
 
 .paragraph_1__art {
@@ -340,6 +370,7 @@
 
 .articles {
   width: 100vw;
+  height: 1100px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -355,7 +386,10 @@
   grid-area: 1/1;
   margin: 150px 0vh 0px 150px;
   color: orange;
-  width: 250px;
+  width: 360px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 1rem;
   word-wrap: wrap;
   text-align: center;
@@ -376,7 +410,7 @@
 .articles p {
   width: 40vw;
   height: 200px;
-  margin: 25vh 40px;
+  margin: 10vh 40px;
   font-size: 15px;
   padding: 2rem;
   -ms-grid-row: 2;
@@ -649,7 +683,7 @@
 }
 
 .counselling__header__name {
-  width: 500px;
+  width: 600px;
   height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -665,13 +699,19 @@
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  border-right: 5px solid red;
 }
 
 .counselling__header__name h1 {
   font-size: 2rem;
   font-weight: 100;
   width: inherit;
+  height: 100px;
+  -webkit-box-shadow: 1px 2px 10px 2px grey;
+          box-shadow: 1px 2px 10px 2px grey;
+  border-radius: 5px;
+  padding: 1rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -681,13 +721,28 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
   padding: 1rem;
+  -webkit-box-shadow: inset 1px 2px 10px 2px grey;
+          box-shadow: inset 1px 2px 10px 2px grey;
+  overflow: hidden;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.counselling__header__name h1:hover, .counselling__header__name h1:focus {
+  -webkit-box-shadow: inset 1px 2px 10px 2px grey;
+          box-shadow: inset 1px 2px 10px 2px grey;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .counselling__header__name h1 b {
   color: grey;
   margin-left: 10px;
   margin-right: 10px;
+  position: relative;
+  top: 100px;
 }
 
 .counselling__header__name h2 {
@@ -812,7 +867,7 @@
 }
 
 body {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   overflow-x: hidden;
 }
 
@@ -829,6 +884,23 @@ body button:focus {
 .move-right {
   -webkit-animation: moveRight 1s ease forwards infinite;
           animation: moveRight 1s ease forwards infinite;
+}
+
+.bounce {
+  -webkit-animation: "bounce 5s ease forwards";
+          animation: "bounce 5s ease forwards";
+  -webkit-transition: "1s ease-in-out forwards";
+  transition: "1s ease-in-out forwards";
+}
+
+.feelingDisp {
+  -webkit-animation: feelingDisp 0.5s ease-in forwards;
+          animation: feelingDisp 0.5s ease-in forwards;
+}
+
+.showBorder {
+  -webkit-animation: showBorder 1s ease-in-out forwards 1s;
+          animation: showBorder 1s ease-in-out forwards 1s;
 }
 
 @-webkit-keyframes moveRight {
@@ -903,6 +975,78 @@ body button:focus {
   100% {
     display: block;
     right: 65%;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    opacity: 0;
+  }
+  30%,
+  50% {
+    opacity: 0;
+  }
+  55%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+  }
+  30%,
+  50% {
+    opacity: 0;
+  }
+  55%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes showBorder {
+  from {
+    width: 600px;
+    border-right: none;
+  }
+  to {
+    width: 490px;
+    border-right: 5px solid red;
+  }
+}
+
+@keyframes showBorder {
+  from {
+    width: 600px;
+    border-right: none;
+  }
+  to {
+    width: 490px;
+    border-right: 5px solid red;
+  }
+}
+
+@-webkit-keyframes feelingDisp {
+  from {
+    top: 100px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes feelingDisp {
+  from {
+    top: 100px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */

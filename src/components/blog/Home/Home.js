@@ -4,7 +4,7 @@ import Paragraph1 from './Paragraph1'
 import Articles from './Articles'
 import Shopping from './Shopping'
 import Counselling from './Counselling'
-import Footer from './Footer'
+
 
 class Home extends React.Component {
     constructor(props){
@@ -19,7 +19,6 @@ class Home extends React.Component {
                 <Articles />
                 <Shopping />
                 <Counselling />
-                <Footer />
             </section>
             
 

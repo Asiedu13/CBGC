@@ -1,17 +1,29 @@
- $color1 :rgba(172, 169, 169, 0.932);
- $primary-blue: #0689c4;
- $secondary-blue: hsl(194, 81%, 43%);
- $orange: #f6d342;
- $abstract: #f1efdc;
- $red: #d96243;
- $otherC: #663399;
+$color1: rgba(172, 169, 169, 0.932);
+$primary-blue: #0689c4;
+$secondary-blue: hsl(194, 81%, 43%);
+$orange: #f6d342;
+$abstract: #f1efdc;
+$red: #d96243;
+$otherC: #663399;
 
- // Shopping section colors
- $bg: #23343b;
- $primary: #fa8d31;
- $secondary: #94a4a5;
+// Shopping section colors
+$bg: #23343b;
+$primary: #fa8d31;
+$secondary: #94a4a5;
 
-@mixin border(){
-    // border: 1px solid red;
-    
+@mixin border() {
+  // border: 1px solid red;
+}
+
+@mixin shadow($color) {
+  box-shadow: 1px 2px 10px 2px $color;
+  border-radius: 5px;
+  padding: 1rem;
+  transition: all 0.5s ease;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 1px 2px 10px 2px $color;
+    transition: all 0.5s ease;
+  }
 }

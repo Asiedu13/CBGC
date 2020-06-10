@@ -1,102 +1,107 @@
-.paragraph_1{
+.paragraph_1 {
+  @include border;
+  width: 100vw;
+  height: 700px;
+  background: url("../../pics/Union 1.png");
+  background-size: 110vw 500px;
+  background-position: -50px 500px;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  p {
     @include border;
-    width: 100vw;
-    height: 700px;
-    background: url('../../pics/Union 1.png');
-    background-size: 110vw 500px;
-    background-position: -50px 500px;
-    background-repeat: no-repeat;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    
-   
-    p {
-        @include border;
-        width: 40vw;
-        height: 200px;
-        margin: 5vh 40px;
-        font-size: 2rem;
-        padding: 2rem;
-        grid-area: 1/1;
-
-        #q-right{
-            position: relative;
-            left: 300px;
-            top: 100px;
-        }
-    
-        .quote-item{
-            position: relative;
-            // left: 150px;
-            top: 40px;
-            padding: 1rem;
-            color: grey;
-        }
-         i{
-             font-size: 1rem;
-         }
-    
-    }
-
-    &__art{
-        width: 30vw;
-        height: 800px;
-        position: relative;
-        // top: 40vh;
-        left: 200px;
-        // overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        grid-area: 1/2;
-        
-        .clouds{
-            width:inherit;
-            height: 200px;
-            display: flex;
-            justify-content: flex-end;
-            flex-direction: row;
-            @include border;
-
-            .cloud{
-                
-                background: transparent;
-                // @include border;
-            }
-
-        }
-        .trees{
-            width: 40vw;
-            height: 500px;
-            position: relative;
-            top: 5vh;
-            // left: 200px;
-            // overflow: hidden;
-            display: flex;
-            flex-direction: row;
-            
-        }
-
-        @include border;
-    }
-
-    .tree_2{
+    width: 43vw;
+    height: 400px;
+    margin: 5vh 40px;
+    font-size: 2rem;
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: 1/1;
+    // @include shadow(rgb(116, 149, 192));
+    #q-left{
         position: absolute;
-        right:500px;
-        
+        top: 0;
+        left: 0;
+    }
+    #q-right {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    //   top: 100px;
     }
 
-    .buttons{
-        display: flex;
-        flex-direction: row;
-        text-align: left;
-        width: 500px;
-        height: 30vh;
-        justify-content: space-evenly;
-        padding: 1rem;
-        margin-top: 20px;
-        @include border;
-        border-radius: 1rem;
-        flex-wrap: wrap-reverse;
+    .quote-item {
+    //   position: relative;
+    //   // left: 150px;
+    //   top: 40px;
+      padding: 1rem;
+      color: red;
     }
- 
+    i {
+      font-size: 1rem;
+      color: grey;
+    }
+  }
+
+  &__art {
+    width: 30vw;
+    height: 800px;
+    position: relative;
+    // top: 40vh;
+    left: 200px;
+    // overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    grid-area: 1/2;
+
+    .clouds {
+      width: inherit;
+      height: 200px;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+      @include border;
+
+      .cloud {
+        background: transparent;
+        // @include border;
+      }
+    }
+    .trees {
+      width: 40vw;
+      height: 500px;
+      position: relative;
+      top: 5vh;
+      // left: 200px;
+      // overflow: hidden;
+      display: flex;
+      flex-direction: row;
+    }
+
+    @include border;
+  }
+
+  .tree_2 {
+    position: absolute;
+    right: 500px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    width: 500px;
+    height: 30vh;
+    justify-content: space-evenly;
+    padding: 1rem;
+    margin-top: 20px;
+    @include border;
+    border-radius: 1rem;
+    flex-wrap: wrap-reverse;
+  }
 }
