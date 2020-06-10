@@ -1,5 +1,5 @@
-import React from 'react'
 import Header from './Header'
+import React from 'react'
 import Paragraph1 from './Paragraph1'
 import Articles from './Articles'
 import Shopping from './Shopping'
@@ -24,6 +24,7 @@ class Home extends React.Component {
             
 
         )
+        
     }
 }
 

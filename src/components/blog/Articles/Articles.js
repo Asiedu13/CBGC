@@ -1,17 +1,16 @@
-import React from 'react'
-import { phoneStyle } from '../JsStyle'
+import React from "react";
+import { ArticleHeader } from "./ArticleHeader";
+import { ArticlesBody } from "./ArticlesBody";
 
-class Article extends React.Component{
-
-    render(){
-       
-        return(
-            <section>
-                <h1>Articles Section</h1>
-               
-            </section>
-        )
-    }
+class Articles extends React.Component {
+  render() {
+    return (
+      <section>
+        <ArticleHeader />
+        <ArticlesBody />
+      </section>
+    );
+  }
 }
 
-export default Article;
+export default Articles;

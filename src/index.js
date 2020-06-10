@@ -17,8 +17,8 @@
 
 // serviceWorker.unregister();
 
-import React from 'react';
-import ReactDom from 'react-dom';
+import React from "react";
+import ReactDom from "react-dom";
 // import App from './App';
 // import App2 from './App2';
 // import App3 from './App3';
@@ -27,12 +27,54 @@ import ReactDom from 'react-dom';
 // import App6 from './App6';
 // import Meme from './Meme';
 // import App7 from './App7';
-import App8 from './App8';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee, faHome, faAngleRight, faUser, faNewspaper, faHeart, faShoppingCart, faInfo, faQuoteLeft, faQuoteRight, faCloud, faArrowCircleRight, faArrowCircleLeft, faLongArrowAltLeft, faSadCry, faSadTear, faHeartBroken, faLowVision, faAppleAlt } from '@fortawesome/free-solid-svg-icons'
+import App8 from "./App8";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import {
+  faCheckSquare,
+  faCoffee,
+  faHome,
+  faAngleRight,
+  faUser,
+  faNewspaper,
+  faHeart,
+  faShoppingCart,
+  faInfo,
+  faQuoteLeft,
+  faQuoteRight,
+  faCloud,
+  faArrowCircleRight,
+  faArrowCircleLeft,
+  faLongArrowAltLeft,
+  faSadCry,
+  faSadTear,
+  faHeartBroken,
+  faLowVision,
+  faAppleAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
-library.add(fab, faCheckSquare, faCoffee, faHome, faAngleRight, faUser, faNewspaper, faHeart, faShoppingCart, faInfo, faQuoteLeft, faQuoteRight, faCloud, faArrowCircleRight,  faArrowCircleLeft, faLongArrowAltLeft,faSadCry, faSadTear, faHeartBroken, faLowVision, faAppleAlt )
+library.add(
+  fab,
+  faCheckSquare,
+  faCoffee,
+  faHome,
+  faAngleRight,
+  faUser,
+  faNewspaper,
+  faHeart,
+  faShoppingCart,
+  faInfo,
+  faQuoteLeft,
+  faQuoteRight,
+  faCloud,
+  faArrowCircleRight,
+  faArrowCircleLeft,
+  faLongArrowAltLeft,
+  faSadCry,
+  faSadTear,
+  faHeartBroken,
+  faLowVision,
+  faAppleAlt
+);
 
-
-ReactDom.render(<App8 />, document.getElementById('root'));
+ReactDom.render(<App8 />, document.getElementById("root"));

@@ -1,77 +1,88 @@
-@import 'config';
-@import 'nav';
-@import 'header';
-@import 'Paragraph1';
-@import '../blog/Art/tree';
-@import 'articles';
-@import 'shopping';
-@import 'counselling';
-@import 'footer';
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+// General Styles
+@import "config";
+@import "nav";
+@import "footer";
+
+@import "header";
+@import "homepage-Paragraph1";
+@import "../blog/Art/tree";
+@import "homepage-articles";
+@import "homepage-shopping";
+@import "homepage-counselling";
+
+// Articles Page styles
+@import "articlepage-header";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    overflow-x:hidden;
-    // background: $abstract;
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  // background: $abstract;
 
-    button:hover{
-        box-shadow: -5px 5px 50px 1px $orange;
-    }
-    button:focus{
-        box-shadow: 0 0 0 0 ;
-    }
-
-}
-
-.move-right{
-    animation: moveRight 1s ease forwards infinite;
-}
-
-@keyframes moveRight{
-    
-
-    25%{
-        position: relative;
-        left:0;
-    }
-
-    50%{
-        position: relative;
-        left: 10px;
-    }
-     75%{
-        position: relative;
-        left: 0px;
-    }
+  button:hover {
+    box-shadow: -5px 5px 50px 1px $orange;
+  }
+  button:focus {
+    box-shadow: 0 0 0 0;
+  }
 }
 
-@keyframes showUp{
-    0%{
-        opacity:0;
-        visibility: hidden;
-    }
-    100%{
-        opacity: 1;
-        display: flex;
-        // right: 75%;
-        visibility: visible;
-        // position: relative;
-    }
+.move-right {
+  animation: moveRight 1s ease forwards infinite;
+}
+.otherPageHeaders {
+  width: 100vw;
+  height: 300px;
+  background: #000;
+
+  h1 {
+    font-size: 3rem;
+    margin: auto 10vw;
+  }
+}
+@keyframes moveRight {
+  25% {
+    position: relative;
+    left: 0;
+  }
+
+  50% {
+    position: relative;
+    left: 10px;
+  }
+  75% {
+    position: relative;
+    left: 0px;
+  }
 }
 
-@keyframes moveLeft{
-    0%{
-        // opacity:0;
+@keyframes showUp {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    display: flex;
+    // right: 75%;
+    visibility: visible;
+    // position: relative;
+  }
+}
 
- 
-    }
-    100%{
-        display: block;
-        right: 65%;
- 
-        // position: relative;
-    }
+@keyframes moveLeft {
+  0% {
+    // opacity:0;
+  }
+  100% {
+    display: block;
+    right: 65%;
+
+    // position: relative;
+  }
 }
