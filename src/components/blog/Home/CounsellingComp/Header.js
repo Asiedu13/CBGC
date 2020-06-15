@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class Header extends React.Component {
   constructor(props) {
     super();
-
     this.state = {
       feelings: ["Depressed", "Anxious", "heart-broken", "nervous"],
       value: 0,

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { arrowMove } from "../../JsStyle";
 import {
   btnSecondStyle,
-  phoneStyle,
+  loveAnimation,
   mainStyle,
   conStyle,
   ChildTwoStyle,
@@ -20,22 +20,26 @@ export class Head extends React.Component {
     return (
       <section className="shop" style={mainStyle}>
         <div className="shop__heading" style={conStyle}>
+          <FontAwesomeIcon
+            icon="heart"
+            color="pink"
+            size="6x"
+            style={loveAnimation}
+          />{" "}
           <h2>
             {" "}
             Ultimate <br /> <b>Shopping</b> <br /> <i>Ease</i> <br />
-            <FontAwesomeIcon icon="heart" color="pink" size="5x" />{" "}
           </h2>
+          <button style={btnSecondStyle} onClick={() => this.props.view(true)}>
+            {" "}
+            View{" "}
+            <FontAwesomeIcon
+              icon="arrow-circle-right"
+              style={arrowMove}
+              className="move-right"
+            />{" "}
+          </button>
         </div>
-
-        <button style={btnSecondStyle} onClick={() => this.props.view(true)}>
-          {" "}
-          View{" "}
-          <FontAwesomeIcon
-            icon="arrow-circle-right"
-            style={arrowMove}
-            className="move-right"
-          />{" "}
-        </button>
       </section>
     );
   }
@@ -48,22 +52,14 @@ export class ChildTwo extends React.Component {
   render() {
     return (
       <div style={ChildTwoStyle}>
-        <div className="childTwoHeader">
-          <h2>Shop Here at Clarkson's</h2>
-        </div>
         <div className="shopping__art">
           <img src={pic} alt="" />
         </div>
 
         <div className="shopping__paragraph">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab natus
-            excepturi iusto aliquid tempora dolore at cupiditate nam tempore off
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab natus
-            excepturi iusto aliquid tempora dolore at cupiditate nam tempore
-            officiis velit quam, neque vel? Inventore minima ea ad non
-            velit?iciis velit quam, neque vel? Inventore minima ea ad non v
-          </p>
+        <div className="childTwoHeader">
+          <h2>Shop Here at Clarkson's</h2>
+        </div>
           <div className="shopping__button">
             <button
               className="shopping__button__seemore"
@@ -76,13 +72,6 @@ export class ChildTwo extends React.Component {
             </Link>
           </div>
         </div>
-
-        <section className="phone__art" style={phoneStyle}>
-          <div className="phone__cover">
-            <div className="phone__cover__inner"></div>
-            <button className="phone__cover__btn"></button>
-          </div>
-        </section>
       </div>
     );
   }

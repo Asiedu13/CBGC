@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../Button";
 import Picture from "../Picture";
-import Reading from "../Art/Reading";
 import { Link } from "react-router-dom";
 
 function Articles() {
@@ -29,9 +28,9 @@ function Articles() {
 
       <Picture />
 
-      <div className="articles__art">
+      {/* <div className="articles__art">
         <Reading />
-      </div>
+      </div> */}
     </section>
   );
 }

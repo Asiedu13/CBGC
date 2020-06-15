@@ -27,27 +27,6 @@ function Paragraph1() {
       </p>
 
       <div className="paragraph_1__art">
-        <div className="clouds">
-          <FontAwesomeIcon
-            icon="cloud"
-            className="cloud"
-            size="5x"
-            color="lightblue"
-          />
-          <FontAwesomeIcon
-            icon="cloud"
-            className="cloud"
-            size="5x"
-            color="lightblue"
-          />
-          <FontAwesomeIcon
-            icon="cloud"
-            className="cloud"
-            size="5x"
-            color="lightblue"
-          />
-        </div>
-
         <div className="trees">
           <Tree />
           <Tree headColor="rgb(47, 47, 196)" />

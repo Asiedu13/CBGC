@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  FontAwesomIcon,
   FontAwesomeIcon,
 } from "@fortawesome/react-fontawesome";
 function Footer() {

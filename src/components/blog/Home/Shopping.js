@@ -67,13 +67,13 @@ class Shopping extends React.Component {
 
 let moveBackStyle = {
   position: "absolute",
-  width: '30px',
-  height: '30px',
-  borderRadius: '30px',
-  cursor: 'pointer',
+  width: "30px",
+  height: "30px",
+  borderRadius: "30px",
+  cursor: "pointer",
   top: "10px",
   left: "10px",
-  boxShadow: '1px 1px 10px #fff',
+  boxShadow: "1px 1px 10px #fff",
   // border: '1px solid green'
 };
 

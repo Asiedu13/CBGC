@@ -11,8 +11,6 @@
     width: inherit;
     height: inherit;
     @include border;
-    display: grid;
-    grid-template-columns: repeat(3, 5fr);
     position: relative;
     overflow: hidden;
     transition: all 1s ease-in;
@@ -41,7 +39,6 @@
     }
 
     &__one {
-      grid-area: 1/1;
       background: linear-gradient(
         to right,
         $primary-blue,
@@ -73,77 +70,60 @@
 
   .childTwoHeader {
     @include border;
+    grid-area: 2/3;
     width: 350px;
     height: 150px;
-    grid-area: 1/1;
     padding: 1rem;
-    margin: 5vh auto;
+    align-items: center;
+    margin: 0vh auto;
+    
 
     h2 {
       font-size: 3rem;
     }
   }
 
-  .phone__cover {
-    background: rgb(170, 168, 168);
-    // border:1px solid red;
-    border-radius: 10px;
-    width: inherit;
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: skewX(-5deg);
-    // box-shadow: 2px 2px 10px 1px #23343b;
+  .loveIcon{
+    // transition: all .2s ease-in-out;
+    position: relative;
+    animation: expands .2s ease-in-out forwards;
 
-    &__inner {
-      width: 300px;
-      height: 300px;
-      background: url("../../pics/Shopping Site.jpg") black;
-    }
-    &__btn {
-      width: 30px;
-      height: 30px;
-      border-radius: 50px;
-      border: none;
-      margin-top: 10px;
-      background: grey;
-      box-shadow: inset 2px 2px 3px #23343b;
-    }
   }
   &__art {
-    grid-area: 2/1;
+    grid-area: 2/ span 3;
     padding: 2rem 0;
+    width: 500px;
     position: relative;
     left: -100px;
+    background: #fff;
+    border-radius: 0 40px 40px 0;
   }
   &__paragraph {
     @include border;
-    grid-area: 2 / 2;
+    grid-area: 2 / 3;
     padding: 2rem 1rem;
-    height: 350px;
+    height: 450px;
     position: relative;
-    top: 10vh;
+    top: 5vh;
+    right: 200px;
+    margin:0vh 5vh;
+    
   }
   &__button {
-    // grid-area: 3/2;
-    margin-top: 30px;
-    // position: relative;
-    // left: 200px;
     display: flex;
+    height: 200px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     &__seemore {
-      width: 100px;
-      height: 50px;
+      width: 200px;
+      height: 70px;
       margin-bottom: 10px;
       cursor: pointer;
       background: none;
       border: none;
-      border-radius: 10px;
+      border-radius: 5px;
       color: $orange;
     }
   }

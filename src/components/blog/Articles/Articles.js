@@ -1,5 +1,4 @@
 import React from "react";
-import { phoneStyle } from "../JsStyle";
 
 class Article extends React.Component {
   render() {

@@ -1,18 +1,28 @@
 export let mainStyle = {
   // border: '1px solid blue',
-  width: "400px",
-  height: "350px",
+  width: "inherit",
+  height: "inherit",
   display: "flex",
-  flexDirection: "column",
+  flexDirection: "row",
   alignItems: "center",
-  justifyContent: "center",
   position: "absolute",
-  // border: '1px solid white',
+  border: "1px solid white",
   animation: "showUp 3s ease-in forwards",
 };
 
-export let conStyle = {};
-
+export const conStyle = {
+  display: "flex",
+  flexDirection: "row",
+  // border: "1px solid white",
+  width: "inherit",
+  alignItems: 'center',
+  justifyContent: 'space-around',
+};
+export const loveAnimation = {
+  position: 'relative',
+  // transition: 'all .2s ease-in-out',
+  animation: 'expands infinite 4s ease-in-out 1s forwards',
+}
 export const btnFirstStyle = {
   width: "200px",
   height: "70px",
