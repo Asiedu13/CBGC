@@ -76,21 +76,19 @@
     padding: 1rem;
     align-items: center;
     margin: 0vh auto;
-    
 
     h2 {
       font-size: 3rem;
     }
   }
 
-  .loveIcon{
+  .loveIcon {
     // transition: all .2s ease-in-out;
     position: relative;
-    animation: expands .2s ease-in-out forwards;
-
+    animation: expands 0.2s ease-in-out forwards;
   }
   &__art {
-    grid-area: 2/ span 3;
+    grid-area: 2 / span 3;
     padding: 2rem 0;
     width: 500px;
     position: relative;
@@ -106,8 +104,7 @@
     position: relative;
     top: 5vh;
     right: 200px;
-    margin:0vh 5vh;
-    
+    margin: 0vh 5vh;
   }
   &__button {
     display: flex;
