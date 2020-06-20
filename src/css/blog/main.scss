@@ -4,14 +4,16 @@
 @import "footer";
 
 @import "header";
-@import "homepage-Paragraph1";
+@import "homepage__Paragraph1";
 @import "../blog/Art/tree";
-@import "homepage-articles";
-@import "homepage-shopping";
-@import "homepage-counselling";
+@import "homepage__articles";
+@import "homepage__shopping";
+@import "homepage__counselling";
 
 // Articles Page styles
 @import "articlepage-header";
+@import "article__artwork";
+@import "articlePage__body";
 
 * {
   margin: 0;
@@ -38,13 +40,8 @@ body {
 .otherPageHeaders {
   width: 100vw;
   height: 300px;
-  background: #000;
-
-  h1 {
-    font-size: 3rem;
-    margin: auto 10vw;
-  }
 }
+
 @keyframes moveRight {
   25% {
     position: relative;
@@ -84,5 +81,25 @@ body {
     right: 65%;
 
     // position: relative;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    bottom: -300px;
+  }
+  40%,
+  59% {
+    bottom: -10px;
+  }
+
+  60% {
+    transform: rotate(360deg);
+  }
+
+  80%,
+  100% {
+    bottom: -300px;
+    bottom: -10px;
   }
 }
