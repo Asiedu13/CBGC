@@ -1,4 +1,5 @@
 @import "config";
+@import "utilities";
 @import "nav";
 @import "header";
 @import "Paragraph1";
@@ -7,6 +8,7 @@
 @import "shopping";
 @import "counselling";
 @import "footer";
+
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +27,6 @@ body {
     box-shadow: 0 0 0 0;
   }
 }
-
 .move-right {
   animation: moveRight 1s ease forwards infinite;
 }

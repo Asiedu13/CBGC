@@ -5,9 +5,6 @@ import { arrowMove } from "../../JsStyle";
 import {
   btnSecondStyle,
   loveAnimation,
-  mainStyle,
-  conStyle,
-  ChildTwoStyle,
 } from "../../JsStyle";
 import pic from "../../../../pics/Shopping Bag.png";
 import { Link } from "react-router-dom";
@@ -18,8 +15,8 @@ export class Head extends React.Component {
   }
   render() {
     return (
-      <section className="shop" style={mainStyle}>
-        <div className="shop__heading" style={conStyle}>
+      <section className="shop">
+        <div className="shop-section-1">
           <FontAwesomeIcon
             icon="heart"
             color="pink"
@@ -51,15 +48,15 @@ export class ChildTwo extends React.Component {
   }
   render() {
     return (
-      <div style={ChildTwoStyle}>
+      <div className='shop-section-2'>
         <div className="shopping__art">
           <img src={pic} alt="" />
         </div>
 
         <div className="shopping__paragraph">
-        <div className="childTwoHeader">
-          <h2>Shop Here at Clarkson's</h2>
-        </div>
+          <div className="childTwoHeader">
+            <h2>Shop Here at Clarkson's</h2>
+          </div>
           <div className="shopping__button">
             <button
               className="shopping__button__seemore"
@@ -80,7 +77,7 @@ export class ChildTwo extends React.Component {
 export class ChildThree extends React.Component {
   render() {
     return (
-      <div>
+      <div className="shop-section-3">
         <h1>
           Order for a <b>loved one</b>
         </h1>

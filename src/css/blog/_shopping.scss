@@ -1,5 +1,5 @@
 .shopping {
-  background: #23343b;
+  background: #23343a;
   width: 100vw;
   height: 650px;
   position: relative;
@@ -15,29 +15,6 @@
     overflow: hidden;
     transition: all 1s ease-in;
 
-    &__children {
-      width: 100vw;
-      height: inherit;
-      background-color: rebeccapurple;
-      color: #fff;
-
-      h2 {
-        font-size: 3rem;
-      }
-    }
-
-    &__info {
-      width: 300px;
-      height: 300px;
-      border: 1px solid red;
-      border-radius: 10px;
-      position: absolute;
-      display: none;
-      transition: all ease-in 1s;
-      animation: moveLeft 3s ease-in forwards;
-      animation-delay: 1s;
-    }
-
     &__one {
       background: linear-gradient(
         to right,
@@ -45,40 +22,44 @@
         rebeccapurple,
         $secondary-blue
       );
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: row;
+      color: #fff;
+      width: 100vw;
+      height: inherit;
+      position: absolute;
+      animation: showUp 3s ease-in forwards;
+      border: 1px solid #fff;
       @include border;
+      h2 {
+        font-size: 4rem;
+      }
     }
-    &__two {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      @include border;
+    .shop-section-1 {
+      width: 100vw;
+      height: 650px;
+      @include flexCon(row, false, space-around);
+      position: absolute;
+      border: 1px solid white;
     }
 
-    &__three {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      @include border;
-    }
-  }
-
-  .childTwoHeader {
-    @include border;
-    grid-area: 2/3;
-    width: 350px;
-    height: 150px;
-    padding: 1rem;
-    align-items: center;
-    margin: 0vh auto;
-
-    h2 {
-      font-size: 3rem;
+    .shop-section-2{
+      width: inherit;
+      height: inherit;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    
+      .childTwoHeader {
+        @include border;
+        grid-area: 2/3;
+        width: 350px;
+        height: 150px;
+        padding: 1rem;
+        align-items: center;
+        margin: 0vh auto;
+        h2 {
+          font-size: 3rem;
+        }
+      }
     }
   }
 
@@ -95,7 +76,13 @@
     left: -100px;
     background: #fff;
     border-radius: 0 40px 40px 0;
+
+    img{
+      position: relative;
+      animation: moveRight 2s ease 4s forwards infinite;
+    }
   }
+  
   &__paragraph {
     @include border;
     grid-area: 2 / 3;
@@ -109,9 +96,8 @@
   &__button {
     display: flex;
     height: 200px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    border: 1px solid #fff;
+    @include flexCon(row, true);
 
     &__seemore {
       width: 200px;

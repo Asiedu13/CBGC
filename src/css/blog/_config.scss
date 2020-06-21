@@ -28,11 +28,14 @@ $secondary: #94a4a5;
   }
 }
 
-@mixin flexCon($direction, $centering) {
+@mixin flexCon($direction, $centering, $justify) {
   display: flex;
   flex-direction: $direction;
-  @if ($centering == "true") {
+  @if ($centering == true) {
     justify-content: center;
+    align-items: center;
+  }@else{
+    justify-content: $justify;
     align-items: center;
   }
 }

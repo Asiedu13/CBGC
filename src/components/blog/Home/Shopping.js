@@ -50,7 +50,7 @@ class Shopping extends React.Component {
     return (
       <section className="shopping">
         <section className="shopping__slider">
-          <div className="shopping__slider__one shopping__slider__children">
+          <div className="shopping__slider__one">
             <FontAwesomeIcon
               icon="arrow-circle-left"
               style={moveBackStyle}
