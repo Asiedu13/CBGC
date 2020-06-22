@@ -214,7 +214,7 @@
 
 .articles {
   width: 100vw;
-  height: 1100px;
+  height: 900px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -335,10 +335,11 @@
   .shopping__button {
     display: flex;
     height: 200px;
+    border: 1px solid #fff;
+    display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    border: 1px solid #fff; }
+    align-items: center; }
     .shopping__button__seemore {
       width: 200px;
       height: 70px;

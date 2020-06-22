@@ -36,7 +36,7 @@
     .shop-section-1 {
       width: 100vw;
       height: 650px;
-      @include flexCon(row, false, space-around);
+      @include flexCon(row,false, space-around);
       position: absolute;
       border: 1px solid white;
     }
@@ -97,7 +97,7 @@
     display: flex;
     height: 200px;
     border: 1px solid #fff;
-    @include flexCon(row, true);
+    @include flexCon(row, true, center);
 
     &__seemore {
       width: 200px;
