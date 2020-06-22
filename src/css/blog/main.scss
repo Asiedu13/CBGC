@@ -19,13 +19,7 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   overflow-x: hidden;
   // background: $abstract;
-
-  button:hover {
-    box-shadow: -5px 5px 50px 1px $orange;
-  }
-  button:focus {
-    box-shadow: 0 0 0 0;
-  }
+ 
 }
 .move-right {
   animation: moveRight 1s ease forwards infinite;

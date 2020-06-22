@@ -27,10 +27,6 @@ function Articles() {
       </p>
 
       <Picture />
-
-      {/* <div className="articles__art">
-        <Reading />
-      </div> */}
     </section>
   );
 }
