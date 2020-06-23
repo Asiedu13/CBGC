@@ -36,6 +36,42 @@ const ArticlesData = [
     data:
       "He is worried about tomorrow. He is concerned about the world around hom",
   },
+  {
+    id: 5,
+    name: "Anxious",
+    type: "feelings",
+    liked: undefined,
+    clicks: 0,
+    data:
+      "He is worried about tomorrow. He is concerned about the world around hom",
+  },
+  {
+    id: 6,
+    name: "Breaking the status quo",
+    type: "society",
+    liked: true,
+    clicks: 0,
+    data:
+      "He is worried about tomorrow. He is concerned about the world around hom",
+  },
+  {
+    id: 7,
+    name: "His Occupation",
+    type: "Society",
+    liked: undefined,
+    clicks: 0,
+    data:
+      "He is worried about tomorrow. He is concerned about the world around hom",
+  },
+  {
+    id: 8,
+    name: "Organisms",
+    type: "Nature",
+    liked: undefined,
+    clicks: 0,
+    data:
+      "He is worried about tomorrow. He is concerned about the world around hom",
+  },
 ];
 
 

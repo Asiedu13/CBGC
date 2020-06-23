@@ -1,15 +1,16 @@
-.logo{
-    // width: inherit;
-    height: inherit;
-    padding: .0rem;
-    
-    h1{
-        padding: .3rem;
-        color: $orange;
-        font-size: 2rem;
-        b{
-            color: $secondary-blue;
-        }
+.logo {
+  height: 60px;
+  width: 60px;
+  padding: 0.5rem;
+  box-shadow: 1px 2px 20px 2px rgb(138, 140, 141);
+  border-radius: 5px;
+
+  h1 {
+    padding: 0.3rem;
+    color: $orange;
+    font-size: 2rem;
+    b {
+      color: $secondary-blue;
     }
-    
+  }
 }

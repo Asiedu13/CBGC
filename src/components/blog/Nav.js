@@ -1,15 +1,13 @@
-import React from 'react'
-import Logo from './Logo'
-import Links from './Links'
-import '../../css/blog/main.css'
+import React from "react";
+import Logo from "./Nav/Logo";
+import Links from "./Nav/Links";
 
-
-function Nav(){
-    return(
-        <div className="nav">
-            <Logo />
-            <Links />
-        </div>
-    )
+function Nav() {
+  return (
+    <div className="nav">
+      <Logo />
+      <Links />
+    </div>
+  );
 }
 export default Nav;
