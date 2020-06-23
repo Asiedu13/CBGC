@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../css/blog/main.css";
 import vid from "../../../vids/article.mp4";
-import Button from "../Button";
+import Button from "../Util/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Header extends React.PureComponent {

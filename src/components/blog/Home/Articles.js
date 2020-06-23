@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../Button";
-import Picture from "../Picture";
+import Button from "../Util/Button";
+import Picture from "../Util/Picture";
 import { Link } from "react-router-dom";
 
 function Articles() {

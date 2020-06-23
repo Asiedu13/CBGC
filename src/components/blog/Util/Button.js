@@ -5,9 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Button(props) {
   return (
-    <button
-      className="buttonc"
-         >
+    <button className="button">
       {props.label}
       {"  "}
       {props.icon ? (

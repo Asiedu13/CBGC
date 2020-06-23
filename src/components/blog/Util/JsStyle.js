@@ -1,4 +1,3 @@
-
 export const loveAnimation = {
   position: "relative",
   animation: "expands infinite 4s ease-in-out 1s forwards",
@@ -13,7 +12,7 @@ export const btnFirstStyle = {
   background: `#f6d342`,
   color: "#fff",
   border: "none",
-  boxShadow: '2px 2px 10px 2px  rgba(117, 117, 117, 0.808)',
+  boxShadow: "2px 2px 10px 2px  rgba(117, 117, 117, 0.808)",
 };
 
 export const btnSecondStyle = {
@@ -26,9 +25,9 @@ export const btnSecondStyle = {
   color: "orange",
   background: "#fff",
   border: "none",
-  position: 'relative',
-  top: '30px',
-  boxShadow: '2px 2px 10px 2px  rgba(117, 117, 117, 0.808)'
+  position: "relative",
+  top: "30px",
+  boxShadow: "2px 2px 10px 2px  rgba(117, 117, 117, 0.808)",
 };
 
 export const arrowMove = {

@@ -1,11 +1,8 @@
 import React from "react";
-import Button from "../../Button";
+import Button from "../../Util/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { arrowMove } from "../../JsStyle";
-import {
-  btnSecondStyle,
-  loveAnimation,
-} from "../../JsStyle";
+import { arrowMove } from "../../Util/JsStyle";
+import { btnSecondStyle, loveAnimation } from "../../Util/JsStyle";
 import pic from "../../../../pics/Shopping Bag.png";
 import { Link } from "react-router-dom";
 
@@ -48,7 +45,7 @@ export class ChildTwo extends React.Component {
   }
   render() {
     return (
-      <div className='shop-section-2'>
+      <div className="shop-section-2">
         <div className="shopping__art">
           <img src={pic} alt="" />
         </div>

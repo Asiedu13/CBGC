@@ -1,12 +1,12 @@
 @import "config";
 @import "utilities";
 @import "nav";
-@import "header";
-@import "Paragraph1";
+@import "Homepage/header";
+@import "Homepage/Paragraph1";
 @import "../blog/Art/tree";
-@import "articles";
-@import "shopping";
-@import "counselling";
+@import "Homepage/articles";
+@import "Homepage/shopping";
+@import "Homepage/counselling";
 @import "footer";
 
 * {

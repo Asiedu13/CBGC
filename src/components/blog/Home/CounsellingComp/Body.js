@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../Button";
+import Button from "../../Util/Button";
 import { Link } from "react-router-dom";
 
 class Body extends React.Component {
@@ -11,7 +11,7 @@ class Body extends React.Component {
           <h1>Now</h1>
           <h3>schedule a meeting today</h3>
           <Link to="/calendar">
-            <Button label="Schedule" importance="meduim" />
+            <Button label="Schedule" importance="medium" />
           </Link>
         </div>
       </section>

@@ -74,7 +74,6 @@ let moveBackStyle = {
   top: "10px",
   left: "10px",
   boxShadow: "1px 1px 10px #fff",
-  // border: '1px solid green'
 };
 
 export default Shopping;
