@@ -1,7 +1,7 @@
 .articles {
   @include border;
   width: 100vw;
-  height: 1100px;
+  height: 900px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -19,7 +19,6 @@
     position: relative;
     top: 100px;
     @include border;
-    // @include shadow(grey);
 
     & > .h2_1 {
       font-size: 2rem;
@@ -47,13 +46,8 @@
     position: relative;
     top: 40vh;
     right: 200px;
-    // overflow: hidden;
     display: flex;
     flex-direction: row;
-    // grid-area: 2/2;
-    // background: url('../../pics/Union 2.png') no-repeat;
-    // background-size: 1000px;
-    // background-position: -500px 20px;
     @include border;
   }
 
@@ -66,10 +60,7 @@
     justify-content: center;
     padding: 1rem;
     margin-top: 20px;
-    // @include border;
     border-radius: 1rem;
-    // background:#fff;
-    // box-shadow: 3px 3px 10px 1px rgb(173, 171, 171);
     flex-wrap: wrap-reverse;
   }
 }

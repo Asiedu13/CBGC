@@ -27,3 +27,15 @@ $secondary: #94a4a5;
     transition: all 0.5s ease;
   }
 }
+
+@mixin flexCon($direction, $centering, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  @if ($centering == true) {
+    justify-content: center;
+    align-items: center;
+  } @else {
+    justify-content: $justify;
+    align-items: center;
+  }
+}

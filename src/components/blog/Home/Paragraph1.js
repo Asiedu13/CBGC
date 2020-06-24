@@ -1,5 +1,5 @@
 import React from "react";
-import Tree from "../Art/Tree";
+import Tree from "../Util/Art/Tree";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Paragraph1() {

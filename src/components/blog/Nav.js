@@ -1,7 +1,6 @@
 import React from "react";
-import Logo from "./Logo";
-import Links from "./Links";
-import "../../css/blog/main.css";
+import Logo from "./Nav/Logo";
+import Links from "./Nav/Links";
 
 function Nav() {
   return (

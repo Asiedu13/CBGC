@@ -23,7 +23,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
-    //   animation: showBorder 1s ease-in-out forwards 1s;
+      //   animation: showBorder 1s ease-in-out forwards 1s;
       @include border;
       h1 {
         font-size: 2rem;
@@ -45,8 +45,8 @@
           margin-left: 10px;
           margin-right: 10px;
           position: relative;
-          top:100px;
-        //   animation: feelingDisp .5s ease-in forwards;
+          top: 100px;
+          //   animation: feelingDisp .5s ease-in forwards;
         }
       }
       h2 {

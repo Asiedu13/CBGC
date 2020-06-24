@@ -17,28 +17,28 @@
     font-size: 2rem;
     position: relative;
     padding: 2rem;
+    grid-area: 1/1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    grid-area: 1/1;
-    // @include shadow(rgb(116, 149, 192));
-    #q-left{
-        position: absolute;
-        top: 0;
-        left: 0;
+
+    #q-left {
+      position: absolute;
+      top: 0;
+      left: 0;
     }
     #q-right {
       position: absolute;
       right: 0;
       bottom: 0;
-    //   top: 100px;
+      //   top: 100px;
     }
 
     .quote-item {
-    //   position: relative;
-    //   // left: 150px;
-    //   top: 40px;
+      //   position: relative;
+      //   // left: 150px;
+      //   top: 40px;
       padding: 1rem;
       color: red;
     }

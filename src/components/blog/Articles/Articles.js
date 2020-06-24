@@ -1,13 +1,16 @@
 import React from "react";
+import { ArticleHeader } from "./ArticleComp/ArticleHeader";
+import { ArticlesBody } from "./ArticleComp/ArticlesBody";
 
-class Article extends React.Component {
+class Articles extends React.Component {
   render() {
     return (
       <section>
-        <h1>Articles Section</h1>
+        <ArticleHeader />
+        <ArticlesBody />
       </section>
     );
   }
 }
 
-export default Article;
+export default Articles;

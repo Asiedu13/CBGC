@@ -1,5 +1,5 @@
 import React from "react";
-import pic from "../../pics/logo3.png";
+import pic from "../../../pics/logo3.png";
 function Logo() {
   return (
     <section className="logo">

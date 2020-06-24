@@ -2,7 +2,7 @@
   width: 100vw;
   height: 600px;
   color: #fff;
-  margin:5vh 0;
+  margin: 5vh 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -34,14 +34,7 @@
     width: 500px;
     grid-area: 3/1;
     margin: 0 auto 150px auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    //    padding: 1rem;
-
-    .btn1 {
-      margin-right: 30px;
-    }
+    @include flexCon(row, true, false);
   }
   .homepage-hero-module {
     border-right: none;

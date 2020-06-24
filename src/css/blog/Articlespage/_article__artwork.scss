@@ -1,0 +1,81 @@
+.artwork {
+  width: inherit;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 10px 0 0 10px;
+  background: linear-gradient(to right, rebeccapurple, blue);
+  padding: 3rem;
+  &__child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
+    position: absolute;
+  }
+  &__paper {
+    animation: slideUp 4s ease-in forwards;
+    background: #fff;
+    border: 11px solid black;
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+    position: relative;
+    justify-content: flex-start;
+
+    bottom: -300px;
+    &__head {
+      // border: 1px solid brown;
+      width: inherit;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    &__head > div {
+      width: 70px;
+      height: 10px;
+      //   padding:.5rem;
+    }
+    .one {
+      background: gold;
+    }
+    &__block {
+      width: 80px;
+      height: 10px;
+      background: royalblue;
+      margin: 10px 0;
+      border-radius: 2px;
+    }
+
+    .large {
+      width: calc(100% - 2%);
+      height: 50px;
+    }
+  }
+
+  //      The lightBulb
+  &__lightbulb {
+    left: 100px;
+    bottom: -300px;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    animation: slideUp 4s ease-in 4s forwards;
+    &__bulb {
+      width: 50px;
+      height: 90px;
+      background: gold;
+      border-radius: 90px;
+      box-shadow: -11px 12px 1px 20px #fff;
+    }
+    &__stalk {
+      width: 30px;
+      height: 30px;
+      background: grey;
+    }
+  }
+}

@@ -1,11 +1,11 @@
 .logo {
   height: 60px;
   width: 60px;
-  padding: .5rem;
+  padding: 0.5rem;
   box-shadow: 1px 2px 20px 2px #8a8c8d;
   border-radius: 5px; }
   .logo h1 {
-    padding: .3rem;
+    padding: 0.3rem;
     color: #f6d342;
     font-size: 2rem; }
     .logo h1 b {
@@ -79,9 +79,8 @@
     margin: 0 auto 150px auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-around; }
-    .header .buttons .btn1 {
-      margin-right: 30px; }
+    justify-content: center;
+    align-items: center; }
   .header .homepage-hero-module {
     border-right: none;
     border-left: none;
@@ -135,11 +134,11 @@
     font-size: 2rem;
     position: relative;
     padding: 2rem;
+    grid-area: 1/1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    grid-area: 1/1; }
+    align-items: center; }
     .paragraph_1 p #q-left {
       position: absolute;
       top: 0;
@@ -215,7 +214,7 @@
 
 .articles {
   width: 100vw;
-  height: 1100px;
+  height: 900px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -265,7 +264,7 @@
     flex-wrap: wrap-reverse; }
 
 .shopping {
-  background: #23343b;
+  background: #23343a;
   width: 100vw;
   height: 650px;
   position: relative;
@@ -277,59 +276,54 @@
     position: relative;
     overflow: hidden;
     transition: all 1s ease-in; }
-    .shopping__slider__children {
-      width: 100vw;
-      height: inherit;
-      background-color: rebeccapurple;
-      color: #fff; }
-      .shopping__slider__children h2 {
-        font-size: 3rem; }
-    .shopping__slider__info {
-      width: 300px;
-      height: 300px;
-      border: 1px solid red;
-      border-radius: 10px;
-      position: absolute;
-      display: none;
-      transition: all ease-in 1s;
-      animation: moveLeft 3s ease-in forwards;
-      animation-delay: 1s; }
     .shopping__slider__one {
       background: linear-gradient(to right, #0689c4, rebeccapurple, #159dc6);
+      color: #fff;
+      width: 100vw;
+      height: inherit;
+      position: absolute;
+      animation: showUp 3s ease-in forwards;
+      border: 1px solid #fff; }
+      .shopping__slider__one h2 {
+        font-size: 4rem; }
+    .shopping__slider .shop-section-1 {
+      width: 100vw;
+      height: 650px;
       display: flex;
+      flex-direction: row;
+      justify-content: space-around;
       align-items: center;
-      justify-content: center;
-      flex-direction: row; }
-    .shopping__slider__two {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column; }
-    .shopping__slider__three {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column; }
-  .shopping .childTwoHeader {
-    grid-area: 2/3;
-    width: 350px;
-    height: 150px;
-    padding: 1rem;
-    align-items: center;
-    margin: 0vh auto; }
-    .shopping .childTwoHeader h2 {
-      font-size: 3rem; }
+      position: absolute;
+      border: 1px solid white; }
+    .shopping__slider .shop-section-2 {
+      width: inherit;
+      height: inherit;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr); }
+      .shopping__slider .shop-section-2 .childTwoHeader {
+        grid-area: 2/3;
+        width: 350px;
+        height: 150px;
+        padding: 1rem;
+        align-items: center;
+        margin: 0vh auto; }
+        .shopping__slider .shop-section-2 .childTwoHeader h2 {
+          font-size: 3rem; }
   .shopping .loveIcon {
     position: relative;
-    animation: expands .2s ease-in-out forwards; }
+    animation: expands 0.2s ease-in-out forwards; }
   .shopping__art {
-    grid-area: 2/ span 3;
+    grid-area: 2 / span 3;
     padding: 2rem 0;
     width: 500px;
     position: relative;
     left: -100px;
     background: #fff;
     border-radius: 0 40px 40px 0; }
+    .shopping__art img {
+      position: relative;
+      animation: moveRight 2s ease 4s forwards infinite; }
   .shopping__paragraph {
     grid-area: 2 / 3;
     padding: 2rem 1rem;
@@ -340,19 +334,27 @@
     margin: 0vh 5vh; }
   .shopping__button {
     display: flex;
-    height: 200px;
-    flex-direction: column;
+    flex-direction: row;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 1%;
+    margin: 50px 0;
+    border: 1px solid #fff;
+    position: relative;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center; }
     .shopping__button__seemore {
       width: 200px;
       height: 70px;
-      margin-bottom: 10px;
       cursor: pointer;
       background: none;
       border: none;
-      border-radius: 5px;
+      border-radius: 10px;
       color: #f6d342; }
+      .shopping__button__seemore:hover {
+        color: #a79036; }
 
 .counselling {
   width: 100vw;
@@ -428,6 +430,114 @@
       .counselling__body__intro h3 {
         margin: 10px 0 50px 0; }
 
+.ArticleHeader {
+  margin: 5vh 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: #fff; }
+  .ArticleHeader__heading {
+    grid-area: 1/1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; }
+  .ArticleHeader h1 {
+    justify-content: center;
+    font-size: 3rem;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 10vw;
+    text-decoration: underline;
+    text-decoration-color: gold; }
+
+.artwork {
+  width: inherit;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 10px 0 0 10px;
+  background: linear-gradient(to right, rebeccapurple, blue);
+  padding: 3rem; }
+  .artwork__child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
+    position: absolute; }
+  .artwork__paper {
+    animation: slideUp 4s ease-in forwards;
+    background: #fff;
+    border: 11px solid black;
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+    position: relative;
+    justify-content: flex-start;
+    bottom: -300px; }
+    .artwork__paper__head {
+      width: inherit;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; }
+    .artwork__paper__head > div {
+      width: 70px;
+      height: 10px; }
+    .artwork__paper .one {
+      background: gold; }
+    .artwork__paper__block {
+      width: 80px;
+      height: 10px;
+      background: royalblue;
+      margin: 10px 0;
+      border-radius: 2px; }
+    .artwork__paper .large {
+      width: calc(100% - 2%);
+      height: 50px; }
+  .artwork__lightbulb {
+    left: 100px;
+    bottom: -300px;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    animation: slideUp 4s ease-in 4s forwards; }
+    .artwork__lightbulb__bulb {
+      width: 50px;
+      height: 90px;
+      background: gold;
+      border-radius: 90px;
+      box-shadow: -11px 12px 1px 20px #fff; }
+    .artwork__lightbulb__stalk {
+      width: 30px;
+      height: 30px;
+      background: grey; }
+
+.trending {
+  width: 90vw;
+  height: fit-content;
+  padding: 1rem;
+  display: flex;
+  margin: auto auto;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  overflow: hidden;
+  border: 2px solid red; }
+  .trending__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem; }
+    .trending__body .item {
+      width: 200px;
+      height: 250px;
+      padding: 1rem;
+      margin: 10px;
+      border-radius: 5px;
+      box-shadow: 1px 2px 10px 1px #bbbbbb; }
+
 .footer {
   width: 100vw;
   height: 400px;
@@ -465,23 +575,47 @@
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   overflow-x: hidden; }
-  body button:hover {
+  body .move-right {
+    animation: moveRight 1s ease forwards infinite; }
+  body .bounce {
+    animation: "bounce 5s ease forwards";
+    transition: "1s ease-in-out forwards"; }
+  body .feelingDisp {
+    animation: feelingDisp 0.5s ease-in forwards; }
+  body .showBorder {
+    animation: showBorder 1s ease-in-out forwards 1s; }
+  body .btn-imp {
+    width: 200px;
+    height: 70px;
+    font-size: 1.3rem;
+    transition: all .5s ease;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: #f6d342;
+    color: #fff; }
+    body .btn-imp:hover {
+      box-shadow: -5px 5px 50px 1px #f6d342; }
+    body .btn-imp:focus {
+      box-shadow: 0 0 0 0; }
+  body .btn-norm {
+    width: 200px;
+    height: 70px;
+    font-size: 1.3rem;
+    transition: all .5s ease;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: #fff;
+    color: #f6d342; }
+    body .btn-norm:hover {
+      box-shadow: 2px 2px 10px 2px rgba(117, 117, 117, 0.808); }
+    body .btn-norm:focus {
+      box-shadow: 0 0 0 0; }
+  body .button:hover {
     box-shadow: -5px 5px 50px 1px #f6d342; }
-  body button:focus {
+  body .button:focus {
     box-shadow: 0 0 0 0; }
-
-.move-right {
-  animation: moveRight 1s ease forwards infinite; }
-
-.bounce {
-  animation: "bounce 5s ease forwards";
-  transition: "1s ease-in-out forwards"; }
-
-.feelingDisp {
-  animation: feelingDisp 0.5s ease-in forwards; }
-
-.showBorder {
-  animation: showBorder 1s ease-in-out forwards 1s; }
 
 @keyframes moveRight {
   25% {
@@ -493,21 +627,22 @@ body {
   75% {
     position: relative;
     left: 0px; } }
+  body .move-right {
+    animation: moveRight 1s ease forwards infinite; }
+  body .otherPageHeaders {
+    width: 100vw;
+    height: 300px; }
 
-@keyframes showUp {
-  0% {
-    opacity: 0;
-    visibility: hidden; }
-  100% {
-    opacity: 1;
-    display: flex;
-    visibility: visible; } }
-
-@keyframes moveLeft {
-  0% { }
-  100% {
-    display: block;
-    right: 65%; } }
+@keyframes moveRight {
+  25% {
+    position: relative;
+    left: 0; }
+  50% {
+    position: relative;
+    left: 10px; }
+  75% {
+    position: relative;
+    left: 0px; } }
 
 @keyframes bounce {
   0% {
@@ -551,3 +686,10 @@ body {
   100% {
     transition: all 1s ease-in-out;
     transform: scale(1); } }
+
+@keyframes slideUp {
+  25% {
+    top: 10px; }
+  100% {
+    top: 10px;
+    transform: rotate(360deg); } }

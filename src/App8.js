@@ -4,7 +4,7 @@ import Footer from "./components/blog/Footer";
 import "./css/blog/main.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-const Home = lazy(() => import("./components/blog/Home/Home"));
+const HomePage = lazy(() => import("./components/blog/HomePage"));
 const Article = lazy(() => import("./components/blog/Articles/Articles"));
 
 function App8() {
@@ -14,7 +14,7 @@ function App8() {
         <section>
           <Nav />
           <Switch>
-            <Route path="/" exact component={Home} />
+            <Route path="/" exact component={HomePage} />
             <Route path="/articles" component={Article} />
           </Switch>
           <Footer />
