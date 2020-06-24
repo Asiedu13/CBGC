@@ -1,0 +1,72 @@
+.register {
+  width: 100vw;
+  height: 550px;
+  display: flex;
+  @include flexCon(row, false, space-between);
+  background-color: linear-gradient(to right, $primary-blue, $secondary-blue);
+  @include border;
+  &__pic {
+    width: 50%;
+    height: inherit;
+    position: relative;
+    background-image: url("../../pics/Counselling.jpg");
+    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%);
+    @include border;
+    animation: shapeChange 10s ease forwards 1s infinite;
+    img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  &__signIn {
+    width: 50%;
+    height: inherit;
+    @include border;
+    @include flexCon(column, false, center);
+
+    &__header {
+      @include border;
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+    form {
+      @include border;
+      width: 400px;
+      height: 400px;
+      padding: 2rem;
+      label {
+        font-size: 1.4rem;
+        margin: 10px 0 10px 0;
+      }
+      input {
+        width: 300px;
+        height: 70px;
+        padding: 1rem;
+        border: none;
+        border-bottom: 2px solid $orange;
+        margin: 10px 0 10px 0;
+        transition: all ease 1s;
+        outline: none;
+
+        &:focus {
+          border-bottom: 2px solid $primary-blue;
+        }
+      }
+
+      button {
+        width: 150px;
+        height: 70px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin: 20px 0 10px 0;
+        border-radius: 5px;
+        background: linear-gradient(to right, $primary-blue, $otherC);
+        transition: all ease 1s;
+        &:hover {
+          background: linear-gradient(to top, $otherC, $primary-blue);
+        }
+      }
+    }
+  }
+}
