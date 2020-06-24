@@ -2,6 +2,7 @@ import React from "react";
 import vid from "../../../vids/article.mp4";
 import Button from "../Util/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 class Header extends React.PureComponent {
   render() {
@@ -34,8 +35,12 @@ class Header extends React.PureComponent {
         </div>
 
         <div className="buttons">
-          <Button label="Sign up" importance="high" icon="angle-right" />
-          <Button label="Sign In" importance="medium" icon="angle-right" />
+          <Link to ='/register'>
+            <Button label="Sign up" importance="high" icon="angle-right" />
+          </Link>
+          <Link to ='/register'>
+            <Button label="Sign In" importance="medium" icon="angle-right" />
+          </Link>
         </div>
       </section>
     );
