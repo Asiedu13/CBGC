@@ -339,7 +339,6 @@
     width: fit-content;
     border-radius: 1%;
     margin: 50px 0;
-    border: 1px solid #fff;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -351,10 +350,10 @@
       cursor: pointer;
       background: none;
       border: none;
-      border-radius: 10px;
+      border-radius: 1px;
       color: #f6d342; }
       .shopping__button__seemore:hover {
-        color: #a79036; }
+        box-shadow: 2px 2px 50px 2px #f6d342; }
 
 .counselling {
   width: 100vw;
@@ -588,7 +587,7 @@ body {
     width: 200px;
     height: 70px;
     font-size: 1.3rem;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     cursor: pointer;
     outline: none;
     border: none;
@@ -602,14 +601,14 @@ body {
     width: 200px;
     height: 70px;
     font-size: 1.3rem;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     cursor: pointer;
     outline: none;
     border: none;
     background: #fff;
     color: #f6d342; }
     body .btn-norm:hover {
-      box-shadow: 2px 2px 10px 2px rgba(117, 117, 117, 0.808); }
+      box-shadow: 2px 2px 50px 2px #f6d342; }
     body .btn-norm:focus {
       box-shadow: 0 0 0 0; }
   body .button:hover {

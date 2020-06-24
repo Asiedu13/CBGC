@@ -99,22 +99,20 @@
     width: fit-content;
     border-radius: 1%;
     margin: 50px 0;
-    border: 1px solid #fff;
+    // border: 1px solid #fff;
     position: relative;
     @include flexCon(row, true, center);
     &__seemore {
       width: 200px;
       height: 70px;
-      // margin-bottom: 10px;
       cursor: pointer;
       background: none;
       border: none;
-      border-radius: 10px;
+      border-radius: 1px;
       color: $orange;
 
-      &:hover{
-        // box-shadow:2px 2px 10px 2px#f6d342;
-        color: #a79036;
+      &:hover {
+       box-shadow: 2px 2px 50px 2px #f6d342;
       }
     }
   }
