@@ -522,8 +522,7 @@
   margin: auto auto;
   flex-direction: column;
   flex-wrap: wrap-reverse;
-  overflow: hidden;
-  border: 2px solid red; }
+  overflow: hidden; }
   .trending__body {
     display: flex;
     flex-direction: row;
