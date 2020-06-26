@@ -552,7 +552,6 @@
     position: relative;
     background-image: url("../../pics/Counselling.jpg");
     clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%);
-    border: 3px solid red;
     animation: shapeChange 10s ease forwards 1s infinite; }
     .register__pic img {
       width: 400px;
@@ -795,18 +794,24 @@ body {
 @keyframes shapeChange {
   0%,
   10% {
-    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%); }
+    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%);
+    border: 3px solid red; }
   15%,
   30% {
-    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 0%); }
+    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 0%);
+    border: 3px solid #663399; }
   35%,
   50% {
-    clip-path: polygon(50% 100%, 100% 50%, 100% 0%, 0% 0%); }
+    clip-path: polygon(50% 100%, 100% 50%, 100% 0%, 0% 0%);
+    border: 3px solid #ffd700; }
   55%,
   70% {
-    clip-path: polygon(50% 100%, 100% 50%, 100% 100%, 0% 0%); }
+    clip-path: polygon(50% 100%, 100% 50%, 100% 100%, 0% 0%);
+    border: 3px solid #663399; }
   75%,
   90% {
-    clip-path: polygon(50% 1100%, 100% 0%, 100% 10%, 0% 0%); }
+    clip-path: polygon(50% 1100%, 100% 0%, 100% 10%, 0% 0%);
+    border: 3px solid #4169e1; }
   100% {
-    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%); } }
+    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%);
+    border: 3px solid violet; } }
