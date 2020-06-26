@@ -5,7 +5,7 @@ import "./css/blog/main.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const HomePage = lazy(() => import("./components/blog/HomePage"));
-const Article = lazy(() => import("./components/blog/Articles/Articles"));
+const Article = lazy(() => import("./components/blog/ArticlesPage"));
 
 function App8() {
   return (
