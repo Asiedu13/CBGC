@@ -1,70 +1,117 @@
 .register {
   width: 100vw;
-  height: 550px;
+  height: fit-content;
   display: flex;
   @include flexCon(row, false, space-between);
   background-color: linear-gradient(to right, $primary-blue, $secondary-blue);
   @include border;
   &__pic {
     width: 50%;
-    height: inherit;
+    height: 500px;
     position: relative;
     background-image: url("../../pics/Counselling.jpg");
     clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%);
+    border: 3px solid red;
     @include border;
+  
     animation: shapeChange 10s ease forwards 1s infinite;
     img {
       width: 400px;
       height: 400px;
     }
   }
-  &__signIn {
-    width: 50%;
-    height: inherit;
-    @include border;
-    @include flexCon(column, false, center);
+  &__forms {
+    display: flex;
+    height: fit-content;
+    @include flexCon(column, true, flex-start);
+    &__signIn {
+      width: 50vw;
+      height: inherit;
+      // @include border;
+      // border: 1px solid green;
+      @include flexCon(column, false, center);
 
-    &__header {
-      @include border;
-      font-size: 1.5rem;
-      padding: 1rem;
-    }
-    form {
-      @include border;
-      width: 400px;
-      height: 400px;
-      padding: 2rem;
-      label {
-        font-size: 1.4rem;
-        margin: 10px 0 10px 0;
-      }
-      input {
-        width: 300px;
-        height: 70px;
+      &__header {
+        @include border;
+        font-size: 1.5rem;
         padding: 1rem;
-        border: none;
-        border-bottom: 2px solid $orange;
-        margin: 10px 0 10px 0;
-        transition: all ease 1s;
-        outline: none;
+        width: inherit;
+        height: fit-content;
+      }
+      form {
+        @include border;
+        width: 400px;
+        height: fit-content;
+        padding: 2rem;
+        label {
+          font-size: 1.4rem;
+          margin: 10px 0 10px 0;
+        }
+        input {
+          width: 300px;
+          height: 70px;
+          padding: 0.5rem;
+          border: none;
+          border-bottom: 2px solid $orange;
+          margin: 10px 0 10px 0;
+          transition: all ease 1s;
+          outline: none;
 
-        &:focus {
-          border-bottom: 2px solid $primary-blue;
+          &:focus {
+            border-bottom: 2px solid $primary-blue;
+          }
+        }
+
+        button {
+          width: 150px;
+          height: 70px;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          margin: 20px 0 10px 0;
+          border-radius: 5px;
+          background: linear-gradient(to right, $primary-blue, $otherC);
+          transition: all ease 1s;
+          &:hover {
+            background: linear-gradient(to top, $otherC, $primary-blue);
+          }
         }
       }
+    }
 
-      button {
-        width: 150px;
-        height: 70px;
-        color: #fff;
+    .optionalSignUp {
+      color: #fff;
+      width: 400px;
+      height: 50px;
+      border-radius: 5px;
+      padding: 1rem;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      .options{
+        margin: 10px 0;
+        height: 50px;
+        padding: 1rem;
         border: none;
-        cursor: pointer;
-        margin: 20px 0 10px 0;
         border-radius: 5px;
-        background: linear-gradient(to right, $primary-blue, $otherC);
-        transition: all ease 1s;
-        &:hover {
-          background: linear-gradient(to top, $otherC, $primary-blue);
+        cursor: pointer;
+        color: #fff;
+        transition: all ease .5s;
+        
+
+      }
+      &__google {
+        background: rgb(243, 11, 11);
+        &:hover{
+          background: darken(rgb(243, 11, 11), 10%);
+        }
+      }
+      &__facebook {
+        background: royalblue;
+        &:hover{
+          background: darken(royalblue, 10%);
         }
       }
     }

@@ -26,7 +26,7 @@ function Links() {
 
         <Link to="/register" style={{ textDecoration: "none" }}>
           <li>
-            Sign Up <FontAwesomeIcon icon={["fas", "user"]} size="1x" />
+            Sign In <FontAwesomeIcon icon={["fas", "user"]} size="1x" />
           </li>
         </Link>
       </ul>

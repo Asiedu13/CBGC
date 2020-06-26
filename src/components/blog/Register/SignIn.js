@@ -6,13 +6,14 @@ export default class SignIn extends Component {
     this.state = {
       email: "",
       password: "",
+      signIn: true,
     };
   }
   render() {
     return (
-      <section className="register__signIn">
+      <section className="register__forms__signIn">
         
-        <div className="register__signIn__header">
+        <div className="register__forms__signIn__header">
           <h2>Sign In</h2>
         </div>
 
@@ -30,8 +31,8 @@ export default class SignIn extends Component {
             id="pass"
             name="password"
             placeholder="password"
-          />
-
+          /><br /><br />
+          <a href="/">I don't have an account.</a><br></br>
           <button>Let's continue</button>
         </form>
       </section>

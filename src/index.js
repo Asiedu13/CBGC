@@ -45,6 +45,7 @@ import {
   faAppleAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
+import {faGoogle } from '@fortawesome/free-brands-svg-icons'
 library.add(
   fab,
   faCheckSquare,
@@ -66,7 +67,9 @@ library.add(
   faSadTear,
   faHeartBroken,
   faLowVision,
-  faAppleAlt
+  faAppleAlt,
+  faGoogle,
+
 );
 
 ReactDom.render(<App8 />, document.getElementById("root"));
