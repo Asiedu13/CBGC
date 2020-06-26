@@ -5,7 +5,7 @@ import "./css/blog/main.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const HomePage = lazy(() => import("./components/blog/HomePage"));
-// const Article = lazy(() => import("./components/blog/ArticlesPage"));
+const Article = lazy(() => import("./components/blog/ArticlesPage"));
 
 function App8() {
   return (
@@ -15,7 +15,7 @@ function App8() {
           <Nav />
           <Switch>
             <Route path="/" exact component={HomePage} />
-            {/* <Route path="/articles" component={Article} /> */}
+            <Route path="/articles" component={Article} />
           </Switch>
           <Footer />
         </section>
