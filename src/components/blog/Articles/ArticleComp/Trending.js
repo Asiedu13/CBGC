@@ -12,15 +12,16 @@ export class Trending extends React.Component {
     return (
       <section className="trending">
         <section className="trending__header">Trending</section>
-        <section className="trending__body">
-          
-          {Articles.length > 0 ? (
-            Articles
-          ) : (
-            <div>
-              <h1>No Items Found</h1>
-            </div>
-          )}
+        <section className="trending__con">
+          <section className="trending__body">
+            {Articles.length > 0 ? (
+              Articles
+            ) : (
+              <div>
+                <h1>No Items Found</h1>
+              </div>
+            )}
+          </section>
         </section>
       </section>
     );

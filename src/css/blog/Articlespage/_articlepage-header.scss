@@ -1,19 +1,18 @@
 .ArticleHeader {
   // color: #fff;
-  margin: 5vh 0 ;
+  margin: 5vh 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   background: #fff;
   // padding: 1rem;
   // overflow: hidden;
   // border-radius: 10px;
-  &__heading{
+  &__heading {
     grid-area: 1/1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    
   }
   h1 {
     // border: 1px solid #fff;
