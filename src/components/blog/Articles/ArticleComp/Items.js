@@ -7,11 +7,9 @@ class Item extends React.Component {
     console.log();
     return (
       <div className="trending__body__wholeItem">
-        <article
-          className="trending__body__wholeItem__item"
-          >
-            <img src={this.props.img} alt="Doing the most" />
-          </article>
+        <article className="trending__body__wholeItem__item">
+          <img src={this.props.img} alt="Doing the most" />
+        </article>
 
         <div className="trending__body__wholeItem__item__description">
           <h2> {this.props.name} </h2>

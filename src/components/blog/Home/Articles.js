@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 function Articles() {
   return (
     <section className="articles">
+      <div className="articles__firstChild">
+
       <div className="h2">
         <h2 className="h2_1">written</h2>{" "}
         <h2 className="h2_2">
@@ -26,6 +28,7 @@ function Articles() {
         </p>
       </p>
 
+      </div>
       <Picture />
     </section>
   );

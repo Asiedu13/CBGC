@@ -5,6 +5,7 @@ import  ArticlesData  from "../../../../Databank/ArticlesData";
 import image1 from '../../../../pics/boy.png'
 import image2 from '../../../../pics/Counselling.jpg'
 import image3 from '../../../../pics/logo.png'
+
  const images = [
     image1, image2, image3
 ];
