@@ -1,12 +1,37 @@
 import React from "react";
 import Item from "./Items";
-import ArticlesData from "../../../../Databank/ArticlesData";
+import  ArticlesData  from "../../../../Databank/ArticlesData";
+
+import image1 from '../../../../pics/boy.png'
+import image2 from '../../../../pics/Counselling.jpg'
+import image3 from '../../../../pics/logo.png'
+ const images = [
+    image1, image2, image3
+];
+
 
 export class Trending extends React.Component {
+  constructor(props) {
+    super();
+    this.state = ArticlesData.articles;
+  }
   componentDidMount() {}
   render() {
-    const Articles = ArticlesData.map((article) => {
-      return <Item key={article.id} name={article.name} type={article.type} />;
+    console.log(this.state);
+    console.log(images)
+    const Articles = this.state.map((article) => {
+      const i = images.map(image => {
+        return (
+          <Item
+          key={article.id}
+          img={image}
+          name={article.name}
+          type={article.type}
+        />
+        )
+      })
+      return  i;
+        
     });
     console.log(ArticlesData);
     return (

@@ -7,7 +7,7 @@
   flex-direction: column;
   overflow: hidden;
 
-  &__con{
+  &__con {
     width: 90vw;
     height: fit-content;
     padding: 1rem;
@@ -16,13 +16,11 @@
     flex-direction: column;
     overflow: hidden;
     overflow-x: scroll;
-     
   }
 
   &__header {
     width: inherit;
     position: relative;
-    
   }
 
   &__body {
@@ -44,20 +42,25 @@
       overflow: hidden;
       position: relative;
       border-radius: 5px;
-      
 
       &__item {
         grid-area: 1/1;
         margin: 10px;
         height: inherit;
         width: inherit;
-        background: url("../../pics/Counselling.jpg");
+        // background: url("../../pics/Counselling.jpg");
         color: #fff;
         position: absolute;
         top: 0;
         left: 0;
-        filter: blur(2px);
-        
+        filter: blur(1px);
+
+        img{
+          width: inherit;
+          height: inherit;
+          background-color: #fff;
+        }
+
         &__description {
           grid-area: 2/1;
           position: absolute;
@@ -69,11 +72,11 @@
       }
     }
     &__wholeItem:nth-last-of-type(even) {
-      background: royalblue;
+      background: rebeccapurple;
     }
 
     &__wholeItem:nth-last-of-type(odd) {
-      background: gold;
+      background: red;
     }
   }
 
@@ -84,6 +87,5 @@
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
-    
   }
 }

@@ -557,12 +557,15 @@
         margin: 10px;
         height: inherit;
         width: inherit;
-        background: url("../../pics/Counselling.jpg");
         color: #fff;
         position: absolute;
         top: 0;
         left: 0;
-        filter: blur(2px); }
+        filter: blur(1px); }
+        .trending__body__wholeItem__item img {
+          width: inherit;
+          height: inherit;
+          background-color: #fff; }
         .trending__body__wholeItem__item__description {
           grid-area: 2/1;
           position: absolute;
@@ -571,9 +574,9 @@
           color: #fff;
           z-index: 2000; }
     .trending__body__wholeItem:nth-last-of-type(even) {
-      background: royalblue; }
+      background: rebeccapurple; }
     .trending__body__wholeItem:nth-last-of-type(odd) {
-      background: gold; }
+      background: red; }
   .trending__slider {
     height: fit-content;
     height: fit-content;
