@@ -29,7 +29,10 @@ function Articles() {
       </p>
 
       </div>
+      <div className="articles__pic">
       <Picture />
+
+      </div>
     </section>
   );
 }
