@@ -585,12 +585,14 @@
       background: rebeccapurple; }
     .trending__body__wholeItem:nth-last-of-type(odd) {
       background: red; }
-  .trending__slider {
-    height: fit-content;
-    height: fit-content;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap; }
+
+.whole__slider {
+  height: fit-content;
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
 
 .footer {
   width: 100vw;

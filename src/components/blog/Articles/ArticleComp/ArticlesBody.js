@@ -4,7 +4,10 @@ export class ArticlesBody extends Component {
   render() {
     return (
       <div>
-        <div className="trending__slider">
+        <div className="whole__slider">
+        <Trending />
+        <Trending />
+        <Trending />
         <Trending />
 
         </div>

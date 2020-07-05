@@ -55,7 +55,7 @@
         left: 0;
         filter: blur(1px);
 
-        img{
+        img {
           width: inherit;
           height: inherit;
           background-color: #fff;
@@ -79,13 +79,16 @@
       background: red;
     }
   }
+  
+}
 
-  &__slider {
-    // border: 5px solid cyan;
-    height: fit-content;
-    height: fit-content;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-  }
+// The main container for all the items
+.whole__slider {
+  // border: 5px solid cyan;
+  height: fit-content;
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
