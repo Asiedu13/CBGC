@@ -33,27 +33,35 @@
     &__wholeItem {
       grid-template-columns: 2fr;
       grid-template-rows: repeat(2, 1fr);
-      width: fit-content;
-      height: fit-content;
-      box-shadow: 1px 2px 10px 1px rgb(187, 187, 187);
+      // box-shadow: 1px 2px 10px 1px rgb(187, 187, 187);
+      box-shadow: 1px 2px 30px 1px darken($color: #f4f4f4, $amount: 50%);
       height: 250px;
       width: 200px;
-      margin: 0 10px;
+      margin: 0 20px;
       overflow: hidden;
       position: relative;
       border-radius: 5px;
+      transition: all 1s ease-in;
+      cursor: pointer;
 
+      &:hover &__item {
+        height: 120px;
+        filter: blur(1px);
+      }
+
+      &:hover &__item__description {
+        transition: all 1s ease-in;
+        display: block;
+      }
       &__item {
         grid-area: 1/1;
-        margin: 10px;
-        height: inherit;
+        height: 245px;
         width: inherit;
-        // background: url("../../pics/Counselling.jpg");
         color: #fff;
         position: absolute;
         top: 0;
         left: 0;
-        filter: blur(1px);
+        transition: all 0.3s ease-in;
 
         img {
           width: inherit;
@@ -62,12 +70,20 @@
         }
 
         &__description {
-          grid-area: 2/1;
+          // grid-area: 2/1;
           position: absolute;
+          bottom: 1px;
           height: fit-content;
           padding: 1rem;
           color: #fff;
           z-index: 2000;
+          transition: all 1s ease;
+          display: none;
+          h3{
+            color: orange;
+            font-size:15px;
+          }
+          
         }
       }
     }
@@ -79,7 +95,6 @@
       background: red;
     }
   }
-  
 }
 
 // The main container for all the items
