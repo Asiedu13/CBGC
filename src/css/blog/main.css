@@ -529,6 +529,7 @@
   display: flex;
   margin: auto auto;
   flex-direction: column;
+<<<<<<< HEAD
   overflow: hidden; }
   .trending__con {
     width: 90vw;
@@ -542,6 +543,10 @@
   .trending__header {
     width: inherit;
     position: relative; }
+=======
+  flex-wrap: wrap-reverse;
+  overflow: hidden; }
+>>>>>>> 3bca3ca097b84f40a45acf7e57898cbcc61b2fc8
   .trending__body {
     display: flex;
     width: fit-content;
