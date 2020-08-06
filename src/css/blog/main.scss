@@ -12,6 +12,7 @@
 @import "Articlespage/article__artwork";
 @import "Articlespage/articlePage__body";
 
+@import "RegisterPage/registerpage";
 @import "footer";
 
 * {
@@ -37,11 +38,11 @@ body {
   .showBorder {
     animation: showBorder 1s ease-in-out forwards 1s;
   }
-  .btn-imp{
+  .btn-imp {
     @include button(high);
   }
-  
-  .btn-norm{
+
+  .btn-norm {
     @include button(low);
   }
   .button:hover {
@@ -50,8 +51,6 @@ body {
   .button:focus {
     box-shadow: 0 0 0 0;
   }
-
-
 
   @keyframes moveRight {
     25% {
@@ -153,9 +152,43 @@ body {
     25% {
       top: 10px;
     }
+
     100% {
       top: 10px;
       transform: rotate(360deg);
     }
+  }
+}
+
+@keyframes shapeChange {
+  0%,
+  10% {
+    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%);
+    border: 3px solid red;
+  }
+  15%,
+  30% {
+    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 0%);
+    border: 3px solid #663399;
+  }
+  35%,
+  50% {
+    clip-path: polygon(50% 100%, 100% 50%, 100% 0%, 0% 0%);
+    border: 3px solid #ffd700;
+  }
+
+  55%,
+  70% {
+    clip-path: polygon(50% 100%, 100% 50%, 100% 100%, 0% 0%);
+    border: 3px solid #663399;
+  }
+  75%,
+  90% {
+    clip-path: polygon(50% 1100%, 100% 00%, 100% 10%, 0% 0%);
+    border: 3px solid #4169e1;
+  }
+  100% {
+    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%);
+    border: 3px solid violet;
   }
 }

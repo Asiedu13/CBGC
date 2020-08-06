@@ -536,6 +536,102 @@
       border-radius: 5px;
       box-shadow: 1px 2px 10px 1px #bbbbbb; }
 
+.register {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: linear-gradient(to right, #0689c4, #159dc6); }
+  .register__pic {
+    width: 50%;
+    height: 500px;
+    position: relative;
+    background-image: url("../../pics/Counselling.jpg");
+    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%);
+    animation: shapeChange 10s ease forwards 1s infinite; }
+    .register__pic img {
+      width: 400px;
+      height: 400px; }
+  .register__forms {
+    display: flex;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .register__forms__signIn {
+      width: 50vw;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .register__forms__signIn__header {
+        font-size: 1.5rem;
+        padding: 1rem;
+        width: inherit;
+        height: fit-content; }
+      .register__forms__signIn form {
+        width: 400px;
+        height: fit-content;
+        padding: 2rem; }
+        .register__forms__signIn form label {
+          font-size: 1.4rem;
+          margin: 10px 0 10px 0; }
+        .register__forms__signIn form input {
+          width: 300px;
+          height: 70px;
+          padding: 0.5rem;
+          border: none;
+          border-bottom: 2px solid #f6d342;
+          margin: 10px 0 10px 0;
+          transition: all ease 1s;
+          outline: none; }
+          .register__forms__signIn form input:focus {
+            border-bottom: 2px solid #0689c4; }
+        .register__forms__signIn form button {
+          width: 150px;
+          height: 70px;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          margin: 20px 0 10px 0;
+          border-radius: 5px;
+          background: linear-gradient(to right, #0689c4, #663399);
+          transition: all ease 1s; }
+          .register__forms__signIn form button:hover {
+            background: linear-gradient(to top, #663399, #0689c4); }
+    .register__forms .optionalSignUp {
+      color: #fff;
+      width: 400px;
+      height: 50px;
+      border-radius: 5px;
+      padding: 1rem;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .register__forms .optionalSignUp .options {
+        margin: 10px 0;
+        height: 50px;
+        padding: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #fff;
+        transition: all ease .5s; }
+      .register__forms .optionalSignUp__google {
+        background: #f30b0b; }
+        .register__forms .optionalSignUp__google:hover {
+          background: #c20909; }
+      .register__forms .optionalSignUp__facebook {
+        background: royalblue; }
+        .register__forms .optionalSignUp__facebook:hover {
+          background: #214cce; }
+
 .footer {
   width: 100vw;
   height: 400px;
@@ -543,7 +639,9 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  position: relative;
+  margin: 5vh 0 0 0; }
   .footer__elem {
     flex-basis: 35%;
     height: 200px;
@@ -691,3 +789,28 @@ body {
   100% {
     top: 10px;
     transform: rotate(360deg); } }
+
+@keyframes shapeChange {
+  0%,
+  10% {
+    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%);
+    border: 3px solid red; }
+  15%,
+  30% {
+    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 0%);
+    border: 3px solid #663399; }
+  35%,
+  50% {
+    clip-path: polygon(50% 100%, 100% 50%, 100% 0%, 0% 0%);
+    border: 3px solid #ffd700; }
+  55%,
+  70% {
+    clip-path: polygon(50% 100%, 100% 50%, 100% 100%, 0% 0%);
+    border: 3px solid #663399; }
+  75%,
+  90% {
+    clip-path: polygon(50% 1100%, 100% 0%, 100% 10%, 0% 0%);
+    border: 3px solid #4169e1; }
+  100% {
+    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%);
+    border: 3px solid violet; } }

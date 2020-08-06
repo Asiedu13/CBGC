@@ -6,6 +6,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: relative;
+  margin: 5vh 0 0 0;
 
   &__elem {
     flex-basis: 35%;

@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const HomePage = lazy(() => import("./components/blog/HomePage"));
 const Article = lazy(() => import("./components/blog/ArticlesPage"));
+const Register = lazy(() => import("./components/blog/RegisterPage"));
 
 function App8() {
   return (
@@ -16,6 +17,7 @@ function App8() {
           <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/articles" component={Article} />
+            <Route path="/register" component={Register} />
           </Switch>
           <Footer />
         </section>
