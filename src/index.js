@@ -45,7 +45,7 @@ import {
   faAppleAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
-import {faGoogle } from '@fortawesome/free-brands-svg-icons'
+// import {fabGoogle } from '@fortawesome/free-brands-svg-icons'
 library.add(
   fab,
   faCheckSquare,
@@ -68,7 +68,7 @@ library.add(
   faHeartBroken,
   faLowVision,
   faAppleAlt,
-  faGoogle,
+
 
 );
 

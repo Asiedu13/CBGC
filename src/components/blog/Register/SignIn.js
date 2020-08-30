@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default class SignIn extends Component {
   constructor(props) {
@@ -33,7 +34,7 @@ export default class SignIn extends Component {
             placeholder="password"
           /><br /><br />
           <a href="/">I don't have an account.</a><br></br>
-          <button>Let's continue</button>
+          <button>Let's continue <FontAwesomeIcon icon="angle-right" size="1x"/> </button>
         </form>
       </section>
     );

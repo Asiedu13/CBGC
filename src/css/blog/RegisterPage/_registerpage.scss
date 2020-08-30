@@ -10,10 +10,10 @@
     height: 500px;
     position: relative;
     background-image: url("../../pics/Counselling.jpg");
-    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%);
+    clip-path: polygon(50% 100%, 100% 50%, 100% 0%, 0% 0%);
+    border: 3px solid #ffd700;
     @include border;
-  
-    animation: shapeChange 10s ease forwards 1s infinite;
+    animation: shapeChange 10s ease alternate 1s infinite;
     img {
       width: 400px;
       height: 400px;
@@ -71,6 +71,9 @@
           border-radius: 5px;
           background: linear-gradient(to right, $primary-blue, $otherC);
           transition: all ease 1s;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
           &:hover {
             background: linear-gradient(to top, $otherC, $primary-blue);
           }
@@ -88,28 +91,34 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      
-      .options{
+
+      .options {
         margin: 10px 0;
         height: 50px;
+        width: 300px;
         padding: 1rem;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         color: #fff;
-        transition: all ease .5s;
-        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        transition: all ease 0.5s;
 
+        div{
+          width: fit-content;
+        }
       }
       &__google {
         background: rgb(243, 11, 11);
-        &:hover{
+        &:hover {
           background: darken(rgb(243, 11, 11), 10%);
         }
       }
       &__facebook {
         background: royalblue;
-        &:hover{
+        &:hover {
           background: darken(royalblue, 10%);
         }
       }

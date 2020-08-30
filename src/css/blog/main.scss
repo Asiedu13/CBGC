@@ -161,11 +161,9 @@ body {
 }
 
 @keyframes shapeChange {
-  0%,
-  10% {
-    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%);
-    border: 3px solid red;
-  }
+  0%, 10%{ clip-path: polygon(50% 100%, 100% 50%, 100% 0%, 0% 0%);
+    border: 3px solid #ffd700;}
+
   15%,
   30% {
     clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 0%);

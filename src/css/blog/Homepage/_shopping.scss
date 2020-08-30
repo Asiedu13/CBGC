@@ -16,12 +16,15 @@
     transition: all 1s ease-in;
 
     &__one {
-      background: linear-gradient(
-        to right,
-        $primary-blue,
-        rebeccapurple,
-        $secondary-blue
-      );
+      // background: linear-gradient(
+      //   to right,
+      //   $primary-blue,
+      //   rebeccapurple,
+      //   $secondary-blue
+      // );
+      background: url("../../pics/3511858.jpg"),
+        linear-gradient(to right, $primary-blue, rebeccapurple, $secondary-blue);
+      background-size: cover;
       color: #fff;
       width: 100vw;
       height: inherit;
@@ -112,7 +115,7 @@
       color: $orange;
 
       &:hover {
-       box-shadow: 2px 2px 50px 2px #f6d342;
+        box-shadow: 2px 2px 50px 2px #f6d342;
       }
     }
   }

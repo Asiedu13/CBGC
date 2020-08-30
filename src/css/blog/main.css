@@ -277,7 +277,8 @@
     overflow: hidden;
     transition: all 1s ease-in; }
     .shopping__slider__one {
-      background: linear-gradient(to right, #0689c4, rebeccapurple, #159dc6);
+      background: url("../../pics/3511858.jpg"), linear-gradient(to right, #0689c4, rebeccapurple, #159dc6);
+      background-size: cover;
       color: #fff;
       width: 100vw;
       height: inherit;
@@ -550,8 +551,9 @@
     height: 500px;
     position: relative;
     background-image: url("../../pics/Counselling.jpg");
-    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%);
-    animation: shapeChange 10s ease forwards 1s infinite; }
+    clip-path: polygon(50% 100%, 100% 50%, 100% 0%, 0% 0%);
+    border: 3px solid #ffd700;
+    animation: shapeChange 10s ease alternate 1s infinite; }
     .register__pic img {
       width: 400px;
       height: 400px; }
@@ -601,7 +603,10 @@
           margin: 20px 0 10px 0;
           border-radius: 5px;
           background: linear-gradient(to right, #0689c4, #663399);
-          transition: all ease 1s; }
+          transition: all ease 1s;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly; }
           .register__forms__signIn form button:hover {
             background: linear-gradient(to top, #663399, #0689c4); }
     .register__forms .optionalSignUp {
@@ -617,12 +622,18 @@
       .register__forms .optionalSignUp .options {
         margin: 10px 0;
         height: 50px;
+        width: 300px;
         padding: 1rem;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         color: #fff;
-        transition: all ease .5s; }
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        transition: all ease 0.5s; }
+        .register__forms .optionalSignUp .options div {
+          width: fit-content; }
       .register__forms .optionalSignUp__google {
         background: #f30b0b; }
         .register__forms .optionalSignUp__google:hover {
@@ -791,10 +802,9 @@ body {
     transform: rotate(360deg); } }
 
 @keyframes shapeChange {
-  0%,
-  10% {
-    clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%);
-    border: 3px solid red; }
+  0%, 10% {
+    clip-path: polygon(50% 100%, 100% 50%, 100% 0%, 0% 0%);
+    border: 3px solid #ffd700; }
   15%,
   30% {
     clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 0%);
