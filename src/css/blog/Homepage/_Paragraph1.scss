@@ -1,5 +1,5 @@
 .paragraph_1 {
-  @include border;
+  @include border(red);
   width: 100vw;
   height: 700px;
   background: url("../../pics/Union 1.png");
@@ -10,7 +10,7 @@
   grid-template-columns: repeat(2, 1fr);
 
   p {
-    @include border;
+    @include border(green);
     width: 43vw;
     height: 400px;
     margin: 5vh 40px;
@@ -36,9 +36,6 @@
     }
 
     .quote-item {
-      //   position: relative;
-      //   // left: 150px;
-      //   top: 40px;
       padding: 1rem;
       color: red;
     }
@@ -52,9 +49,7 @@
     width: 30vw;
     height: 800px;
     position: relative;
-    // top: 40vh;
     left: 200px;
-    // overflow: hidden;
     display: flex;
     flex-direction: column;
     grid-area: 1/2;
@@ -65,11 +60,10 @@
       display: flex;
       justify-content: flex-end;
       flex-direction: row;
-      @include border;
+      @include border(red);
 
       .cloud {
         background: transparent;
-        // @include border;
       }
     }
     .trees {
@@ -77,13 +71,11 @@
       height: 500px;
       position: relative;
       top: 5vh;
-      // left: 200px;
-      // overflow: hidden;
       display: flex;
       flex-direction: row;
     }
 
-    @include border;
+    @include border(red);
   }
 
   .tree_2 {
@@ -100,7 +92,7 @@
     justify-content: space-evenly;
     padding: 1rem;
     margin-top: 20px;
-    @include border;
+    @include border(blue);
     border-radius: 1rem;
     flex-wrap: wrap-reverse;
   }

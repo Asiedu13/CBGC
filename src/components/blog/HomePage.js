@@ -14,8 +14,8 @@ class HomePage extends React.Component {
     return (
       <section>
         <Header />
-        <Paragraph1 />
         <Articles />
+        <Paragraph1 />
         <Shopping />
         <Counselling />
       </section>

@@ -4,7 +4,7 @@
   display: flex;
   @include flexCon(row, false, space-between);
   background-color: linear-gradient(to right, $primary-blue, $secondary-blue);
-  @include border;
+  @include border(cyan);
   &__pic {
     width: 50%;
     height: 500px;
@@ -12,7 +12,7 @@
     background-image: url("../../pics/Counselling.jpg");
     clip-path: polygon(50% 100%, 100% 50%, 100% 0%, 0% 0%);
     border: 3px solid #ffd700;
-    @include border;
+    @include border(green);
     animation: shapeChange 10s ease alternate 1s infinite;
     img {
       width: 400px;
@@ -26,19 +26,18 @@
     &__signIn {
       width: 50vw;
       height: inherit;
-      // @include border;
-      // border: 1px solid green;
+      @include border(red);
       @include flexCon(column, false, center);
 
       &__header {
-        @include border;
+        @include border(lightskyblue);
         font-size: 1.5rem;
         padding: 1rem;
         width: inherit;
         height: fit-content;
       }
       form {
-        @include border;
+        @include border(rebeccapurple);
         width: 400px;
         height: fit-content;
         padding: 2rem;

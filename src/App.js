@@ -1,13 +1,31 @@
-import React from 'react'
+import React, { Suspense, lazy } from "react";
+import Nav from "./components/blog/Nav";
+import Footer from "./components/blog/Footer";
+import "./css/blog/main.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { RegistrationProvider } from "./Contexts/RegistrationContext";
+const HomePage = lazy(() => import("./components/blog/HomePage"));
+const Article = lazy(() => import("./components/blog/ArticlesPage"));
+const Register = lazy(() => import("./components/blog/RegisterPage"));
 
-class App extends React.Component{
-    
-    
-    render(){
-        return(
-            <div></div>
-        )
-    }
+function App8() {
+  return (
+    <Router>
+      <Suspense fallback={<div>Loading...</div>}>
+        <section>
+          <Nav />
+          <Switch>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/articles" component={Article} />
+            <RegistrationProvider>
+              <Route path="/register" component={Register} />
+            </RegistrationProvider>
+          </Switch>
+          <Footer />
+        </section>
+      </Suspense>
+    </Router>
+  );
 }
 
-export default App;
+export default App8;

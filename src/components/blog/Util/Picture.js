@@ -7,7 +7,7 @@ const picStyle = {
   boxShadow: "-10px 5px 19px 5px rgba(172, 169, 169, 0.932)",
   padding: "2rem",
   position: "relative",
-  top: "300px",
+  top: "150px",
   left: "200px",
 };
 

@@ -19,7 +19,7 @@
 
 import React from "react";
 import ReactDom from "react-dom";
-import App8 from "./App8";
+import App from "./App";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -72,4 +72,4 @@ library.add(
 
 );
 
-ReactDom.render(<App8 />, document.getElementById("root"));
+ReactDom.render(<App />, document.getElementById("root"));

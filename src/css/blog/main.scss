@@ -24,7 +24,6 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   overflow-x: hidden;
-  // background: $abstract;
   .move-right {
     animation: moveRight 1s ease forwards infinite;
   }
@@ -161,8 +160,11 @@ body {
 }
 
 @keyframes shapeChange {
-  0%, 10%{ clip-path: polygon(50% 100%, 100% 50%, 100% 0%, 0% 0%);
-    border: 3px solid #ffd700;}
+  0%,
+  10% {
+    clip-path: polygon(50% 100%, 100% 50%, 100% 0%, 0% 0%);
+    border: 3px solid #ffd700;
+  }
 
   15%,
   30% {

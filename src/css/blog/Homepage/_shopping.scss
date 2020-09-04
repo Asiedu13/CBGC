@@ -5,23 +5,17 @@
   position: relative;
   overflow: hidden;
   transition: All 1s ease forwards;
-  @include border;
+  @include border(red);
 
   &__slider {
     width: inherit;
     height: inherit;
-    @include border;
+    @include border(cyan);
     position: relative;
     overflow: hidden;
     transition: all 1s ease-in;
 
     &__one {
-      // background: linear-gradient(
-      //   to right,
-      //   $primary-blue,
-      //   rebeccapurple,
-      //   $secondary-blue
-      // );
       background: url("../../pics/3511858.jpg"),
         linear-gradient(to right, $primary-blue, rebeccapurple, $secondary-blue);
       background-size: cover;
@@ -31,7 +25,7 @@
       position: absolute;
       animation: showUp 3s ease-in forwards;
       border: 1px solid #fff;
-      @include border;
+      @include border(blue);
       h2 {
         font-size: 4rem;
       }
@@ -52,7 +46,7 @@
       grid-template-rows: repeat(3, 1fr);
 
       .childTwoHeader {
-        @include border;
+        @include border(blue);
         grid-area: 2/3;
         width: 350px;
         height: 150px;
@@ -86,7 +80,7 @@
   }
 
   &__paragraph {
-    @include border;
+    @include border(red);
     grid-area: 2 / 3;
     padding: 2rem 1rem;
     height: 450px;
@@ -102,7 +96,6 @@
     width: fit-content;
     border-radius: 1%;
     margin: 50px 0;
-    // border: 1px solid #fff;
     position: relative;
     @include flexCon(row, true, center);
     &__seemore {
