@@ -20,17 +20,50 @@ export class ArticlesBody extends Component {
       .then((data) => {
         console.log(data);
         this.setState({ articles: data });
+        this.setState({ modified: data });
       });
   }
   handleValueChange = (val) => {
-    console.log(`ArticlesBody: ${val}`);
     this.setState({ heading: val });
+    this.handleModifications(val);
   };
+
+  handleModifications = (val) => {
+    switch (val) {
+      case "all":
+        this.handleAllModification();
+      case "popular":
+        this.handlePopularModification();
+      case "recent":
+        this.handleRecentModification();
+      case "read":
+        this.handleReadModification();
+      case "liked":
+        this.handleLikedModification();
+      default:
+        this.handleAllModification();
+    }
+  };
+
+  handleAllModification = () => {
+    if (this.state.heading === "all") {
+      if (this.state.articles.length > 0) {
+        let m = this.state.articles;
+        this.setState({ modified: m });
+      }
+    }
+  };
+  handlePopularModification = () => {
+    this.setState({modified: ""})
+  };
+  handleRecentModification = () => {};
+  handleReadModification = () => {};
+  handleLikedModification = () => {};
 
   render() {
     let DbArt =
-      this.state.articles.length > 0
-        ? this.state.articles.map((article) => {
+      this.state.modified.length > 0
+        ? this.state.modified.map((article) => {
             return (
               <Item
                 key={article._id}
@@ -39,7 +72,7 @@ export class ArticlesBody extends Component {
               />
             );
           })
-        : "undefined";
+        : "No articles here";
 
     return (
       <div>
@@ -50,7 +83,12 @@ export class ArticlesBody extends Component {
         />
 
         <div className="articles-body__heading">
-          <h2 className="articles-body__heading__text" style={{textTransform: 'capitalize'}} >{this.state.heading}</h2>
+          <h2
+            className="articles-body__heading__text"
+            style={{ textTransform: "capitalize" }}
+          >
+            {this.state.heading}
+          </h2>
         </div>
 
         {/* General */}

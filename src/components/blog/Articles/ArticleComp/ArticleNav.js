@@ -7,7 +7,6 @@ export default class ArticleNav extends Component {
 
   componentDidMount() {
     let lists = document.querySelectorAll(".article-nav__ul__elem");
-    console.log(lists);
 
     lists.forEach((item) => {
       item.addEventListener("click", (e) => {
