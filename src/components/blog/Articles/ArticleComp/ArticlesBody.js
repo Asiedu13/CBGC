@@ -32,16 +32,22 @@ export class ArticlesBody extends Component {
     switch (val) {
       case "all":
         this.handleAllModification();
+        break;
       case "popular":
         this.handlePopularModification();
+        break;
       case "recent":
         this.handleRecentModification();
+        break;
       case "read":
         this.handleReadModification();
+        break;
       case "liked":
         this.handleLikedModification();
+        break;
       default:
         this.handleAllModification();
+        break;
     }
   };
 
@@ -54,7 +60,7 @@ export class ArticlesBody extends Component {
     }
   };
   handlePopularModification = () => {
-    this.setState({modified: ""})
+    this.setState({ modified: "" });
   };
   handleRecentModification = () => {};
   handleReadModification = () => {};
