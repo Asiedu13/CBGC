@@ -52,4 +52,23 @@ router.route("/include").post((req, res) => {
     });
 });
 
+router.route("/update/:id").put((req, res) => {
+  Articles.findById(req.params.id, (err, article) => {
+    if (err) res.send(err);
+
+    article.title = req.body.title;
+    article.author = req.body.author;
+    article.content = req.body.content;
+    article.time = req.body.time;
+    article.likes = req.body.likes;
+    article.haveRead = req.body.haveRead;
+
+    article.save( (err)=>{
+      if(err) res.send(err);
+      res.json('Article updated');
+    })
+  });
+});
+
+
 module.exports = router;

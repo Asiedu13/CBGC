@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ArticleNav from "./ArticleNav";
 import Item from "./Items";
 import { ArticlesBox } from "./ArticlesBox";
+import ArticleViewer from "./ArticleViewer";
 
 export class ArticlesBody extends Component {
   constructor(props) {
@@ -10,6 +11,8 @@ export class ArticlesBody extends Component {
       articles: "",
       modified: "",
       heading: "All",
+      currentReading: "",
+      shouldRetreat: true,
     };
   }
   componentDidMount() {
@@ -21,6 +24,9 @@ export class ArticlesBody extends Component {
         console.log(data);
         this.setState({ articles: data });
         this.setState({ modified: data });
+      })
+      .catch((err) => {
+        console.log(`Error: ${err}`);
       });
   }
   handleValueChange = (val) => {
@@ -66,6 +72,25 @@ export class ArticlesBody extends Component {
   handleReadModification = () => {};
   handleLikedModification = () => {};
 
+  handleShowThis = (val) => {
+    console.log(val);
+    this.setState((prevState) => {
+      if (prevState._id !== val._id) {
+        return {
+          currentReading: val,
+        };
+      } else {
+        return;
+      }
+    });
+  };
+  handleRetreat = () => {
+    if(true){
+      this.setState({currentReading: ""});
+      this.setState({shouldRetreat: false});
+    }
+
+  }
   render() {
     let DbArt =
       this.state.modified.length > 0
@@ -73,8 +98,10 @@ export class ArticlesBody extends Component {
             return (
               <Item
                 key={article._id}
-                name={article.title}
-                type={article.author}
+                article={article}
+                onClick={(val) => {
+                  this.handleShowThis(val);
+                }}
               />
             );
           })
@@ -82,6 +109,17 @@ export class ArticlesBody extends Component {
 
     return (
       <div>
+        {this.state.currentReading ? (
+          <ArticleViewer
+            article={this.state.currentReading}
+            retreat={() => {
+              this.handleRetreat();
+            }}
+          />
+        ) : (
+          ""
+        )}
+
         <ArticleNav
           handleClick={(id) => {
             this.handleValueChange(id);

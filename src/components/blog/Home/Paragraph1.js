@@ -13,9 +13,9 @@ function Paragraph1() {
           id="q-left"
         />{" "}
         <br />
-        <b className="quote-item">inform.</b>{" "}
-        <b className="quote-item">inspire.</b>{" "}
-        <b className="quote-item">refactor.</b>
+          <p>
+          THIS BLOG SEEKS TO INFORM SOCIETY AND THE WORLD AT LARGE OF THE INCOMMODE PROLIFERATING AS A RESULT OF THEIR ACTIONS AND INACTIONS
+          </p>
         <br />
         <i> ~ Clarkson Acheampong</i>
         <FontAwesomeIcon
