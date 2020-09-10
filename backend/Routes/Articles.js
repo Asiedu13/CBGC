@@ -71,7 +71,7 @@ router.route("/update/:id").put((req, res) => {
 });
 
 router.route("/delete/:id").delete((req, res) => {
-  Articles.remove({ _id: req.params.id })
+  Articles.deleteOne({ _id: req.params.id })
     .then(() => {
       res.status(200).json(`Removed: ${req.params.id}`);
     })
