@@ -63,12 +63,21 @@ router.route("/update/:id").put((req, res) => {
     article.likes = req.body.likes;
     article.haveRead = req.body.haveRead;
 
-    article.save( (err)=>{
-      if(err) res.send(err);
-      res.json('Article updated');
-    })
+    article.save((err) => {
+      if (err) res.send(err);
+      res.json("Article updated");
+    });
   });
 });
 
+router.route("/delete/:id").delete((req, res) => {
+  Articles.remove({ _id: req.params.id })
+    .then(() => {
+      res.status(200).json(`Removed: ${req.params.id}`);
+    })
+    .catch((err) => {
+      res.status(500).json(`Error:${err}`);
+    });
+});
 
 module.exports = router;

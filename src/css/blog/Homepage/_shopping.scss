@@ -16,8 +16,19 @@
     transition: all 1s ease-in;
 
     &__one {
+<<<<<<< HEAD
       background: url("../../pics/3511858.jpg"),
         linear-gradient(to right, $primary-blue, rebeccapurple, $secondary-blue);
+=======
+      // background: linear-gradient(
+      //   to right,
+      //   $primary-blue,
+      //   rebeccapurple,
+      //   $secondary-blue
+      // );
+      background: 
+        linear-gradient(to right, $primary-blue, rebeccapurple);
+>>>>>>> 496de27... Improved articlesPage
       background-size: cover;
       color: #fff;
       width: 100vw;

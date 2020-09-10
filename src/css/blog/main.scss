@@ -74,6 +74,36 @@ body {
     height: 300px;
   }
 
+  .dimensionChange{
+    position: relative;
+    animation: dimensionChange 2s ease-in forwards 4s;
+  }
+
+  @keyframes dimensionChange{
+    0%{
+
+    }
+
+    10%,50% {
+      width: 250px;
+    }
+
+    51%, 100%{
+      width: 250px;
+      height: 130px;
+    }
+  }
+  @keyframes showBack {
+    0% {
+      width: 0;
+    }
+
+    50%{
+      width: 50%;
+    }
+    100% {
+      width: 100%;
+    }}
   @keyframes moveRight {
     25% {
       position: relative;
