@@ -1,13 +1,18 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const ArticleSchema = new Schema({
-  title: { type: String, trim: true, required: true },
-  author: { type: String, trim: true, default: "author" },
-  date: new Date(),
-  imgId: { type: Schema.Types.Mixed, trim: true, required: true },
-});
+const ArticleSchema = new Schema(
+  {
+    title: { type: String, required: true, trim: true },
+    author: { type: String, required: true, trim: true, default: "Author" },
+    time: { type: String },
+    content: {type: String},
+    likes: { type: Number, trim: true },
+    haveRead: { type: Number, trim: true },
+    imgId: { type: Schema.Types.Mixed, default: "233432" },
+  },
+  { timeStamps: true }
+);
 
-
-const Article = mongoose.model(ArticleSchema, "articles");
-module.exports = Article;
+const Articles = new mongoose.model("Articles", ArticleSchema, "articles");
+module.exports = Articles;

@@ -3,20 +3,32 @@ const app = express();
 const cors = require("cors");
 const PORT = process.env.PORT || 5000;
 const mongoose = require("mongoose");
-const uri = process.env.URI;
 app.use(cors());
 app.use(express.json());
-
-mongoose.connect(uri, {
-  useCreateIndex: true,
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+require("dotenv").config();
+const uri = process.env.db_URI;
 
 let connection = mongoose.connection;
-connection.on("once", () => console.log("Connected successfully to db"));
-connections.on("error", (err) => console.log(`Error: ${err}`));
 
+let connectMongoDb = async () => {
+  try {
+    mongoose
+      .connect(uri, {
+        useCreateIndex: true,
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      })
+      .catch((err) => {
+        console.log("Failed to connect to database");
+      });
+    connection.once("open", () => console.log("Connected successfully to db"));
+    connection.on("error", (err) => console.log(`Error: ${err}`));
+  } catch (err) {
+    console.log(`Error: ${err}`);
+  }
+};
+
+connectMongoDb();
 const articles = require("./Routes/Articles");
 app.use("/api/articles", articles);
 

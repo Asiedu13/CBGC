@@ -1,4 +1,8 @@
-.trending {
+.article-nav-main{
+  @include border(red);
+}
+
+.articlesBox {
   width: 90vw;
   height: fit-content;
   padding: 1rem;
@@ -7,7 +11,6 @@
   flex-direction: column;
   flex-wrap: wrap-reverse;
   overflow: hidden;
-  // border: 2px solid red;
 
   &__body {
     display: flex;
@@ -22,7 +25,6 @@
       margin: 10px;
       border-radius: 5px;
       box-shadow: 1px 2px 10px 1px rgb(187, 187, 187);
-      //   border: 1px solid green;
     }
   }
 }
