@@ -2,16 +2,17 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function ArticleViewer(props) {
-
-  
   return (
     <div className="article-viewer">
-        
       <section className="article-viewer__desc">
         <div className="article-viewer__desc__content">
-          <FontAwesomeIcon icon="arrow-left" color="#fff" onClick={()=> {
+          <FontAwesomeIcon
+            icon="arrow-left"
+            color="#fff"
+            onClick={() => {
               props.retreat();
-          }} />
+            }}
+          />
           <section className="article-viewer__desc__content__desc">
             <h3>Currently reading</h3>
             <h2>{props.article.title || ""}</h2>

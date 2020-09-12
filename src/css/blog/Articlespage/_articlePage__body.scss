@@ -46,7 +46,7 @@
 }
 
 .articlesBox {
-  width: 90vw;
+  width: 99vw;
   height: fit-content;
   padding: 1rem;
   display: flex;
@@ -54,11 +54,11 @@
   flex-direction: column;
   flex-wrap: wrap-reverse;
   // overflow: scroll;
-  
+
   &__body {
     display: flex;
-    // width: 800px;
-    height: 600px;
+    width: 96vw;
+    height: fit-content;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -68,7 +68,7 @@
     .item {
       width: 230px;
       height: 250px;
-      margin: 10px 20px;
+      margin: 10px 50px 20px 0px;
       border-radius: 5px;
       display: flex;
       flex-direction: column;
