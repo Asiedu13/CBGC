@@ -39,6 +39,9 @@ body {
   }
   .btn-imp {
     @include button(high);
+    position: relative;
+    bottom: 20px;
+    left: 20px;
   }
 
   .btn-norm {

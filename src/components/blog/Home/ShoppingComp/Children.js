@@ -22,7 +22,7 @@ export class Head extends React.Component {
           />{" "}
           <h2>
             {" "}
-            Ultimate <br /> <b>Shopping</b> <br /> <i>Ease</i> <br />
+            Ultimate <br /> <b>Shopping</b> <br /> Ease <br />
           </h2>
           <button style={btnSecondStyle} onClick={() => this.props.view(true)}>
             {" "}

@@ -35,10 +35,10 @@ class Header extends React.PureComponent {
         </div>
 
         <div className="buttons">
-          <Link to ='/register'>
+          <Link to="/register">
             <Button label="Sign up" importance="high" icon="angle-right" />
           </Link>
-          <Link to ='/register'>
+          <Link to="/register">
             <Button label="Sign In" importance="medium" icon="angle-right" />
           </Link>
         </div>

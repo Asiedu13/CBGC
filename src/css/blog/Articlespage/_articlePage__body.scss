@@ -1,12 +1,12 @@
 .article-nav-main {
-  @include border();
+  @include border(red);
   padding: 1rem;
 
   .article-nav {
-    @include border();
+    @include border(red);
 
     &__ul {
-      @include border();
+      @include border(red);
       display: flex;
       flex-direction: row;
 
@@ -33,11 +33,11 @@
 }
 
 .articles-body__heading {
-  @include border();
+  @include border(red);
   padding: 1rem 2rem;
 
   &__text {
-    @include border();
+    @include border(blue);
     color: rgb(255, 187, 0);
     text-decoration: underline;
     // the capitalize property is used in React instead
@@ -66,24 +66,28 @@
     // overflow: scroll;
 
     .item {
-      width: 230px;
+      width: 530px;
       height: 250px;
       margin: 10px 50px 20px 0px;
       border-radius: 5px;
       display: flex;
       flex-direction: column;
       box-shadow: 1px 2px 20px 1px rgb(187, 187, 187);
-      @include border;
+      @include border(brown);
       cursor: pointer;
       border-top: 5px solid #663399;
 
       &__image {
         height: 100px;
-        @include border();
+        @include border(green);
         background: royalblue;
+        img{
+          height: inherit;
+          width: 100%;
+        }
       }
       &__desc {
-        @include border();
+        @include border(brown);
         padding: 1rem;
         height: 150px;
         display: flex;
@@ -91,12 +95,12 @@
         justify-content: space-between;
         h2 {
           word-wrap: break-word;
-          @include border();
+          @include border(red);
         }
         h3 {
           font-size: 0.8rem;
           font-weight: 100;
-          @include border();
+          @include border(violet);
         }
       }
       &__read__link {
@@ -122,7 +126,7 @@
   width: 99vw;
   background: #fff;
   height: 500px;
-  @include border();
+  @include border(orange);
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 0.5fr 2fr;
@@ -130,7 +134,7 @@
 
   &__desc {
     grid-area: 1/1;
-    @include border();
+    @include border(cyan);
     height: 40px;
     width: 50px;
     background: orange;
@@ -159,7 +163,7 @@
           margin-left: 10px;
           font-weight: 900;
           font-size: 1.2rem;
-          @include border();
+          @include border(red);
         }
       }
     }
@@ -172,10 +176,10 @@
     flex-direction: column;
     justify-content: space-between;
     overflow-y: scroll;
-    @include border();
+    @include border(blue);
 
     &__head {
-      @include border();
+      @include border(brown);
       display: flex;
       flex-direction: column;
       // align-items: center;
@@ -201,7 +205,7 @@
     p {
       width: 700px;
       margin: 20px auto;
-      @include border();
+      @include border(red);
     }
   }
 }

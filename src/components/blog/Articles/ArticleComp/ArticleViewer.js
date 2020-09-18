@@ -25,8 +25,14 @@ export default function ArticleViewer(props) {
           <h2>{props.article.title || ""}</h2>
           <h3>by {props.article.author || ""}</h3>
         </section>
-        <p>{props.article.content || ""}</p>
+        <section className="content">
+          <h2>{props.article.title}</h2>
+          <blockquote> {props.article.author} </blockquote>
+          <img src={props.article.img} />
+          <p>{props.article.content}</p>
+        </section>
       </section>
+
       <section className="related-articles">
         <section className="related-articles__head">
           <h2 className="related-articles__head__title">Related Articles</h2>

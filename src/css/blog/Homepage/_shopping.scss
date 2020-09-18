@@ -1,5 +1,5 @@
 .shopping {
-  background: #23343a;
+  // background: #f4f4f4;
   width: 100vw;
   height: 650px;
   position: relative;
@@ -16,21 +16,7 @@
     transition: all 1s ease-in;
 
     &__one {
-<<<<<<< HEAD
-      background: url("../../pics/3511858.jpg"),
-        linear-gradient(to right, $primary-blue, rebeccapurple, $secondary-blue);
-=======
-      // background: linear-gradient(
-      //   to right,
-      //   $primary-blue,
-      //   rebeccapurple,
-      //   $secondary-blue
-      // );
-      background: 
-        linear-gradient(to right, $primary-blue, rebeccapurple);
->>>>>>> 496de27... Improved articlesPage
       background-size: cover;
-      color: #fff;
       width: 100vw;
       height: inherit;
       position: absolute;
@@ -39,6 +25,7 @@
       @include border(blue);
       h2 {
         font-size: 4rem;
+        color: deepskyblue;
       }
     }
     .shop-section-1 {
@@ -81,8 +68,9 @@
     width: 500px;
     position: relative;
     left: -100px;
-    background: #fff;
+    background: linear-gradient(to right,  orange,red,);
     border-radius: 0 40px 40px 0;
+    clip-path: polygon(100% 100%, 100% 00%, 20% 0%, 0% 100%);
 
     img {
       position: relative;
@@ -103,12 +91,14 @@
   &__button {
     display: flex;
     flex-direction: row;
-    height: fit-content;
+    height: 200px;
     width: fit-content;
     border-radius: 1%;
     margin: 50px 0;
     position: relative;
+    @include border(green);
     @include flexCon(row, true, center);
+
     &__seemore {
       width: 200px;
       height: 70px;
@@ -117,6 +107,10 @@
       border: none;
       border-radius: 1px;
       color: $orange;
+      position: relative;
+      bottom: 30px;
+      left: 30px;
+      box-shadow: 2px 2px 20px 2px lighten(orange, 30%);
 
       &:hover {
         box-shadow: 2px 2px 50px 2px #f6d342;

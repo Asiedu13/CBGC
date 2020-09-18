@@ -35,6 +35,10 @@
     grid-area: 3/1;
     margin: 0 auto 150px auto;
     @include flexCon(row, true, false);
+
+    button:nth-of-type(){
+      background: blue;
+    }
   }
   .homepage-hero-module {
     border-right: none;

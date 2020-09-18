@@ -85,12 +85,11 @@ export class ArticlesBody extends Component {
     });
   };
   handleRetreat = () => {
-    if(true){
-      this.setState({currentReading: ""});
-      this.setState({shouldRetreat: false});
+    if (true) {
+      this.setState({ currentReading: "" });
+      this.setState({ shouldRetreat: false });
     }
-
-  }
+  };
   render() {
     let DbArt =
       this.state.modified.length > 0

@@ -1,11 +1,11 @@
 .counselling {
   width: 100vw;
   height: 800px;
-  background: black;
+  // background: black;
   margin-top: 2vh;
   color: #fff;
   @include border(blue);
-
+  
   &__header {
     height: 300px;
     width: 100%;
@@ -38,7 +38,7 @@
         box-shadow: inset 1px 2px 10px 2px grey;
         overflow: hidden;
         transition: all 1s ease;
-
+        
         b {
           color: grey;
           margin-left: 10px;
@@ -62,7 +62,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    clip-path: polygon(100% 100%, 100% 00%, 0% 0%, 0% 100%);
+    
     &__intro {
       width: 90%;
       height: 90%;
@@ -87,3 +88,4 @@
     }
   }
 }
+// 

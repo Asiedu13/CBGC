@@ -8,11 +8,15 @@
   background-repeat: no-repeat;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin: 0vh 0;
+  box-shadow: 1px 1px 10px 12px blue;
+  clip-path: polygon(0% 100%, 100% 50%, 100% 0%, 0% 0%);
+  box-shadow: 1px 1px 10px 12px blue;
 
   p {
     @include border(green);
     width: 43vw;
-    height: 400px;
+    height: 500px;
     margin: 5vh 40px;
     font-size: 2rem;
     position: relative;
@@ -22,6 +26,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: grey;
 
     #q-left {
       position: absolute;
@@ -54,18 +59,6 @@
     flex-direction: column;
     grid-area: 1/2;
 
-    .clouds {
-      width: inherit;
-      height: 200px;
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: row;
-      @include border(red);
-
-      .cloud {
-        background: transparent;
-      }
-    }
     .trees {
       width: 40vw;
       height: 500px;

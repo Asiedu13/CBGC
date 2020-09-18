@@ -9,7 +9,6 @@ class Shopping extends React.Component {
       value: undefined,
       viewer: true,
       comp: [
-        <Head view={this.handleViewSiblings} />,
         <ChildTwo view={this.handleViewSiblings} />,
         <ChildThree />,
       ],
@@ -51,12 +50,7 @@ class Shopping extends React.Component {
       <section className="shopping">
         <section className="shopping__slider">
           <div className="shopping__slider__one">
-            <FontAwesomeIcon
-              icon="arrow-circle-left"
-              style={moveBackStyle}
-              size="2x"
-              onClick={this.handleBackMovememt}
-            />
+           
             {this.state.comp[this.state.value || 0]}
           </div>
         </section>

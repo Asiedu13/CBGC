@@ -9,7 +9,7 @@ const ArticleSchema = new Schema(
     content: { type: String },
     likes: { type: Number, trim: true },
     haveRead: { type: Number, trim: true },
-    imgId: { type: Schema.Types.Mixed, default: "233432" },
+    img: { type: Schema.Types.Mixed },
   },
   { timeStamps: true }
 );

@@ -10,6 +10,7 @@ class Item extends React.Component {
     this.props.onClick(value);
   };
   render() {
+    console.log(this.props.article.img)
     return (
       <article
         className="item"
@@ -18,7 +19,7 @@ class Item extends React.Component {
         }}
       >
         <div className="item__image">
-          <h2 className="img"></h2>
+          <img className="img" src={this.props.article.img} />
         </div>
         <div className="item__desc">
           <h2> {this.props.article.title} </h2>

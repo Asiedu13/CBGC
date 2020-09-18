@@ -26,7 +26,9 @@ function Articles() {
         </p>
       </p>
 
-      <Picture />
+      <div className="articles-author">
+        <Picture />
+      </div>
     </section>
   );
 }

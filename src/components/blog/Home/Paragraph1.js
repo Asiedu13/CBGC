@@ -13,9 +13,9 @@ function Paragraph1() {
           id="q-left"
         />{" "}
         <br />
-          <p>
-          THIS BLOG SEEKS TO INFORM SOCIETY AND THE WORLD AT LARGE OF THE INCOMMODE PROLIFERATING AS A RESULT OF THEIR ACTIONS AND INACTIONS
-          </p>
+        <p>
+          This blog seeks to inform society and the world  of the incommode proliferating as a result of their actions and inactions.
+        </p>
         <br />
         <i> ~ Clarkson Acheampong</i>
         <FontAwesomeIcon
