@@ -49,6 +49,9 @@ class Shopping extends React.Component {
     return (
       <section className="shopping">
         <section className="shopping__slider">
+          <section className="art">
+            
+          </section>
           <div className="shopping__slider__one">
            
             {this.state.comp[this.state.value || 0]}
@@ -58,16 +61,5 @@ class Shopping extends React.Component {
     );
   }
 }
-
-let moveBackStyle = {
-  position: "absolute",
-  width: "30px",
-  height: "30px",
-  borderRadius: "30px",
-  cursor: "pointer",
-  top: "10px",
-  left: "10px",
-  boxShadow: "1px 1px 10px #fff",
-};
 
 export default Shopping;

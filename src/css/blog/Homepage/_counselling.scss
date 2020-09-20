@@ -1,17 +1,17 @@
 .counselling {
   width: 100vw;
   height: 800px;
-  // background: black;
+  display: flex;
+  flex-direction: row;
   margin-top: 2vh;
-  color: #fff;
   @include border(blue);
   
   &__header {
-    height: 300px;
+    // height: 300px;
     width: 100%;
     @include border(red);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -25,19 +25,22 @@
       position: relative;
       @include border(gold);
       h1 {
-        font-size: 2rem;
-        font-weight: 100;
+        @include border(red);
+        font-size: 4rem;
+        // font-weight: 100;
         width: inherit;
-        height: 100px;
-        @include shadow(grey);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        // height: 100px;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        text-align: center;
         position: relative;
-        padding: 1rem;
-        box-shadow: inset 1px 2px 10px 2px grey;
-        overflow: hidden;
         transition: all 1s ease;
+        padding: 1rem;
+        color: royalblue;
+        // box-shadow: inset 1px 2px 10px 2px grey;
+        // overflow: hidden;
+        // @include shadow(grey);
         
         b {
           color: grey;
@@ -56,7 +59,7 @@
   &__body {
     width: inherit;
     @include border(green);
-    height: 500px;
+    // height: 500px;
     background: url("../../pics/Counselling.jpg") no-repeat;
     background-size: cover;
     display: flex;
@@ -67,11 +70,12 @@
     &__intro {
       width: 90%;
       height: 90%;
-      background: rgba(102, 51, 153, 0.61);
+      // background: rgba(102, 51, 153, 0.61);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      
       @include border(pink);
 
       h2 {

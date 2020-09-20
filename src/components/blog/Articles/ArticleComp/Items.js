@@ -19,7 +19,7 @@ class Item extends React.Component {
         }}
       >
         <div className="item__image">
-          <img className="img" src={this.props.article.img} />
+          <img className="img" alt="article-ref-pic" src={this.props.article.img} />
         </div>
         <div className="item__desc">
           <h2> {this.props.article.title} </h2>

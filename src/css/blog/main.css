@@ -62,7 +62,7 @@
     font-size: 3rem;
     margin: 0px auto;
     position: relative;
-    color: #159dc6;
+    color: #f6d342;
     grid-area: 2/1;
     z-index: 100; }
     .header h1 b {
@@ -134,9 +134,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 0vh 0;
-  box-shadow: 1px 1px 10px 12px blue;
-  clip-path: polygon(0% 100%, 100% 50%, 100% 0%, 0% 0%);
-  box-shadow: 1px 1px 10px 12px blue; }
+  clip-path: polygon(0% 100%, 100% 50%, 100% 0%, 0% 0%); }
   .paragraph_1 p {
     border: 2px solid transparent;
     width: 43vw;
@@ -279,7 +277,7 @@
 
 .shopping {
   width: 100vw;
-  height: 650px;
+  height: 750px;
   position: relative;
   overflow: hidden;
   transition: All 1s ease forwards;
@@ -301,6 +299,8 @@
       border: 2px solid transparent; }
       .shopping__slider__one h2 {
         font-size: 4rem;
+        width: 100%;
+        border: 2px solid transparent;
         color: deepskyblue; }
     .shopping__slider .shop-section-1 {
       width: 100vw;
@@ -321,12 +321,13 @@
         border: 2px solid transparent;
         grid-area: 2/3;
         width: 350px;
-        height: 150px;
-        padding: 1rem;
+        height: 220px;
         align-items: center;
         margin: 0vh auto; }
         .shopping__slider .shop-section-2 .childTwoHeader h2 {
-          font-size: 3rem; }
+          font-size: 4rem;
+          width: 100%;
+          border: 2px solid transparent; }
   .shopping .loveIcon {
     position: relative;
     animation: expands 0.2s ease-in-out forwards; }
@@ -338,7 +339,7 @@
     left: -100px;
     background: linear-gradient(to right, orange, red);
     border-radius: 0 40px 40px 0;
-    clip-path: polygon(100% 100%, 100% 0%, 20% 0%, 0% 100%); }
+    box-shadow: 2px 2px 20px 3px #ffb733; }
     .shopping__art img {
       position: relative;
       animation: moveRight 2s ease 4s forwards infinite; }
@@ -348,9 +349,15 @@
     padding: 2rem 1rem;
     height: 450px;
     position: relative;
-    top: 5vh;
+    bottom: 200px;
     right: 200px;
     margin: 0vh 5vh; }
+    .shopping__paragraph__text {
+      border: 2px solid transparent;
+      width: 500px;
+      height: 200px;
+      padding: 1rem;
+      text-align: center; }
   .shopping__button {
     display: flex;
     flex-direction: row;
@@ -382,15 +389,15 @@
 .counselling {
   width: 100vw;
   height: 800px;
+  display: flex;
+  flex-direction: row;
   margin-top: 2vh;
-  color: #fff;
   border: 2px solid transparent; }
   .counselling__header {
-    height: 300px;
     width: 100%;
     border: 2px solid transparent;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center; }
     .counselling__header__name {
@@ -403,25 +410,14 @@
       position: relative;
       border: 2px solid transparent; }
       .counselling__header__name h1 {
-        font-size: 2rem;
-        font-weight: 100;
+        border: 2px solid transparent;
+        font-size: 4rem;
         width: inherit;
-        height: 100px;
-        box-shadow: 1px 2px 10px 2px grey;
-        border-radius: 5px;
-        padding: 1rem;
-        transition: all 0.5s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
         position: relative;
+        transition: all 1s ease;
         padding: 1rem;
-        box-shadow: inset 1px 2px 10px 2px grey;
-        overflow: hidden;
-        transition: all 1s ease; }
-        .counselling__header__name h1:hover, .counselling__header__name h1:focus {
-          box-shadow: inset 1px 2px 10px 2px grey;
-          transition: all 0.5s ease; }
+        color: royalblue; }
         .counselling__header__name h1 b {
           color: grey;
           margin-left: 10px;
@@ -433,7 +429,6 @@
   .counselling__body {
     width: inherit;
     border: 2px solid transparent;
-    height: 500px;
     background: url("../../pics/Counselling.jpg") no-repeat;
     background-size: cover;
     display: flex;
@@ -443,7 +438,6 @@
     .counselling__body__intro {
       width: 90%;
       height: 90%;
-      background: rgba(102, 51, 153, 0.61);
       display: flex;
       flex-direction: column;
       justify-content: center;

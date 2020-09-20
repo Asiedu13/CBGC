@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import {Link} from 'react-router-dom';
+import Button from "../../Util/Button";
 class Header extends React.Component {
   constructor(props) {
     super();
@@ -39,7 +40,7 @@ class Header extends React.Component {
     }
     return (
       <section className="counselling__header">
-        <div className="counselling__header__name">
+        {/* <div className="counselling__header__name">
           <h1>
             Feeling <b>{`${this.state.feelings[0 || this.state.value]}`} </b>
             <FontAwesomeIcon
@@ -53,7 +54,12 @@ class Header extends React.Component {
             />
           </h1>
           <h2>You are not alone</h2>
-        </div>
+        </div> */}
+        <section className="counselling__header__name">
+          <h1>Clarkson's Counsel</h1>
+        </section>
+        {/* <div className="counselling__body__i*/}
+
       </section>
     );
   }

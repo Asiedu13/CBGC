@@ -5,7 +5,7 @@ class Counselling extends React.Component {
   render() {
     return (
       <section className="counselling">
-        {/* <Header /> */}
+        <Header />
         <Body />
       </section>
     );
