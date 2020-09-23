@@ -193,6 +193,16 @@ body {
     }
   }
 }
+@keyframes slide{
+  from{
+    opacity: 0;
+    left: 0;
+  }
+  to{
+    opacity: 1;
+    left: 40px;
+  }
+}
 
 @keyframes shapeChange {
   0%,

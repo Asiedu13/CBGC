@@ -1,12 +1,15 @@
 import React from "react";
 import Header from "./CounsellingComp/Header";
-import Body from "./CounsellingComp/Body";
+import Booking from "./CounsellingComp/Booking";
+import El from "./CounsellingComp/Elaboration";
+
 class Counselling extends React.Component {
   render() {
     return (
       <section className="counselling">
         <Header />
-        <Body />
+        <El/>
+        <Booking />
       </section>
     );
   } 

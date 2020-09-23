@@ -388,9 +388,9 @@
 
 .counselling {
   width: 100vw;
-  height: 800px;
+  height: 1000px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 2vh;
   border: 2px solid transparent; }
   .counselling__header {
@@ -412,7 +412,6 @@
       .counselling__header__name h1 {
         border: 2px solid transparent;
         font-size: 4rem;
-        width: inherit;
         text-align: center;
         position: relative;
         transition: all 1s ease;
@@ -426,31 +425,61 @@
           top: 100px; }
       .counselling__header__name h2 {
         color: #34a2e2; }
-  .counselling__body {
-    width: inherit;
+  .counselling__el {
     border: 2px solid transparent;
-    background: url("../../pics/Counselling.jpg") no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    clip-path: polygon(100% 100%, 100% 0%, 0% 0%, 0% 100%); }
-    .counselling__body__intro {
-      width: 90%;
-      height: 90%;
+    height: 500px;
+    width: 99vw; }
+    .counselling__el__feeling {
+      width: inherit;
+      height: 250px;
+      border: 2px solid transparent;
+      padding: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      .counselling__el__feeling .text {
+        padding: 1rem;
+        border: 2px solid transparent; }
+        .counselling__el__feeling .text__content {
+          position: relative; }
+        .counselling__el__feeling .text h2 {
+          font-size: 2.0rem;
+          color: grey; }
+      .counselling__el__feeling .feeling {
+        border: 2px solid transparent;
+        height: 150px;
+        text-align: center;
+        padding: 1rem; }
+        .counselling__el__feeling .feeling__text {
+          font-size: 2.5rem;
+          position: relative;
+          animation: slide ease 0.5s forwards 0.2s;
+          transition: all 1s ease-in forwards;
+          color: grey; }
+    .counselling__el__paragraph {
+      border: 2px solid transparent;
+      color: blue;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      justify-content: center; }
+      .counselling__el__paragraph__text {
+        width: 500px; }
+  .counselling__booking {
+    width: inherit;
+    height: 200px;
+    border: 2px solid transparent;
+    background: #f4f4f4;
+    padding: 1rem; }
+    .counselling__booking__part1 {
+      border: 2px solid transparent;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border: 2px solid transparent; }
-      .counselling__body__intro h2 {
-        font-size: 2rem; }
-      .counselling__body__intro h1 {
-        font-size: 3rem;
-        color: yellow;
-        text-decoration: underline; }
-      .counselling__body__intro h3 {
-        margin: 10px 0 50px 0; }
+      align-items: center; }
+      .counselling__booking__part1 .buttons {
+        margin: 50px 0; }
 
 .ArticleHeader {
   margin: 5vh 0;
@@ -868,6 +897,7 @@ body {
     cursor: pointer;
     outline: none;
     border: none;
+    margin: 10px;
     background: #f6d342;
     color: #fff;
     position: relative;
@@ -885,6 +915,7 @@ body {
     cursor: pointer;
     outline: none;
     border: none;
+    margin: 10px;
     background: #fff;
     color: #f6d342; }
     body .btn-norm:hover {
@@ -993,6 +1024,14 @@ body {
   100% {
     top: 10px;
     transform: rotate(360deg); } }
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    left: 0; }
+  to {
+    opacity: 1;
+    left: 40px; } }
 
 @keyframes shapeChange {
   0%,

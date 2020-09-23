@@ -1,13 +1,12 @@
 .counselling {
   width: 100vw;
-  height: 800px;
+  height: 1000px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 2vh;
   @include border(blue);
-  
+
   &__header {
-    // height: 300px;
     width: 100%;
     @include border(red);
     display: flex;
@@ -27,21 +26,12 @@
       h1 {
         @include border(red);
         font-size: 4rem;
-        // font-weight: 100;
-        width: inherit;
-        // height: 100px;
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
         text-align: center;
         position: relative;
         transition: all 1s ease;
         padding: 1rem;
         color: royalblue;
-        // box-shadow: inset 1px 2px 10px 2px grey;
-        // overflow: hidden;
-        // @include shadow(grey);
-        
+
         b {
           color: grey;
           margin-left: 10px;
@@ -56,40 +46,81 @@
     }
   }
 
-  &__body {
-    width: inherit;
-    @include border(green);
-    // height: 500px;
-    background: url("../../pics/Counselling.jpg") no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    clip-path: polygon(100% 100%, 100% 00%, 0% 0%, 0% 100%);
-    
-    &__intro {
-      width: 90%;
-      height: 90%;
-      // background: rgba(102, 51, 153, 0.61);
+  &__el {
+    @include border(black);
+    height: 500px;
+    width: 99vw;
+
+    &__feeling {
+      width: inherit;
+      height: 250px;
+      @include border(red);
+      padding: 1rem;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
-      
-      @include border(pink);
 
-      h2 {
-        font-size: 2rem;
+      .text {
+        padding: 1rem;
+        @include border(pink);
+        &__content {
+          position: relative;
+        }
+        h2 {
+          font-size: 2.0rem;
+          color: grey;
+        }
       }
-      h1 {
-        font-size: 3rem;
-        color: yellow;
-        text-decoration: underline;
+      .feeling {
+        @include border(pink);
+        height: 150px;
+        text-align: center;
+        padding: 1rem;
+        // position: absolute;
+
+        &__text {
+          font-size: 2.5rem;
+          position: relative;
+          animation: slide ease 0.5s forwards 0.2s;
+          transition: all 1s ease-in forwards;
+          color: grey;
+        }
       }
-      h3 {
-        margin: 10px 0 50px 0;
+    }
+
+    &__paragraph {
+      @include border(brown);
+      color: blue;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      justify-content: center;
+
+      &__text {
+        width: 500px;
       }
     }
   }
+
+  &__booking {
+    width: inherit;
+    height: 200px;
+    @include border(green);
+    background: #f4f4f4;
+    padding: 1rem;
+
+    &__part1{
+      @include border(#fff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .buttons{
+        margin: 50px 0;
+      }
+    }
+
+  }
 }
-// 

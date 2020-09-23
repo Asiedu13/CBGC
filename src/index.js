@@ -46,6 +46,7 @@ import {
   faHeartBroken,
   faLowVision,
   faAppleAlt,
+  faSmile,
 } from "@fortawesome/free-solid-svg-icons";
 
 // import {fabGoogle } from '@fortawesome/free-brands-svg-icons'
@@ -54,8 +55,6 @@ library.add(
   faCheckSquare,
   faCoffee,
   faHome,
-  faArrowRight,
-  faArrowLeft,
   faAngleRight,
   faUser,
   faNewspaper,
@@ -69,13 +68,14 @@ library.add(
   faArrowCircleLeft,
   faLongArrowAltLeft,
   faLongArrowAltRight,
+  faArrowRight,
+  faArrowLeft,
   faSadCry,
   faSadTear,
   faHeartBroken,
   faLowVision,
   faAppleAlt,
-
-
+  faSmile
 );
 
 ReactDom.render(<App />, document.getElementById("root"));
