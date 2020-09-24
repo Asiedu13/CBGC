@@ -7,7 +7,6 @@ class Body extends React.Component {
     return (
       <section className="counselling__booking">
         <div className="counselling__booking__part1">
-
           <h2>Book an appointment today</h2>
           <div className="buttons">
             <Button label="schedule" importance="high" />

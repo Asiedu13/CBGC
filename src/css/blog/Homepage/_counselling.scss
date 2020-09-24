@@ -50,6 +50,7 @@
     @include border(black);
     height: 500px;
     width: 99vw;
+    background: #f4f4f4;
 
     &__feeling {
       width: inherit;
@@ -68,7 +69,7 @@
           position: relative;
         }
         h2 {
-          font-size: 2.0rem;
+          font-size: 2rem;
           color: grey;
         }
       }
@@ -91,7 +92,7 @@
 
     &__paragraph {
       @include border(brown);
-      color: blue;
+      color: grey;
       text-align: center;
       display: flex;
       align-items: center;
@@ -111,16 +112,18 @@
     background: #f4f4f4;
     padding: 1rem;
 
-    &__part1{
+    &__part1 {
       @include border(#fff);
       display: flex;
       flex-direction: column;
       align-items: center;
+      h2 {
+        color: royalblue;
+      }
 
-      .buttons{
+      .buttons {
         margin: 50px 0;
       }
     }
-
   }
 }

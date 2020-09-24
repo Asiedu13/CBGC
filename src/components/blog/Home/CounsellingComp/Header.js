@@ -9,9 +9,9 @@ class Header extends React.Component {
   render() {
     return (
       <section className="counselling__header">
-        <section className="counselling__header__name">
+        {/* <section className="counselling__header__name">
           <h1>Clarkson's Counsel</h1>
-        </section>
+        </section> */}
 
       </section>
     );

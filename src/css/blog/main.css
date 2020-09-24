@@ -142,21 +142,23 @@
     margin: 5vh 40px;
     font-size: 2rem;
     position: relative;
-    padding: 2rem;
+    padding: 3rem;
     grid-area: 1/1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: grey; }
+    color: grey;
+    background: #f4f4f4;
+    border-radius: 5px; }
     .paragraph_1 p #q-left {
       position: absolute;
-      top: 0;
-      left: 0; }
+      top: 10px;
+      left: 20px; }
     .paragraph_1 p #q-right {
       position: absolute;
-      right: 0;
-      bottom: 0; }
+      right: 20px;
+      bottom: 10px; }
     .paragraph_1 p .quote-item {
       padding: 1rem;
       color: red; }
@@ -428,7 +430,8 @@
   .counselling__el {
     border: 2px solid transparent;
     height: 500px;
-    width: 99vw; }
+    width: 99vw;
+    background: #f4f4f4; }
     .counselling__el__feeling {
       width: inherit;
       height: 250px;
@@ -444,7 +447,7 @@
         .counselling__el__feeling .text__content {
           position: relative; }
         .counselling__el__feeling .text h2 {
-          font-size: 2.0rem;
+          font-size: 2rem;
           color: grey; }
       .counselling__el__feeling .feeling {
         border: 2px solid transparent;
@@ -459,7 +462,7 @@
           color: grey; }
     .counselling__el__paragraph {
       border: 2px solid transparent;
-      color: blue;
+      color: grey;
       text-align: center;
       display: flex;
       align-items: center;
@@ -478,6 +481,8 @@
       display: flex;
       flex-direction: column;
       align-items: center; }
+      .counselling__booking__part1 h2 {
+        color: royalblue; }
       .counselling__booking__part1 .buttons {
         margin: 50px 0; }
 

@@ -19,11 +19,11 @@ function Articles() {
         excepturi iusto aliquid tempora dolore at cupiditate nam tempore
         officiis velit quam, neque vel? Inventore minima ea ad non velit?iciis
         velit quam, neque vel? Inventore minima ea ad non velit?
-        <p className="buttons">
+        <section className="buttons">
           <Link to="/articles">
             <Button label="Articles" importance="medium" icon="angle-right" />
           </Link>
-        </p>
+        </section>
       </p>
 
       <div className="articles-author">

@@ -1,5 +1,4 @@
 .shopping {
-  // background: #f4f4f4;
   width: 100vw;
   height: 750px;
   position: relative;
@@ -71,9 +70,8 @@
     width: 500px;
     position: relative;
     left: -100px;
-    background: linear-gradient(to right,  orange,red,);
+    background: linear-gradient(to right, orange, red);
     border-radius: 0 40px 40px 0;
-    // clip-path: polygon(100% 100%, 100% 00%, 20% 0%, 0% 100%);
     box-shadow: 2px 2px 20px 3px lighten(orange, 10%);
 
     img {
@@ -92,7 +90,7 @@
     right: 200px;
     margin: 0vh 5vh;
 
-    &__text{
+    &__text {
       @include border(blue);
       width: 500px;
       height: 200px;

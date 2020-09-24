@@ -18,23 +18,25 @@
     margin: 5vh 40px;
     font-size: 2rem;
     position: relative;
-    padding: 2rem;
+    padding: 3rem;
     grid-area: 1/1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: grey;
+    background: #f4f4f4;
+    border-radius: 5px;
 
     #q-left {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 10px;
+      left: 20px;
     }
     #q-right {
       position: absolute;
-      right: 0;
-      bottom: 0;
+      right: 20px;
+      bottom: 10px;
       //   top: 100px;
     }
 

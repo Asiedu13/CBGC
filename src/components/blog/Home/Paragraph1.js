@@ -14,7 +14,8 @@ function Paragraph1() {
         />{" "}
         <br />
         <p>
-          This blog seeks to inform society and the world  of the incommode proliferating as a result of their actions and inactions.
+          This blog seeks to inform society and the world of the incommode
+          proliferating as a result of their actions and inactions.
         </p>
         <br />
         <i> ~ Clarkson Acheampong</i>
