@@ -54,6 +54,59 @@ body {
     box-shadow: 0 0 0 0;
   }
 
+  .moveToLeft {
+    animation: moveToLeft 5s ease forwards;
+  }
+  .moveToRight {
+    animation: moveToRight 5s ease forwards;
+  }
+  .centre{
+    animation: centre 1s ease forwards;
+  }
+  @keyframes centre{
+    0% {
+      position: relative;
+    }
+
+    100% {
+      position: relative;
+      right: 120px;
+      // margin-left: 10px;
+      margin-right: 40px;
+      z-index: 200;
+    }
+  }
+  @keyframes moveToLeft {
+    25% {
+      position: relative;
+      right: 0;
+      // margin-right: 100px;
+    }
+
+    100% {
+      position: relative;
+      right: 0px;
+      // margin-right: 100px;
+    }
+  }
+  @keyframes moveToRight {
+    25% {
+      position: relative;
+      left: 0;
+      margin-left: 10px;
+    }
+
+    100% {
+      position: relative;
+      left: 0px;
+      margin-left: 0px;
+    }
+
+    // 75% {
+    //   position: relative;
+    //   left: 0px;
+    // }
+  }
   @keyframes moveRight {
     25% {
       position: relative;
@@ -193,12 +246,12 @@ body {
     }
   }
 }
-@keyframes slide{
-  from{
+@keyframes slide {
+  from {
     opacity: 0;
     left: 0;
   }
-  to{
+  to {
     opacity: 1;
     left: 40px;
   }

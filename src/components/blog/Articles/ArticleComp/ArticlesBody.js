@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ArticleNav from "./ArticleNav";
 import Item from "./Items";
 import { ArticlesBox } from "./ArticlesBox";
-import ArticleViewer from "./ArticleViewer";
 
 export class ArticlesBody extends Component {
   constructor(props) {
@@ -11,8 +10,6 @@ export class ArticlesBody extends Component {
       articles: "",
       modified: "",
       heading: "All",
-      currentReading: "",
-      shouldRetreat: true,
     };
   }
   componentDidMount() {
@@ -72,53 +69,18 @@ export class ArticlesBody extends Component {
   handleReadModification = () => {};
   handleLikedModification = () => {};
 
-  handleShowThis = (val) => {
-    console.log(val);
-    this.setState((prevState) => {
-      if (prevState._id !== val._id) {
-        return {
-          currentReading: val,
-        };
-      } else {
-        return;
-      }
-    });
-  };
-  handleRetreat = () => {
-    if (true) {
-      this.setState({ currentReading: "" });
-      this.setState({ shouldRetreat: false });
-    }
-  };
   render() {
     let DbArt =
-      this.state.modified.length > 0
-        ? this.state.modified.map((article) => {
-            return (
-              <Item
-                key={article._id}
-                article={article}
-                onClick={(val) => {
-                  this.handleShowThis(val);
-                }}
-              />
-            );
-          })
-        : "No articles here";
+      this.state.modified.length > 0 ? (
+        this.state.modified.map((article) => {
+          return <Item key={article._id} article={article} />;
+        })
+      ) : (
+        <p className="no-articles">No articles here</p>
+      );
 
     return (
       <div>
-        {this.state.currentReading ? (
-          <ArticleViewer
-            article={this.state.currentReading}
-            retreat={() => {
-              this.handleRetreat();
-            }}
-          />
-        ) : (
-          ""
-        )}
-
         <ArticleNav
           handleClick={(id) => {
             this.handleValueChange(id);

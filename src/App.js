@@ -7,6 +7,7 @@ import { RegistrationProvider } from "./Contexts/RegistrationContext";
 const HomePage = lazy(() => import("./components/blog/HomePage"));
 const Article = lazy(() => import("./components/blog/ArticlesPage"));
 const Register = lazy(() => import("./components/blog/RegisterPage"));
+const Reader = lazy(() => import("./components/blog/Reader"));
 
 function App8() {
   return (
@@ -17,8 +18,9 @@ function App8() {
           <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/articles" component={Article} />
+            <Route path="/reader" component={Reader} />
             <RegistrationProvider>
-              <Route path="/register" component={Register} />
+              <Route path="/register/:id" component={Register} />
             </RegistrationProvider>
           </Switch>
           <Footer />

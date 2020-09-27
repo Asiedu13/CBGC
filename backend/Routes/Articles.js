@@ -32,7 +32,7 @@ router.route("/include").post((req, res) => {
   const time = req.body.time;
   const likes = req.body.likes;
   const haveRead = req.body.haveRead;
-  const img = req.body.img
+  const img = req.body.img;
 
   const newArticle = new Articles({
     title,
@@ -41,7 +41,7 @@ router.route("/include").post((req, res) => {
     time,
     likes,
     haveRead,
-    img
+    img,
   });
 
   newArticle
@@ -64,7 +64,7 @@ router.route("/update/:id").put((req, res) => {
     article.time = req.body.time;
     article.likes = req.body.likes;
     article.haveRead = req.body.haveRead;
-    article.img = req.body.img
+    article.img = req.body.img;
 
     article.save((err) => {
       if (err) res.send(err);

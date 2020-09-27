@@ -16,24 +16,33 @@ export default class Elaboration extends Component {
     this.handleIconChange(this.state.feelings);
     console.log(this.state.feelings);
   }
+  componentWillUnmount() {
+    this.setState({
+      feelings: "",
+    });
+  }
 
   handleIconChange = (stateField) => {
     console.log(stateField);
-    let n = 0;
-    const iconInterval = setInterval(() => {
-      if (n === 4) {
-        n = 0;
-        console.log(n);
-        this.setState({ value: n });
-        n++;
-      } else {
-        n++;
-        console.log(n);
-        this.setState({ value: n });
-      }
-    }, 3000);
+    let iconInterval;
+    if (stateField.length >= 0) {
+      let n = 0;
+       iconInterval = setInterval(() => {
+        if (n === 4) {
+          n = 0;
+          console.log(n);
+          this.setState({ value: n });
+          n++;
+        } else {
+          n++;
+          console.log(n);
+          this.setState({ value: n });
+        }
+      }, 3000);
+    }else{
+
+    }
   };
-  //   inconInterval(0);
 
   render() {
     let icon;
