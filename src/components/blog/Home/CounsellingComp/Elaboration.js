@@ -27,7 +27,7 @@ export default class Elaboration extends Component {
     let iconInterval;
     if (stateField.length >= 0) {
       let n = 0;
-       iconInterval = setInterval(() => {
+      iconInterval = setInterval(() => {
         if (n === 4) {
           n = 0;
           console.log(n);
@@ -39,8 +39,8 @@ export default class Elaboration extends Component {
           this.setState({ value: n });
         }
       }, 3000);
-    }else{
-
+    } else {
+      clearInterval(iconInterval);
     }
   };
 

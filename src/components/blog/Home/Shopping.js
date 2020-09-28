@@ -1,6 +1,5 @@
 import React from "react";
-import { Head, ChildTwo, ChildThree } from "./ShoppingComp/Children";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ChildTwo, ChildThree } from "./ShoppingComp/Children";
 
 class Shopping extends React.Component {
   constructor(props) {

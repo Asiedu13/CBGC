@@ -3,47 +3,16 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Item extends React.Component {
-  constructor() {
-    super();
-  }
-
   handleClick = (value) => {
     this.props.onClick(value);
   };
 
   mouseOver = (e) => {
     console.log(e.currentTarget.previousSibling);
-    let prevSibling = e.currentTarget.previousSibling;
-    let nextSibling = e.currentTarget.nextSibling;
-
-    // if (prevSibling !== null) {
-    //   prevSibling.classList.add("moveToLeft");
-    // } else {
-    //   console.log("");
-    // }
-    // if (nextSibling !== null) {
-    //   nextSibling.classList.add("moveToRight");
-    // } else {
-    //   console.log("null");
-    // }
     e.currentTarget.classList.add("centre");
   };
   mouseOut = (e) => {
     console.log(e.currentTarget.previousSibling);
-    let prevSibling = e.currentTarget.previousSibling;
-    let nextSibling = e.currentTarget.nextSibling;
-
-    if (prevSibling !== null) {
-      prevSibling.classList.remove("moveToLeft");
-    } else {
-      console.log("null");
-    }
-
-    if (nextSibling !== null) {
-      nextSibling.classList.remove("moveToRight");
-    } else {
-      console.log("null");
-    }
     e.currentTarget.classList.remove("centre");
   };
   render() {

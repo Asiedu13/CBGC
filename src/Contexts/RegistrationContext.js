@@ -1,4 +1,4 @@
-import React, { Component, createContext } from "react";
+import React, { Component } from "react";
 
 export const RegistrationContext = React.createContext();
 

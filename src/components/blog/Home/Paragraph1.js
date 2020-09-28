@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Paragraph1() {
   return (
     <section className="paragraph_1">
-      <p>
+      <section>
         <FontAwesomeIcon
           icon="quote-left"
           size="2x"
@@ -25,7 +25,7 @@ function Paragraph1() {
           color="royalblue"
           id="q-right"
         />
-      </p>
+      </section>
 
       <div className="paragraph_1__art">
         <div className="trees">

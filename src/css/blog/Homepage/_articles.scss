@@ -3,12 +3,10 @@
   width: 100vw;
   height: 700px;
   display: grid;
-  // margin: 0 0 200px 0;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows:  1fr;
+  grid-template-rows: repeat(2, 1fr);
   text-align: center;
-  
-
+  position: relative;
 
   .h2 {
     grid-area: 1/1;
@@ -33,42 +31,53 @@
       font-size: 5rem;
     }
   }
-  p {
-    @include border(gold);
-    width: 40vw;
-    height: 200px;
-    margin: 250px 40px;
-    font-size: 15px;
-    padding: 2rem;
-    grid-area: 1/1;
-  }
-
-  .buttons {
+  .articles__paragraph {
+    @include border(cyan);
+    height: fit-content;
+    margin: 0px 40px;
+    position: absolute;
+    bottom: 100px;
     display: flex;
-    flex-direction: row;
-    text-align: left;
-    width: 400px;
-    height: 100px;
+    flex-direction: column;
     justify-content: center;
-    padding: 1rem;
-    margin-top: 20px;
-    border-radius: 1rem;
-    flex-wrap: wrap-reverse;
+    align-items: center;
+
+    p {
+      @include border(gold);
+      width: 40vw;
+      height: 200px;
+      font-size: 15px;
+      padding: 2rem;
+      grid-area: 1/1;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      text-align: left;
+      width: 400px;
+      height: 100px;
+      justify-content: center;
+      padding: 1rem;
+      margin-top: 20px;
+      border-radius: 1rem;
+      flex-wrap: wrap-reverse;
+    }
   }
 
-  &-author{
+  &-author {
     @include border(red);
+    grid-area: 1 / 2;
     display: flex;
     justify-content: center;
     align-items: center;
     height: fit-content;
-    margin: auto;
+    margin: 200px 0 0 100px;
     background: lightblue;
     border-radius: 100%;
     width: 90%;
     // clip-path: ellipse();
-    img{
-
+    img {
       z-index: 200;
     }
   }

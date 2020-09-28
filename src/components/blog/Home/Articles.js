@@ -12,19 +12,21 @@ function Articles() {
           <b>Articles</b>
         </h2>
       </div>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab natus
-        excepturi iusto aliquid tempora dolore at cupiditate nam tempore off
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab natus
-        excepturi iusto aliquid tempora dolore at cupiditate nam tempore
-        officiis velit quam, neque vel? Inventore minima ea ad non velit?iciis
-        velit quam, neque vel? Inventore minima ea ad non velit?
+      <section className="articles__paragraph">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab natus
+          excepturi iusto aliquid tempora dolore at cupiditate nam tempore off
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab natus
+          excepturi iusto aliquid tempora dolore at cupiditate nam tempore
+          officiis velit quam, neque vel? Inventore minima ea ad non velit?iciis
+          velit quam, neque vel? Inventore minima ea ad non velit?
+        </p>
         <section className="buttons">
           <Link to="/articles">
             <Button label="Articles" importance="medium" icon="angle-right" />
           </Link>
         </section>
-      </p>
+      </section>
 
       <div className="articles-author">
         <Picture />
