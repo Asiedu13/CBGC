@@ -73,7 +73,7 @@ export class ArticlesBody extends Component {
     let DbArt =
       this.state.modified.length > 0 ? (
         this.state.modified.map((article) => {
-          return <Item key={article._id} article={article} />;
+          return <Item key={article._id} article={article} onClick = {""} />;
         })
       ) : (
         <p className="no-articles">No articles here</p>

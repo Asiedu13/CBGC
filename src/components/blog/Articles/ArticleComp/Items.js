@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Item extends React.Component {
@@ -18,8 +17,8 @@ class Item extends React.Component {
   render() {
     console.log(this.props.article.img);
     return (
-      <Link to={`/reader/${this.props.article._id}`}>
-        <article
+      // <Link to={`/reader/${this.props.article._id}`}>
+        <article onClick={this.handleClick(this.props.article)}
           className="item"
           onMouseOver={this.mouseOver}
           onMouseOut={this.mouseOut}
@@ -41,7 +40,7 @@ class Item extends React.Component {
             </button>
           </div>
         </article>
-      </Link>
+      // </Link>
     );
   }
 }

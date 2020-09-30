@@ -1,0 +1,79 @@
+.article__preview__maincon {
+  background: rgba(194, 194, 197, 0.349);
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 300;
+
+  &__pre {
+    @include border(#fff);
+    width: 100vw;
+    height: 380px;
+    background: url("../../pics/attachment_77327090.png") no-repeat;
+    background-size: 100vw;
+    background-position: -00px -300px;
+    margin: 100px 0;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    filter: blur(8px);
+    z-index: 301;
+  }
+  &__items {
+    position: absolute;
+    top: 0px;
+    margin: 100px 0;
+    z-index: 302;
+    display: flex;
+    justify-content: space-around;
+
+    .pre__part {
+      width: 30.33%;
+      height: 380px;
+      @include border(red);
+      position: relative;
+
+      &__left {
+        .poly {
+          width: 100%;
+          height: 100%;
+        }
+        .any {
+          width: 200px;
+          height: 200px;
+          position: absolute;
+          top: 20%;
+          left: 20%;
+          @include border(#fff);
+        }
+      }
+      &__middle {
+        padding: 1rem 0;
+
+        &__header {
+          text-align: center;
+          height: 100px;
+        }
+        &__buttons {
+          width: 120%;
+          height: 150px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-end;
+          @include border(blue);
+        }
+      }
+      &__right {
+      }
+    }
+  }
+}

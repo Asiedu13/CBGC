@@ -6,6 +6,7 @@ export default class Reader extends Component {
     this.state = {
       title: "",
       currentlyReading: "",
+      img: "",
     };
   }
   componentDidMount() {
@@ -20,6 +21,7 @@ export default class Reader extends Component {
         this.setState({
           title: data.title,
           currentlyReading: data.content,
+          img: data.img,
         });
       });
   }
@@ -27,6 +29,7 @@ export default class Reader extends Component {
     return (
       <div>
         <h1>{this.state.title}</h1>
+        <img alt="article cover" src={this.state.img} />
         <p>{this.state.currentlyReading}</p>
       </div>
     );
