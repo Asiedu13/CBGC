@@ -2,8 +2,9 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Item extends React.Component {
+
   handleClick = (value) => {
-    this.props.onClick(value);
+    // this.props.onClick(value);
   };
 
   mouseOver = (e) => {
@@ -14,11 +15,12 @@ class Item extends React.Component {
     console.log(e.currentTarget.previousSibling);
     e.currentTarget.classList.remove("centre");
   };
+
   render() {
-    console.log(this.props.article.img);
+    console.log(this.props.article._id);
     return (
-      // <Link to={`/reader/${this.props.article._id}`}>
-        <article onClick={this.handleClick(this.props.article)}
+        <article
+          onClick={this.handleClick(this.props.article)}
           className="item"
           onMouseOver={this.mouseOver}
           onMouseOut={this.mouseOut}
@@ -40,7 +42,7 @@ class Item extends React.Component {
             </button>
           </div>
         </article>
-      // </Link>
+  
     );
   }
 }

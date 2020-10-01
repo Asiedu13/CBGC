@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import ArticleNav from "./ArticleNav";
 import Item from "./Items";
 import { ArticlesBox } from "./ArticlesBox";
@@ -69,11 +70,21 @@ export class ArticlesBody extends Component {
   handleReadModification = () => {};
   handleLikedModification = () => {};
 
+  handleItemClick = (articleID) => {
+    // this.setState({currentArticle: articleID})
+    this.props.currentArticle(articleID);
+  };
+
   render() {
     let DbArt =
       this.state.modified.length > 0 ? (
         this.state.modified.map((article) => {
-          return <Item key={article._id} article={article} onClick = {""} />;
+          console.log(article._id);
+          return (
+            <Link to={`/articles/${article._id}`}>
+              <Item key={article._id} article={article} />
+            </Link>
+          );
         })
       ) : (
         <p className="no-articles">No articles here</p>

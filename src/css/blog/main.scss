@@ -61,10 +61,10 @@ body {
   .moveToRight {
     animation: moveToRight 5s ease forwards;
   }
-  .centre{
+  .centre {
     animation: centre 1s ease forwards;
   }
-  @keyframes centre{
+  @keyframes centre {
     0% {
       position: relative;
     }
