@@ -5,6 +5,7 @@ import Articles from "./Home/Articles";
 import Shopping from "./Home/Shopping";
 import Counselling from "./Home/Counselling";
 
+
 class HomePage extends React.Component {
   constructor(props) {
     super();
@@ -18,6 +19,7 @@ class HomePage extends React.Component {
         <Paragraph1 />
         <Shopping />
         <Counselling />
+       
       </section>
     );
   }

@@ -1,6 +1,6 @@
 .counselling {
   width: 100vw;
-  height: 1000px;
+  height: 1200px;
   display: flex;
   flex-direction: column;
   margin-top: 2vh;
@@ -124,6 +124,19 @@
       .buttons {
         margin: 50px 0;
       }
+    }
+  }
+
+  &-calendar {
+    box-shadow: 2px 15px 40px 2px #98a7ec;
+    margin: 100px ;
+    @include border(red);
+    padding: 1rem;
+    font-size: 1rem;
+    color: grey;
+    width: 500px;
+    abbr {
+      text-decoration: none;
     }
   }
 }

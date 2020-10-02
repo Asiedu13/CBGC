@@ -401,7 +401,7 @@
 
 .counselling {
   width: 100vw;
-  height: 1000px;
+  height: 1200px;
   display: flex;
   flex-direction: column;
   margin-top: 2vh;
@@ -496,6 +496,16 @@
         color: royalblue; }
       .counselling__booking__part1 .buttons {
         margin: 50px 0; }
+  .counselling-calendar {
+    box-shadow: 2px 15px 40px 2px #98a7ec;
+    margin: 100px;
+    border: 2px solid transparent;
+    padding: 1rem;
+    font-size: 1rem;
+    color: grey;
+    width: 500px; }
+    .counselling-calendar abbr {
+      text-decoration: none; }
 
 .ArticleHeader {
   margin: 5vh 0;
