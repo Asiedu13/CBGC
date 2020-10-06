@@ -7,10 +7,7 @@ class Shopping extends React.Component {
     this.state = {
       value: undefined,
       viewer: true,
-      comp: [
-        <ChildTwo view={this.handleViewSiblings} />,
-        <ChildThree />,
-      ],
+      comp: [<ChildTwo view={this.handleViewSiblings} />, <ChildThree />],
     };
   }
 
@@ -48,11 +45,8 @@ class Shopping extends React.Component {
     return (
       <section className="shopping">
         <section className="shopping__slider">
-          <section className="art">
-            
-          </section>
+          <section className="art"></section>
           <div className="shopping__slider__one">
-           
             {this.state.comp[this.state.value || 0]}
           </div>
         </section>

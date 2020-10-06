@@ -41,6 +41,7 @@
       width: inherit;
       height: inherit;
       display: grid;
+      border: 4px solid red;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, 1fr);
 
@@ -87,7 +88,7 @@
     height: 450px;
     position: relative;
     bottom: 200px;
-    right: 200px;
+    right: 50%;
     margin: 0vh 5vh;
 
     &__text {

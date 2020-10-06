@@ -21,17 +21,17 @@
     top: 50px;
     @include border(red);
 
-    & > .h2_1 {
+     .h2_1 {
       font-size: 2rem;
       font-weight: 100;
       color: orange;
-      width: 360px;
+      width: fit-content;
       height: fit-content;
       padding: 1rem;
       word-wrap: wrap;
       text-align: center;
       position: relative;
-      top: 100px;
+      // top: 100px;
       @include border(green);
 
       // & > .h2_1 {
@@ -40,12 +40,14 @@
       //   color: orange;
       // }
 
-     .h2_2 {
-        // font-size: 2rem;
-        height: 100px;
-        b{
-          font-size: 5rem;
-        }
+     
+    }
+    .h2_2 {
+      font-size: 2rem;
+      height: 100px;
+      @include border(brown);
+      b{
+        font-size: 5rem;
       }
     }
     p {
