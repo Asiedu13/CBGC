@@ -71,6 +71,7 @@
       margin: 10px 0px 20px -130px;
       border-radius: 5px;
       display: flex;
+      
       flex-direction: column;
       box-shadow: 1px 2px 20px 1px rgb(187, 187, 187);
       @include border(brown);
@@ -103,6 +104,7 @@
         flex-direction: column;
         text-decoration: none;
         justify-content: space-between;
+        
         h2 {
           word-wrap: break-word;
           color: black;

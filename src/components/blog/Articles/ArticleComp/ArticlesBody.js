@@ -81,7 +81,10 @@ export class ArticlesBody extends Component {
         this.state.modified.map((article) => {
           console.log(article._id);
           return (
-            <Link to={`/articles/${article._id}`}>
+            <Link
+              to={`/articles/${article._id}`}
+              style={{ textDecoration: "none" }}
+            >
               <Item key={article._id} article={article} />
             </Link>
           );
