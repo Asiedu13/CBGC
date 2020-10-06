@@ -13,6 +13,7 @@ function Articles() {
             <b>Articles</b>
           </h2>
         </div>
+      </div>
         <section className="articles__paragraph">
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab natus
@@ -32,7 +33,6 @@ function Articles() {
         <div className="articles-author">
           <Picture />
         </div>
-      </div>
     </section>
   );
 }

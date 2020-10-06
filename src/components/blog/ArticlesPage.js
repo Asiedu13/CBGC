@@ -11,7 +11,7 @@ class Articles extends React.Component {
     };
   }
   render() {
-    console.log(`This is the current article: ${this.state.currentArticle}`)
+    console.log(`This is the current article: ${this.state.currentArticle}`);
     return (
       <section>
         <ArticleHeader />
@@ -23,7 +23,11 @@ class Articles extends React.Component {
           }}
         />
         <ArticlePreview
-          style={this.state.currentArticle.length > 2 ? {display: "flex"} : {display: "none"}}
+          style={
+            this.state.currentArticle.length > 2
+              ? { display: "flex" }
+              : { display: "none" }
+          }
           currentArticle={this.state.currentArticle}
         />
       </section>

@@ -49,12 +49,11 @@ import {
   faAppleAlt,
   faSmile,
 } from "@fortawesome/free-solid-svg-icons";
-import {faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
+// import {faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 library.add(
   faCheckSquare,
   faCoffee,
-  faFacebook,
-  faGoogle,
+  // faGoogle,
   faHome,
   faAngleRight,
   faUser,
