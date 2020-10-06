@@ -24,8 +24,8 @@ function Footer() {
         <li className="footer__elem__child">P.O.Box AT 1486</li>
 
         <div className="footer__elem__socialmedia">
-          <FontAwesomeIcon icon="apple-alt" size="2x" />
-          <FontAwesomeIcon icon="apple-alt" size="2x" color="royalblue" />
+          <FontAwesomeIcon icon="Google" size="2x" />
+          <FontAwesomeIcon icon="Facebook" size="2x" color="royalblue" />
           <FontAwesomeIcon icon="apple-alt" size="2x" color="red" />
         </div>
       </div>

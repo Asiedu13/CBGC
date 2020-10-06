@@ -8,7 +8,7 @@
   text-align: center;
   position: relative;
 
-  .h2 {
+  &__firstChild {
     grid-area: 1/1;
     margin: 0 0 0 150px;
     color: orange;
@@ -25,10 +25,41 @@
       font-size: 2rem;
       font-weight: 100;
       color: orange;
+      width: 360px;
+      height: fit-content;
+      padding: 1rem;
+      word-wrap: wrap;
+      text-align: center;
+      position: relative;
+      top: 100px;
+      @include border;
+
+      & > .h2_1 {
+        font-size: 2rem;
+        font-weight: 100;
+        color: orange;
+      }
+
+      & > .h2_2 {
+        font-size: 5rem;
+      }
+    }
+    p {
+      @include border;
+      width: 500px;
+      height: 200px;
+      margin: 10% 10%;
+      font-size: 15px;
+      padding: 2rem;
+      grid-area: 2/1;
     }
 
-    & > .h2_2 {
-      font-size: 5rem;
+    &__art {
+      width: 50vw;
+      height: 400px;
+      position: relative;
+      display: flex;
+      @include border;
     }
   }
   .articles__paragraph {

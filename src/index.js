@@ -22,7 +22,7 @@ import ReactDom from "react-dom";
 import App from "./App";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import 'react-calendar/dist/Calendar.css';
+import "react-calendar/dist/Calendar.css";
 import {
   faCheckSquare,
   faCoffee,
@@ -49,12 +49,12 @@ import {
   faAppleAlt,
   faSmile,
 } from "@fortawesome/free-solid-svg-icons";
-
-// import {fabGoogle } from '@fortawesome/free-brands-svg-icons'
+import {faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 library.add(
-  fab,
   faCheckSquare,
   faCoffee,
+  faFacebook,
+  faGoogle,
   faHome,
   faAngleRight,
   faUser,

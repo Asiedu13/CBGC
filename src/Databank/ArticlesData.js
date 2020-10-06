@@ -1,11 +1,13 @@
 
-const ArticlesData = [
-  {
-    id: 1,
+
+const ArticlesData = {
+  articles: [
+   { id: 1,
     name: "Anxious",
     type: "feelings",
     liked: undefined,
     clicks: 0,
+    img: "../../../pics/Counselling.jpg",
     data:
       "He is worried about tomorrow. He is concerned about the world around hom",
   },
@@ -15,6 +17,7 @@ const ArticlesData = [
     type: "society",
     liked: true,
     clicks: 0,
+    img: "../../../pics/Counselling.jpg",
     data:
       "He is worried about tomorrow. He is concerned about the world around hom",
   },
@@ -23,6 +26,7 @@ const ArticlesData = [
     name: "His Occupation",
     type: "Society",
     liked: undefined,
+    img: "../../../pics/Counselling.jpg",
     clicks: 0,
     data:
       "He is worried about tomorrow. He is concerned about the world around hom",
@@ -33,6 +37,7 @@ const ArticlesData = [
     type: "Nature",
     liked: undefined,
     clicks: 0,
+    img: "../../../pics/Counselling.jpg",
     data:
       "He is worried about tomorrow. He is concerned about the world around hom",
   },
@@ -42,6 +47,7 @@ const ArticlesData = [
     type: "feelings",
     liked: undefined,
     clicks: 0,
+    img: "../../../pics/Counselling.jpg",
     data:
       "He is worried about tomorrow. He is concerned about the world around hom",
   },
@@ -51,6 +57,7 @@ const ArticlesData = [
     type: "society",
     liked: true,
     clicks: 0,
+    img: "../../../pics/Counselling.jpg",
     data:
       "He is worried about tomorrow. He is concerned about the world around hom",
   },
@@ -60,6 +67,7 @@ const ArticlesData = [
     type: "Society",
     liked: undefined,
     clicks: 0,
+    img: "../pics/Counselling.jpg",
     data:
       "He is worried about tomorrow. He is concerned about the world around hom",
   },
@@ -69,10 +77,11 @@ const ArticlesData = [
     type: "Nature",
     liked: undefined,
     clicks: 0,
+    img: "../pics/Counselling.jpg",
     data:
       "He is worried about tomorrow. He is concerned about the world around hom",
   },
-];
-
+  ]
+};
 
 module.exports = ArticlesData;
