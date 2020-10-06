@@ -1,5 +1,5 @@
 import React from "react";
-import pic from "../../../pics/boy.png";
+import pic from "../../../pics/Clarkson.jpg";
 
 const picStyle = {
   width: "300px",
@@ -9,7 +9,7 @@ const picStyle = {
   position: "relative",
 };
 
-function Picture(props) {
+function Picture() {
   return <img src={pic} alt="boy-smiling" style={picStyle} />;
 }
 

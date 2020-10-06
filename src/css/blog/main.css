@@ -483,15 +483,21 @@
         width: 500px; }
   .counselling__booking {
     width: inherit;
-    height: 200px;
+    height: 500px;
     border: 2px solid transparent;
-    background: #f4f4f4;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem; }
     .counselling__booking__part1 {
       border: 2px solid transparent;
+      width: 600px;
       display: flex;
+      height: inherit;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      justify-content: space-evenly; }
       .counselling__booking__part1 h2 {
         color: royalblue; }
       .counselling__booking__part1 .buttons {
