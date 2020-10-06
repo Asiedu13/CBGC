@@ -41,7 +41,6 @@
       width: inherit;
       height: inherit;
       display: grid;
-      border: 4px solid red;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, 1fr);
 
@@ -88,8 +87,8 @@
     height: 450px;
     position: relative;
     bottom: 200px;
-    right: 50%;
-    margin: 0vh 5vh;
+    right: 70%;
+    margin: 0vh 0vh;
 
     &__text {
       @include border(blue);

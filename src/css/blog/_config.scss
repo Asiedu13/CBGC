@@ -12,7 +12,7 @@ $primary: #fa8d31;
 $secondary: #94a4a5;
 
 @mixin border($color) {
-  border: 2px solid $color;
+  border: 2px solid transparent;
 }
 
 @mixin shadow($color) {
