@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import marked from "marked";
+import imgs from '../../pics/attachment_77327090.png'
 
 export default class Reader extends Component {
   constructor(props) {
@@ -7,6 +9,7 @@ export default class Reader extends Component {
       title: "",
       currentlyReading: "",
       img: "",
+      author: "",
     };
   }
   componentDidMount() {
@@ -22,16 +25,31 @@ export default class Reader extends Component {
           title: data.title,
           currentlyReading: data.content,
           img: data.img,
+          author: data.author,
         });
       });
   }
+  getMarkdownText = () => {
+    var rawMarkup = marked(this.state.currentlyReading, { sanitize: true });
+    return { __html: rawMarkup };
+  };
   render() {
     return (
-      <div>
-        <h1>{this.state.title}</h1>
-        <img alt="article cover" src={this.state.img} />
-        <p>{this.state.currentlyReading}</p>
-      </div>
+      <section className="reader">
+        <div className="reader__meta">
+          <img alt="article cover" src={imgs} />
+          <div className="reader__meta__desc">
+            <h1>{this.state.title}</h1>
+            <h3> {this.state.author} </h3>
+          <br /> <br />
+          <article className="reader__main__content" dangerouslySetInnerHTML={this.getMarkdownText()} />
+          </div>
+        </div>
+
+        <article className="reader__main">
+          
+        </article>
+      </section>
     );
   }
 }

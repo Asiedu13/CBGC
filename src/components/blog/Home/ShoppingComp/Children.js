@@ -56,8 +56,12 @@ export class ChildTwo extends React.Component {
           </div>
           <div className="shopping__paragraph__text">
             <p className="shopping__paragraph__text__p">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsam eveniet molestiae! Non, odit? Fuga non blanditiis dolorem nisi, atque incidunt corrupti similique accusantium commodi sed rerum porro officiis unde itaque alias! Aliquid atque ut, obcaecati nulla quam numquam praesentium cupiditate! Sequi maiores eveniet expedita blanditiis nulla cupiditate ullam explicabo!
-              
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+              ipsam eveniet molestiae! Non, odit? Fuga non blanditiis dolorem
+              nisi, atque incidunt corrupti similique accusantium commodi sed
+              rerum porro officiis unde itaque alias! Aliquid atque ut,
+              obcaecati nulla quam numquam praesentium cupiditate! Sequi maiores
+              eveniet expedita blanditiis nulla cupiditate ullam explicabo!
             </p>
           </div>
           <div className="shopping__button">

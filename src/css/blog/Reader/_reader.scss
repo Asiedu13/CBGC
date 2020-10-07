@@ -1,0 +1,47 @@
+.reader {
+  width: 80%;
+  height: 1500px;
+  display: flex;
+  flex-direction: column;
+  margin: 5% 10%;
+  @include border(red);
+
+  &__meta {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include border(blue);
+
+    img {
+      width: 250px;
+      height: 350px;
+      @include border(yellow);
+    }
+
+    &__desc {
+      width: 70%;
+      height: inherit;
+      @include border(orange);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        font-size: 2rem;
+      }
+      h3 {
+        color: grey;
+        font-weight: 100;
+        margin: 2% 0;
+      }
+    }
+  }
+
+  &__main {
+    &__content {
+      width: 90%;
+    }
+  }
+}
