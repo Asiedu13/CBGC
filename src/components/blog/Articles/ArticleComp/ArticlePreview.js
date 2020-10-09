@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import img from "../../../../pics/Polygon5.png";
-import img2 from "../../../../pics/attachment_77327090.png"
+import img2 from "../../../../pics/attachment_77327090.png";
 import Button from "../../Util/Button";
 import { Link } from "react-router-dom";
 
@@ -39,7 +39,7 @@ export default class ArticlePreview extends Component {
   render() {
     console.log(this.state.currentlyReading);
     let shortened = this.state.currentlyReading;
-    
+
     return (
       <div style={this.props.style}>
         <section className="article__preview__maincon">
@@ -57,7 +57,7 @@ export default class ArticlePreview extends Component {
               <div className="pre__part__middle__header">
                 <h2 className="title">{this.state.title}</h2>
               </div>
-              <p >{`${shortened}...`}</p>
+              <p>{`${shortened}...`}</p>
 
               <div className="pre__part__middle__buttons">
                 <Link to={`/reader/${this.state.id}`}>

@@ -2,11 +2,6 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Item extends React.Component {
-
-  handleClick = (value) => {
-    // this.props.onClick(value);
-  };
-
   mouseOver = (e) => {
     console.log(e.currentTarget.previousSibling);
     e.currentTarget.classList.add("centre");
@@ -20,7 +15,6 @@ class Item extends React.Component {
     console.log(this.props.article._id);
     return (
         <article
-          onClick={this.handleClick(this.props.article)}
           className="item"
           onMouseOver={this.mouseOver}
           onMouseOut={this.mouseOut}

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import marked from "marked";
-import imgs from '../../pics/attachment_77327090.png'
+import imgs from "../../pics/attachment_77327090.png";
 
 export default class Reader extends Component {
   constructor(props) {
-    super(props);
+    super();
     this.state = {
       title: "",
       currentlyReading: "",
@@ -41,13 +41,19 @@ export default class Reader extends Component {
           <div className="reader__meta__desc">
             <h1>{this.state.title}</h1>
             <h3> {this.state.author} </h3>
-          <br /> <br />
-          <article className="reader__main__content" dangerouslySetInnerHTML={this.getMarkdownText()} />
+            <br /> <br />
+            <article
+              className="reader__main__content"
+              dangerouslySetInnerHTML={this.getMarkdownText()}
+            />
           </div>
         </div>
 
         <article className="reader__main">
-          
+          <section className="reader__main__header">
+            <h2>this is the field for the related articles</h2>
+          </section>
+          <section className="reader-_main__body"></section>
         </article>
       </section>
     );

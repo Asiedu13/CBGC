@@ -1,6 +1,5 @@
 .article__preview__maincon {
   background: rgba(194, 194, 197, 0.349);
-  color: #fff;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -13,18 +12,17 @@
   z-index: 300;
 
   &__pre {
+    box-shadow: 2px 2px 21px 2px #6b6565;
     @include border(#fff);
     width: 100vw;
     height: 380px;
-    background: url("../../pics/attachment_77327090.png") no-repeat;
-    background-size: 100vw;
-    background-position: -00px -300px;
+    background: #f4f4f4;
     margin: 100px 0;
     display: flex;
     flex-direction: row;
+    padding: 1rem;
     position: absolute;
     top: 0;
-    filter: blur(5px);
     z-index: 301;
   }
   &__items {
@@ -62,8 +60,9 @@
         &__header {
           text-align: center;
           height: 100px;
+          padding: 1rem;
         }
-        p{
+        p {
           @include border(yellow);
           width: 400px;
           margin: 0 auto;
