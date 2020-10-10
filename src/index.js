@@ -51,9 +51,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 // import {faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 library.add(
+  fab,
   faCheckSquare,
   faCoffee,
-  // faGoogle,
   faHome,
   faAngleRight,
   faUser,

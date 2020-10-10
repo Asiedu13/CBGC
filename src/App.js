@@ -8,12 +8,14 @@ const HomePage = lazy(() => import("./components/blog/HomePage"));
 const Article = lazy(() => import("./components/blog/ArticlesPage"));
 const Register = lazy(() => import("./components/blog/RegisterPage"));
 const Reader = lazy(() => import("./components/blog/Reader"));
-const Preview = lazy(()=> import("./components/blog/Articles/ArticleComp/ArticlePreview"))
+const Preview = lazy(() => import("./components/blog/Articles/ArticleComp/ArticlePreview"))
 
 function App8() {
   return (
     <Router>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div className="loader">
+        <p>Clarkson's...</p>
+      </div>}>
         <section>
           <Nav />
           <Switch>

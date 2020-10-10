@@ -1,12 +1,14 @@
 .logo {
   height: 60px;
-  width: 60px;
+  width: 160px;
   padding: 0.5rem;
-  box-shadow: 1px 2px 20px 2px #8a8c8d;
-  border-radius: 5px; }
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid transparent; }
   .logo h1 {
     padding: 0.3rem;
-    color: #f6d342;
+    color: royalblue;
     font-size: 2rem; }
     .logo h1 b {
       color: #159dc6; }
@@ -1041,6 +1043,14 @@ body {
   overflow-x: hidden; }
   body .move-right {
     animation: moveRight 1s ease forwards infinite; }
+  body .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    body .loader p {
+      font-size: 2rem;
+      color: royalblue; }
   body .bounce {
     animation: "bounce 5s ease forwards";
     transition: "1s ease-in-out forwards"; }
