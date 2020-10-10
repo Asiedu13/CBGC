@@ -40,8 +40,84 @@
   }
 
   &__main {
-    &__content {
-      width: 90%;
+
+    &__body{
+      width: 99vw;
+      height: fit-content;
+      padding: 1rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap-reverse;
+      position: relative;
+      @include border(blue);
+    
+      .item {
+        width: 330px;
+        height: 250px;
+        margin: 10px 0px 0px 0px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 1px 2px 20px 1px rgb(187, 187, 187);
+        @include border(brown);
+        cursor: pointer;
+        background: #fff;
+        border-top: 5px solid #663399;
+        position: relative;
+        transition: all 1s ease-in;
+        &:hover {
+          bottom: 20px;
+        }
+  
+        &__image {
+          height: 100px;
+          @include border(green);
+          background: royalblue;
+          img {
+            height: inherit;
+            width: 100%;
+          }
+        }
+        &__desc {
+          @include border(brown);
+          padding: 1rem;
+          height: 150px;
+          display: flex;
+          flex-direction: column;
+          text-decoration: none;
+          justify-content: space-between;
+          
+          h2 {
+            word-wrap: break-word;
+            color: black;
+            text-decoration: none;
+            @include border(red);
+          }
+          h3 {
+            font-size: 0.8rem;
+            text-decoration: none;
+            font-weight: 100;
+            @include border(violet);
+          }
+        }
+        &__read__link {
+          width: inherit;
+          height: fit-content;
+  
+          button {
+            background: none;
+            margin: 0 auto;
+            color: orange;
+            width: 130px;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
-}
+  
+    }
+  
+

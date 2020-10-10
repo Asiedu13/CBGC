@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const Articles = require("../Models/Article.model");
 
+// Display all articles
 router.route("/").get((req, res) => {
   Articles.find()
     .then((data) => {
@@ -13,6 +14,7 @@ router.route("/").get((req, res) => {
     });
 });
 
+// get single article
 router.route("/:id").get((req, res) => {
   Articles.findById(req.params.id)
     .then((data) => {
@@ -25,6 +27,14 @@ router.route("/:id").get((req, res) => {
     });
 });
 
+// display 3 articles
+router.route("/defined/:num").get((req, res) => {
+  Articles.find().skip(2).limit(Number(req.params.num)).then((data) => {
+    res.status(200).json(data);
+  })
+})
+
+// Add a single article
 router.route("/include").post((req, res) => {
   const title = req.body.title;
   const author = req.body.author;
@@ -54,6 +64,7 @@ router.route("/include").post((req, res) => {
     });
 });
 
+// UPdate article content
 router.route("/update/:id").put((req, res) => {
   Articles.findById(req.params.id, (err, article) => {
     if (err) res.send(err);
@@ -73,6 +84,7 @@ router.route("/update/:id").put((req, res) => {
   });
 });
 
+// Delete Article
 router.route("/delete/:id").delete((req, res) => {
   Articles.deleteOne({ _id: req.params.id })
     .then(() => {

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import marked from "marked";
 import imgs from "../../pics/attachment_77327090.png";
+import Item from "./Articles/ArticleComp/Items"
+import { Link } from "react-router-dom";
 
 export default class Reader extends Component {
   constructor(props) {
@@ -10,6 +12,7 @@ export default class Reader extends Component {
       currentlyReading: "",
       img: "",
       author: "",
+      relatedArticles: "",
     };
   }
   componentDidMount() {
@@ -28,12 +31,32 @@ export default class Reader extends Component {
           author: data.author,
         });
       });
+
+    // Fetch related articles
+    fetch("http://localhost:5000/api/articles/defined/3").then(data => {
+      return data.json();
+    }).then(data => {
+      this.setState({
+        relatedArticles: data,
+      })
+      console.log(this.state.relatedArticles);
+    }).catch(err => console.log(err));
   }
   getMarkdownText = () => {
     var rawMarkup = marked(this.state.currentlyReading, { sanitize: true });
     return { __html: rawMarkup };
   };
   render() {
+    let relArticles = this.state.relatedArticles;
+    let relatedArticles = relArticles.length > 0 ? this.state.relatedArticles.map(relarticle => {
+      return (<Link
+        to={`/articles/${relarticle._id}`}
+        style={{ textDecoration: "none" }} key={relarticle._id}
+      >
+        <Item key={relarticle._id} article={relarticle} />
+      </Link>)
+    }) : "Nothing to see here ";
+
     return (
       <section className="reader">
         <div className="reader__meta">
@@ -51,9 +74,11 @@ export default class Reader extends Component {
 
         <article className="reader__main">
           <section className="reader__main__header">
-            <h2>this is the field for the related articles</h2>
+            <h2>People also read</h2>
           </section>
-          <section className="reader-_main__body"></section>
+          <section className="reader__main__body">
+            {relatedArticles}
+          </section>
         </article>
       </section>
     );
