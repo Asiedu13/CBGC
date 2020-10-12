@@ -59,7 +59,16 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   justify-content: center;
-  z-index: 50; }
+  z-index: 50;
+  position: relative; }
+  .header .head__svg {
+    border: 1px solid blue; }
+  .header .one {
+    position: absolute;
+    bottom: 500px; }
+  .header .two {
+    position: absolute;
+    top: 500px; }
   .header h1 {
     font-size: 3rem;
     margin: 0px auto;
@@ -92,6 +101,7 @@
     border-right: none;
     border-left: none;
     position: absolute;
+    margin: 10vh 0;
     width: 100vw;
     height: 400px; }
   .header .no-video .video-container video,
@@ -129,14 +139,13 @@
   border: 2px solid transparent;
   width: 100vw;
   height: 700px;
-  background: url("../../pics/Union 1.png");
   background-size: 110vw 500px;
   background-position: -50px 500px;
   background-repeat: no-repeat;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 5vh 0;
-  clip-path: polygon(0% 100%, 100% 50%, 100% 0%, 0% 0%); }
+  position: relative; }
   .paragraph_1 section {
     border: 2px solid transparent;
     width: 43vw;
@@ -198,6 +207,13 @@
     border: 2px solid transparent;
     border-radius: 1rem;
     flex-wrap: wrap-reverse; }
+  .paragraph_1 .two {
+    position: absolute;
+    bottom: -300px; }
+  .paragraph_1 .one {
+    position: absolute;
+    bottom: -50px;
+    z-index: -1; }
 
 .tree {
   border: 2px solid transparent;
@@ -341,7 +357,7 @@
         font-size: 4rem;
         width: 100%;
         border: 2px solid transparent;
-        color: deepskyblue; }
+        color: #fff; }
     .shopping__slider .shop-section-1 {
       width: 100vw;
       height: 650px;
@@ -824,7 +840,7 @@
       display: flex;
       flex-direction: column; }
       .reader__meta__desc h1 {
-        font-size: 2rem; }
+        font-size: 3rem; }
       .reader__meta__desc h3 {
         color: grey;
         font-weight: 100;

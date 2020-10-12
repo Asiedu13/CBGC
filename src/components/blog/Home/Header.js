@@ -8,13 +8,19 @@ class Header extends React.PureComponent {
   render() {
     return (
       <section className="header">
+         
         <h1>
           Clarksons{" "}
-          <FontAwesomeIcon icon={["fas", "heart"]} color="hsl(194, 81%, 43%)" size="2x" />
+          <FontAwesomeIcon
+            icon={["fas", "heart"]}
+            color="hsl(194, 81%, 43%)"
+            size="2x"
+          />
         </h1>
         <p className="header__slogan">Strategy that delivers</p>
 
         <div className="homepage-hero-module">
+       
           <div className="video-container">
             <div className="filter"></div>
             <video

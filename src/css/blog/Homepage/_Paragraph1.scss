@@ -2,14 +2,13 @@
   @include border(red);
   width: 100vw;
   height: 700px;
-  background: url("../../pics/Union 1.png");
   background-size: 110vw 500px;
   background-position: -50px 500px;
   background-repeat: no-repeat;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 5vh 0;
-  clip-path: polygon(0% 100%, 100% 50%, 100% 0%, 0% 0%);
+  position: relative;
 
   section {
     @include border(green);
@@ -88,5 +87,14 @@
     @include border(blue);
     border-radius: 1rem;
     flex-wrap: wrap-reverse;
+  }
+  .two{
+    position: absolute;
+    bottom: -300px;
+  }
+  .one{
+    position: absolute;
+    bottom: -50px;
+    z-index: -1;
   }
 }
