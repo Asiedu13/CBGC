@@ -31,16 +31,15 @@ body {
     animation: moveRight 1s ease forwards infinite;
   }
 
-  .loader{
+  .loader {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    p{
+    p {
       font-size: 2rem;
       color: royalblue;
-      
     }
   }
   .bounce {
