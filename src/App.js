@@ -8,6 +8,7 @@ const HomePage = lazy(() => import("./components/blog/HomePage"));
 const Article = lazy(() => import("./components/blog/ArticlesPage"));
 const Register = lazy(() => import("./components/blog/RegisterPage"));
 const Reader = lazy(() => import("./components/blog/Reader"));
+const Shopping = lazy(() => import("./components/blog/ShoppingPage"));
 const Preview = lazy(() =>
   import("./components/blog/Articles/ArticleComp/ArticlePreview")
 );
@@ -27,6 +28,7 @@ function App8() {
           <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/articles" component={Article} />
+            <Route path="/shopping" component={Shopping} />
             <Route path="/reader/:id" component={Reader} />
             <RegistrationProvider>
               <Route path="/register/:id" component={Register} />

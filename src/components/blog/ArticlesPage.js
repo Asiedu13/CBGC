@@ -1,5 +1,5 @@
 import React from "react";
-import { ArticleHeader } from "./Articles/ArticleComp/ArticleHeader";
+import { Header } from "./Util/Header";
 import { ArticlesBody } from "./Articles/ArticleComp/ArticlesBody";
 import ArticlePreview from "./Articles/ArticleComp/ArticlePreview";
 
@@ -14,7 +14,7 @@ class Articles extends React.Component {
     console.log(`This is the current article: ${this.state.currentArticle}`);
     return (
       <section>
-        <ArticleHeader />
+        <Header firstHeaderName="Blog" secondHeaderName = "Posts" />
         <ArticlesBody
           currentArticle={(articleID) => {
             this.setState({
