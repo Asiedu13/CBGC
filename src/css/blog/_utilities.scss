@@ -12,7 +12,7 @@
     background: #f6d342;
     color: #fff;
     &:hover {
-      box-shadow: -5px 5px 50px 1px $orange;
+      box-shadow: 2px 12px 15px 1px lighten($orange, 20%);
     }
     &:focus {
       box-shadow: 0 0 0 0;
@@ -21,7 +21,7 @@
     background: #fff;
     color: #f6d342;
     &:hover {
-      box-shadow: 2px 2px 50px 2px #f6d342;
+      box-shadow: 2px 12px 15px 1px lighten(#f6d342, 20%);
     }
     &:focus {
       box-shadow: 0 0 0 0;
