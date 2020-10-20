@@ -59,40 +59,40 @@
   &__body {
     display: flex;
     width: 96vw;
-    height: 300px;
+    height: fit-content;
     flex-direction: row;
     justify-content: flex-start;
+    flex-wrap: wrap;
     padding: 1rem;
     @include border(green);
 
     .item {
-      width: 230px;
-      height: 250px;
-      margin: 10px 0px 20px -130px;
+      width: 100%;
+      height: 290px;
+      margin: 10px 0px 20px 20px;
       border-radius: 5px;
       display: flex;
-      
       flex-direction: column;
-      box-shadow: 1px 2px 20px 1px rgb(187, 187, 187);
-      @include border(brown);
+      box-shadow: 2px 12px 15px 1px lighten(royalblue, 40%);
       cursor: pointer;
       background: #fff;
       border-top: 5px solid #663399;
       position: relative;
-      left: 300px;
-      transition: all 1s ease-in;
-      // transform: rotateY(40deg);
+      left: 00px;
+      transition: all 0.5s ease-in;
+      @include border(brown);
 
       &:hover {
-        bottom: 20px;
+        box-shadow: 2px 12px 15px 1px lighten(rgb(52, 91, 175), 40%);
       }
 
       &__image {
-        height: 100px;
+        height: 90px;
+        border-radius: 4px 4px 0 0;
+        background: lightskyblue;
         @include border(green);
-        background: royalblue;
         img {
-          height: inherit;
+          height: 100%;
           width: 100%;
         }
       }
@@ -104,10 +104,11 @@
         flex-direction: column;
         text-decoration: none;
         justify-content: space-between;
-        
+
         h2 {
           word-wrap: break-word;
           color: black;
+          font-weight: 100;
           text-decoration: none;
           @include border(red);
         }
@@ -115,7 +116,12 @@
           font-size: 0.8rem;
           text-decoration: none;
           font-weight: 100;
+          color: orange;
           @include border(violet);
+        }
+        p{
+          color: black;
+          font-weight: 100;
         }
       }
       &__read__link {

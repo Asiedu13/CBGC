@@ -14,7 +14,7 @@ class Articles extends React.Component {
     console.log(`This is the current article: ${this.state.currentArticle}`);
     return (
       <section>
-        <Header firstHeaderName="Blog" secondHeaderName = "Posts" />
+        <Header firstHeaderName="Blog" secondHeaderName="Posts" />
         <ArticlesBody
           currentArticle={(articleID) => {
             this.setState({

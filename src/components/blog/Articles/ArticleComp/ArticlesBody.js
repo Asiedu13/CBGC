@@ -14,7 +14,7 @@ export class ArticlesBody extends Component {
     };
   }
   componentDidMount() {
-    fetch("http://localhost:5000/api/articles")
+    fetch("http://localhost:5000/api/articles/short?limit=340")
       .then((data) => {
         return data.json();
       })

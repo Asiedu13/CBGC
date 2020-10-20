@@ -1,9 +1,9 @@
 .reader {
-  width: 80%;
-  height: 1500px;
+  width: 90%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
-  margin: 5% 10%;
+  margin: 5% 5%;
   @include border(red);
 
   &__meta {
@@ -40,8 +40,7 @@
   }
 
   &__main {
-
-    &__body{
+    &__body {
       width: 99vw;
       height: fit-content;
       padding: 1rem;
@@ -50,25 +49,28 @@
       flex-wrap: wrap-reverse;
       position: relative;
       @include border(blue);
-    
+
       .item {
-        width: 330px;
-        height: 250px;
-        margin: 10px 0px 0px 0px;
+        position: relative;
+        width: 80%;
+        height: 300px;
+        top: 0px;
+        margin: 40px 0;
         border-radius: 5px;
         display: flex;
         flex-direction: column;
-        box-shadow: 1px 2px 20px 1px rgb(187, 187, 187);
-        @include border(brown);
-        cursor: pointer;
+        box-shadow: 2px 12px 15px 1px lighten(royalblue, 40%);
         background: #fff;
         border-top: 5px solid #663399;
         position: relative;
         transition: all 1s ease-in;
+        cursor: pointer;
+        @include border(brown);
+
         &:hover {
-          bottom: 20px;
+          box-shadow: 2px 12px 15px 1px lighten(rgb(52, 91, 175), 40%);
         }
-  
+
         &__image {
           height: 100px;
           @include border(green);
@@ -86,7 +88,7 @@
           flex-direction: column;
           text-decoration: none;
           justify-content: space-between;
-          
+
           h2 {
             word-wrap: break-word;
             color: black;
@@ -103,7 +105,7 @@
         &__read__link {
           width: inherit;
           height: fit-content;
-  
+
           button {
             background: none;
             margin: 0 auto;
@@ -117,7 +119,4 @@
       }
     }
   }
-  
-    }
-  
-
+}
