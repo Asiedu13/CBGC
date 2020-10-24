@@ -18,7 +18,7 @@ let connectMongoDb = async () => {
         useUnifiedTopology: true,
       })
       .catch((err) => {
-        console.log("Failed to connect to database");
+        console.log(`Failed to connect to database: ${err}`);
       });
     connection.once("open", () => console.log("Connected successfully to db"));
     connection.on("error", (err) => console.log(`Error: ${err}`));
@@ -28,7 +28,9 @@ let connectMongoDb = async () => {
 };
 
 connectMongoDb();
+
 const articles = require("./Routes/Articles");
 app.use("/api/articles", articles);
+
 
 app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));
