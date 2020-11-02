@@ -16,10 +16,27 @@
     background-color: #fff;
     width: 500px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     h2 {
       color: #00bfff;
+    }
+
+    .error {
+      background: lighten(red, 30%);
+      border-bottom: 2px solid red;
+      height: 50px;
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h3 {
+        font-size: 1rem;
+        font-weight: 100;
+      }
     }
   }
   &__form {
@@ -33,7 +50,7 @@
     & > div {
       @include border(pink);
       width: inherit;
-      height: 20%;
+      height: 30%;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -47,6 +64,7 @@
         font-size: 1rem;
         border: none;
         border-bottom: 2px solid deepskyblue;
+        outline: none;
       }
     }
     &__agreement {

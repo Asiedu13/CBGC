@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const marked = require("marked");
 const createDomPurify = require("dompurify");
 const { JSDOM } = require("jsdom");
 const domPurify = createDomPurify(new JSDOM().window);

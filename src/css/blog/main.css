@@ -992,10 +992,23 @@
     background-color: #fff;
     width: 500px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center; }
     .sign__up__header h2 {
       color: #00bfff; }
+    .sign__up__header .error {
+      background: #ff9999;
+      border-bottom: 2px solid red;
+      height: 50px;
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .sign__up__header .error h3 {
+        font-size: 1rem;
+        font-weight: 100; }
   .sign__up__form {
     border: 2px solid transparent;
     width: 500px;
@@ -1006,7 +1019,7 @@
     .sign__up__form > div {
       border: 2px solid transparent;
       width: inherit;
-      height: 20%;
+      height: 30%;
       display: flex;
       justify-content: space-around;
       align-items: center; }
@@ -1018,7 +1031,8 @@
         padding: 1rem;
         font-size: 1rem;
         border: none;
-        border-bottom: 2px solid deepskyblue; }
+        border-bottom: 2px solid deepskyblue;
+        outline: none; }
     .sign__up__form__agreement {
       border: 2px solid transparent;
       justify-content: flex-start;

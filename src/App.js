@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { RegistrationProvider } from "./Contexts/RegistrationContext";
 const HomePage = lazy(() => import("./components/blog/HomePage"));
 const Article = lazy(() => import("./components/blog/ArticlesPage"));
-const RegisterPage = lazy(() => import("./components/blog/RegisterPage"));
 const Reader = lazy(() => import("./components/blog/Reader"));
 const Shopping = lazy(() => import("./components/blog/ShoppingPage"));
 const Preview = lazy(() =>
