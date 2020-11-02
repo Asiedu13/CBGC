@@ -6,12 +6,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { RegistrationProvider } from "./Contexts/RegistrationContext";
 const HomePage = lazy(() => import("./components/blog/HomePage"));
 const Article = lazy(() => import("./components/blog/ArticlesPage"));
-const Register = lazy(() => import("./components/blog/RegisterPage"));
+const RegisterPage = lazy(() => import("./components/blog/RegisterPage"));
 const Reader = lazy(() => import("./components/blog/Reader"));
 const Shopping = lazy(() => import("./components/blog/ShoppingPage"));
 const Preview = lazy(() =>
   import("./components/blog/Articles/ArticleComp/ArticlePreview")
 );
+const SignUp = lazy(() => import("./components/blog/Register/SignUp"));
 
 function App8() {
   return (
@@ -31,7 +32,7 @@ function App8() {
             <Route path="/shopping" component={Shopping} />
             <Route path="/reader/:id" component={Reader} />
             <RegistrationProvider>
-              <Route path="/register/:id" component={Register} />
+              <Route path="/register/" component={SignUp} />
             </RegistrationProvider>
           </Switch>
           <Route exact path="/articles/:id" component={Preview} />

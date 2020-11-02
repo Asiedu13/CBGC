@@ -975,116 +975,99 @@
             padding: 0.5rem;
             cursor: pointer; }
 
-.register {
-  width: 100vw;
-  height: fit-content;
+.sign__up {
+  width: 99vw;
+  height: 900px;
   display: flex;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-color: linear-gradient(to right, #0689c4, #159dc6);
+  background: linear-gradient(to right, #2ac0d9, #5576c3);
   border: 2px solid transparent; }
-  .register__pic {
-    width: 50%;
-    height: 500px;
-    position: relative;
-    background-image: url("../../pics/Counselling.jpg");
-    clip-path: polygon(50% 100%, 100% 50%, 100% 0%, 0% 0%);
-    border: 3px solid #ffd700;
+  .sign__up__header {
     border: 2px solid transparent;
-    animation: shapeChange 10s ease alternate 1s infinite; }
-    .register__pic img {
-      width: 400px;
-      height: 400px; }
-  .register__forms {
+    font-size: 2rem;
+    font-weight: 100;
+    padding: 1rem;
+    background-color: #fff;
+    width: 500px;
     display: flex;
-    height: fit-content;
+    justify-content: center;
+    align-items: center; }
+    .sign__up__header h2 {
+      color: #00bfff; }
+  .sign__up__form {
+    border: 2px solid transparent;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff; }
+    .sign__up__form > div {
+      border: 2px solid transparent;
+      width: inherit;
+      height: 20%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .sign__up__form > div input[type="password"],
+      .sign__up__form > div input[type="text"],
+      .sign__up__form > div input[type="email"] {
+        height: 60px;
+        width: 90%;
+        padding: 1rem;
+        font-size: 1rem;
+        border: none;
+        border-bottom: 2px solid deepskyblue; }
+    .sign__up__form__agreement {
+      border: 2px solid transparent;
+      justify-content: flex-start;
+      align-items: center; }
+      .sign__up__form__agreement input {
+        width: 30px;
+        height: 30px;
+        padding-right: 1rem; }
+      .sign__up__form__agreement p {
+        color: grey; }
+        .sign__up__form__agreement p b {
+          color: #00bfff; }
+    .sign__up__form__button {
+      border: 2px solid transparent;
+      justify-content: space-between; }
+      .sign__up__form__button button {
+        height: 60px;
+        width: 150px;
+        background: #00bfff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+        box-shadow: 2px 12px 15px 1px #99e5ff; }
+        .sign__up__form__button button:hover {
+          background: #007399; }
+      .sign__up__form__button h4 {
+        font-weight: 100;
+        color: grey; }
+        .sign__up__form__button h4 a {
+          text-decoration: none;
+          color: #00bfff; }
+  .sign__up__optional {
+    width: 500px;
+    height: 200px;
+    background-color: #00affe;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
-    .register__forms__signIn {
-      width: 50vw;
-      height: inherit;
-      border: 2px solid transparent;
+    align-items: center;
+    color: #fff; }
+    .sign__up__optional header {
+      font-size: 1.4rem;
+      padding: 1rem; }
+    .sign__up__optional .options {
+      width: 60%;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center; }
-      .register__forms__signIn__header {
-        border: 2px solid transparent;
-        font-size: 1.5rem;
-        padding: 1rem;
-        width: inherit;
-        height: fit-content; }
-      .register__forms__signIn form {
-        border: 2px solid transparent;
-        width: 400px;
-        height: fit-content;
-        padding: 2rem; }
-        .register__forms__signIn form label {
-          font-size: 1.4rem;
-          margin: 10px 0 10px 0; }
-        .register__forms__signIn form input {
-          width: 300px;
-          height: 70px;
-          padding: 0.5rem;
-          border: none;
-          border-bottom: 2px solid #f6d342;
-          margin: 10px 0 10px 0;
-          transition: all ease 1s;
-          outline: none; }
-          .register__forms__signIn form input:focus {
-            border-bottom: 2px solid #0689c4; }
-        .register__forms__signIn form button {
-          width: 150px;
-          height: 70px;
-          color: #fff;
-          border: none;
-          cursor: pointer;
-          margin: 20px 0 10px 0;
-          border-radius: 5px;
-          background: linear-gradient(to right, #0689c4, #663399);
-          transition: all ease 1s;
-          display: flex;
-          align-items: center;
-          justify-content: space-evenly; }
-          .register__forms__signIn form button:hover {
-            background: linear-gradient(to top, #663399, #0689c4); }
-    .register__forms .optionalSignUp {
-      color: #fff;
-      width: 400px;
-      height: 50px;
-      border-radius: 5px;
-      padding: 1rem;
-      height: fit-content;
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
-      .register__forms .optionalSignUp .options {
-        margin: 10px 0;
-        height: 50px;
-        width: 300px;
-        padding: 1rem;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        color: #fff;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        transition: all ease 0.5s; }
-        .register__forms .optionalSignUp .options div {
-          width: fit-content; }
-      .register__forms .optionalSignUp__google {
-        background: #f30b0b; }
-        .register__forms .optionalSignUp__google:hover {
-          background: #c20909; }
-      .register__forms .optionalSignUp__facebook {
-        background: royalblue; }
-        .register__forms .optionalSignUp__facebook:hover {
-          background: #214cce; }
 
 .footer {
   width: 100vw;
