@@ -5,13 +5,6 @@ export let validator = (obj) => {
     error: undefined,
   };
 
-  if (obj.username !== "" && obj.username !== undefined) {
-    isValid = true;
-  } else {
-    isValid = false;
-    message.error = `Empty username field`;
-  }
-
   if (obj.email !== "" && obj.email !== undefined) {
     isValid = true;
   } else {

@@ -31,8 +31,8 @@ connectMongoDb();
 
 const articles = require("./Routes/Articles");
 const users = require("./Routes/Users");
-app.use("./api/users", users);
-app.use("./api/users/articles", articles);
+app.use("/api/users", users);
 app.use("/api/articles", articles);
+app.use("/api/users/articles", articles);
 
 app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));

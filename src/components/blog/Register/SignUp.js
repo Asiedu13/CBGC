@@ -3,11 +3,12 @@ import React, { Component } from "react";
 import { RegistrationContext } from "../../../Contexts/RegistrationContext";
 import { validator } from "../Util/Validate";
 import { fetcher } from "../Util/HTTP";
+
 export default class SignUp extends Component {
   constructor() {
     super();
     this.state = {
-      username: "",
+      phone: "",
       email: "",
       password: "",
       checked: "",
@@ -15,9 +16,8 @@ export default class SignUp extends Component {
       errMsg: "",
     };
   }
-
+  //------------------ Handle input change ------------------
   handleChange = (e) => {
-    //----------- Setting the properties from the target Element to state -------------
     let { checked, value, name, type } = e.target;
     console.log(checked, value, name);
     type === "checkbox"
@@ -30,16 +30,19 @@ export default class SignUp extends Component {
         });
     console.log(this.state);
   };
+
+  //------------- Handle Submission --------------
   handleSubmit = (e) => {
-    // ------------- Prevent Default behaviour ------------
     e.preventDefault();
 
     let validateState = {
-      username: this.state.username,
       email: this.state.email,
       password: this.state.password,
+      phone: this.state.phone,
     };
+
     // ------------- Sign Up -------------------
+
     if (this.state.signUp) {
       let p = validator(validateState);
 
@@ -47,11 +50,16 @@ export default class SignUp extends Component {
         this.setState({ errMsg: p.error });
       } else {
         let fetched = fetcher(
-          "http://localhost:5000/api/users",
+          "http://localhost:5000/api/users/include",
           validateState,
           "POST"
-        );
-        console.log(fetched);
+        ).then((confirmation) => {
+          if (confirmation === "ok") {
+            console.log("User created successfully");
+          } else {
+            console.log(`Error`);
+          }
+        });
       }
     }
 
@@ -76,28 +84,14 @@ export default class SignUp extends Component {
                 ""
               )}
             </header>
-
+            {/*********************  Main Form ********************/}
             <form
               action=""
               method="post"
               className="sign__up__form"
               onSubmit={this.handleSubmit}
             >
-              {context.signIn ? (
-                ""
-              ) : (
-                <div className="sign__up__form__username">
-                  <input
-                    type="text"
-                    name="username"
-                    id="username"
-                    placeholder="Username"
-                    min="4"
-                    value={this.state.username}
-                    onChange={this.handleChange}
-                  />
-                </div>
-              )}
+              {/*************  Email ***************/}
 
               <div className="sign__up__form__email">
                 <input
@@ -111,6 +105,7 @@ export default class SignUp extends Component {
                 />
               </div>
 
+              {/*************  Password ***************/}
               <div className="sign__up__form__password">
                 <input
                   type="password"
@@ -123,6 +118,24 @@ export default class SignUp extends Component {
                 />
               </div>
 
+              {/*************  Phone Number ***************/}
+              {context.signIn ? (
+                ""
+              ) : (
+                <div className="sign__up__form__phone">
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    placeholder="Phone"
+                    min="4"
+                    value={this.state.phone}
+                    onChange={this.handleChange}
+                  />
+                </div>
+              )}
+
+              {/*************  Agreement to Terms and Conditions ***************/}
               {context.signIn ? (
                 ""
               ) : (
@@ -141,10 +154,13 @@ export default class SignUp extends Component {
                 </div>
               )}
 
+              {/*************  Submit Button ***************/}
               <div className="sign__up__form__button">
                 <button id="submit" type="submit">
                   Submit
                 </button>
+
+                {/*************  SignIn/Out Toggle ***************/}
                 {context.signIn ? (
                   <h4>
                     Don't have an account?{" "}
@@ -153,7 +169,7 @@ export default class SignUp extends Component {
                       onClick={(e) => {
                         e.preventDefault();
                         context.toggleSignIn();
-                        this.setState({ signUp: context.signIn, errMsg: "", });
+                        this.setState({ signUp: context.signIn, errMsg: "" });
                       }}
                       rel="noopener noreferrer"
                     >
@@ -179,6 +195,7 @@ export default class SignUp extends Component {
               </div>
             </form>
 
+            {/*************  Optional SignIn/Out ***************/}
             <section className="sign__up__optional">
               <header>
                 {context.signIn ? "Or sign in with" : "Or sign up with"}
