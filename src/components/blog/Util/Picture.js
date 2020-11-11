@@ -1,5 +1,5 @@
 import React from "react";
-import pic from "../../../pics/Clarkson.jpg";
+import pic from "../../../pics/clarkson4.jpg";
 
 const picStyle = {
   width: "300px",
