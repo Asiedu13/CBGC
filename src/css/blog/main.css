@@ -60,15 +60,8 @@
   grid-template-rows: repeat(3, 1fr);
   justify-content: center;
   z-index: 50;
-  position: relative; }
-  .header .head__svg {
-    border: 1px solid blue; }
-  .header .one {
-    position: absolute;
-    bottom: 500px; }
-  .header .two {
-    position: absolute;
-    top: 500px; }
+  position: relative;
+  border: 2px solid transparent; }
   .header h1 {
     font-size: 3rem;
     margin: 0px auto;
@@ -101,7 +94,6 @@
     border-right: none;
     border-left: none;
     position: absolute;
-    margin: 10vh 0;
     width: 100vw;
     height: 400px; }
   .header .no-video .video-container video,
@@ -1032,7 +1024,13 @@
         font-size: 1rem;
         border: none;
         border-bottom: 2px solid deepskyblue;
-        outline: none; }
+        outline: none;
+        transition: all .3s ease-in-out; }
+        .sign__up__form > div input[type="password"]:focus,
+        .sign__up__form > div input[type="text"]:focus,
+        .sign__up__form > div input[type="email"]:focus {
+          border-bottom: 2px solid gold;
+          padding-left: 2rem; }
     .sign__up__form__agreement {
       border: 2px solid transparent;
       justify-content: flex-start;

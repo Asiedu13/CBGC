@@ -8,22 +8,9 @@
   grid-template-rows: repeat(3, 1fr);
   justify-content: center;
   z-index: 50;
-  // background: #0099ff;
   position: relative;
-  .head__svg {
-    // fill: #fff;
-    border: 1px solid blue;
-  }
-  .one {
-    position: absolute;
-    bottom: 500px;
-    // z-index: 300;
-  }.two{
-    position: absolute;
-    // z-index: 300;
-    top: 500px;
-  }
-
+  @include border(brown);
+  
   h1 {
     font-size: 3rem;
     margin: 0px auto;
@@ -59,7 +46,6 @@
     border-right: none;
     border-left: none;
     position: absolute;
-    margin: 10vh 0;
     width: 100vw;
     height: 400px;
   }

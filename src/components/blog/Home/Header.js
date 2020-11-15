@@ -8,7 +8,6 @@ class Header extends React.PureComponent {
   render() {
     return (
       <section className="header">
-         
         <h1>
           Clarksons{" "}
           <FontAwesomeIcon
@@ -20,7 +19,6 @@ class Header extends React.PureComponent {
         <p className="header__slogan">Strategy that delivers</p>
 
         <div className="homepage-hero-module">
-       
           <div className="video-container">
             <div className="filter"></div>
             <video
