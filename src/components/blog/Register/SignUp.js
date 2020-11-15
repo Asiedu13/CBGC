@@ -35,15 +35,14 @@ export default class SignUp extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    let validateState = {
-      email: this.state.email,
-      password: this.state.password,
-      phone: this.state.phone,
-    };
-
     // ------------- Sign Up -------------------
 
     if (this.state.signUp) {
+      let validateState = {
+        email: this.state.email,
+        password: this.state.password,
+        phone: this.state.phone,
+      };
       let p = validator(validateState);
 
       if (p.error) {
@@ -65,7 +64,21 @@ export default class SignUp extends Component {
 
     // --------------- Sign In --------------------
     else {
-      console.log("We are not signing up");
+      let validateState = {
+        username: this.state.email,
+        password: this.state.password,
+      };
+      let fetched = fetcher(
+        "http://localhost:5000/api/users/login",
+        validateState,
+        "POST"
+      ).then((confirmation) => {
+        if (confirmation) {
+          console.log(confirmation);
+        } else {
+          console.log(`Error`);
+        }
+      });
     }
   };
 

@@ -1,6 +1,7 @@
 export let fetcher = async (url, body, method) => {
+  let parsedBody = JSON.stringify(body);
+  console.log(parsedBody);
   if (method === "POST") {
-    let parsedBody = JSON.stringify(body);
     try {
       let response = await fetch(url, {
         method: method,
@@ -10,12 +11,11 @@ export let fetcher = async (url, body, method) => {
         body: parsedBody,
       });
       let msg = await response.json();
-      
-      return msg.msg
-      
+
+      return msg.msg;
     } catch (err) {
       console.log("err");
       return err;
     }
-  }
+  } 
 };

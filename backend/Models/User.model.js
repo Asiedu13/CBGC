@@ -15,7 +15,9 @@ let UserSchema = new Schema({
   counsellingSessions: { type: Number },
   userImg: { type: Schema.Types.Mixed },
 }).pre("validate", function () {
-  this.username = this.email;
+  
+    this.username = this.email;
+  
 });
 
 let Users = mongoose.model("Users", UserSchema, "users");
