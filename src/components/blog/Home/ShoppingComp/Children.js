@@ -68,7 +68,7 @@ export class ChildTwo extends React.Component {
           <Link to="/shopping">
               <button
                 className="shopping__button__seemore"
-                onClick={() => this.props.view(true)}
+               // onClick={() => this.props.view(true)}
               >
                 Let's shop
               </button>

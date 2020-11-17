@@ -26,15 +26,15 @@ function App8() {
         <section>
           <Nav />
           <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/articles" component={Article} />
-            <Route path="/shopping" component={Shopping} />
+            <Route path="/(me)?" exact component={HomePage} />
+            <Route path="/articles/:num?/:userId?" component={Article} />
+            <Route path="/shopping/:num?/:userId?" component={Shopping} />
             <Route path="/reader/:id" component={Reader} />
             <RegistrationProvider>
               <Route path="/register/" component={SignUp} />
             </RegistrationProvider>
+            <Route exact path="/articles/:id" component={Preview} />
           </Switch>
-          <Route exact path="/articles/:id" component={Preview} />
           <Footer />
         </section>
       </Suspense>

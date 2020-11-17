@@ -25,7 +25,7 @@ export default class Elaboration extends Component {
   handleIconChange = (stateField) => {
     console.log(stateField);
     let iconInterval;
-    if (stateField.length >= 0) {
+    if (stateField) {
       let n = 0;
       iconInterval = setInterval(() => {
         if (n === 4) {

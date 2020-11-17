@@ -75,6 +75,7 @@ export default class SignUp extends Component {
       ).then((confirmation) => {
         if (confirmation) {
           console.log(confirmation);
+          window.location = `/me/`;
         } else {
           console.log(`Error`);
         }

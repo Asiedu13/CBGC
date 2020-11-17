@@ -56,7 +56,6 @@ router.route("/include").post((req, res) => {
 router.route("/login").post(function (req, res, next) {
   console.log(req.body.password)
   passport.authenticate("local", function (err, user, info) {
-    console.log(user.password);
     if (err) return next(err);
     if (!user) {
       return res.json(info);
@@ -64,7 +63,7 @@ router.route("/login").post(function (req, res, next) {
     if (!user.password) return res.json({ msg: "invalid password" });
     req.logIn(user, function (err) {
       if (err) return next(err);
-      return res.json({ msg: "user found" });
+      return res.json({ msg: {msg:"user found", user: user._id,} });
     });
   })(req, res, next);
 });

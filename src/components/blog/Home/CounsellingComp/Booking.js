@@ -19,7 +19,7 @@ class Body extends React.Component {
                 Instagram
               </a>
 
-              <a className="mail" href="mailto:Clarksonduku25@gmail.com">
+              <a className="mail" href="mailto:Clarksonduku25@gmail.com?subject=Can you help me">
                 <FontAwesomeIcon icon={["fa", "mail-bulk"]} size="2x" /> Mail
               </a>
 
@@ -27,10 +27,12 @@ class Body extends React.Component {
                 <FontAwesomeIcon icon="phone" size="2x" /> Call
               </a>
             </section>
-
           </div>
 
-          <p className="assurance">Your details and issues will be remain between you and your counsellor</p>
+          <p className="assurance">
+            Your details and issues will be remain between you and your
+            counsellor
+          </p>
         </section>
       </section>
     );
