@@ -5,6 +5,8 @@ import { arrowMove } from "../../Util/JsStyle";
 import { btnSecondStyle, loveAnimation } from "../../Util/JsStyle";
 import pic from "../../../../pics/Shopping Bag.png";
 import { Link } from "react-router-dom";
+import Zoom from "react-reveal/Zoom";
+import Fade from "react-reveal/Fade";
 
 export class Head extends React.Component {
   constructor(props) {
@@ -46,9 +48,13 @@ export class ChildTwo extends React.Component {
   render() {
     return (
       <div className="shop-section-2">
-        <div className="shopping__art">
-          <img src={pic} alt="" />
-        </div>
+        {/* <Zoom> */}
+          <div className="shopping__art" style={{overflow: 'hidden'}}>
+            <Fade left>
+              <img src={pic} alt="" />
+            </Fade>
+          </div>
+        {/* </Zoom> */}
 
         <div className="shopping__paragraph">
           <div className="childTwoHeader">
@@ -65,7 +71,7 @@ export class ChildTwo extends React.Component {
             </p>
           </div>
           <div className="shopping__button">
-          <Link to="/shopping">
+            <Link to="/shopping">
               <button
                 className="shopping__button__seemore"
                 onClick={() => this.props.view(true)}

@@ -967,6 +967,55 @@
             padding: 0.5rem;
             cursor: pointer; }
 
+.adminPage {
+  height: 500px; }
+  .adminPage header {
+    border: 2px solid transparent;
+    padding: 1rem; }
+    .adminPage header h2 {
+      font-size: 4rem;
+      padding: 1rem;
+      color: #000; }
+      .adminPage header h2 b {
+        font-weight: 100;
+        color: #f6d342; }
+  .adminPage__subHeaders {
+    border: 2px solid transparent;
+    height: 300px; }
+    .adminPage__subHeaders header h3 {
+      color: grey; }
+    .adminPage__subHeaders__items {
+      height: fit-content;
+      border: 2px solid transparent;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center; }
+      .adminPage__subHeaders__items__btnCon {
+        height: inherit;
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        border: 2px solid transparent; }
+        .adminPage__subHeaders__items__btnCon button {
+          height: 60px;
+          width: 150px;
+          background: transparent;
+          border: none;
+          font-size: 1.2rem;
+          cursor: pointer;
+          box-shadow: 5px 10px 20px 1px #f6d342; }
+        .adminPage__subHeaders__items__btnCon__desc {
+          margin-left: 10px;
+          width: 300px;
+          background: #f4f4f4;
+          position: relative; }
+          .adminPage__subHeaders__items__btnCon__desc ul {
+            padding: 1rem; }
+            .adminPage__subHeaders__items__btnCon__desc ul li {
+              list-style-type: none; }
+
 .sign__up {
   width: 99vw;
   height: 900px;
@@ -1335,3 +1384,16 @@ body {
   100% {
     clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%);
     border: 3px solid violet; } }
+
+.btnConListShow {
+  animation: listSlide .3s ease-in-out forwards; }
+
+.btnConListHide {
+  animation: listSlide .3s ease-in-out forwards; }
+
+@keyframes listSlide {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1;
+    left: 20px; } }

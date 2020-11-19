@@ -15,6 +15,8 @@
 
 @import "Reader/reader";
 
+@import 'Adminpage/adminpage';
+
 @import "RegisterPage/registerpage";
 @import "footer";
 
@@ -285,5 +287,22 @@ body {
   100% {
     clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 10% 100%);
     border: 3px solid violet;
+  }
+}
+
+.btnConListShow {
+  animation: listSlide .3s ease-in-out forwards;
+}
+
+.btnConListHide {
+  animation: listSlide .3s ease-in-out forwards;
+}
+@keyframes listSlide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity:1;
+    left: 20px;
   }
 }

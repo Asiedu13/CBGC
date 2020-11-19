@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../Util/Button";
 import Picture from "../Util/Picture";
 import { Link } from "react-router-dom";
+import Zoom from "react-reveal/Zoom";
 
 function Articles() {
   return (
@@ -14,25 +15,27 @@ function Articles() {
           </h2>
         </div>
       </div>
-        <section className="articles__paragraph">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab natus
-            excepturi iusto aliquid tempora dolore at cupiditate nam tempore off
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab natus
-            excepturi iusto aliquid tempora dolore at cupiditate nam tempore
-            officiis velit quam, neque vel? Inventore minima ea ad non
-            velit?iciis velit quam, neque vel? Inventore minima ea ad non velit?
-          </p>
-          <section className="buttons">
-            <Link to="/articles">
-              <Button label="Articles" importance="medium" icon="angle-right" />
-            </Link>
-          </section>
+      <section className="articles__paragraph">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab natus
+          excepturi iusto aliquid tempora dolore at cupiditate nam tempore off
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab natus
+          excepturi iusto aliquid tempora dolore at cupiditate nam tempore
+          officiis velit quam, neque vel? Inventore minima ea ad non velit?iciis
+          velit quam, neque vel? Inventore minima ea ad non velit?
+        </p>
+        <section className="buttons">
+          <Link to="/articles">
+            <Button label="Articles" importance="medium" icon="angle-right" />
+          </Link>
         </section>
+      </section>
 
-        <div className="articles-author">
+      <div className="articles-author">
+        <Zoom>
           <Picture />
-        </div>
+        </Zoom>
+      </div>
     </section>
   );
 }

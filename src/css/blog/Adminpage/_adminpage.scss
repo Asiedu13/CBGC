@@ -1,0 +1,76 @@
+.adminPage {
+  height: 500px;
+
+  header {
+    @include border(red);
+    //text-align: center;
+    padding: 1rem;
+    // background: $secondary-blue;
+    
+    h2 {
+      // background: $orange;
+      font-size: 4rem;
+      padding: 1rem;
+      color: #000;
+      b {
+        font-weight: 100;
+        color: $orange;
+      }
+    }
+  }
+
+  &__subHeaders {
+    @include border(orange);
+    height: 300px;
+    header {
+      h3 {
+        color: grey;
+      }
+    }
+
+    &__items {
+      height: fit-content;
+      @include border(red);
+      display:flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+
+      &__btnCon {
+        height: inherit;
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        @include border(green);
+        
+        button {
+          height: 60px;
+          width: 150px;
+          background: transparent;
+          border: none;
+          font-size: 1.2rem;
+          cursor: pointer;
+          box-shadow: 5px 10px 20px 1px $orange;
+        }
+
+        &__desc{
+          // border: 1px solid red;
+          margin-left: 10px;
+          width: 300px;
+          background: #f4f4f4;
+          position: relative;
+          // display: none;
+          
+          ul {
+            padding: 1rem;
+            li {
+              list-style-type: none;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

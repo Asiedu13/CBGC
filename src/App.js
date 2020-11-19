@@ -12,6 +12,7 @@ const Preview = lazy(() =>
   import("./components/blog/Articles/ArticleComp/ArticlePreview")
 );
 const SignUp = lazy(() => import("./components/blog/Register/SignUp"));
+const AdminPanel = lazy(() => import("./components/blog/AdminPage"));
 
 function App8() {
   return (
@@ -26,12 +27,13 @@ function App8() {
         <section>
           <Nav />
           <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/articles" component={Article} />
-            <Route path="/shopping" component={Shopping} />
-            <Route path="/reader/:id" component={Reader} />
+            <Route path="/(me)?" exact component={HomePage} />
             <RegistrationProvider>
+              <Route path="/articles" component={Article} />
+              <Route path="/shopping" component={Shopping} />
+              <Route path="/reader/:id" component={Reader} />
               <Route path="/register/" component={SignUp} />
+              <Route path="/adminPanel" component={AdminPanel} />
             </RegistrationProvider>
           </Switch>
           <Route exact path="/articles/:id" component={Preview} />
