@@ -48,13 +48,13 @@ export class ChildTwo extends React.Component {
   render() {
     return (
       <div className="shop-section-2">
-        {/* <Zoom> */}
+        <Zoom>
           <div className="shopping__art" style={{overflow: 'hidden'}}>
             <Fade left>
               <img src={pic} alt="" />
             </Fade>
           </div>
-        {/* </Zoom> */}
+        </Zoom>
 
         <div className="shopping__paragraph">
           <div className="childTwoHeader">

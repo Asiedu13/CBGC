@@ -968,22 +968,26 @@
             cursor: pointer; }
 
 .adminPage {
-  height: 500px; }
-  .adminPage header {
+  height: fit-content; }
+  .adminPage__header {
     border: 2px solid transparent;
     padding: 1rem; }
-    .adminPage header h2 {
+    .adminPage__header h2 {
       font-size: 4rem;
       padding: 1rem;
       color: #000; }
-      .adminPage header h2 b {
+      .adminPage__header h2 b {
         font-weight: 100;
         color: #f6d342; }
   .adminPage__subHeaders {
     border: 2px solid transparent;
-    height: 300px; }
-    .adminPage__subHeaders header h3 {
-      color: grey; }
+    height: 200px; }
+    .adminPage__subHeaders header {
+      padding: 1rem; }
+      .adminPage__subHeaders header h3 {
+        color: grey;
+        position: relative;
+        left: 100px; }
     .adminPage__subHeaders__items {
       height: fit-content;
       border: 2px solid transparent;
@@ -1015,6 +1019,19 @@
             padding: 1rem; }
             .adminPage__subHeaders__items__btnCon__desc ul li {
               list-style-type: none; }
+  .adminPage .buttonDisplay {
+    border: 2px solid transparent;
+    height: fit-content;
+    display: flex;
+    flex-direction: column; }
+    .adminPage .buttonDisplay header {
+      border: 2px solid transparent;
+      display: flex;
+      justify-content: space-between; }
+      .adminPage .buttonDisplay header input {
+        height: 50px;
+        width: 300px;
+        margin: 5px; }
 
 .sign__up {
   width: 99vw;

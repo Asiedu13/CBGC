@@ -1,14 +1,26 @@
 import React, { Component } from "react";
+import {fetcher} from './Util/HTTP'
 import Slide from "react-reveal/Slide";
 import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
+import Items from "./Articles/ArticleComp/Items";
 export default class AdminPage extends Component {
   constructor() {
     super();
     this.state = {
       btnHover0: false,
       btnHover1: false,
+      btnClickState: "",
     };
+  }
+  componentDidMount() {
+    let fetched = fetcher("http://localhost:5000/api/articles/short?limit=340", "", "GET");
+      fetched.then(data => {
+        this.setState({
+          btnClickState: data,
+        })
+      })
+
   }
   handleMouseOver = (event) => {
     let { name } = event.target;
@@ -34,10 +46,25 @@ export default class AdminPage extends Component {
       });
     }
   };
+
+  handleOptionBtnClick = (event) => {
+    let { name } = event.target;
+    if (name === "articles") {
+      
+    } else if (name === "shop") {
+      // do something
+    }
+  };
   render() {
+    let optionItems = this.state.btnClickState ? this.state.btnClickState.map(item => {
+      return (
+        <Items key={item.title} article={item} />
+          
+      )
+    }): "";
     return (
       <div className="adminPage">
-        <header>
+        <header className="adminPage__header">
           <Slide left>
             <h2>
               <b>Say Gob3,</b> Admin
@@ -57,6 +84,7 @@ export default class AdminPage extends Component {
                 name="articles"
                 onMouseOver={this.handleMouseOver}
                 onMouseOut={this.handleMouseOut}
+                onClick={this.handleOptionBtnClick}
               >
                 Articles
               </button>
@@ -80,6 +108,7 @@ export default class AdminPage extends Component {
                 name="shop"
                 onMouseOver={this.handleMouseOver}
                 onMouseOut={this.handleMouseOut}
+                onClick={this.handleOptionBtnClick}
               >
                 Shop
               </button>
@@ -98,6 +127,16 @@ export default class AdminPage extends Component {
                 ""
               )}
             </div>
+          </section>
+        </section>
+
+        <section className="buttonDisplay">
+          <header>
+            <h2>Articles</h2>
+            <input type="search" name="searchBar" id="searcher" />
+          </header>
+          <section className="buttonDisplay__items">
+                {this.state.btnClickState ? optionItems : 'Null' }
           </section>
         </section>
       </div>

@@ -20,6 +20,8 @@ router.route("/").get((req, res) => {
     });
 });
 
+// ----------- For A User or visitor -----------------
+
 // get article intros
 // this takes in limit query parameter to indicate how many words in the content to retrieve
 
@@ -43,7 +45,7 @@ router.route("/short").get((req, res) => {
     .catch((err) => {
       res
         .json({
-          msg: `Error occured in /summary
+          msg: `Error occurred in /summary
       ${err}`,
         })
         .status(404);
@@ -107,6 +109,11 @@ router.route("/defined/:num").get((req, res) => {
       res.json(modified).status(200);
     });
 });
+
+
+
+
+// ---------- For Admin ------------
 
 // Add a single article
 router.route("/include").post((req, res) => {

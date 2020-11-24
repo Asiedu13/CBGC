@@ -17,5 +17,21 @@ export let fetcher = async (url, body, method) => {
       console.log("err");
       return err;
     }
-  } 
+  }
+  else if (method === "GET") {
+    try {
+      let response = await fetch(url, {
+        method: method,
+        headers: {
+          "Content-Type": "application/json",
+        }
+      });
+      let data = await response.json();
+
+      return data;
+    } catch (err) {
+      console.log("err");
+      return err;
+    }
+  }
 };
