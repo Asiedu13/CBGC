@@ -80,17 +80,51 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
-    
 
     header {
       @include border(red);
       // width: 80%;
       display: flex;
+      padding: 1rem;
       justify-content: space-between;
+
+      div {
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        @include border(red);
+        h2 {
+          font-size: 2rem;
+          text-transform: capitalize;
+        }
+        .awesomeIcon {
+          border: 1px solid #000;
+          height: 30px;
+          width: 30px;
+          padding: .5rem;
+          cursor: pointer;
+          border-radius: 30px;
+        }
+      }
       input {
         height: 50px;
         width: 300px;
         margin: 5px;
+        padding: 1rem;
+      }
+    }
+    &__items {
+      padding: 1rem;
+
+      .item {
+        width: 70%;
+        height: 250px;
+        margin: 20px auto;
+        overflow: hidden;
+        padding: 1rem;
+        box-shadow: 5px 5px 50px 1px lighten(royalblue, 30%);
+        // border: 1px solid green;
       }
     }
   }

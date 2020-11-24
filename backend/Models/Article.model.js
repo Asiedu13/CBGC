@@ -4,7 +4,7 @@ const createDomPurify = require("dompurify");
 const { JSDOM } = require("jsdom");
 const domPurify = createDomPurify(new JSDOM().window);
 
-const ArticleSchema = new Schema(
+const ArticleSchema = new Schema (
   {
     title: { type: String, required: true, trim: true },
     author: { type: String, required: true, trim: true, default: "Author" },

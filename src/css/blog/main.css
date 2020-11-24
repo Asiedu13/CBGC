@@ -1027,11 +1027,38 @@
     .adminPage .buttonDisplay header {
       border: 2px solid transparent;
       display: flex;
+      padding: 1rem;
       justify-content: space-between; }
+      .adminPage .buttonDisplay header div {
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border: 2px solid transparent; }
+        .adminPage .buttonDisplay header div h2 {
+          font-size: 2rem;
+          text-transform: capitalize; }
+        .adminPage .buttonDisplay header div .awesomeIcon {
+          border: 1px solid #000;
+          height: 30px;
+          width: 30px;
+          padding: .5rem;
+          cursor: pointer;
+          border-radius: 30px; }
       .adminPage .buttonDisplay header input {
         height: 50px;
         width: 300px;
-        margin: 5px; }
+        margin: 5px;
+        padding: 1rem; }
+    .adminPage .buttonDisplay__items {
+      padding: 1rem; }
+      .adminPage .buttonDisplay__items .item {
+        width: 70%;
+        height: 250px;
+        margin: 20px auto;
+        overflow: hidden;
+        padding: 1rem;
+        box-shadow: 5px 5px 50px 1px #c5d1f6; }
 
 .sign__up {
   width: 99vw;
