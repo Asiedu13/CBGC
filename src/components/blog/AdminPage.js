@@ -12,6 +12,8 @@ export default class AdminPage extends Component {
       btnHover0: false,
       btnHover1: false,
       header: "",
+      searching: false,
+      resultCount: [],
       articlesData: "",
       shopItemsData: "",
       btnClickState: "",
@@ -66,20 +68,50 @@ export default class AdminPage extends Component {
       });
     } else if (name === "shop") {
       this.setState({
+        resultCount: [],
         btnClickState: this.state.shopItemsData,
       });
     }
   };
   handleAwesomeIconClick = () => {
-    // Do something
+    // do something
+  };
+  handleSearch = (e) => {
+    let { value } = e.target;
+    console.log(value);
+    if (
+      value !== "" &&
+      value !== " " &&
+      value !== null &&
+      value !== undefined
+    ) {
+      let result = this.state.articlesData.filter((item) =>
+        item["title"].toLowerCase().includes(value)
+      );
+
+      this.setState({
+        btnClickState: result,
+        searching: true,
+        resultCount: [
+          this.state.btnClickState.length,
+          `${result.length} result${result.length > 1 ? "s": ""} found`,
+        ],
+      });
+    } else {
+      this.setState({
+        searching: false,
+        btnClickState: this.state.articlesData,
+        resultCount: [],
+      });
+    }
   };
   render() {
     let optionItems =
-      this.state.btnClickState.length > 1
+      this.state.btnClickState.length > 0
         ? this.state.btnClickState.map((item) => {
             return <Items key={item.title} article={item} />;
           })
-        : "";
+        : "No items found";
     return (
       <div className="adminPage">
         <header className="adminPage__header">
@@ -151,7 +183,7 @@ export default class AdminPage extends Component {
         <section
           className="buttonDisplay"
           style={
-            this.state.btnClickState.length > 1
+            this.state.header.length > 1
               ? { display: "flex" }
               : { display: "none" }
           }
@@ -173,9 +205,18 @@ export default class AdminPage extends Component {
               name="searchBar"
               id="searcher"
               placeholder="Search here"
+              onChange={this.handleSearch}
             />
           </header>
           <section className="buttonDisplay__items">
+            <div className="buttonDisplay__items__search">
+              <Slide right>
+                <h3>
+                  {" "}
+                  {this.state.searching ? this.state.resultCount[1] : " "}{" "}
+                </h3>
+              </Slide>
+            </div>
             {this.state.btnClickState ? optionItems : "Null"}
           </section>
         </section>

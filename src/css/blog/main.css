@@ -1043,6 +1043,7 @@
           height: 30px;
           width: 30px;
           padding: .5rem;
+          color: grey;
           cursor: pointer;
           border-radius: 30px; }
       .adminPage .buttonDisplay header input {
@@ -1059,6 +1060,11 @@
         overflow: hidden;
         padding: 1rem;
         box-shadow: 5px 5px 50px 1px #c5d1f6; }
+      .adminPage .buttonDisplay__items__search {
+        border: 2px solid transparent;
+        width: 70%;
+        margin: 0 auto;
+        color: grey; }
 
 .sign__up {
   width: 99vw;

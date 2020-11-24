@@ -103,6 +103,7 @@
           height: 30px;
           width: 30px;
           padding: .5rem;
+          color: grey;
           cursor: pointer;
           border-radius: 30px;
         }
@@ -117,6 +118,7 @@
     &__items {
       padding: 1rem;
 
+
       .item {
         width: 70%;
         height: 250px;
@@ -125,6 +127,13 @@
         padding: 1rem;
         box-shadow: 5px 5px 50px 1px lighten(royalblue, 30%);
         // border: 1px solid green;
+      }
+
+      &__search {
+        @include border(red);
+        width: 70%;
+        margin: 0 auto;
+        color: grey;
       }
     }
   }
