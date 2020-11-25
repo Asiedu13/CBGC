@@ -3,7 +3,7 @@ import img from "../../../../pics/Polygon5.png";
 import img2 from "../../../../pics/attachment_77327090.png";
 import Button from "../../Util/Button";
 import { Link } from "react-router-dom";
-import {getMarkdownText} from "../../Util/convertToHTML"
+import { getMarkdownText } from "../../Util/convertToHTML";
 
 export default class ArticlePreview extends Component {
   constructor(props) {

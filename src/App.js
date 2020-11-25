@@ -35,7 +35,7 @@ function App8() {
               <Route path="/register/" component={SignUp} />
               <Route path="/adminPanel" component={AdminPanel} />
             </RegistrationProvider>
-            <Route exact path="/articles/:id" component={Preview} />
+            <Route path="/articles/:id" component={Preview} />
           </Switch>
           <Footer />
         </section>
