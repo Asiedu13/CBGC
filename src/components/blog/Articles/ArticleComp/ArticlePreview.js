@@ -58,7 +58,6 @@ export default class ArticlePreview extends Component {
               <div className="pre__part__middle__header">
                 <h2 className="title">{this.state.title}</h2>
               </div>
-              {/* <p>{`${shortened}...`}</p> */}
               <article dangerouslySetInnerHTML={getMarkdownText(shortened)} />
 
               <div className="pre__part__middle__buttons">

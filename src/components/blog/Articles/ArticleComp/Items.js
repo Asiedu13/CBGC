@@ -3,15 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { getMarkdownText } from "../../Util/convertToHTML";
 import Zoom from "react-reveal/Zoom";
 class Item extends React.Component {
-  mouseOver = (e) => {
-    console.log(e.currentTarget.previousSibling);
-    // e.currentTarget.classList.add("centre");
-  };
-  mouseOut = (e) => {
-    console.log(e.currentTarget.previousSibling);
-    // e.currentTarget.classList.remove("centre");
-  };
-
+  
   render() {
     console.log(this.props.article._id);
     return (

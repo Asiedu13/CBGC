@@ -10,8 +10,12 @@ class Articles extends React.Component {
       currentArticle: "",
     };
   }
+  componentDidMount() {
+    console.log(this.state.currentArticle);
+  }
   render() {
     console.log(`This is the current article: ${this.state.currentArticle}`);
+
     return (
       <section>
         <Header firstHeaderName="Blog" secondHeaderName="Posts" />
