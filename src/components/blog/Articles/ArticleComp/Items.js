@@ -7,7 +7,7 @@ class Item extends React.Component {
   render() {
     console.log(this.props.article._id);
     return (
-      <Zoom>
+      // <Zoom>
         <article
           className="item"
           onMouseOver={this.mouseOver}
@@ -36,7 +36,7 @@ class Item extends React.Component {
             </button>
           </div>
         </article>
-      </Zoom>
+      // </Zoom>
     );
   }
 }
