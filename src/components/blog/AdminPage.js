@@ -69,6 +69,7 @@ export default class AdminPage extends Component {
     } else if (name === "shop") {
       this.setState({
         resultCount: [],
+        header: "shop",
         btnClickState: this.state.shopItemsData,
       });
     }
@@ -94,7 +95,7 @@ export default class AdminPage extends Component {
         searching: true,
         resultCount: [
           this.state.btnClickState.length,
-          `${result.length} result${result.length > 1 ? "s": ""} found`,
+          `${result.length} result${result.length > 1 ? "s" : ""} found`,
         ],
       });
     } else {
