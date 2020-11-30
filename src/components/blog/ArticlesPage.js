@@ -1,10 +1,10 @@
 import React from "react";
 import { Header } from "./Util/Header";
-import { ArticlesBody } from "./Articles/ArticleComp/ArticlesBody";
 import ArticlePreview from "./Articles/ArticleComp/ArticlePreview";
+import { ArticlesBody } from "./Articles/ArticleComp/ArticlesBody";
 
 class Articles extends React.Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       currentArticle: "",
@@ -28,7 +28,7 @@ class Articles extends React.Component {
         />
         <ArticlePreview
           style={
-            this.state.currentArticle.length > 2
+            this.state.currentArticle.length > 1
               ? { display: "flex" }
               : { display: "none" }
           }

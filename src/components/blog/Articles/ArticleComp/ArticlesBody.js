@@ -79,11 +79,11 @@ export class ArticlesBody extends Component {
     let DbArt =
       this.state.modified.length > 0 ? (
         this.state.modified.map((article) => {
-          console.log(article._id);
           return (
             <Link
               to={`/articles/${article._id}`}
               style={{ textDecoration: "none" }}
+              key={article._id}
             >
               <Item key={article._id} article={article} />
             </Link>

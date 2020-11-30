@@ -22,6 +22,8 @@ export default class ArticlePreview extends Component {
     console.log(this.state.currentlyReading)
     let pathId = window.location.pathname.split("/");
     let path = `http://localhost:5000/api/articles/short/${pathId[2]}?limit=205`;
+    alert(pathId);
+    console.log(path);
 
     fetch(path)
       .then((data) => {
