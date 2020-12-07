@@ -33,8 +33,8 @@ function App8() {
             <RegistrationProvider>
               <Route path="/register/" component={SignUp} />
             </RegistrationProvider>
-            <Route exact path="/articles/:id" component={Preview} />
           </Switch>
+            <Route exact path="/articles/:id" component={Preview} />
           <Footer />
         </section>
       </Suspense>
