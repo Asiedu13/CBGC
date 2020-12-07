@@ -722,17 +722,16 @@
   border: 2px solid transparent; }
   .articlesBox__body {
     display: flex;
-    width: 96vw;
+    width: 97vw;
     height: fit-content;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
     flex-wrap: wrap;
     padding: 1rem;
     border: 2px solid transparent; }
     .articlesBox__body .item {
-      width: 100%;
-      height: 290px;
-      margin: 10px 0px 20px 20px;
+      width: 1000px;
+      height: 300px;
+      margin: 10px auto;
       border-radius: 2px;
       display: flex;
       flex-direction: column;

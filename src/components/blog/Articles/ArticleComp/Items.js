@@ -33,6 +33,7 @@ class Item extends React.Component {
           {/* <p>{this.props.article.content}...</p> */}
           <article dangerouslySetInnerHTML={getMarkdownText(this.props.article.content + "...")} />
         </div>
+        <br/>
         <div className="item__read__link">
           <button>
             read <FontAwesomeIcon icon="arrow-right" />{" "}
