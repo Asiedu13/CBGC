@@ -117,6 +117,7 @@ router.route("/include").post((req, res) => {
   const likes = req.body.likes;
   const haveRead = req.body.haveRead;
   const img = req.body.img;
+  const comment = req.body.incomingComment;
 
   const newArticle = new Articles({
     title,
@@ -126,6 +127,7 @@ router.route("/include").post((req, res) => {
     likes,
     haveRead,
     img,
+    incomingComment: comment,
   });
 
   newArticle
@@ -168,4 +170,16 @@ router.route("/delete/:id").delete((req, res) => {
     });
 });
 
+// Commenting an article
+router.route("/comment/:id").put((req, res) => {
+  let incomingComment = req.body.incomingComment;
+  Articles.findById(req.params.id, (err, article) => {
+    article.incomingComment = incomingComment;
+
+    article.save((err) => {
+      if (err) return res.status(500).json("failed to update comments");
+      res.status(201).json("Comments updated");
+    });
+  });
+});
 module.exports = router;

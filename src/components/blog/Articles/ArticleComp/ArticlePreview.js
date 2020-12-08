@@ -62,7 +62,7 @@ export default class ArticlePreview extends Component {
               <article dangerouslySetInnerHTML={getMarkdownText(shortened)} />
 
               <div className="pre__part__middle__buttons">
-                <Link to={`/reader/${this.state.id}`}>
+                <Link to={`/reader/${this.state.id}`} target="top">
                   <Button label="continue..." importance="high" />
                 </Link>
                 {/* <Link to={`/articles`}>

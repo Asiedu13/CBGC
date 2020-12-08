@@ -13,9 +13,19 @@ const ArticleSchema = new Schema(
     likes: { type: Number, trim: true },
     haveRead: { type: Number, trim: true },
     img: { type: Schema.Types.Mixed },
+    incomingComment: {type: String, trim: true},
+    comment: {
+      comments: {
+        type: Array,
+        trim: true,
+      },
+      madeAt: { type: Date, default: Date.now },
+    },
   },
   { timeStamps: true }
-);
+).pre("validate", function() {
+  this.comment['comments'].push(this.incomingComment);
+});
 
 const Articles = new mongoose.model("Articles", ArticleSchema, "articles");
 
