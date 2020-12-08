@@ -3,6 +3,7 @@ import img from "../../../../pics/Polygon5.png";
 import img2 from "../../../../pics/attachment_77327090.png";
 import Button from "../../Util/Button";
 import { Link } from "react-router-dom";
+import {getMarkdownText} from "../../Util/convertToHTML"
 
 export default class ArticlePreview extends Component {
   constructor(props) {
@@ -57,7 +58,8 @@ export default class ArticlePreview extends Component {
               <div className="pre__part__middle__header">
                 <h2 className="title">{this.state.title}</h2>
               </div>
-              <p>{`${shortened}...`}</p>
+              {/* <p>{`${shortened}...`}</p> */}
+              <article dangerouslySetInnerHTML={getMarkdownText(shortened)} />
 
               <div className="pre__part__middle__buttons">
                 <Link to={`/reader/${this.state.id}`}>

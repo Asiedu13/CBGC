@@ -54,21 +54,23 @@ router.route("/short").get((req, res) => {
 // this takes in limit query parameter to indicate how many words in the content to retrieve
 
 router.route("/short/:id").get((req, res) => {
-  Articles.findById(req.params.id).then((data) => {
-    let content = shorten(data.content, req.query.limit);
-    let modified = {
-      _id: data._id,
-      author: data.author,
-      imgId: data.imgId,
-      title: data.title,
-      content,
-      likes: data.likes,
-      haveRead: data.haveRead,
-    };
-    res.json(modified).status(200);
-  }).catch(err => {
-    res.status(404).json({"msg": err});
-  });
+  Articles.findById(req.params.id)
+    .then((data) => {
+      let content = shorten(data.content, req.query.limit);
+      let modified = {
+        _id: data._id,
+        author: data.author,
+        imgId: data.imgId,
+        title: data.title,
+        content,
+        likes: data.likes,
+        haveRead: data.haveRead,
+      };
+      res.json(modified).status(200);
+    })
+    .catch((err) => {
+      res.status(404).json({ msg: err });
+    });
 });
 
 // get single article

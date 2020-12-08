@@ -6,7 +6,7 @@ export class RegistrationProvider extends Component {
   constructor() {
     super();
     this.state = {
-      signIn: true,
+      signIn: false,
     };
   }
   render() {
@@ -14,11 +14,11 @@ export class RegistrationProvider extends Component {
       <RegistrationContext.Provider
         value={{
           signIn: this.state.signIn,
-          
+
           toggleSignIn: () => {
             if (this.state.signIn) {
               this.setState({ signIn: false });
-            } else if (this.state.signIn === false) {
+            } else if (!this.state.signIn) {
               this.setState({ signIn: true });
             }
           },
