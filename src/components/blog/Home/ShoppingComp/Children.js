@@ -65,14 +65,13 @@ export class ChildTwo extends React.Component {
             </p>
           </div>
           <div className="shopping__button">
-            <button
-              className="shopping__button__seemore"
-              onClick={() => this.props.view(true)}
-            >
-              See more
-            </button>
-            <Link to="/shopping">
-              <Button label="let's shop" importance="high" />
+          <Link to="/shopping">
+              <button
+                className="shopping__button__seemore"
+                onClick={() => this.props.view(true)}
+              >
+                Let's shop
+              </button>
             </Link>
           </div>
         </div>

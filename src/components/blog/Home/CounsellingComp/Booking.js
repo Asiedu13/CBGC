@@ -1,49 +1,37 @@
 import React from "react";
-import Button from "../../Util/Button";
-import { Link } from "react-router-dom";
-import Calendar from "react-calendar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Body extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      year: "",
-      month: "",
-      day: "",
-      dValue: "",
-    };
-  }
   render() {
-    let date = this.state.day
-      ? `${this.state.day[0]} ${this.state.day[1]} ${this.state.day[2]} ${this.state.day[3]}`
-      : "Select date from calendar";
     return (
       <section className="counselling__booking">
         <section className="counselling__booking__part1">
-          <h2>Book an appointment today</h2>
+          <h2>
+            Speak to a <big>counsellor</big> today
+          </h2>
 
-          <div className="counselling__booking__part1__date">
-            <p> {date} </p>
+          <div className="contact">
+            <p>Send a message to get help </p>
+
+            <section className="contact__links">
+              <a className="insta" href="instagram://user?username={username}">
+                `<FontAwesomeIcon icon={["fab", "instagram"]} size="2x" />{" "}
+                Instagram
+              </a>
+
+              <a className="mail" href="mailto:Clarksonduku25@gmail.com">
+                <FontAwesomeIcon icon={["fa", "mail-bulk"]} size="2x" /> Mail
+              </a>
+
+              <a className="tel" href="tel:+233 344 32 099">
+                <FontAwesomeIcon icon="phone" size="2x" /> Call
+              </a>
+            </section>
+
           </div>
 
-          <div className="buttons">
-            <Link to="/">
-              <Button label="schedule" importance="high" />
-            </Link>
-            <Link to="/">
-              <Button label="See more" />
-            </Link>
-          </div>
+          <p className="assurance">Your details and issues will be remain between you and your counsellor</p>
         </section>
-
-        <div className="counselling__booking__part2">
-          <Calendar
-            className="counselling-calendar"
-            onChange={(value, event) => {
-              this.setState({ day: value.toString().split(" ") });
-            }}
-          />
-        </div>
       </section>
     );
   }

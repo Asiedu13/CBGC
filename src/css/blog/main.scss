@@ -75,9 +75,9 @@ body {
   .moveToRight {
     animation: moveToRight 5s ease forwards;
   }
-  .centre {
-    animation: centre 1s ease forwards;
-  }
+  // .centre {
+  //   animation: centre 1s ease forwards;
+  // }
   @keyframes centre {
     0% {
       position: relative;
@@ -86,7 +86,6 @@ body {
     100% {
       position: relative;
       right: 120px;
-      // margin-left: 10px;
       margin-right: 40px;
       z-index: 200;
     }
@@ -95,13 +94,11 @@ body {
     25% {
       position: relative;
       right: 0;
-      // margin-right: 100px;
     }
 
     100% {
       position: relative;
       right: 0px;
-      // margin-right: 100px;
     }
   }
   @keyframes moveToRight {
@@ -116,18 +113,12 @@ body {
       left: 0px;
       margin-left: 0px;
     }
-
-    // 75% {
-    //   position: relative;
-    //   left: 0px;
-    // }
   }
   @keyframes moveRight {
     25% {
       position: relative;
       left: 0;
     }
-
     50% {
       position: relative;
       left: 10px;
@@ -144,21 +135,16 @@ body {
     width: 100vw;
     height: 300px;
   }
-
   .dimensionChange {
     position: relative;
     animation: dimensionChange 2s ease-in forwards 4s;
   }
 
   @keyframes dimensionChange {
-    0% {
-    }
-
     10%,
     50% {
       width: 250px;
     }
-
     51%,
     100% {
       width: 250px;
@@ -169,7 +155,6 @@ body {
     0% {
       width: 0;
     }
-
     50% {
       width: 50%;
     }
@@ -182,7 +167,6 @@ body {
       position: relative;
       left: 0;
     }
-
     50% {
       position: relative;
       left: 10px;
@@ -196,12 +180,10 @@ body {
     0% {
       opacity: 0;
     }
-
     30%,
     50% {
       opacity: 0;
     }
-
     55%,
     100% {
       opacity: 1;

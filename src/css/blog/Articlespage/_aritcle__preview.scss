@@ -56,6 +56,9 @@
       }
       &__middle {
         padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
 
         &__header {
           text-align: center;
@@ -64,17 +67,18 @@
         }
         p {
           @include border(yellow);
-          width: 400px;
+          width: 500px;
           margin: 0 auto;
           height: 100px;
           overflow: hidden;
         }
         &__buttons {
           width: 100%;
-          height: 150px;
+          height: 100px;
           display: flex;
           flex-direction: row;
-          align-items: flex-end;
+          align-items: center;
+          justify-content: center;
           @include border(blue);
         }
       }

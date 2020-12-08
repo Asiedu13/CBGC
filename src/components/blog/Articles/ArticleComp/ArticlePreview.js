@@ -19,7 +19,7 @@ export default class ArticlePreview extends Component {
   }
   componentDidMount() {
     let pathId = window.location.pathname.split("/");
-    let path = `http://localhost:5000/api/articles/${pathId[2]}`;
+    let path = `http://localhost:5000/api/articles/short/${pathId[2]}?limit=205`;
 
     fetch(path)
       .then((data) => {
@@ -27,7 +27,7 @@ export default class ArticlePreview extends Component {
       })
       .then((data) => {
         let shortSum = data.content;
-        console.log(shortSum);
+
         this.setState({
           title: data.title,
           id: pathId[2],
@@ -63,9 +63,9 @@ export default class ArticlePreview extends Component {
                 <Link to={`/reader/${this.state.id}`}>
                   <Button label="continue..." importance="high" />
                 </Link>
-                <Link to={`/articles`}>
+                {/* <Link to={`/articles`}>
                   <Button label="back" />
-                </Link>
+                </Link> */}
               </div>
             </div>
 

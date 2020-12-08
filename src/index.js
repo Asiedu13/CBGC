@@ -21,12 +21,13 @@ import React from "react";
 import ReactDom from "react-dom";
 import App from "./App";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fab  } from "@fortawesome/free-brands-svg-icons";
 import "react-calendar/dist/Calendar.css";
 import {
   faCheckSquare,
   faCoffee,
   faHome,
+  faMailBulk,
   faAngleRight,
   faUser,
   faNewspaper,
@@ -44,6 +45,7 @@ import {
   faArrowLeft,
   faSadCry,
   faSadTear,
+  
   faHeartBroken,
   faLowVision,
   faAppleAlt,
@@ -54,6 +56,7 @@ library.add(
   fab,
   faCheckSquare,
   faCoffee,
+  faMailBulk,
   faHome,
   faAngleRight,
   faUser,
@@ -76,6 +79,7 @@ library.add(
   faLowVision,
   faAppleAlt,
   faSmile
+
 );
 
 ReactDom.render(<App />, document.getElementById("root"));

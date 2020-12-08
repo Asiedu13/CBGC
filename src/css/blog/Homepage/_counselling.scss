@@ -107,7 +107,7 @@
 
   &__booking {
     width: inherit;
-    height: 500px;
+    height: 650px;
     @include border(green);
     display: flex;
     flex-direction: row-reverse;
@@ -119,30 +119,74 @@
       @include border(red);
       width: 600px;
       display: flex;
-      height: inherit;
+      height: 600px;
       flex-direction: column;
-      align-items: center;
+      // align-items: center;
       justify-content: space-evenly;
+      .assurance {
+        color: royalblue;
+        height: 200px;
+        margin: 50px 0;
+        border-radius: 5px;
+        padding: 1rem;
+        text-align: center;
+      }
       h2 {
         color: royalblue;
+        font-size: 1.5rem;
+        big {
+          font-size: 2rem;
+          color: orange;
+        }
       }
+      .contact {
+        width: 650px;
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @include border(red);
+        p {
+          color: grey;
+          margin: 20px 0;
+        }
 
-      .buttons {
-        margin: 50px 0;
+        &__links {
+          width: 650px;
+          height: 100px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          a {
+            width: 200px;
+            height: 70px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 1rem 4rem;
+            border-radius: 5px;
+            color: #000;
+            background: #fff;
+            text-decoration: none;
+            @include border(green);
+            transition: all 0.5s ease;
+
+            &:hover {
+              box-shadow: 2px 12px 15px 1px lighten(#663399, 40%);
+            }
+          }
+          .insta {
+            box-shadow: 2px 12px 15px 1px lighten(red, 40%);
+          }
+          .mail {
+            box-shadow: 2px 12px 15px 1px lighten(red, 40%);
+          }
+          .tel {
+            box-shadow: 2px 12px 15px 1px lighten(red, 40%);
+          }
+        }
       }
-    }
-  }
-
-  &-calendar {
-    box-shadow: 2px 15px 40px 2px #98a7ec;
-    margin: 100px ;
-    @include border(red);
-    padding: 1rem;
-    font-size: 1rem;
-    color: grey;
-    width: 500px;
-    abbr {
-      text-decoration: none;
     }
   }
 }
