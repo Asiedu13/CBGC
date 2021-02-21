@@ -45,7 +45,7 @@ import {
   faArrowLeft,
   faSadCry,
   faSadTear,
-  
+  faAddressBook,
   faHeartBroken,
   faLowVision,
   faAppleAlt,
@@ -54,6 +54,7 @@ import {
 // import {faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 library.add(
   fab,
+  faAddressBook,
   faCheckSquare,
   faCoffee,
   faMailBulk,

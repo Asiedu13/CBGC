@@ -15,16 +15,16 @@ class Body extends React.Component {
 
             <section className="contact__links">
               <a className="insta" href="instagram://user?username={username}">
-                `<FontAwesomeIcon icon={["fab", "instagram"]} size="2x" />{" "}
+                `<FontAwesomeIcon icon={["fab", "instagram"]} size="2x" color="grey" style={{paddingRight: "10px"}}/>{" "}
                 Instagram
               </a>
 
               <a className="mail" href="mailto:Clarksonduku25@gmail.com">
-                <FontAwesomeIcon icon={["fa", "mail-bulk"]} size="2x" /> Mail
+                <FontAwesomeIcon icon={["fa", "mail-bulk"]} size="2x" color="grey" style={{paddingRight: "10px"}}/> Mail
               </a>
 
               <a className="tel" href="tel:+233 344 32 099">
-                <FontAwesomeIcon icon="phone" size="2x" /> Call
+                <FontAwesomeIcon icon="address-book" size="2x" color="grey" style={{paddingRight: "10px"}} /> Call
               </a>
             </section>
 

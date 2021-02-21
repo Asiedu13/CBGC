@@ -28,6 +28,7 @@ class Header extends React.PureComponent {
               loop
               muted
               playsInline
+              type="video/mp4"
               src={vid}
               className="fillWidth"
             >
