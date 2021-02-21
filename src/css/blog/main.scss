@@ -1,35 +1,34 @@
-@import "config";
-@import "utilities";
-@import "nav";
-@import "Homepage/header";
-@import "Homepage/Paragraph1";
-@import "../blog/Art/tree";
-@import "Homepage/articles";
-@import "Homepage/shopping";
-@import "Homepage/counselling";
-
-@import "Articlespage/articlepage-header";
-@import "Articlespage/article__artwork";
-@import "Articlespage/articlePage__body";
-@import "ArticlesPage/aritcle__preview";
-
-@import "Reader/reader";
-
-@import "RegisterPage/registerpage";
-@import "footer";
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  font-family: "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   overflow-x: hidden;
   .move-right {
     animation: moveRight 1s ease forwards infinite;
   }
+  @import "config";
+  @import "utilities";
+  @import "nav";
+  @import "Homepage/header";
+  @import "Homepage/Paragraph1";
+  @import "../blog/Art/tree";
+  @import "Homepage/articles";
+  @import "Homepage/shopping";
+  @import "Homepage/counselling";
+
+  @import "Articlespage/articlepage-header";
+  @import "Articlespage/article__artwork";
+  @import "Articlespage/articlePage__body";
+  @import "ArticlesPage/aritcle__preview";
+
+  @import "Reader/reader";
+
+  @import "RegisterPage/registerpage";
+  @import "footer";
 
   .loader {
     position: absolute;
