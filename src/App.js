@@ -13,7 +13,7 @@ const Preview = lazy(() =>
 );
 const SignUp = lazy(() => import("./components/blog/Register/SignUp"));
 
-function App8() {
+function App() {
   return (
     <Router>
       <Suspense
@@ -34,7 +34,7 @@ function App8() {
               <Route path="/register/" component={SignUp} />
             </RegistrationProvider>
           </Switch>
-            <Route exact path="/articles/:id" component={Preview} />
+          <Route exact path="/articles/:id" component={Preview} />
           <Footer />
         </section>
       </Suspense>
@@ -42,4 +42,4 @@ function App8() {
   );
 }
 
-export default App8;
+export default App;
