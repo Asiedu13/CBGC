@@ -21,7 +21,7 @@ import React from "react";
 import ReactDom from "react-dom";
 import App from "./App";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab  } from "@fortawesome/free-brands-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
 import "react-calendar/dist/Calendar.css";
 import {
   faCheckSquare,
@@ -45,7 +45,7 @@ import {
   faArrowLeft,
   faSadCry,
   faSadTear,
-  
+  faAddressBook,
   faHeartBroken,
   faLowVision,
   faAppleAlt,
@@ -54,6 +54,7 @@ import {
 // import {faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 library.add(
   fab,
+  faAddressBook,
   faCheckSquare,
   faCoffee,
   faMailBulk,
@@ -79,7 +80,10 @@ library.add(
   faLowVision,
   faAppleAlt,
   faSmile
-
 );
 
 ReactDom.render(<App />, document.getElementById("root"));
+
+if (module.hot) {
+  module.hot.accept();
+}
