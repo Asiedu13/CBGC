@@ -9,12 +9,10 @@ class Shopping extends React.Component {
       comp: [<ChildTwo />],
     };
   }
-
   render() {
     return (
       <section className="shopping">
         <section className="shopping__slider">
-          <section className="art"></section>
           <div className="shopping__slider__one">
             <ChildTwo />
           </div>
