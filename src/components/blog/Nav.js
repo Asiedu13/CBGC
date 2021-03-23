@@ -2,10 +2,11 @@ import React from "react";
 import Logo from "./Nav/Logo";
 import Links from "./Nav/Links";
 
-const Nav = () => {
+const Nav = () => (
   <div className="nav">
     <Logo />
     <Links />
-  </div>;
-};
+  </div>
+);
+
 export default Nav;

@@ -2,7 +2,7 @@ import React from "react";
 import Tree from "../Util/Art/Tree";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Paragraph1() {
+const Paragraph1 = () => {
   return (
     <section className="paragraph_1">
       <section>
@@ -33,22 +33,14 @@ function Paragraph1() {
           <Tree headColor="rgb(71, 107, 228)" />
         </div>
       </div>
-      <svg
-        className="one"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-      >
+      <svg className="one" viewBox="0 0 1440 320">
         <path
           fill="#0099ff"
           fillOpacity="1"
           d="M0,32L80,26.7C160,21,320,11,480,32C640,53,800,107,960,133.3C1120,160,1280,160,1360,160L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
         ></path>
       </svg>{" "}
-      <svg
-        className="two"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-      >
+      <svg className="two" viewBox="0 0 1440 320">
         <path
           fill="#0099ff"
           fillOpacity="1"
@@ -57,5 +49,5 @@ function Paragraph1() {
       </svg>
     </section>
   );
-}
+};
 export default Paragraph1;
