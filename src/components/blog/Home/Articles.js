@@ -4,7 +4,7 @@ import Picture from "../Util/Picture";
 import { Link } from "react-router-dom";
 import Zoom from "react-reveal/Zoom";
 
-function Articles() {
+const Articles = () => {
   return (
     <section className="articles">
       <div className="articles__firstChild">
@@ -17,12 +17,12 @@ function Articles() {
       </div>
       <section className="articles__paragraph">
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab natus
-          excepturi iusto aliquid tempora dolore at cupiditate nam tempore off
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab natus
-          excepturi iusto aliquid tempora dolore at cupiditate nam tempore
-          officiis velit quam, neque vel? Inventore minima ea ad non velit?iciis
-          velit quam, neque vel? Inventore minima ea ad non velit?
+          An amalgam of original articles written deep from within thoughts and
+          emotions. They encapsulate a host of societal issues ranging from
+          sexism, racism, misogynism, homophobia, transphobia and religion.
+          Please feel free to read and engage with our thoughts with your likes
+          and comments. It would mean a great deal to us if you'd share as well,
+          thank you!
         </p>
         <section className="buttons">
           <Link to="/articles">
@@ -38,5 +38,5 @@ function Articles() {
       </div>
     </section>
   );
-}
+};
 export default Articles;

@@ -14,7 +14,7 @@ const Preview = lazy(() =>
 const SignUp = lazy(() => import("./components/blog/Register/SignUp"));
 const AdminPanel = lazy(() => import("./components/blog/AdminPage"));
 
-function App8() {
+function App() {
   return (
     <Router>
       <Suspense
@@ -44,4 +44,4 @@ function App8() {
   );
 }
 
-export default App8;
+export default App;

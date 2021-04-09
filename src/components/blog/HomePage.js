@@ -5,22 +5,13 @@ import Articles from "./Home/Articles";
 import Shopping from "./Home/Shopping";
 import Counselling from "./Home/Counselling";
 
-class HomePage extends React.Component {
-  constructor(props) {
-    super();
-  }
-
-  render() {
-    return (
-      <section>
-        <Header />
-        <Articles />
-        <Paragraph1 />
-        <Shopping />
-        <Counselling />
-      </section>
-    );
-  }
-}
-
+const HomePage = (props) => (
+  <section>
+    <Header />
+    <Articles />
+    <Paragraph1 />
+    <Shopping />
+    <Counselling />
+  </section>
+);
 export default HomePage;

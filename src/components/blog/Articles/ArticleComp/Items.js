@@ -6,31 +6,31 @@ class Item extends React.Component {
   
   render() {
     return (
-        <article
-          className="item"
-        >
-          <div className="item__image">
-            <img
-              className="img"
-              alt="article-ref-pic"
-              src={this.props.article.img}
-            />
-          </div>
-          <div className="item__desc">
-            <h2> {this.props.article.title} </h2>
-            <h3> {this.props.article.author} </h3>
-            <article
-              dangerouslySetInnerHTML={getMarkdownText(
-                this.props.article.content + "..."
-              )}
-            />
-          </div>
-          <div className="item__read__link">
-            <button>
-              read <FontAwesomeIcon icon="arrow-right" />{" "}
-            </button>
-          </div>
-        </article>
+      <article
+        className="item"
+        onMouseOver={this.mouseOver}
+        onMouseOut={this.mouseOut}
+      >
+        <div className="item__image">
+          <img
+            className="img"
+            alt="article-ref-pic"
+            src={this.props.article.img}
+          />
+        </div>
+        <div className="item__desc">
+          <h2> {this.props.article.title} </h2>
+          <h3> {this.props.article.author} </h3>
+          {/* <p>{this.props.article.content}...</p> */}
+          <article dangerouslySetInnerHTML={getMarkdownText(this.props.article.content + "...")} />
+        </div>
+        <br/>
+        <div className="item__read__link">
+          <button>
+            read <FontAwesomeIcon icon="arrow-right" />{" "}
+          </button>
+        </div>
+      </article>
     );
   }
 }

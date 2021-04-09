@@ -1,38 +1,36 @@
-@import "config";
-@import "utilities";
-@import "nav";
-@import "Homepage/header";
-@import "Homepage/Paragraph1";
-@import "../blog/Art/tree";
-@import "Homepage/articles";
-@import "Homepage/shopping";
-@import "Homepage/counselling";
-
-@import "Articlespage/articlepage-header";
-@import "Articlespage/article__artwork";
-@import "Articlespage/articlePage__body";
-@import "ArticlesPage/aritcle__preview";
-
-@import "Reader/reader";
-
-@import 'Adminpage/adminpage';
-
-@import "RegisterPage/registerpage";
-@import "footer";
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode",
+    Geneva, Verdana, sans-serif;
   overflow-x: hidden;
   .move-right {
     animation: moveRight 1s ease forwards infinite;
   }
+  @import "config";
+  @import "utilities";
+  @import "nav";
+  @import "Homepage/header";
+  @import "Homepage/Paragraph1";
+  @import "../blog/Art/tree";
+  @import "Homepage/articles";
+  @import "Homepage/shopping";
+  @import "Homepage/counselling";
 
+  @import "Articlespage/articlepage-header";
+  @import "Articlespage/article__artwork";
+  @import "Articlespage/articlePage__body";
+  @import "ArticlesPage/aritcle__preview";
+
+  @import "Reader/reader";
+
+  @import "Adminpage/adminpage";
+
+  @import "RegisterPage/registerpage";
+  @import "footer";
   .loader {
     position: absolute;
     top: 50%;
@@ -214,23 +212,18 @@ body {
   }
   @keyframes expands {
     10% {
-      transition: all 1s ease-in-out;
       transform: scale(1);
     }
     25% {
-      transition: all 1s ease-in-out;
       transform: scale(1.3);
     }
     50% {
-      transition: all 1s ease-in-out;
       transform: scale(1);
     }
     75% {
-      transition: all 1s ease-in-out;
       transform: scale(1.5);
     }
     100% {
-      transition: all 1s ease-in-out;
       transform: scale(1);
     }
   }
@@ -291,18 +284,18 @@ body {
 }
 
 .btnConListShow {
-  animation: listSlide .3s ease-in-out forwards;
+  animation: listSlide 0.3s ease-in-out forwards;
 }
 
 .btnConListHide {
-  animation: listSlide .3s ease-in-out forwards;
+  animation: listSlide 0.3s ease-in-out forwards;
 }
 @keyframes listSlide {
   from {
     opacity: 0;
   }
   to {
-    opacity:1;
+    opacity: 1;
     left: 20px;
   }
 }

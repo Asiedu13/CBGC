@@ -100,12 +100,13 @@ export default class Elaboration extends Component {
         <section className="counselling__el__paragraph">
           <section className="counselling__el__paragraph__text">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut natus
-              recusandae, praesentium, provident animi maxime nam fugiat error
-              accusamus adipisci id! Nisi delectus molestiae aspernatur natus
-              dolore ducimus omnis dolorem! Autem laboriosam ratione perferendis
-              facere similique. Neque nostrum magni sequi ex hic impedit
-              pariatur ipsam officia. Omnis est illo aliquam?
+              In this current dispensation of so much hustle and bustle everyday
+              we much forget to take care of ourselves and give ourselves the
+              much deserved attention we need after so much hard words.
+              Clarkson's counsel is here to take a few minutes of your day to
+              create recognizance of our hard work and our mental health. Don't
+              lose yourself to the world. Self love is priority. <br />
+              Thank you.
             </p>
           </section>
         </section>
