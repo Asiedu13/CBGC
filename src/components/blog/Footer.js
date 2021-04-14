@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Footer() {
   return (
@@ -10,9 +11,13 @@ function Footer() {
       </div>
 
       <div className="footer__elem">
-        <li className="footer__elem__child">Clarksons Shop</li>
-        <li className="footer__elem__child">Clarksons Foods</li>
-        <li className="footer__elem__child">Clarksons Articles</li>
+        <Link to="/shopping">
+          <li className="footer__elem__child">Clarksons Shop</li>
+        </Link>
+        <Link to="/articles">
+          <li className="footer__elem__child">Clarksons Articles</li>
+        </Link>
+
         <li className="footer__elem__child">Clarksons Counselling </li>
       </div>
       <div className="footer__elem">
