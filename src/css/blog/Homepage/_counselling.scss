@@ -1,50 +1,11 @@
 .counselling {
   width: 100vw;
-  height: 1200px;
+  height: 1000px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin-top: 2vh;
   @include border(blue);
-
-  &__header {
-    width: 100%;
-    @include border(red);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    &__name {
-      width: 600px;
-      height: inherit;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      @include border(gold);
-      h1 {
-        @include border(red);
-        font-size: 4rem;
-        text-align: center;
-        position: relative;
-        transition: all 1s ease;
-        padding: 1rem;
-        color: royalblue;
-
-        b {
-          color: grey;
-          margin-left: 10px;
-          margin-right: 10px;
-          position: relative;
-          top: 100px;
-        }
-      }
-      h2 {
-        color: rgb(52, 162, 226);
-      }
-    }
-  }
 
   &__el {
     @include border(black);
@@ -54,22 +15,21 @@
 
     &__feeling {
       width: inherit;
-      height: 250px;
-      @include border(red);
+      height: 150px;
       padding: 1rem;
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      @include border(red);
 
       .text {
-        padding: 1rem;
         @include border(pink);
         &__content {
           position: relative;
         }
         h2 {
-          font-size: 2rem;
+          font-size: 3rem;
           color: grey;
         }
       }
@@ -92,15 +52,53 @@
 
     &__paragraph {
       @include border(brown);
+      height: fit-content;
       color: grey;
-      text-align: center;
+      background: #f4f4f4;
+      // text-align: center;
       display: flex;
+      flex-direction: column;
       align-items: center;
+      justify-content: space-around;
       padding: 1rem;
-      justify-content: center;
 
       &__text {
-        width: 500px;
+        width: 900px;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        @include border(red);
+        & > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 1rem;
+          @include border(blue);
+          width: 100%;
+          align-items: flex-start;
+          header {
+            @include border(red);
+            text-align: left;
+          }
+          p {
+            @include border(blue);
+            width: 100%;
+          }
+          .counselBtn {
+            height: fit-content;
+            @include border(pink);
+          }
+        }
+        p {
+          @include border(blue);
+          width: 50%;
+        }
+        img {
+          height: 300px;
+          width: 300px;
+        }
       }
     }
   }

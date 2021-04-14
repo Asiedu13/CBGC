@@ -8,8 +8,7 @@
   justify-content: space-between;
   @include border(pink);
   padding: 1rem;
-  background: #fff;
-  color: $orange;
+  color: $secondary;
 
   &__list {
     @include border(red);
@@ -28,7 +27,7 @@
       li {
         list-style-type: none;
         cursor: pointer;
-        color: $primary-blue;
+        color: $primary;
         font-size: 1.2rem;
         padding: 0.5rem;
         text-decoration: strike-through;
@@ -36,11 +35,11 @@
         margin-right: 1rem;
 
         &:hover {
-          color: $orange;
-          border-bottom: 1px solid $red;
+          color: $secondary;
+          border-bottom: 1px solid $secondary
         }
         &:focus {
-          color: $orange;
+          color: $secondary;
         }
       }
     }

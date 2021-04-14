@@ -1,96 +1,77 @@
 .header {
   width: 100vw;
   height: 600px;
-  color: #fff;
-  margin: 1vh 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  justify-content: center;
+  color: $abstract;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   z-index: 50;
   position: relative;
+  background: $abstract;
   @include border(brown);
-  
-  h1 {
-    font-size: 3rem;
-    margin: 0px auto;
-    position: relative;
-    color: $orange;
-    grid-area: 2/1;
-    z-index: 100;
-    b {
-      color: $orange;
-    }
-  }
-  &__slogan {
-    font-size: 1.5rem;
-    margin: 90px auto;
-    position: relative;
-    color: #fff;
-    grid-area: 2/1;
-    z-index: 100;
-  }
-  .buttons {
-    z-index: 100;
-    height: 100px;
+
+  &-main {
     width: 500px;
-    grid-area: 3/1;
-    margin: 0 auto 150px auto;
-    @include flexCon(row, true, false);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    @include border(pink);
 
-    button:nth-of-type() {
-      background: blue;
+    h1 {
+      font-size: 3.5rem;
+      margin: 0px auto;
+      position: relative;
+      color: $background;
+      grid-area: 2/1;
+      z-index: 100;
+      // height: 200px;
+      @include border(red);
+    }
+    .header__slogan {
+      font-size: 0.9rem;
+      position: relative;
+      color: $secondary;
+      z-index: 100;
+      @include border(blue);
+    }
+    button {
+      height: 70px;
+      width: 300px;
+      background: $secondary;
+      color: $abstract;
+      font-size: 1.3rem;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      margin: 10px;
+      &:hover {
+        background: $background;
+        color: $abstract;
+      }
     }
   }
-  .homepage-hero-module {
-    border-right: none;
-    border-left: none;
-    position: absolute;
-    width: 100vw;
-    height: 400px;
-  }
 
-  .no-video .video-container video,
-  .touch .video-container video {
-    display: none;
-  }
-
-  .no-video .video-container .poster,
-  .touch .video-container .poster {
-    display: block !important;
-  }
-
-  .video-container {
-    position: relative;
-    bottom: 0%;
-    left: 0%;
-    height: 500px;
-    width: 100%;
-    overflow: hidden;
-    background: #000;
-  }
-
-  .video-container .poster img {
-    width: 100%;
-    bottom: 0;
-    position: absolute;
-  }
-
-  .video-container .filter {
-    z-index: 50;
-    position: absolute;
-    background: rgba(58, 54, 54, 0.4);
-    width: 100vw;
+  &-illustration {
+    @include border(red);
     height: inherit;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
   }
-
-  .video-container video {
+  img {
+    height: 500px;
     position: absolute;
-    z-index: 0;
-    bottom: 0;
   }
-
-  .video-container video.fillWidth {
-    width: 100%;
+  #shopper {
+    right: 20px;
+  }
+  #reader {
+    left: 50px;
+  }
+  #reader {
+    left: 50px;
   }
 }

@@ -10,10 +10,10 @@
 
   h1 {
     padding: 0.3rem;
-    color: royalblue;
+    color: $primary;
     font-size: 2rem;
     b {
-      color: $secondary-blue;
+      color:$primary;
     }
   }
 }

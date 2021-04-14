@@ -1,40 +1,50 @@
 import React from "react";
-import pic from "../../../../pics/Shopping Bag.png";
+import goneShopping from "../../../../pics/gone-shopping.svg";
 import { Link } from "react-router-dom";
-import Zoom from "react-reveal/Zoom";
-import Fade from "react-reveal/Fade";
+import Button from "../../Util/Button";
+import Reveal from "react-reveal/Reveal";
+import Bounce from "react-reveal/Bounce";
+import Slide from "react-reveal/Slide";
 
 export const ChildTwo = () => {
   return (
     <div className="shop-section-2">
-      <Zoom>
-        <div className="shopping__art" style={{ overflow: "hidden" }}>
-          <Fade left>
-            <img src={pic} alt="" />
-          </Fade>
+      <section className="shopping__paragraph">
+        <Slide>
+          <div className="shopping__paragraph__header">
+            <h2>Clarkson's Shops</h2>
+          </div>
+        </Slide>
+        <Slide delay={1000}>
+          <div className="shopping__paragraph__text">
+            <p className="shopping__paragraph__text__p">
+              Clarksons shop is an online shop which aims at improving at
+              quality and affordability in the realm of business. We bring you
+              the best of items at enviable prices within the shortest possible
+              time. With us you have no regrets. Order an item now to support a
+              worthy cause.
+            </p>
+          </div>
+        </Slide>
+        <Slide delay={2000}>
+          <div className="shopping__button">
+            <Link to="/shopping">
+              <Button
+                importance="medium"
+                label="Let's Shop"
+                icon="angle-right"
+              />
+            </Link>
+          </div>
+        </Slide>
+      </section>
+      <Reveal>
+        <div className="shopping__art">
+          <Bounce delay={1000}>
+            <img src={goneShopping} alt="woman at a mall" />
+          </Bounce>
         </div>
-      </Zoom>
-
-      <div className="shopping__paragraph">
-        <div className="childTwoHeader">
-          <h2>Clarkson's Shops</h2>
-        </div>
-        <div className="shopping__paragraph__text">
-          <p className="shopping__paragraph__text__p">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsam
-            eveniet molestiae! Non, odit? Fuga non blanditiis dolorem nisi,
-            atque incidunt corrupti similique accusantium commodi sed rerum
-            porro officiis unde itaque alias! Aliquid atque ut, obcaecati nulla
-            quam numquam praesentium cupiditate! Sequi maiores eveniet expedita
-            blanditiis nulla cupiditate ullam explicabo!
-          </p>
-        </div>
-        <div className="shopping__button">
-          <Link to="/shopping">
-            <button className="shopping__button__seemore">Let's shop</button>
-          </Link>
-        </div>
-      </div>
+      </Reveal>
     </div>
   );
 };

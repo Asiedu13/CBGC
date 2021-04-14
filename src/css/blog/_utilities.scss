@@ -7,20 +7,26 @@
   outline: none;
   border: none;
   margin: 10px;
+  border-radius: 5px;
+  z-index: 900;
 
   @if ($importance == high) {
-    background: #f6d342;
-    color: #fff;
+    background: $abstract;
+    color: $primary;
     &:hover {
-      box-shadow: 2px 12px 15px 1px lighten($orange, 20%);
+      background: $primary;
+      color: $secondary;
+      box-shadow: 2px 12px 15px 1px lighten($secondary, 20%);
     }
     &:focus {
       box-shadow: 0 0 0 0;
     }
   } @else {
-    background: #fff;
-    color: #f6d342;
+    background: $secondary;
+    color: $abstract;
     &:hover {
+      background: $abstract;
+      color: $secondary;
       box-shadow: 2px 12px 15px 1px lighten(#f6d342, 20%);
     }
     &:focus {
