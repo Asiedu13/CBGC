@@ -1,23 +1,36 @@
 .ArticleHeader {
-  margin: 5vh 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  background: #fff;
+  // margin: 5vh 0;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: $abstract;
+  @include border(red);
 
   &__heading {
-    grid-area: 1/1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    color: $background;
+    padding: 1rem;
+    @include border(royalblue);
   }
   h1 {
-    justify-content: center;
     font-size: 3rem;
     width: fit-content;
     height: fit-content;
-    margin: 0 10vw;
     text-decoration: underline;
-    text-decoration-color: gold;
+    text-decoration-color: $secondary;
+  }
+  .header__arts {
+    height: inherit;
+    width: inherit;
+    @include border(pink);
+
+    img {
+      width: inherit;
+      height: inherit;
+    }
   }
 }

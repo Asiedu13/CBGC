@@ -25,7 +25,7 @@ export default function Elaboration() {
             </header>
             <p>
               In this current dispensation of so much hustle and bustle everyday
-              we much forget to take care of ourselves and give ourselves the
+              we much forget to take care of ourselves and give the
               much deserved attention we need after so much hard work.
             </p>
           </div>

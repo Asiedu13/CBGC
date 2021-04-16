@@ -3,12 +3,19 @@
   padding: 1rem;
 
   .article-nav {
-    @include border(red);
+    @include border(royalblue);
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
     &__ul {
       @include border(red);
       display: flex;
       flex-direction: row;
+      justify-content: space-around;
+      width: 950px;
 
       &__elem {
         background: none;
@@ -16,32 +23,22 @@
         border: none;
         padding-left: 1rem;
         cursor: pointer;
-        color: blue;
-        width: fit-content;
+        color: $primary;
+        width: 500px;
         padding: 1rem;
         outline: none;
-        transition: all 0.5s ease-in;
-
+        transition: all 0.5s linear;
+        &:hover {
+          background: $abstract;
+        }
         &:focus {
-          color: rgb(255, 187, 0);
+          color: $secondary;
+          background: $abstract;
           outline: none;
           border-bottom: 2px solid rgb(255, 187, 0);
         }
       }
     }
-  }
-}
-
-.articles-body__heading {
-  @include border(red);
-  padding: 1rem 2rem;
-
-  &__text {
-    @include border(blue);
-    color: rgb(255, 187, 0);
-    text-decoration: underline;
-    // the capitalize property is used in React instead of
-    // text-transform: capitalize;
   }
 }
 
@@ -71,70 +68,126 @@
       margin: 10px auto;
       border-radius: 2px;
       display: flex;
-      flex-direction: column;
-      box-shadow: 2px 12px 15px 1px lighten(royalblue, 40%);
+      flex-direction: row;
+      justify-content: flex-start;
       cursor: pointer;
-      background: #fff;
+      background: $background;
       border-top: 5px solid #663399;
-      position: relative;
-      left: 00px;
       transition: all 0.5s ease-in;
+      // box-shadow: 2px 12px 15px 1px lighten($background, 15%);
       @include border(brown);
+      border-top: 2px solid $secondary;
+      border-bottom: 2px solid $secondary;
+      border-width: 5px;
 
       &:hover {
-        box-shadow: 2px 12px 15px 1px lighten(rgb(52, 91, 175), 40%);
+        border-left: 2px solid $primary;
+        border-width: 5px;
+
+        // box-shadow: 2px 12px 15px 1px lighten(rgb(52, 91, 175), 40%);
       }
 
       &__image {
-        height: 90px;
+        height: 100%;
+        width: 50%;
         border-radius: 4px 4px 0 0;
-        background: lightskyblue;
+        background: $secondary;
         @include border(green);
         img {
           height: 100%;
           width: 100%;
         }
       }
-      &__desc {
-        @include border(brown);
-        padding: 1rem;
-        height: 150px;
-        display: flex;
-        flex-direction: column;
-        text-decoration: none;
-        justify-content: space-between;
-
-        h2 {
-          word-wrap: break-word;
-          color: black;
-          font-weight: 100;
-          text-decoration: none;
+      &__main {
+        width: 50%;
+        height: 250px;
+        
+        
+        // background: blue;
+        .meta-data {
           @include border(red);
-        }
-        h3 {
-          font-size: 0.8rem;
-          text-decoration: none;
-          font-weight: 100;
-          color: orange;
-          @include border(violet);
-        }
-        p{
-          color: black;
-          font-weight: 100;
-        }
-      }
-      &__read__link {
-        width: inherit;
-        height: fit-content;
+          &-main {
+            display: flex;
+            flex-direction: row;
 
-        button {
-          background: none;
-          margin: 0 auto;
-          color: orange;
-          width: 130px;
-          border: none;
-          padding: 0.5rem;
-          cursor: pointer;
+            &-avatar {
+              img{
+                height: 50px;
+                width: 50px;
+                border-radius: 50px;
+              }
+            }
+            &-text {
+              // text-align: center;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              color: $primary;
+              // padding: .4rem;
+              @include border(#fff);
+              h3 {
+                font-size: 1rem;
+              }
+              span {
+                font-size:.8rem;
+              }
+            }
+          }
+        }
+        &__desc {
+          @include border(brown);
+          padding: 1rem;
+          display: flex;
+          height: fit-content;
+          flex-direction: column;
+          text-decoration: none;
+          justify-content: flex-start;
+
+          h2 {
+            word-wrap: break-word;
+            color: black;
+            height: 55px;
+            font-weight: 100;
+            font-size: 2.5rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-decoration: none;
+            @include border(red);
+          }
+          h3 {
+            font-size: 0.8rem;
+            text-decoration: none;
+            font-weight: 100;
+            color: orange;
+            @include border(violet);
+          }
+          article{
+            width: inherit;
+            height: 70px;
+            overflow: hidden;
+          }
+          p {
+            @include border(red);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 90px;
+            color: black;
+            font-weight: 100;
+          }
+        }
+        &__read__link {
+          width: inherit;
+          height: 40px;
+          @include border(red);
+          button {
+            background: none;
+            color: $primary;
+            width: 140px;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            
+          }
         }
       }
     }

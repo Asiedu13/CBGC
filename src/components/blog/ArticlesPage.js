@@ -2,10 +2,11 @@ import React from "react";
 import { Header } from "./Util/Header";
 import ArticlePreview from "./Articles/ArticleComp/ArticlePreview";
 import { ArticlesBody } from "./Articles/ArticleComp/ArticlesBody";
+import pic from '../../pics/standing-reading.svg';
 
 class Articles extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       currentArticle: "",
     };
@@ -18,7 +19,7 @@ class Articles extends React.Component {
 
     return (
       <section>
-        <Header firstHeaderName="Blog" secondHeaderName="Posts" />
+        <Header firstHeaderName="Blog Posts" illustration={pic} altText="A person reading an article" niche="A repository of awesome articles on a variety of topics" />
         <ArticlesBody
           currentArticle={(articleID) => {
             this.setState({

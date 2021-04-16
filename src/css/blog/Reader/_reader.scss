@@ -13,6 +13,7 @@
     flex-direction: row;
     justify-content: space-between;
     @include border(blue);
+    background: #fff;
 
     img {
       width: 250px;
@@ -27,7 +28,12 @@
       padding: 1rem;
       display: flex;
       flex-direction: column;
+      // background: #fff;
 
+      .reader__main__content{
+        @include border(red);
+        width: 700px;
+      }
       &__navigation {
         @include border(pink);
         width: 100px;
@@ -72,72 +78,134 @@
       @include border(blue);
 
       .item {
-        position: relative;
-        width: 80%;
+        width: 1000px;
         height: 300px;
-        top: 0px;
-        margin: 40px 0;
+        margin: 10px auto;
         border-radius: 2px;
         display: flex;
-        flex-direction: column;
-        box-shadow: 2px 12px 15px 1px lighten(royalblue, 40%);
-        background: #fff;
-        border-top: 5px solid #663399;
-        position: relative;
-        transition: all 1s ease-in;
+        flex-direction: row;
+        justify-content: flex-start;
         cursor: pointer;
+        background: $background;
+        border-top: 5px solid #663399;
+        transition: all 0.5s ease-in;
+        // box-shadow: 2px 12px 15px 1px lighten($background, 15%);
         @include border(brown);
-
+        border-top: 2px solid $secondary;
+        border-bottom: 2px solid $secondary;
+        border-width: 5px;
+  
         &:hover {
-          box-shadow: 2px 12px 15px 1px lighten(rgb(52, 91, 175), 40%);
+          border-left: 2px solid $primary;
+          border-width: 5px;
+  
+          // box-shadow: 2px 12px 15px 1px lighten(rgb(52, 91, 175), 40%);
         }
-
+  
         &__image {
-          height: 100px;
+          height: 100%;
+          width: 50%;
+          border-radius: 4px 4px 0 0;
+          background: $secondary;
           @include border(green);
-          background: royalblue;
           img {
-            height: inherit;
+            height: 100%;
             width: 100%;
           }
         }
-        &__desc {
-          @include border(brown);
-          padding: 1rem;
-          height: 150px;
-          display: flex;
-          flex-direction: column;
-          text-decoration: none;
-          justify-content: space-between;
-
-          h2 {
-            word-wrap: break-word;
-            color: black;
-            text-decoration: none;
+        &__main {
+          width: 50%;
+          height: 250px;
+          
+          
+          // background: blue;
+          .meta-data {
             @include border(red);
+            &-main {
+              display: flex;
+              flex-direction: row;
+  
+              &-avatar {
+                img{
+                  height: 50px;
+                  width: 50px;
+                  border-radius: 50px;
+                }
+              }
+              &-text {
+                // text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: $primary;
+                // padding: .4rem;
+                @include border(#fff);
+                h3 {
+                  font-size: 1rem;
+                }
+                span {
+                  font-size:.8rem;
+                }
+              }
+            }
           }
-          h3 {
-            font-size: 0.8rem;
+          &__desc {
+            @include border(brown);
+            padding: 1rem;
+            display: flex;
+            height: fit-content;
+            flex-direction: column;
             text-decoration: none;
-            font-weight: 100;
-            @include border(violet);
+            justify-content: flex-start;
+  
+            h2 {
+              word-wrap: break-word;
+              color: black;
+              height: 55px;
+              font-weight: 100;
+              font-size: 2.5rem;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              text-decoration: none;
+              @include border(red);
+            }
+            h3 {
+              font-size: 0.8rem;
+              text-decoration: none;
+              font-weight: 100;
+              color: orange;
+              @include border(violet);
+            }
+            article{
+              width: inherit;
+              height: 70px;
+              overflow: hidden;
+            }
+            p {
+              @include border(red);
+              overflow: hidden;
+              text-overflow: ellipsis;
+              height: 90px;
+              color: black;
+              font-weight: 100;
+            }
           }
-        }
-        &__read__link {
-          width: inherit;
-          height: fit-content;
-
-          button {
-            background: none;
-            margin: 0 auto;
-            color: orange;
-            width: 130px;
-            border: none;
-            padding: 0.5rem;
-            cursor: pointer;
+          &__read__link {
+            width: inherit;
+            height: 40px;
+            @include border(red);
+            button {
+              background: none;
+              color: $primary;
+              width: 140px;
+              border: none;
+              padding: 0.5rem;
+              cursor: pointer;
+              
+            }
           }
         }
       }
-    }
+       }
   }
 }

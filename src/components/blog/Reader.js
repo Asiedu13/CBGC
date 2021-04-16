@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { getMarkdownText } from "./Util/convertToHTML";
-import imgs from "../../pics/attachment_77327090.png";
+import imgs from "../../pics/feeling-blue.svg";
 import Item from "./Articles/ArticleComp/Items";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

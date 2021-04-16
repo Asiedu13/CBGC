@@ -101,15 +101,6 @@ export class ArticlesBody extends Component {
           }}
         />
 
-        <div className="articles-body__heading">
-          <h2
-            className="articles-body__heading__text"
-            style={{ textTransform: "capitalize" }}
-          >
-            {this.state.heading}
-          </h2>
-        </div>
-
         {/* General */}
         <ArticlesBox>{DbArt}</ArticlesBox>
       </div>

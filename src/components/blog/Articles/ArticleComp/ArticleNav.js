@@ -27,19 +27,22 @@ export default class ArticleNav extends Component {
         <nav className="article-nav">
           <ul className="article-nav__ul">
             <button className="article-nav__ul__elem" id="all">
-              All
+              All Posts
             </button>
-            <button id="popular" className="article-nav__ul__elem">
-              Popular
+            <button id="devotionals" className="article-nav__ul__elem">
+              Devotionals
             </button>
-            <button id="read" className="article-nav__ul__elem">
-              Read
+            <button id="society" className="article-nav__ul__elem">
+              Society
             </button>
-            <button id="liked" className="article-nav__ul__elem">
-              Liked
+            <button id="poetry" className="article-nav__ul__elem">
+              Poetry
             </button>
-            <button id="recent" className="article-nav__ul__elem">
-              Recent
+            <button id="Thursday Talks" className="article-nav__ul__elem">
+              Thursday Talks
+            </button>
+            <button id="Discipleship Class" className="article-nav__ul__elem">
+              Discipleship Class
             </button>
           </ul>
         </nav>
