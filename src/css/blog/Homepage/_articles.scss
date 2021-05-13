@@ -21,7 +21,7 @@
      .h2_1 {
       font-size: 2rem;
       font-weight: 100;
-      color: orange;
+      color: $secondary;
       width: fit-content;
       height: fit-content;
       padding: 1rem;
@@ -33,6 +33,7 @@
     }
     .h2_2 {
       height: 100px;
+      color: $secondary;
       @include border(brown);
       b{
         font-size: 4rem;
@@ -71,7 +72,7 @@
       font-weight: 100;
       padding: 2rem;
       line-height: 1.5;
-      color: $primary;
+      color: $red;
     }
 
     .buttons {

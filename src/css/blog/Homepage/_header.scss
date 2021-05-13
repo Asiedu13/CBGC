@@ -1,7 +1,7 @@
 .header {
   width: 100vw;
   height: 600px;
-  color: $abstract;
+  color: $primary;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -22,7 +22,7 @@
       font-size: 3.5rem;
       margin: 0px auto;
       position: relative;
-      color: $background;
+      color: $primary;
       grid-area: 2/1;
       z-index: 100;
       // height: 200px;
@@ -31,7 +31,8 @@
     .header__slogan {
       font-size: 0.9rem;
       position: relative;
-      color: $secondary;
+      color: $red;
+
       z-index: 100;
       @include border(blue);
     }

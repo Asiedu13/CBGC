@@ -30,7 +30,7 @@
       h2 {
         font-size: 3rem;
         width: 100%;
-        color: $primary;
+        color: $secondary;
         @include border(cyan);
       }
     }
@@ -39,7 +39,7 @@
       @include border(blue);
       width: 500px;
       height: 150px;
-      color: $primary;
+      color: $red;
     }
   }
   &__button {

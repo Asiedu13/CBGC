@@ -6,7 +6,8 @@
   justify-content: center;
   align-items: center;
   // background: linear-gradient(to right, #2ac0d9, #5576c3);
-  background: linear-gradient(to right, $abstract, $primary);
+  // background-color: $primary;
+  
   @include border(blue);
 
   &__header {
@@ -47,6 +48,7 @@
     display: flex;
     flex-direction: column;
     background-color: #fff;
+    box-shadow: #dbd4d4 2px 2px 20px 3px;
 
     & > div {
       @include border(pink);
@@ -85,9 +87,9 @@
       }
 
       p {
-        color: grey;
+        color: $primary;
         b {
-          color: $abstract;
+          color: $secondary;
         }
       }
     }
@@ -98,7 +100,7 @@
       button {
         height: 60px;
         width: 150px;
-        background: $abstract;
+        background: $primary;
         color: #fff;
         border: none;
         cursor: pointer;

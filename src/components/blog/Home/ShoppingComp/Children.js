@@ -28,13 +28,15 @@ export const ChildTwo = () => {
         </Slide>
         <Slide delay={2000}>
           <div className="shopping__button">
-            <Link to="/shopping">
+            <a href="http://www.clarksonsshop.com/" rel="noreferrer noopener">
+
               <Button
                 importance="medium"
                 label="Let's Shop"
                 icon="angle-right"
-              />
-            </Link>
+                />
+                </a>
+            
           </div>
         </Slide>
       </section>
