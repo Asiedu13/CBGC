@@ -10,7 +10,6 @@ export class Header extends PureComponent {
           <p>{this.props.niche}</p>
         </div>
         <section className="header__arts">
-          {/* <ArtWork /> */}
           <img src={this.props.illustration} alt={this.props.altText} />
         </section>
       </div>

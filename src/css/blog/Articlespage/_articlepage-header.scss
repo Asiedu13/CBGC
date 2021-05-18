@@ -1,11 +1,15 @@
 .ArticleHeader {
-  // margin: 5vh 0;
   height: 400px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   background: $abstract;
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
   @include border(red);
 
   &__heading {
@@ -24,8 +28,11 @@
     text-decoration-color: $secondary;
   }
   .header__arts {
+    width: 400px; 
     height: inherit;
-    width: inherit;
+    @include desktop {
+      width: inherit;
+    }
     @include border(pink);
 
     img {

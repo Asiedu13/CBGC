@@ -63,7 +63,10 @@
       padding: 1rem;
 
       &__text {
-        width: 900px;
+        width: 100%;
+        @include desktop {
+          width: 900px;
+        }
         height: 300px;
         display: flex;
         flex-direction: row;
@@ -73,7 +76,7 @@
         & > div {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: space-around;
           padding: 1rem;
           @include border(blue);
           width: 100%;
@@ -84,7 +87,10 @@
           }
           p {
             @include border(blue);
-            width: 100%;
+            width: 80%;
+            @include desktop {
+              width: 100%;
+            }
           }
           .counselBtn {
             height: fit-content;

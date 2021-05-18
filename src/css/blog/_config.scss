@@ -1,10 +1,7 @@
 $abstract: #f1f1f1;
-$background: linear-gradient(
-  to right,
-  #21209c,
-);
+$background: linear-gradient(to right, #21209c);
 $secondary: #fdb827;
-$primary:#21209c;
+$primary: #21209c;
 $red: #23120b;
 
 @mixin border($color) {
@@ -33,5 +30,23 @@ $red: #23120b;
   } @else {
     justify-content: $justify;
     align-items: center;
+  }
+}
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+@mixin phone {
+  @media(max-width: #{$tablet-width - 1}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
   }
 }

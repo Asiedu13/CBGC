@@ -3,9 +3,17 @@
   width: 100vw;
   height: 750px;
   position: relative;
+  overflow: hidden;
+
+  @include desktop {
+    @include border(green);
+    width: 100vw;
+    height: 750px;
+    position: relative;
+  }
 
   &__firstChild {
-    margin: 0 0 0 100px;
+    margin: 0 0 0 50px;
     color: $primary;
     width: 960px;
     height: fit-content;
@@ -14,11 +22,27 @@
     position: relative;
     top: 50px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     z-index: 300;
     @include border(red);
 
-     .h2_1 {
+    @include desktop {
+      margin: 0 0 0 100px;
+      color: $primary;
+      width: 960px;
+      height: fit-content;
+      padding: 1rem;
+      word-wrap: wrap;
+      position: relative;
+      top: 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      z-index: 300;
+    }
+
+    .h2_1 {
       font-size: 2rem;
       font-weight: 100;
       color: $secondary;
@@ -29,32 +53,16 @@
       text-align: center;
       position: relative;
       @include border(green);
-
     }
     .h2_2 {
       height: 100px;
       color: $secondary;
       @include border(brown);
-      b{
+      b {
         font-size: 4rem;
       }
     }
-    p {
-      @include border(red);
-      width: 500px;
-      height: 200px;
-      margin: 10% 10%;
-      font-size: 15px;
-      padding: 2rem;
-    }
 
-    &__art {
-      width: 50vw;
-      height: 400px;
-      position: relative;
-      display: flex;
-      @include border(red);
-    }
   }
   .articles__paragraph {
     @include border(cyan);
@@ -62,17 +70,28 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
 
     p {
       @include border(gold);
-      width: 40vw;
+      width: 50vw;
       height: 250px;
       font-size: 17px;
       font-weight: 100;
-      padding: 2rem;
       line-height: 1.5;
       color: $red;
+      margin: 5% 0%;
+
+      @include desktop {
+        @include border(gold);
+        width: 40vw;
+        height: 250px;
+        font-size: 17px;
+        font-weight: 100;
+        padding: 2rem;
+        line-height: 1.5;
+        color: $red;
+      }
     }
 
     .buttons {
@@ -87,14 +106,16 @@
 
   &-author {
     @include border(red);
-    grid-area: 1 / 2;
     display: flex;
     justify-content: center;
     align-items: center;
     height: fit-content;
-    margin: -100px 0 0 200px;
+    margin: -360px 0 0 500px;
     border-radius: 100%;
     width: 90%;
+    @include desktop {
+      margin: -100px 0 0 200px;
+    }
     // background: lightblue;
     img {
       @include border(white);

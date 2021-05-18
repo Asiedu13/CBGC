@@ -17,6 +17,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     @include border(pink);
+    z-index: 10;
 
     h1 {
       font-size: 3.5rem;
@@ -24,7 +25,7 @@
       position: relative;
       color: $primary;
       grid-area: 2/1;
-      z-index: 100;
+      z-index: 20;
       // height: 200px;
       @include border(red);
     }
@@ -33,7 +34,7 @@
       position: relative;
       color: $red;
 
-      z-index: 100;
+      z-index: 10;
       @include border(blue);
     }
     button {
@@ -61,6 +62,7 @@
     display: flex;
     flex-direction: row;
     position: relative;
+    z-index: 4;
   }
   img {
     height: 500px;

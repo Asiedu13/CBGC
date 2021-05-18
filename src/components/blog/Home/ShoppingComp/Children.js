@@ -1,6 +1,5 @@
 import React from "react";
 import goneShopping from "../../../../pics/gone-shopping.svg";
-import { Link } from "react-router-dom";
 import Button from "../../Util/Button";
 import Reveal from "react-reveal/Reveal";
 import Bounce from "react-reveal/Bounce";

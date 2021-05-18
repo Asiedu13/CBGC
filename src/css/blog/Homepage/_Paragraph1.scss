@@ -2,9 +2,6 @@
   @include border(red);
   width: 100vw;
   height: 680px;
-  background-size: 110vw 500px;
-  background-position: -50px 500px;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -22,15 +19,36 @@
     justify-content: space-between;
     align-items: center;
     color: grey;
-    background: $abstract;
+    background: $primary;
     border-radius: 5px;
     .quote {
       @include border(green);
-      height: 350px;
-      width: 70%;
+      height: fit-content;
+      width: 90%;
       background: #f4f4f4;
       position: absolute;
       z-index: 100;
+      p {
+        position:relative;
+        left: 100px;
+        width: 80%;
+
+      }
+
+      @include desktop {
+        @include border(green);
+        height: fit-content;
+        width: 80%;
+        background: #f4f4f4;
+        position: absolute;
+        z-index: 100;
+        
+      p {
+        position: relative;
+        left: 100px;
+        width: 90%;
+      }
+      }
 
       #q-left {
         position: relative;
@@ -44,11 +62,6 @@
 
         @include border(green);
         //   top: 100px;
-      }
-      p {
-        position: relative;
-        left: 100px;
-        width: 90%;
       }
       i {
         font-size: 1rem;

@@ -19,7 +19,7 @@ class Header extends React.PureComponent {
             platform to get items.{" "}
           </p>
           <Link to="/register">
-            <button type="button">Join Us</button>
+            <button type="button">Sign Up</button>
           </Link>
         </div>
         <div className="header-illustration">
