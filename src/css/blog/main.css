@@ -722,13 +722,21 @@
 .articlesBox {
   width: 99vw;
   height: fit-content;
-  padding: 1rem;
   display: flex;
-  margin: auto auto;
   flex-direction: row;
   flex-wrap: wrap-reverse;
   position: relative;
   border: 2px solid transparent; }
+  @media (min-width: 1024px) {
+    .articlesBox {
+      width: 99vw;
+      height: fit-content;
+      padding: 1rem;
+      display: flex;
+      margin: auto auto;
+      flex-direction: row;
+      flex-wrap: wrap-reverse;
+      position: relative; } }
   .articlesBox__body {
     display: flex;
     width: 97vw;
@@ -738,12 +746,12 @@
     padding: 1rem;
     border: 2px solid transparent; }
     .articlesBox__body .item {
-      width: 1000px;
+      width: 500px;
       height: 300px;
       margin: 10px auto;
       border-radius: 2px;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: flex-start;
       cursor: pointer;
       background: linear-gradient(to right, #21209c);
@@ -752,21 +760,26 @@
       border: 2px solid transparent;
       border-top: 2px solid #fdb827;
       border-bottom: 2px solid #fdb827;
-      border-width: 5px; }
+      border-width: 5px;
+      position: relative; }
       .articlesBox__body .item:hover {
         border-left: 2px solid #21209c;
         border-width: 5px; }
       .articlesBox__body .item__image {
         height: 100%;
-        width: 50%;
+        width: 100%;
         border-radius: 4px 4px 0 0;
         background: #fdb827;
+        overflow: hidden;
+        position: absolute;
+        z-index: -10;
+        filter: blur(5px);
         border: 2px solid transparent; }
         .articlesBox__body .item__image img {
           height: 100%;
           width: 100%; }
       .articlesBox__body .item__main {
-        width: 50%;
+        width: 100%;
         height: 250px; }
         .articlesBox__body .item__main .meta-data {
           border: 2px solid transparent; }
@@ -786,7 +799,7 @@
               .articlesBox__body .item__main .meta-data-main-text h3 {
                 font-size: 1rem; }
               .articlesBox__body .item__main .meta-data-main-text span {
-                font-size: .8rem; }
+                font-size: 0.8rem; }
         .articlesBox__body .item__main__desc {
           border: 2px solid transparent;
           padding: 1rem;
@@ -833,6 +846,105 @@
             border: none;
             padding: 0.5rem;
             cursor: pointer; }
+      @media (min-width: 1024px) {
+        .articlesBox__body .item {
+          width: 1000px;
+          height: 300px;
+          margin: 10px auto;
+          border-radius: 2px;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          cursor: pointer;
+          background: linear-gradient(to right, #21209c);
+          border-top: 5px solid #663399;
+          transition: all 0.5s ease-in;
+          border: 2px solid transparent;
+          border-top: 2px solid #fdb827;
+          border-bottom: 2px solid #fdb827;
+          border-width: 5px; }
+          .articlesBox__body .item:hover {
+            border-left: 2px solid #21209c;
+            border-width: 5px; }
+          .articlesBox__body .item__image {
+            height: 100%;
+            width: 50%;
+            border-radius: 4px 4px 0 0;
+            background: #fdb827;
+            position: relative;
+            filter: blur(0);
+            border: 2px solid transparent; }
+            .articlesBox__body .item__image img {
+              height: 100%;
+              width: 100%; }
+          .articlesBox__body .item__main {
+            width: 50%;
+            height: 250px; }
+            .articlesBox__body .item__main .meta-data {
+              border: 2px solid transparent; }
+              .articlesBox__body .item__main .meta-data-main {
+                display: flex;
+                flex-direction: row; }
+                .articlesBox__body .item__main .meta-data-main-avatar img {
+                  height: 50px;
+                  width: 50px;
+                  border-radius: 50px; }
+                .articlesBox__body .item__main .meta-data-main-text {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  color: #21209c;
+                  border: 2px solid transparent; }
+                  .articlesBox__body .item__main .meta-data-main-text h3 {
+                    font-size: 1rem; }
+                  .articlesBox__body .item__main .meta-data-main-text span {
+                    font-size: 0.8rem; }
+            .articlesBox__body .item__main__desc {
+              border: 2px solid transparent;
+              padding: 1rem;
+              display: flex;
+              height: fit-content;
+              flex-direction: column;
+              text-decoration: none;
+              justify-content: flex-start; }
+              .articlesBox__body .item__main__desc h2 {
+                word-wrap: break-word;
+                color: black;
+                height: 55px;
+                font-weight: 100;
+                font-size: 2.5rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-decoration: none;
+                border: 2px solid transparent; }
+              .articlesBox__body .item__main__desc h3 {
+                font-size: 0.8rem;
+                text-decoration: none;
+                font-weight: 100;
+                color: orange;
+                border: 2px solid transparent; }
+              .articlesBox__body .item__main__desc article {
+                width: inherit;
+                height: 70px;
+                overflow: hidden; }
+              .articlesBox__body .item__main__desc p {
+                border: 2px solid transparent;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 90px;
+                color: black;
+                font-weight: 100; }
+            .articlesBox__body .item__main__read__link {
+              width: inherit;
+              height: 40px;
+              border: 2px solid transparent; }
+              .articlesBox__body .item__main__read__link button {
+                background: none;
+                color: #21209c;
+                width: 140px;
+                border: none;
+                padding: 0.5rem;
+                cursor: pointer; } }
 
 .article__preview__maincon {
   background: rgba(194, 194, 197, 0.349);

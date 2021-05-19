@@ -16,7 +16,6 @@ class Item extends React.Component {
           <img
             className="img"
             alt="article-ref-pic"
-            // src={this.props.article.img}
             src={articleImg}
           />
         </div>
@@ -35,8 +34,6 @@ class Item extends React.Component {
           </div>
           <div className="item__main__desc">
             <h2> {this.props.article.title} </h2>
-            {/* <h3> {this.props.article.author} </h3> */}
-            {/* <p>{this.props.article.content}...</p> */}
             <article
               dangerouslySetInnerHTML={getMarkdownText(
                 this.props.article.content + "..."
