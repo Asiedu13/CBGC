@@ -11,6 +11,7 @@ const Shopping = lazy(() => import("./components/blog/ShoppingPage"));
 const Preview = lazy(() =>
   import("./components/blog/Articles/ArticleComp/ArticlePreview")
 );
+const Policies = lazy(()=> import("./components/blog/Policies"));
 const SignUp = lazy(() => import("./components/blog/Register/SignUp"));
 const AdminPanel = lazy(() => import("./components/blog/AdminPage"));
 
@@ -34,6 +35,7 @@ function App() {
               <Route path="/reader/:id" component={Reader} />
               <Route path="/register/" component={SignUp} />
               <Route path="/adminPanel" component={AdminPanel} />
+              <Route path="/user_rights" component={Policies} />
             </RegistrationProvider>
           </Switch>
           <Route exact path="/articles/:id" component={Preview} />

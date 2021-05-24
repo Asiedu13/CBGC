@@ -1,0 +1,30 @@
+.policies {
+  @include border(red);
+  padding: 1rem;
+
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    width: 90vw;
+    @include border(green);
+  }
+  ul {
+    padding: 1rem;
+    li {
+      width: 90vw;
+    }
+  }
+  // Mission
+  &_mission {
+    margin-bottom: 50px;
+  }
+  // Privacy Policy
+  &_privacy {
+    margin-bottom: 50px;
+  }
+  // Terms
+  &_terms {
+    margin-bottom: 50px;
+  }
+}

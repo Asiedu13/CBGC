@@ -1620,6 +1620,25 @@
       justify-content: space-around;
       align-items: center; }
 
+.policies {
+  border: 2px solid transparent;
+  padding: 1rem; }
+  .policies h3 {
+    font-size: 16px; }
+  .policies p {
+    width: 90vw;
+    border: 2px solid transparent; }
+  .policies ul {
+    padding: 1rem; }
+    .policies ul li {
+      width: 90vw; }
+  .policies_mission {
+    margin-bottom: 50px; }
+  .policies_privacy {
+    margin-bottom: 50px; }
+  .policies_terms {
+    margin-bottom: 50px; }
+
 .footer {
   width: 100vw;
   height: 480px;
