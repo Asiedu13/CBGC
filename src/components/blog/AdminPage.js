@@ -227,8 +227,6 @@ export default class AdminPage extends Component {
             <div>{optionItems}</div>
           </section>
         </section>
-
-        <Actions />
       </div>
     );
   }
