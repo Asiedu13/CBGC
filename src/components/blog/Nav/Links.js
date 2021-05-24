@@ -20,7 +20,7 @@ class Links extends Component {
   }
   toggleMenu() {
     let deviceWidth = window.innerWidth;
-    if (deviceWidth >= 768) this.setState({ toggleNav: !this.state.toggleNav });
+    if (deviceWidth < 768) this.setState({ toggleNav: !this.state.toggleNav });
   }
   render() {
     return (

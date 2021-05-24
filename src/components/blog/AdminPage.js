@@ -4,6 +4,7 @@ import Slide from "react-reveal/Slide";
 import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
 import Items from "./Articles/ArticleComp/Items";
+import Actions from "./Util/Actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default class AdminPage extends Component {
   constructor() {
@@ -61,7 +62,7 @@ export default class AdminPage extends Component {
 
   handleOptionBtnClick = (event) => {
     let { name } = event.target;
-    if (name === "articles") {
+    if (name === "Posts") {
       this.setState({
         header: name,
         btnClickState: this.state.articlesData,
@@ -107,22 +108,28 @@ export default class AdminPage extends Component {
     }
   };
   render() {
-    let optionItems =
-      this.state.btnClickState.length > 0
-        ? this.state.btnClickState.map((item) => {
-            return <Items key={item.title} article={item} />;
-          })
-        : "No items found";
+    // let optionItems =
+    //   this.state.btnClickState.length > 0
+    //     ? this.state.btnClickState.map((item) => {
+    //         return <Items key={item.title} article={item} />;
+    //       })
+    //     : "No items found";
+    let optionItems = this.state.articlesData
+      ? this.state.articlesData.map((item) => {
+          return <Items key={item.title} article={item} />;
+        })
+      : "No items found";
+    console.log(this.state.articlesData);
     return (
       <div className="adminPage">
-        <header className="adminPage__header">
+        {/* <header className="adminPage__header">
           <Slide left>
             <h2>
               <b>Say Gob3,</b> Admin
             </h2>
           </Slide>
-        </header>
-
+        </header> */}
+        {/* 
         <section className="adminPage__subHeaders">
           <header>
             <Zoom>
@@ -132,12 +139,12 @@ export default class AdminPage extends Component {
           <section className="adminPage__subHeaders__items">
             <div className="adminPage__subHeaders__items__btnCon">
               <button
-                name="articles"
+                name="Posts"
                 onMouseOver={this.handleMouseOver}
                 onMouseOut={this.handleMouseOut}
                 onClick={this.handleOptionBtnClick}
               >
-                Articles
+                Posts
               </button>
               {this.state.btnHover0 ? (
                 <Fade>
@@ -179,7 +186,7 @@ export default class AdminPage extends Component {
               )}
             </div>
           </section>
-        </section>
+        </section> */}
 
         <section
           className="buttonDisplay"
@@ -218,9 +225,11 @@ export default class AdminPage extends Component {
                 </h3>
               </Slide>
             </div>
-            {this.state.btnClickState ? optionItems : "Null"}
+            <div>{optionItems}</div>
           </section>
         </section>
+
+        <Actions />
       </div>
     );
   }

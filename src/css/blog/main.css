@@ -20,16 +20,17 @@
 
 .nav {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 100px;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   border: 2px solid transparent;
   padding: 0.1rem;
   color: #fdb827; }
   .nav #menu-icon {
     list-style-type: none;
-    width: 300px;
+    width: 70px;
     height: 80px;
     padding: 0.3rem;
     z-index: 100;
@@ -51,30 +52,47 @@
     width: 350px;
     height: 80px;
     padding: 0.3rem;
-    z-index: 100; }
+    z-index: 100;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    right: 00px; }
     @media (min-width: 1024px) {
       .nav__list {
         border: 2px solid transparent;
         width: 650px;
         height: 80px;
-        padding: 0.3rem; } }
+        padding: 0.3rem;
+        position: relative;
+        right: 0px; } }
     .nav__list__con {
+      height: 250px;
+      width: 300px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      justify-content: space-between;
+      justify-content: flex-start;
       padding: 0.5rem;
       background: black;
       z-index: 400;
+      position: absolute;
+      top: 90px;
+      box-shadow: 2px 2px 12px 3px #dad8d8;
+      border: 2px solid transparent;
       border: 2px solid transparent; }
       @media (min-width: 1024px) {
         .nav__list__con {
+          height: 250px;
+          width: 600px;
           display: flex;
           flex-direction: row;
           align-items: flex-start;
           justify-content: space-around;
           padding: 0.5rem;
           background: none;
+          position: relative;
+          top: 00px;
+          box-shadow: none;
           border: 2px solid transparent; } }
       .nav__list__con li {
         list-style-type: none;
@@ -584,9 +602,10 @@
 
 .ArticleHeader {
   height: 400px;
+  width: 100vw;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   background: #f1f1f1;
   border: 2px solid transparent; }
@@ -596,12 +615,19 @@
       justify-content: space-around;
       align-items: center; } }
   .ArticleHeader__heading {
+    width: 250px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     color: linear-gradient(to right, #21209c);
     padding: 1rem;
+    z-index: 10;
     border: 2px solid transparent; }
+    @media (min-width: 1024px) {
+      .ArticleHeader__heading {
+        width: 450px; } }
+    .ArticleHeader__heading p {
+      width: inherit; }
   .ArticleHeader h1 {
     font-size: 3rem;
     width: fit-content;
@@ -609,12 +635,15 @@
     text-decoration: underline;
     text-decoration-color: #fdb827; }
   .ArticleHeader .header__arts {
-    width: 400px;
-    height: inherit;
     border: 2px solid transparent; }
+    @media (max-width: 767px) {
+      .ArticleHeader .header__arts {
+        width: 200px;
+        height: inherit;
+        position: relative; } }
     @media (min-width: 1024px) {
       .ArticleHeader .header__arts {
-        width: inherit; } }
+        width: 500px; } }
     .ArticleHeader .header__arts img {
       width: inherit;
       height: inherit; }
@@ -743,12 +772,11 @@
     height: fit-content;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 1rem;
     border: 2px solid transparent; }
     .articlesBox__body .item {
       width: 500px;
       height: 300px;
-      margin: 10px auto;
+      margin: 10px 0;
       border-radius: 2px;
       display: flex;
       flex-direction: column;
@@ -1182,7 +1210,8 @@
   height: fit-content; }
   .adminPage__header {
     border: 2px solid transparent;
-    padding: 1rem; }
+    padding: 1rem;
+    background: #f1f1f1; }
     .adminPage__header h2 {
       font-size: 4rem;
       padding: 1rem;
@@ -1253,7 +1282,7 @@
           border: 1px solid #000;
           height: 30px;
           width: 30px;
-          padding: .5rem;
+          padding: 0.5rem;
           color: grey;
           cursor: pointer;
           border-radius: 30px; }
@@ -1276,6 +1305,206 @@
         width: 70%;
         margin: 0 auto;
         color: grey; }
+  .adminPage .item {
+    width: 500px;
+    height: 300px;
+    margin: 10px 0;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    cursor: pointer;
+    background: linear-gradient(to right, #21209c);
+    border-top: 5px solid #663399;
+    transition: all 0.5s ease-in;
+    border: 2px solid transparent;
+    border-top: 2px solid #fdb827;
+    border-bottom: 2px solid #fdb827;
+    border-width: 5px;
+    position: relative; }
+    .adminPage .item:hover {
+      border-left: 2px solid #21209c;
+      border-width: 5px; }
+    .adminPage .item__image {
+      height: 100%;
+      width: 100%;
+      border-radius: 4px 4px 0 0;
+      background: #fdb827;
+      overflow: hidden;
+      position: absolute;
+      z-index: -10;
+      filter: blur(5px);
+      border: 2px solid transparent; }
+      .adminPage .item__image img {
+        height: 100%;
+        width: 100%; }
+    .adminPage .item__main {
+      width: 100%;
+      height: 250px; }
+      .adminPage .item__main .meta-data {
+        border: 2px solid transparent; }
+        .adminPage .item__main .meta-data-main {
+          display: flex;
+          flex-direction: row; }
+          .adminPage .item__main .meta-data-main-avatar img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50px; }
+          .adminPage .item__main .meta-data-main-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #21209c;
+            border: 2px solid transparent; }
+            .adminPage .item__main .meta-data-main-text h3 {
+              font-size: 1rem; }
+            .adminPage .item__main .meta-data-main-text span {
+              font-size: 0.8rem; }
+      .adminPage .item__main__desc {
+        border: 2px solid transparent;
+        padding: 1rem;
+        display: flex;
+        height: fit-content;
+        flex-direction: column;
+        text-decoration: none;
+        justify-content: flex-start; }
+        .adminPage .item__main__desc h2 {
+          word-wrap: break-word;
+          color: black;
+          height: 55px;
+          font-weight: 100;
+          font-size: 2.5rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-decoration: none;
+          border: 2px solid transparent; }
+        .adminPage .item__main__desc h3 {
+          font-size: 0.8rem;
+          text-decoration: none;
+          font-weight: 100;
+          color: orange;
+          border: 2px solid transparent; }
+        .adminPage .item__main__desc article {
+          width: inherit;
+          height: 70px;
+          overflow: hidden; }
+        .adminPage .item__main__desc p {
+          border: 2px solid transparent;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          height: 90px;
+          color: black;
+          font-weight: 100; }
+      .adminPage .item__main__read__link {
+        width: inherit;
+        height: 40px;
+        border: 2px solid transparent; }
+        .adminPage .item__main__read__link button {
+          background: none;
+          color: #21209c;
+          width: 140px;
+          border: none;
+          padding: 0.5rem;
+          cursor: pointer; }
+    @media (min-width: 1024px) {
+      .adminPage .item {
+        width: 1000px;
+        height: 300px;
+        margin: 10px auto;
+        border-radius: 2px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        cursor: pointer;
+        background: linear-gradient(to right, #21209c);
+        border-top: 5px solid #663399;
+        transition: all 0.5s ease-in;
+        border: 2px solid transparent;
+        border-top: 2px solid #fdb827;
+        border-bottom: 2px solid #fdb827;
+        border-width: 5px; }
+        .adminPage .item:hover {
+          border-left: 2px solid #21209c;
+          border-width: 5px; }
+        .adminPage .item__image {
+          height: 100%;
+          width: 50%;
+          border-radius: 4px 4px 0 0;
+          background: #fdb827;
+          position: relative;
+          filter: blur(0);
+          border: 2px solid transparent; }
+          .adminPage .item__image img {
+            height: 100%;
+            width: 100%; }
+        .adminPage .item__main {
+          width: 50%;
+          height: 250px; }
+          .adminPage .item__main .meta-data {
+            border: 2px solid transparent; }
+            .adminPage .item__main .meta-data-main {
+              display: flex;
+              flex-direction: row; }
+              .adminPage .item__main .meta-data-main-avatar img {
+                height: 50px;
+                width: 50px;
+                border-radius: 50px; }
+              .adminPage .item__main .meta-data-main-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: #21209c;
+                border: 2px solid transparent; }
+                .adminPage .item__main .meta-data-main-text h3 {
+                  font-size: 1rem; }
+                .adminPage .item__main .meta-data-main-text span {
+                  font-size: 0.8rem; }
+          .adminPage .item__main__desc {
+            border: 2px solid transparent;
+            padding: 1rem;
+            display: flex;
+            height: fit-content;
+            flex-direction: column;
+            text-decoration: none;
+            justify-content: flex-start; }
+            .adminPage .item__main__desc h2 {
+              word-wrap: break-word;
+              color: black;
+              height: 55px;
+              font-weight: 100;
+              font-size: 2.5rem;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              text-decoration: none;
+              border: 2px solid transparent; }
+            .adminPage .item__main__desc h3 {
+              font-size: 0.8rem;
+              text-decoration: none;
+              font-weight: 100;
+              color: orange;
+              border: 2px solid transparent; }
+            .adminPage .item__main__desc article {
+              width: inherit;
+              height: 70px;
+              overflow: hidden; }
+            .adminPage .item__main__desc p {
+              border: 2px solid transparent;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              height: 90px;
+              color: black;
+              font-weight: 100; }
+          .adminPage .item__main__read__link {
+            width: inherit;
+            height: 40px;
+            border: 2px solid transparent; }
+            .adminPage .item__main__read__link button {
+              background: none;
+              color: #21209c;
+              width: 140px;
+              border: none;
+              padding: 0.5rem;
+              cursor: pointer; } }
 
 .sign__up {
   width: 99vw;

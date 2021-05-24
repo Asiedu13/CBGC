@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // let copy = [%raw {|'\u00a9'|}];
 
-
 let year = new Date().getFullYear();
 
 function Footer() {
@@ -16,9 +15,13 @@ function Footer() {
       </div>
 
       <div className="footer__elem">
-        <Link to="/shopping">
-          <li className="footer__elem__child">Clarksons Shop</li>
-        </Link>
+        <li className="footer__elem__child">
+          {" "}
+          <a href="http://www.clarksonsshop.com/" rel="noreferrer noopener">
+            Clarksons Shop
+          </a>
+        </li>
+
         <Link to="/articles">
           <li className="footer__elem__child">Clarksons Articles</li>
         </Link>
@@ -26,7 +29,10 @@ function Footer() {
         <li className="footer__elem__child">Clarksons Counselling </li>
       </div>
       <div className="footer__elem">
-        <li className="footer__elem__child"> <FontAwesomeIcon icon={['fa', 'copyright']}/> Clarksons {year}  </li>
+        <li className="footer__elem__child">
+          {" "}
+          <FontAwesomeIcon icon={["fa", "copyright"]} /> Clarksons {year}{" "}
+        </li>
         <li className="footer__elem__child">+233 344 32 099 </li>
         <li className="footer__elem__child">Clarksonduku25@gmail.com</li>
         {/* <li className="footer__elem__child">P.O.Box AT 1486</li> */}

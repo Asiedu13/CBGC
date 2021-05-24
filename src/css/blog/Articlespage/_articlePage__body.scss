@@ -45,9 +45,7 @@
 .articlesBox {
   width: 99vw;
   height: fit-content;
-  // padding: 1rem;
   display: flex;
-  // margin: auto auto;
   flex-direction: row;
   flex-wrap: wrap-reverse;
   position: relative;
@@ -70,13 +68,12 @@
     height: fit-content;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 1rem;
     @include border(green);
 
     .item {
       width: 500px;
       height: 300px;
-      margin: 10px auto;
+      margin: 10px 0;
       border-radius: 2px;
       display: flex;
       flex-direction: column ;
