@@ -4,7 +4,6 @@ import Slide from "react-reveal/Slide";
 import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
 import Items from "./Articles/ArticleComp/Items";
-import Actions from "./Util/Actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default class AdminPage extends Component {
   constructor() {
