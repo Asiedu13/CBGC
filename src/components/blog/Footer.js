@@ -10,8 +10,12 @@ function Footer() {
     <section className="footer">
       <div className="footer__elem">
         <li className="footer__elem__child">About Us</li>
-        <li className="footer__elem__child">Our Mission</li>
-        <li className="footer__elem__child">Privacy Policy</li>
+        <Link to="/user_rights#policies_mission">
+          <li className="footer__elem__child">Our Mission</li>
+        </Link>
+        <Link to="/user_rights#policies_privacy">
+          <li className="footer__elem__child">Privacy Policy</li>
+        </Link>
       </div>
 
       <div className="footer__elem">
@@ -34,7 +38,7 @@ function Footer() {
           <FontAwesomeIcon icon={["fa", "copyright"]} /> Clarksons {year}{" "}
         </li>
         <li className="footer__elem__child">+233 344 32 099 </li>
-        <li className="footer__elem__child">Clarksonduku25@gmail.com</li>
+        <li className="footer__elem__child">Clarksonsblog@gmail.com</li>
         {/* <li className="footer__elem__child">P.O.Box AT 1486</li> */}
 
         <div className="footer__elem__socialmedia">

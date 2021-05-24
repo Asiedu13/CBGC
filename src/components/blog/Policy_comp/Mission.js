@@ -2,7 +2,7 @@ import React from 'react'
 
 const Mission = () => {
     return (
-        <section className="policies_mission">
+        <section className="policies_mission" id="policies_mission">
         <header className="policies_mission_header">
           <h2>Mission for Clarksons</h2>
         </header>
