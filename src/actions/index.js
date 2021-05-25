@@ -1,5 +1,6 @@
 import * as api from "../api/api";
 
+// Asynchronous actions
 export function getArticles() {
   return (dispatch) => {
     api.getArticles().then((resp) => {
@@ -8,6 +9,7 @@ export function getArticles() {
   };
 }
 
+// Action Creator for getting articles
 export function getArticlesSucceeded(resp) {
     console.log(resp);
   return {
