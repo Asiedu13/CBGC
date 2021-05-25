@@ -13,20 +13,7 @@ export class ArticlesBody extends Component {
       heading: "All",
     };
   }
-  componentDidMount() {
-    fetch("http://localhost:5000/api/articles/short?limit=340")
-      .then((data) => {
-        return data.json();
-      })
-      .then((data) => {
-        console.log(data);
-        this.setState({ articles: data });
-        this.setState({ modified: data });
-      })
-      .catch((err) => {
-        console.log(`Error: ${err}`);
-      });
-  }
+
   handleValueChange = (val) => {
     this.setState({ heading: val });
     this.handleModifications(val);
@@ -34,51 +21,23 @@ export class ArticlesBody extends Component {
 
   handleModifications = (val) => {
     switch (val) {
-      case "all":
-        this.handleAllModification();
-        break;
-      case "popular":
-        this.handlePopularModification();
-        break;
-      case "recent":
-        this.handleRecentModification();
-        break;
-      case "read":
-        this.handleReadModification();
-        break;
-      case "liked":
-        this.handleLikedModification();
+      case "\[a-zA-Z]\i":
+        console.log("Hmmm");
         break;
       default:
-        this.handleAllModification();
+        console.log("Default")
         break;
     }
   };
 
-  handleAllModification = () => {
-    if (this.state.heading === "all") {
-      if (this.state.articles.length > 0) {
-        let m = this.state.articles;
-        this.setState({ modified: m });
-      }
-    }
-  };
-  handlePopularModification = () => {
-    this.setState({ modified: "" });
-  };
-  handleRecentModification = () => {};
-  handleReadModification = () => {};
-  handleLikedModification = () => {};
-
   handleItemClick = (articleID) => {
-    // this.setState({currentArticle: articleID})
     this.props.currentArticle(articleID);
   };
 
   render() {
     let DbArt =
-      this.state.modified.length > 0 ? (
-        this.state.modified.map((article) => {
+      this.props.allArticles.length > 0 ? (
+        this.props.allArticles.map((article) => {
           return (
             <Link
               to={`/articles/${article._id}`}
@@ -92,7 +51,6 @@ export class ArticlesBody extends Component {
       ) : (
         <p className="no-articles">No articles here</p>
       );
-
     return (
       <div>
         <ArticleNav

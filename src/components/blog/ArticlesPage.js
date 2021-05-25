@@ -15,12 +15,15 @@ class Articles extends React.Component {
     console.log(this.state.currentArticle);
   }
   render() {
+    const {articles} = this.props;
+    console.log(articles);
     console.log(`This is the current article: ${this.state.currentArticle}`);
 
     return (
       <section>
         <Header firstHeaderName="Blog Posts" illustration={pic} altText="A person reading an article" niche="A repository of awesome articles on a variety of topics" />
         <ArticlesBody
+          allArticles={this.props.articles}
           currentArticle={(articleID) => {
             this.setState({
               currentArticle: articleID,

@@ -4,6 +4,8 @@ const cors = require("cors");
 const passport = require("passport");
 const PORT = process.env.PORT || 5000;
 const mongoose = require("mongoose");
+const logger = require("morgan");
+app.use(logger("short"));
 app.use(cors());
 app.use(express.json());
 require("dotenv").config();
