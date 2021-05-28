@@ -6,14 +6,20 @@ let UserSchema = new Schema({
   email: { type: String, trim: true, unique: true, required: true },
   password: { type: String, trim: true, required: true },
   phone: { type: String, trim: true, required: true, unique: true },
-  createdAt: { type: Date, default: Date.now },
+  dob: String,
   readArticles: { type: Array },
   likedArticles: { type: Array },
-  sharedArticles: { type: Array },
+  savedArticles: {type: Array},
   dislikedArticles: { type: Array },
-  booksBought: { type: Array },
+  sharedArticles: { type: Array },
+  articleComments: {type: Array},
+  Admin: String,
+  lastSeen: Date.now,
+  isActive: {type: Boolean},
+  reportedArticles: {type: Array},
   counsellingSessions: { type: Number },
   userImg: { type: Schema.Types.Mixed },
+  createdAt: { type: Date, default: Date.now },
 }).pre("validate", function () {
   
     this.username = this.email;

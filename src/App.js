@@ -64,7 +64,7 @@ class App extends Component {
                 />
                 <Route path="/reader/:id" component={Reader} />
                 <Route path="/register/" component={SignUp} />
-                <Route path="/adminPanel" render={(props) => <AdminPanel />} />
+                <Route path="/adminPanel" render={(props) => <AdminPanel {...props} />} />
                 <Route path="/user_rights" component={Policies} />
               </RegistrationProvider>
               {/* 404 page goes here */}
