@@ -47,19 +47,17 @@ import {
   faLongArrowAltLeft,
   faLongArrowAltRight,
   faArrowRight,
+  faEnvelope,
   faArrowLeft,
-  faSadCry,
-  faSadTear,
   faCopyright,
   faAddressBook,
-  faHeartBroken,
-  faLowVision,
-  faAppleAlt,
-  faSmile,
+  faTimes,
+  faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 // import {faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 library.add(
   fab,
+  faTrash,
   faAddressBook,
   faCheckSquare,
   faCoffee,
@@ -67,6 +65,7 @@ library.add(
   faCopyright,
   faHome,
   faAngleRight,
+  faEnvelope,
   faPlus,
   faBars,
   faUser,
@@ -83,12 +82,7 @@ library.add(
   faLongArrowAltRight,
   faArrowRight,
   faArrowLeft,
-  faSadCry,
-  faSadTear,
-  faHeartBroken,
-  faLowVision,
-  faAppleAlt,
-  faSmile
+  faTimes,
 );
 const store = createStore(articlesReducer, applyMiddleware(thunk));
 ReactDom.render(

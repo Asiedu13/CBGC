@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// let copy = [%raw {|'\u00a9'|}];
 
 let year = new Date().getFullYear();
 

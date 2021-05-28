@@ -4,6 +4,7 @@ import feelingBlue from "../../../../pics/feeling-blue.svg";
 import Jello from "react-reveal/Jello";
 import HeadShake from "react-reveal/HeadShake";
 import Button from '../../Util/Button'
+import {Link} from 'react-router-dom';
 
 
 export default function Elaboration() {
@@ -42,8 +43,9 @@ export default function Elaboration() {
             </p>
 
             <div className="counselBtn">
-              {/* <button>Reflect</button> */}
+              <Link to="/counsel">
               <Button label="Reflect" importance="high" />
+              </Link>
             </div>
           </div>
           <HeadShake delay={2000}>

@@ -5,6 +5,7 @@ const passport = require("passport");
 const PORT = process.env.PORT || 5000;
 const mongoose = require("mongoose");
 const logger = require("morgan");
+
 app.use(logger("short"));
 app.use(cors());
 app.use(express.json());
@@ -34,10 +35,18 @@ let connectMongoDb = async () => {
 
 connectMongoDb();
 
+// // Mail transporter
+// const transporter = nodemailer.createTransport({
+//   host: "smtp.gmail.com",
+//   port: 995,
+// });
+
 const articles = require("./Routes/Articles");
 const users = require("./Routes/Users");
 app.use("/api/users", users);
+// app.use("/api/users/mail", users);
 app.use("/api/articles", articles);
 app.use("/api/users/articles", articles);
+
 
 app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));

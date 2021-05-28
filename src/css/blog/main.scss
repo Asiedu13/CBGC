@@ -22,6 +22,8 @@
 
 @import "Adminpage/adminpage";
 
+@import "CounsellingPage/counsellingpage";
+
 @import "RegisterPage/registerpage";
 @import "Policies/policies";
 @import "footer";
@@ -32,6 +34,7 @@ body {
   overflow-x: hidden;
   background-color: $background;
   line-height: 1.5;
+  box-sizing: border-box;
   .move-right {
     animation: moveRight 1s ease forwards infinite;
   }

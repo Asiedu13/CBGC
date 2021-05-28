@@ -1506,6 +1506,179 @@
               padding: 0.5rem;
               cursor: pointer; } }
 
+.counsel__main {
+  margin-bottom: 50px;
+  width: 100vw;
+  border: 2px solid transparent; }
+  .counsel__main__header {
+    border: 2px solid transparent;
+    padding: 1rem; }
+    .counsel__main__header h1 {
+      color: grey;
+      font-weight: 100;
+      margin-left: 100px; }
+
+.person {
+  width: 80%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 100px;
+  border: 2px solid transparent; }
+  .person__image {
+    height: 500px;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid transparent;
+    background: url("../../pics/blob1black.svg") #fff;
+    background-size: cover;
+    background-position: 100px;
+    position: relative;
+    box-shadow: 0px 2px 20px 3px rgba(136, 136, 136, 0.623);
+    border-radius: 10px; }
+    .person__image .o-img {
+      position: absolute;
+      z-index: -10; }
+    .person__image img {
+      align-self: center;
+      margin: 0 auto;
+      height: 250px;
+      width: 250px;
+      border-radius: 50%; }
+  .person__info {
+    border: 2px solid transparent;
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 50px;
+    box-shadow: 0px 2px 20px 3px rgba(136, 136, 136, 0.623); }
+    .person__info > div {
+      border: 2px solid transparent;
+      padding: 1rem; }
+      .person__info > div h3 {
+        font-size: 2rem;
+        color: grey; }
+      .person__info > div p {
+        width: 350px;
+        color: grey; }
+      .person__info > div .buttons {
+        margin-top: 30px; }
+        .person__info > div .buttons button {
+          cursor: pointer;
+          width: 200px;
+          height: 50px;
+          background: #21209c;
+          color: #fff;
+          outline: none;
+          border: none;
+          font-size: 1rem; }
+          .person__info > div .buttons button:hover {
+            background: #181772; }
+  .person__social {
+    border: 2px solid transparent;
+    width: 10%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; }
+    .person__social > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-end;
+      height: 200px;
+      border: 2px solid transparent; }
+
+.mailBox {
+  width: 50vw;
+  height: 500px;
+  border: 2px solid transparent;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  box-shadow: 0px 2px 20px 3px rgba(136, 136, 136, 0.623);
+  position: fixed;
+  top: 0%;
+  left: 30%;
+  z-index: 300;
+  overflow: auto;
+  background: #fff; }
+  .mailBox__menubar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #21209c;
+    color: #fff;
+    height: 50px;
+    padding: 1rem;
+    border: 2px solid transparent; }
+    .mailBox__menubar .title h2 {
+      font-size: 1rem; }
+    .mailBox__menubar .menu_actions {
+      border: 2px solid transparent;
+      width: fit-content; }
+      .mailBox__menubar .menu_actions:nth-child(even):hover {
+        color: grey;
+        cursor: pointer; }
+  .mailBox__body {
+    width: inherit;
+    height: 60%;
+    border: 2px solid transparent; }
+    .mailBox__body .subject {
+      padding-left: 1rem;
+      width: inherit;
+      height: 40px;
+      border-bottom: 1px solid grey;
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      .mailBox__body .subject span {
+        color: grey;
+        font-size: 1rem; }
+      .mailBox__body .subject input {
+        height: 30px;
+        width: 500px;
+        margin-left: 10px;
+        border: none;
+        outline: none;
+        font-size: 1rem; }
+    .mailBox__body .rest textarea {
+      width: 99%;
+      height: 300px;
+      border: none;
+      padding: 1rem;
+      outline: none; }
+  .mailBox__footer {
+    border-top: 1px solid grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: grey;
+    width: inherit;
+    height: 50px;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0px; }
+    .mailBox__footer button {
+      width: 70px;
+      height: 40px;
+      background: #21209c;
+      color: #fff;
+      border: none;
+      outline: none;
+      cursor: pointer; }
+      .mailBox__footer button:hover {
+        background: #0f0f47; }
+
 .sign__up {
   width: 99vw;
   height: 900px;
@@ -1687,7 +1860,8 @@ body {
   font-family: "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   overflow-x: hidden;
   background-color: linear-gradient(to right, #21209c);
-  line-height: 1.5; }
+  line-height: 1.5;
+  box-sizing: border-box; }
   body .move-right {
     animation: moveRight 1s ease forwards infinite; }
   body .loader {
@@ -1721,7 +1895,7 @@ body {
     body .btn-imp:hover {
       background: #21209c;
       color: #fdb827;
-      box-shadow: 2px 12px 15px 1px #fed98c; }
+      box-shadow: 0px 8px 40px 2px rgba(97, 94, 94, 0.637); }
     body .btn-imp:focus {
       box-shadow: 0 0 0 0; }
   body .btn-norm {

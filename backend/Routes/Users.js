@@ -3,6 +3,15 @@ const Users = require("../Models/User.model");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
+// const mailjet = require("node-mailjet").connect(
+//   "d19ff10670ba0da73fc4b377d15d36e3",
+//   "c74b2d47f4a15dac141164f3111c940a"
+// );
+const mailjet = require("node-mailjet").connect(
+  "5bce6dc2d9dd81aede4d7c116e695041",
+  "1964780d5c9f1f69ba6ff5d649c24864"
+);
+
 passport.use(
   new LocalStrategy(function (username, password, done) {
     Users.findOne({ username }, function (err, user) {
@@ -54,7 +63,7 @@ router.route("/include").post((req, res) => {
 
 //--------------- Login user --------------
 router.route("/login").post(function (req, res, next) {
-  console.log(req.body.password)
+  console.log(req.body.password);
   passport.authenticate("local", function (err, user, info) {
     if (err) return next(err);
     if (!user) {
@@ -63,7 +72,7 @@ router.route("/login").post(function (req, res, next) {
     if (!user.password) return res.json({ msg: "invalid password" });
     req.logIn(user, function (err) {
       if (err) return next(err);
-      return res.json({ msg: {msg:"user found", user: user._id,} });
+      return res.json({ msg: { msg: "user found", user: user._id } });
     });
   })(req, res, next);
 });
@@ -75,6 +84,67 @@ router.route("/login").post(function (req, res, next) {
 //------------- Single user dashboard -------------
 router.route("/me").get((req, res) => {
   res.json("I am me");
+});
+
+// --------- Send Mail ------------
+router.route("/mail").post((req, res) => {
+  console.log(req.body.subject, req.body.mailbody);
+
+  const request = mailjet.post("send", { version: "v3.1" }).request({
+    Messages: [
+      {
+        From: {
+          Email: "princekofasiedu@gmail.com",
+          Name: "Person",
+        },
+        To: [
+          {
+            Email: "clarksonsblog@gmail.com",
+            Name: "Clarkson",
+          },
+        ],
+        Subject: req.body.subject,
+        TextPart: req.body.mailbody,
+        CustomID: "RequestingHelpMail",
+      },
+    ],
+  });
+  request
+    .then((result) => {
+      res.status(200).json({ mailSent: "Mail Sent" });
+    })
+    .catch((err) => {
+      res.status(500).json({ msg: err });
+    });
+
+  // const request = mailjet.post("send", { version: "v3.1" }).request({
+  //   Messages: [
+  //     {
+  //       From: {
+  //         Email: "clarksonsblog@gmail.com",
+  //         Name: "CBGC",
+  //       },
+  //       To: [
+  //         {
+  //           Email: "princekofasiedu@gmail.com",
+  //           Name: "Clarkson",
+  //         },
+  //       ],
+  //       Subject: "Greetings from Prince",
+  //       TextPart: "My first Mailjet email test",
+  //       // HTMLPart:
+  //       //   "<h3>Dear User, welcome to Clarksons! May the delivery force be with you!",
+  //       CustomID: "AppGettingStartedTest",
+  //     },
+  //   ],
+  // });
+  // request
+  //   .then((result) => {
+  //     console.log(result.body);
+  //   })
+  //   .catch((err) => {
+  //     console.log(err.statusCode);
+  //   });
 });
 
 module.exports = router;

@@ -13,3 +13,6 @@ const client = axios.create(
 export function getArticles() {
    return client.get("/articles/short?limit=340");
 }
+export function sendMail(params) {
+    return client.post('/users/mail', JSON.stringify(params));
+}
