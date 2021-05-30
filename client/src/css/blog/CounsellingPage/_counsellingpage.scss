@@ -1,0 +1,224 @@
+.counsel__main {
+  margin-bottom: 50px;
+  width: 100vw;
+  @include border(red);
+
+  &__header {
+    @include border(orange);
+    padding: 1rem;
+    h1 {
+      color: grey;
+      font-weight: 100;
+      margin-left: 100px;
+    }
+  }
+}
+
+.person {
+  width: 80%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 100px;
+
+  @include border(blue);
+  &__image {
+    height: 500px;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    // justify-content: center;
+    // align-items: center;
+    @include border(orange);
+    background: url("../../pics/blob1black.svg") #fff;
+    background-size: cover;
+    background-position: 100px;
+    position: relative;
+    box-shadow: 0px 2px 20px 3px rgba(136, 136, 136, 0.623);
+    // background-color: $primary;
+    border-radius: 10px;
+    .o-img {
+      position: absolute;
+
+      z-index: -10;
+    }
+    img {
+      align-self: center;
+      margin: 0 auto;
+      height: 250px;
+      width: 250px;
+      border-radius: 50%;
+    }
+  }
+
+  &__info {
+    @include border(brown);
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 50px;
+    // z-index: -20;
+    // background: transparent;
+    box-shadow: 0px 2px 20px 3px rgba(136, 136, 136, 0.623);
+
+    & > div {
+      @include border(blue);
+      padding: 1rem;
+      h3 {
+        font-size: 2rem;
+        color: grey;
+      }
+      p {
+        width: 350px;
+        color: grey;
+      }
+      .buttons {
+        margin-top: 30px;
+        button {
+          cursor: pointer;
+          width: 200px;
+          height: 50px;
+          background: lighten($primary, 30%);
+          color: #fff;
+          outline: none;
+          border: none;
+          font-size: 1rem;
+          &:hover {
+            background: darken($primary, 10%);
+          }
+        }
+      }
+    }
+  }
+  &__social {
+    @include border(orange);
+    width: 10%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    // margin-top: 50px;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-end;
+      height: 200px;
+      @include border(red);
+    }
+  }
+}
+
+.mailBox {
+  width: 50vw;
+  height: 500px;
+  @include border(red);
+  // background: blue;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  box-shadow: 0px 2px 20px 3px rgba(136, 136, 136, 0.623);
+  position: fixed;
+  top: 0%;
+  left: 30%;
+  z-index: 300;
+  overflow: auto;
+  background: #fff;
+
+  &__menubar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: lighten($primary, 30%);
+    color: #fff;
+    height: 50px;
+    padding: 1rem;
+    @include border(orange);
+
+    .title {
+      h2 {
+        font-size: 1rem;
+      }
+    }
+    .menu_actions {
+      @include border(red);
+      width: fit-content;
+
+      &:nth-child(even):hover {
+        color: grey;
+        cursor: pointer;
+      }
+    }
+  }
+  // Mail body
+  &__body {
+    width: inherit;
+    height: 60%;
+    @include border(green);
+    .subject {
+      padding-left: 1rem;
+      width: inherit;
+      height: 40px;
+      // border-top: 1px solid grey;
+      border-bottom: 1px solid grey;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      span {
+        color: grey;
+        font-size: 1rem;
+      }
+      input {
+        height: 30px;
+        width: 500px;
+        margin-left: 10px;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+      }
+    }
+    .rest {
+      textarea {
+        width: 99%;
+        height: 300px;
+        border: none;
+        padding: 1rem;
+        outline: none;
+      }
+    }
+  }
+  // Mail footer
+  &__footer {
+    border-top: 1px solid grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: grey;
+    width: inherit;
+    height: 50px;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0px;
+    button {
+      width: 70px;
+      height: 40px;
+      background: lighten($primary, 30%);
+      color: #fff;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      &:hover {
+        background: darken($primary, 20%);
+      }
+    }
+  }
+}

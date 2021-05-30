@@ -1,0 +1,107 @@
+.creator {
+  width: 86vw;
+  padding: 1rem;
+  height: 690px;
+  @include border(red);
+
+  &__header {
+    padding: 1rem;
+  }
+
+  .writer {
+    @include border(orange);
+    height: 590px;
+
+    .title {
+      margin-bottom: 10px;
+      @include border(blue);
+      padding: 1rem;
+      span {
+        color: grey;
+        font-size: 15px;
+      }
+      input {
+        height: 50px;
+        width: 300px;
+        background: lighten($primary, 50%);
+        color: #fff;
+        border: none;
+        padding: 1rem;
+        margin-left: 10px;
+      }
+    }
+
+    .textarea {
+      padding: 1rem;
+      textarea {
+        width: 83vw;
+        height: 80vh;
+        padding: 1rem;
+        background: lighten(grey, 40%);
+      }
+    }
+
+    .creator__flow {
+      padding: 0.5rem 1rem;
+      button {
+        padding: 1rem;
+        background: lighten($primary, 30%);
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        &:hover {
+          background: $primary;
+        }
+      }
+    }
+  }
+
+  // Creator Image
+  &__image {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include border(red);
+    .main {
+      width: 600px;
+      height: 300px;
+      display: flex;
+      //   justify-content: center;
+      // align-items: center;
+      @include border(blue);
+      .preview {
+        height: 300px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include border(yellow);
+
+        img {
+          width: inherit;
+          height: inherit;
+        }
+      }
+      .select {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include border(yellow);
+
+        h2 {
+            font-size: 2rem;
+            @include border(blue);
+        }
+        input {
+            width: 200px;
+            @include border(blue);
+        }
+      }
+    }
+  }
+}
