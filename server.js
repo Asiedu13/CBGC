@@ -9,6 +9,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const flash = require('connect-flash');
 const setUpPassport = require('./passport');
+const path = require('path');
 
 app.use(logger("short"));
 app.use(cors());
@@ -24,6 +25,7 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.resolve(__dirname, 'client/build')))
+
 const uri = process.env.db_URI;
 let connection = mongoose.connection;
 
@@ -47,6 +49,9 @@ let connectMongoDb = async () => {
 
 connectMongoDb();
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/client/build/index.html'))
+})
 setUpPassport();
 
 
@@ -68,5 +73,10 @@ function ensureAuthenticated(req, res, next) {
 
 app.use(ensureAuthenticated);
 
-
-app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));
+try {
+app.listen(PORT, (err) =>{ console.log(`Server started on port: ${PORT}`)});
+}catch(err) {
+  console.log(`The error ${err}`)
+}finally {
+  app.listen(PORT, (err) =>{ console.log(`Server started on port: ${PORT}`)});
+}
