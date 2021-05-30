@@ -24,7 +24,6 @@ app.use(cookieParser());
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(express.static(path.resolve(__dirname, 'client/build')))
 
 const uri = process.env.db_URI;
 let connection = mongoose.connection;
@@ -49,9 +48,10 @@ let connectMongoDb = async () => {
 
 connectMongoDb();
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname , '/client/build/index.html'))
-})
+app.use(express.static(path.join(__dirname, 'client/build')));
+app.get('*', (req, res) => { 
+  res.sendFile(path.join(__dirname + '/client/build/index.html')) 
+});
 setUpPassport();
 
 
