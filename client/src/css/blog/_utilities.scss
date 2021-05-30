@@ -1,0 +1,37 @@
+@mixin button($importance) {
+  width: 200px;
+  height: 70px;
+  font-size: 1.3rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin: 10px;
+  border-radius: 5px;
+  z-index: 900;
+
+  @if ($importance == high) {
+    background: $abstract;
+    color: $primary;
+    &:hover {
+      background: $primary;
+      color: $secondary;
+      // box-shadow: 2px 12px 15px 1px lighten($secondary, 20%);
+      box-shadow: 0px 8px 40px 2px rgba(97, 94, 94, 0.637);
+    }
+    &:focus {
+      box-shadow: 0 0 0 0;
+    }
+  } @else {
+    background: $secondary;
+    color: $abstract;
+    &:hover {
+      background: $abstract;
+      color: $secondary;
+      box-shadow: 2px 12px 15px 1px lighten(#f6d342, 20%);
+    }
+    &:focus {
+      box-shadow: 0 0 0 0;
+    }
+  }
+}

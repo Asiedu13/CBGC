@@ -1,0 +1,52 @@
+$abstract: #f1f1f1;
+$background: linear-gradient(to right, #21209c);
+$secondary: #fdb827;
+$primary: #21209c;
+$red: #23120b;
+
+@mixin border($color) {
+  border: 2px solid transparent;
+}
+
+@mixin shadow($color) {
+  box-shadow: 1px 2px 10px 2px $color;
+  border-radius: 5px;
+  padding: 1rem;
+  transition: all 0.5s ease;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 1px 2px 10px 2px $color;
+    transition: all 0.5s ease;
+  }
+}
+
+@mixin flexCon($direction, $centering, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  @if ($centering == true) {
+    justify-content: center;
+    align-items: center;
+  } @else {
+    justify-content: $justify;
+    align-items: center;
+  }
+}
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+@mixin phone {
+  @media(max-width: #{$tablet-width - 1}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

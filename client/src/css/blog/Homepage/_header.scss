@@ -1,0 +1,80 @@
+.header {
+  width: 100vw;
+  height: 600px;
+  color: $primary;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 50;
+  position: relative;
+  background: $abstract;
+  @include border(brown);
+
+  &-main {
+    width: 500px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    @include border(pink);
+    z-index: 10;
+
+    h1 {
+      font-size: 3.5rem;
+      margin: 0px auto;
+      position: relative;
+      color: $primary;
+      grid-area: 2/1;
+      z-index: 20;
+      // height: 200px;
+      @include border(red);
+    }
+    .header__slogan {
+      font-size: 0.9rem;
+      position: relative;
+      color: $red;
+
+      z-index: 10;
+      @include border(blue);
+    }
+    button {
+      height: 70px;
+      width: 300px;
+      background: $secondary;
+      color: $abstract;
+      font-size: 1.3rem;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      margin: 10px;
+      &:hover {
+        background: $background;
+        color: $abstract;
+      }
+    }
+  }
+
+  &-illustration {
+    @include border(red);
+    height: inherit;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 4;
+  }
+  img {
+    height: 500px;
+    position: absolute;
+  }
+  #shopper {
+    right: 20px;
+  }
+  #reader {
+    left: 50px;
+  }
+  #reader {
+    left: 50px;
+  }
+}

@@ -1,0 +1,125 @@
+.articles {
+  @include border(green);
+  width: 100vw;
+  height: 750px;
+  position: relative;
+  overflow: hidden;
+
+  @include desktop {
+    @include border(green);
+    width: 100vw;
+    height: 750px;
+    position: relative;
+  }
+
+  &__firstChild {
+    margin: 0 0 0 50px;
+    color: $primary;
+    width: 960px;
+    height: fit-content;
+    padding: 1rem;
+    word-wrap: wrap;
+    position: relative;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 300;
+    @include border(red);
+
+    @include desktop {
+      margin: 0 0 0 100px;
+      color: $primary;
+      width: 960px;
+      height: fit-content;
+      padding: 1rem;
+      word-wrap: wrap;
+      position: relative;
+      top: 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      z-index: 300;
+    }
+
+    .h2_1 {
+      font-size: 2rem;
+      font-weight: 100;
+      color: $secondary;
+      width: fit-content;
+      height: fit-content;
+      padding: 1rem;
+      word-wrap: wrap;
+      text-align: center;
+      position: relative;
+      @include border(green);
+    }
+    .h2_2 {
+      height: 100px;
+      color: $secondary;
+      @include border(brown);
+      b {
+        font-size: 4rem;
+      }
+    }
+
+  }
+  .articles__paragraph {
+    @include border(cyan);
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+
+    p {
+      @include border(gold);
+      width: 50vw;
+      height: 250px;
+      font-size: 17px;
+      font-weight: 100;
+      line-height: 1.5;
+      color: $red;
+      margin: 5% 0%;
+
+      @include desktop {
+        @include border(gold);
+        width: 40vw;
+        height: 250px;
+        font-size: 17px;
+        font-weight: 100;
+        padding: 2rem;
+        line-height: 1.5;
+        color: $red;
+      }
+    }
+
+    .buttons {
+      width: fit-content;
+      height: fit-content;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      @include border(red);
+    }
+  }
+
+  &-author {
+    @include border(red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin: -360px 0 0 500px;
+    border-radius: 100%;
+    width: 90%;
+    @include desktop {
+      margin: -100px 0 0 200px;
+    }
+    // background: lightblue;
+    img {
+      @include border(white);
+      z-index: 200;
+    }
+  }
+}

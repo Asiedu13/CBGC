@@ -1,0 +1,196 @@
+.counselling {
+  width: 100vw;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 2vh;
+  @include border(blue);
+
+  &__el {
+    @include border(black);
+    height: 500px;
+    width: 99vw;
+    background: #f4f4f4;
+
+    &__feeling {
+      width: inherit;
+      height: 150px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      @include border(red);
+
+      .text {
+        @include border(pink);
+        &__content {
+          position: relative;
+        }
+        h2 {
+          font-size: 3rem;
+          color: grey;
+        }
+      }
+      .feeling {
+        @include border(pink);
+        height: 150px;
+        text-align: center;
+        padding: 1rem;
+        // position: absolute;
+
+        &__text {
+          font-size: 2.5rem;
+          position: relative;
+          animation: slide ease 0.5s forwards 0.2s;
+          transition: all 1s ease-in forwards;
+          color: grey;
+        }
+      }
+    }
+
+    &__paragraph {
+      @include border(brown);
+      height: fit-content;
+      color: grey;
+      background: #f4f4f4;
+      // text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 1rem;
+
+      &__text {
+        width: 100%;
+        @include desktop {
+          width: 900px;
+        }
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        @include border(red);
+        & > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          padding: 1rem;
+          @include border(blue);
+          width: 100%;
+          align-items: flex-start;
+          header {
+            @include border(red);
+            text-align: left;
+          }
+          p {
+            @include border(blue);
+            width: 80%;
+            @include desktop {
+              width: 100%;
+            }
+          }
+          .counselBtn {
+            height: fit-content;
+            @include border(pink);
+          }
+        }
+        p {
+          @include border(blue);
+          width: 50%;
+        }
+        img {
+          height: 300px;
+          width: 300px;
+        }
+      }
+    }
+  }
+
+  &__booking {
+    width: inherit;
+    height: 650px;
+    @include border(green);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+
+    &__part1 {
+      @include border(red);
+      width: 600px;
+      display: flex;
+      height: 600px;
+      flex-direction: column;
+      // align-items: center;
+      justify-content: space-evenly;
+      .assurance {
+        color: royalblue;
+        height: 200px;
+        margin: 50px 0;
+        border-radius: 5px;
+        padding: 1rem;
+        text-align: center;
+      }
+      h2 {
+        color: royalblue;
+        font-size: 1.5rem;
+        big {
+          font-size: 2rem;
+          color: orange;
+        }
+      }
+      .contact {
+        width: 650px;
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @include border(red);
+        p {
+          color: grey;
+          margin: 20px 0;
+        }
+
+        &__links {
+          width: 650px;
+          height: 100px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          a {
+            width: 200px;
+            height: 70px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 1rem 4rem;
+            border-radius: 5px;
+            color: #000;
+            background: #fff;
+            text-decoration: none;
+            @include border(green);
+            transition: box-shadow 0.5s ease;
+
+            &:hover {
+              box-shadow: 2px 12px 15px 1px lighten(#663399, 40%);
+            }
+          }
+          .insta {
+            box-shadow: 2px 12px 15px 1px lighten(red, 40%);
+          }
+          .mail {
+            box-shadow: 2px 12px 15px 1px lighten(red, 40%);
+          }
+          .tel {
+            box-shadow: 2px 12px 15px 1px lighten(red, 40%);
+          }
+        }
+      }
+    }
+  }
+}

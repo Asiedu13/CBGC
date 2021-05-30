@@ -4,11 +4,26 @@ const cors = require("cors");
 const passport = require("passport");
 const PORT = process.env.PORT || 5000;
 const mongoose = require("mongoose");
+const logger = require("morgan");
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const flash = require('connect-flash');
+const setUpPassport = require('./passport');
+
+app.use(logger("short"));
 app.use(cors());
 app.use(express.json());
 require("dotenv").config();
+app.use(cookieParser());
+app.use(session({
+ secret: "TKRv0IJs=HYqrvagQ#&!F!%V]Ww/4KiVs$s,<<MX", 
+ resave: true, 
+ saveUninitialized: true 
+}));
+app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
+
 const uri = process.env.db_URI;
 let connection = mongoose.connection;
 
@@ -32,10 +47,26 @@ let connectMongoDb = async () => {
 
 connectMongoDb();
 
+setUpPassport();
+
+
 const articles = require("./Routes/Articles");
 const users = require("./Routes/Users");
-app.use("/api/users", users);
 app.use("/api/articles", articles);
 app.use("/api/users/articles", articles);
+
+app.use("/api/users", users);
+
+function ensureAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) { 
+ next();
+} else {
+  req.flash("info", "You must be logged in to see this page.");
+  // res.json(res.redirect("/login"));
+}
+}
+
+app.use(ensureAuthenticated);
+
 
 app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));

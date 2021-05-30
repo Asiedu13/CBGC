@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const Articles = require("../Models/Article.model");
-
+const formidable = require("formidable");
+const fs = require("fs");
+const path = require("path");
 // Shortened string
 function shorten(string, num) {
   let a = string.substring(0, num);
@@ -10,6 +12,7 @@ function shorten(string, num) {
 // Display all articles
 router.route("/").get((req, res) => {
   Articles.find()
+    .sort({ createdAt: "descending" })
     .then((data) => {
       res.status(200).json(data);
     })
@@ -27,6 +30,7 @@ router.route("/").get((req, res) => {
 
 router.route("/short").get((req, res) => {
   Articles.find()
+    .sort({ createdAt: "descending" })
     .then((data) => {
       let modified = data.map((article) => {
         let content = shorten(article.content, req.query.limit);
@@ -38,6 +42,8 @@ router.route("/short").get((req, res) => {
           content,
           likes: article.likes,
           haveRead: article.haveRead,
+          tags: article.tags,
+          img: article.img,
         };
       });
       res.json(modified).status(200);
@@ -67,6 +73,8 @@ router.route("/short/:id").get((req, res) => {
         content,
         likes: data.likes,
         haveRead: data.haveRead,
+        tags: data.tags,
+        img: data.img,
       };
       res.json(modified).status(200);
     })
@@ -93,6 +101,7 @@ router.route("/defined/:num").get((req, res) => {
   Articles.find()
     .skip(Number(req.params.num))
     .limit(3)
+    .sort({ createdAt: "descending" })
     .then((data) => {
       let modified = data.map((article) => {
         let content = shorten(article.content, 380);
@@ -104,14 +113,12 @@ router.route("/defined/:num").get((req, res) => {
           content,
           likes: article.likes,
           haveRead: article.haveRead,
+          tags: article.tags,
         };
       });
       res.json(modified).status(200);
     });
 });
-
-
-
 
 // ---------- For Admin ------------
 
@@ -120,25 +127,29 @@ router.route("/include").post((req, res) => {
   const title = req.body.title;
   const author = req.body.author;
   const content = req.body.content;
-  const time = req.body.time;
-  const likes = req.body.likes;
-  const haveRead = req.body.haveRead;
-  const img = req.body.img;
+  const tags = req.body.tags;
+  // const createdAt = req.body.time;
+  // const likes = req.body.likes;
+  // const haveRead = req.body.haveRead;
+  const img = req.body.image;
+  console.log(img);
 
   const newArticle = new Articles({
     title,
     author,
     content,
-    time,
-    likes,
-    haveRead,
+    tags,
+    // time,
+    // likes,
+    // haveRead,
     img,
   });
 
   newArticle
     .save()
     .then((data) => {
-      res.status(200).json(data);
+      // res.status(200).json(data);
+      res.status(201).json("Your post has been successfully added");
     })
     .catch((err) => {
       res.status(500).json(`error: ${err}`);
@@ -175,4 +186,44 @@ router.route("/delete/:id").delete((req, res) => {
     });
 });
 
+// Image of articles
+router.route("/img").post((req, res) => {
+  // let fileName = `${req.}`
+  // console.log(req);
+  // res.json("Received");
+
+  // new formidable.IncomingForm().parse(req)
+  // .on('fileBegin', (name, file) => {
+  //   let newFile = path.resolve(__dirname, 'public', 'images', `${file.name}.${file.type}`)
+  //   fs.appendFile(newFile, "", (err)=> {
+  //     if(err) return new Error("Could not create file");
+
+  //   })
+  //   // file.path = __dirname + '/uploads/' + file.name
+  // })
+  // .on('file', (name, file) => {
+  //   fs.createReadStream(file).pipe(writeStream(newFile));
+  //   console.log('Uploaded file', name, file)
+  // })
+  // res.status(201).json({fileName: newFile})
+
+  new formidable.IncomingForm()
+    .parse(req)
+    .on("field", (name, field) => {
+      console.log("Field", name, field);
+    })
+    .on("file", (name, file) => {
+      console.log("Uploaded file", name, file);
+    })
+    .on("aborted", () => {
+      console.error("Request aborted by the user");
+    })
+    .on("error", (err) => {
+      console.error("Error", err);
+      throw err;
+    })
+    .on("end", () => {
+      res.end();
+    });
+});
 module.exports = router;

@@ -1,0 +1,83 @@
+.shopping {
+  width: 100vw;
+  height: 750px;
+  position: relative;
+  overflow: hidden;
+  transition: All 1s ease forwards;
+  @include border(pink);
+
+  .shop-section-2 {
+    width: inherit;
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    @include border(white);
+  }
+
+  &__paragraph {
+    @include border(red);
+    width: 350px;
+    height: 450px;
+    position: relative;
+    left: 50px;
+    margin-left: 100px;
+
+    @include desktop {
+      width: 500px;
+      height: 450px;
+      position: relative;
+      left: 0;
+    }
+
+    &__header {
+      @include border(blue);
+      width: 350px;
+      height: 220px;
+
+      h2 {
+        font-size: 3rem;
+        width: 100%;
+        color: $secondary;
+        @include border(cyan);
+      }
+    }
+
+    &__text {
+      @include border(blue);
+      width: 300px;
+      height: 250px;
+      color: $red;
+      @include desktop {
+        width: 500px;
+      height: 150px;
+        
+      }
+    }
+  }
+  &__button {
+    height: 100px;
+    position: relative;
+    @include border(green);
+  }
+
+  &__art {
+    padding: 2rem 0;
+    width: 500px;
+    position: relative;
+    left: 100px;
+    background: linear-gradient(to right, orange, red);
+    border-radius: 0 40px 40px 0;
+    box-shadow: 2px 2px 20px 3px lighten(orange, 10%);
+    z-index: -10;
+    @include desktop {
+      position: relative;
+      left: 0px;
+    }
+
+    img {
+      position: relative;
+      animation: moveRight 2s ease 4s forwards infinite;
+    }
+  }
+}

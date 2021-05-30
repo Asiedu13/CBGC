@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import "config";
+@import "utilities";
+@import "nav";
+@import "Homepage/header";
+@import "Homepage/Paragraph1";
+@import "../blog/Art/tree";
+@import "Homepage/articles";
+@import "Homepage/shopping";
+@import "Homepage/counselling";
+
+@import "Articlespage/articlepage-header";
+@import "Articlespage/article__artwork";
+@import "Articlespage/articlePage__body";
+@import "ArticlesPage/aritcle__preview";
+
+@import "Reader/reader";
+
+@import "Adminpage/adminpage";
+
+@import "CounsellingPage/counsellingpage";
+
+@import "RegisterPage/registerpage";
+@import "Policies/policies";
+@import "footer";
+
+body {
+  font-family: "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode",
+    Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  background-color: $background;
+  line-height: 1.5;
+  box-sizing: border-box;
+  .move-right {
+    animation: moveRight 1s ease forwards infinite;
+  }
+
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    p {
+      font-size: 2rem;
+      color: royalblue;
+    }
+  }
+  .bounce {
+    animation: "bounce 5s ease forwards";
+    transition: "1s ease-in-out forwards";
+  }
+  .feelingDisp {
+    animation: feelingDisp 0.5s ease-in forwards;
+  }
+  .showBorder {
+    animation: showBorder 1s ease-in-out forwards 1s;
+  }
+  .btn-imp {
+    @include button(high);
+  }
+
+  .btn-norm {
+    @include button(low);
+  }
+  .button:hover {
+    box-shadow: -5px 5px 50px 1px $secondary;
+  }
+  .button:focus {
+    box-shadow: 0 0 0 0;
+  }
+}

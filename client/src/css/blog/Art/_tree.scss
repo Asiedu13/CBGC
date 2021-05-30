@@ -1,0 +1,24 @@
+.tree {
+  @include border(red);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  height: 500px;
+  margin-right: -10px;
+  border-radius: 10px;
+
+  &__head {
+    width: 150px;
+    height: 600px;
+    background: green;
+    clip-path: circle(50%);
+  }
+  &__stick {
+    width: 10px;
+    height: 500px;
+    background: rgb(184, 89, 89);
+    position: relative;
+    bottom: 15vh;
+  }
+}
