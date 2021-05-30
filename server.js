@@ -23,7 +23,7 @@ app.use(session({
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
-
+app.use(express.static(path.resolve(__dirname, 'client/build')))
 const uri = process.env.db_URI;
 let connection = mongoose.connection;
 
