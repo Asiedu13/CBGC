@@ -48,10 +48,10 @@ let connectMongoDb = async () => {
 
 connectMongoDb();
 
-// app.use(express.static(path.join(__dirname, "client/build")));
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname + "/client/build/public/index.html"));
-// });
+app.use(express.static(path.join(__dirname, "client/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/client/build/public/index.html"));
+});
  
 // setUpPassport();
 
@@ -62,7 +62,7 @@ app.use("/api/users/articles", articles);
 
 app.use("/api/users", users);
 
-app.use(express.static(path.resolve(__dirname, "client/public")));
+// app.use(express.static(path.resolve(__dirname, "client/public")));
 // app.get("*", (req, res) => {
 //   res.sendFile(path.resolve(__dirname + "/client/build/public/index.html"));
 // });
