@@ -636,7 +636,7 @@
     text-decoration-color: #fdb827; }
   .ArticleHeader .header__arts {
     border: 2px solid transparent; }
-    @media (max-width: 767px) {
+    @media (min-width: 376px) and (max-width: 767px) {
       .ArticleHeader .header__arts {
         width: 200px;
         height: inherit;

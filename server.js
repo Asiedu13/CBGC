@@ -46,6 +46,13 @@ let connectMongoDb = async () => {
   }
 };
 
+const articles = require("./Routes/Articles");
+const users = require("./Routes/Users");
+app.use("/api/articles", articles);
+app.use("/api/users/articles", articles);
+
+app.use("/api/users", users);
+
 connectMongoDb();
 
 app.use(express.static(path.join(__dirname, "client/build")));
@@ -54,13 +61,6 @@ app.get("*", (req, res) => {
 });
  
 // setUpPassport();
-
-const articles = require("./Routes/Articles");
-const users = require("./Routes/Users");
-app.use("/api/articles", articles);
-app.use("/api/users/articles", articles);
-
-app.use("/api/users", users);
 
 // app.use(express.static(path.resolve(__dirname, "client/public")));
 // app.get("*", (req, res) => {
