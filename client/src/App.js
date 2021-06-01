@@ -15,7 +15,7 @@ const Preview = lazy(() =>
 );
 const Policies = lazy(() => import("./components/blog/Policies"));
 const SignUp = lazy(() => import("./components/blog/Register/SignUp"));
-const AdminPanel = lazy(() => import("./components/blog/AdminPage"));
+const AdminPage = lazy(() => import("./components/blog/AdminPage"));
 
 class App extends Component {
   componentDidMount() {
@@ -75,7 +75,7 @@ class App extends Component {
                 />
                 <Route path="/reader/:id" component={Reader} />
                 <Route path="/register/" component={SignUp} />
-                <Route path="/adminPanel" render={(props) => <AdminPanel {...props} deletePost = {this.onDeletePost} articles={this.props.articles.articles} onModDisplay={this.onModDisplay} comp={this.props.articles.comp || "Posts"} onPostArticle={this.onPostArticle}  msg={this.props.articles.msg} />  } /> 
+                <Route path="/adminPanel" render={(props) => <AdminPage {...props} deletePost = {this.onDeletePost} articles={this.props.articles.articles} onModDisplay={this.onModDisplay} comp={this.props.articles.comp || "Posts"} onPostArticle={this.onPostArticle}  msg={this.props.articles.msg} />  } /> 
                 <Route path="/user_rights" component={Policies} />
                 
                 </RegistrationProvider>

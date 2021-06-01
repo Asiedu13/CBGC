@@ -6,7 +6,7 @@ export default function Person(props) {
   return (
     <section className="person">
       <div className="person__image">
-        <img src={img1} alt=" "/>
+        <img src={img1} alt=" " />
       </div>
       <div className="person__info">
         <div>
@@ -16,22 +16,40 @@ export default function Person(props) {
           </div>
           <div>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam,
-              neque sunt accusamus unde, laboriosam aperiam architecto mollitia
-              reiciendis nisi molestiae voluptatibus quaerat, explicabo quam
-              totam |
+              Clarkson majors in mental health issues pertaining to the youth.
+              After studying psychology for three years his passions led him to
+              the field of clinical psychology. Clarkson can help you
+              understand, prevent, and alleviate psychologically-caused distress
+              or dysfunction, and promote your individual well-being and
+              personal development. Contact today for an initial consulatation.
             </p>
             <div className="buttons">
               <button onClick={() => props.onShowMailDialog()}> Mail me</button>
             </div>
           </div>
+          foote
         </div>
         {/* // Social Media */}
         <div className="person__social">
           <div className="icons">
-            <FontAwesomeIcon icon={["fab", "twitter"]} size="2x" />
-            <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" />
-            <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" />{" "}
+            <a
+              href="http://www.twitter.com/clarksonsblog"
+              rel="noreferrer noopener"
+            >
+              <FontAwesomeIcon icon={["fab", "twitter"]} size="2x" />
+            </a>
+            <a
+              href="http://www.facebook.com/clarksonsblog"
+              rel="noreferrer noopener"
+            >
+              <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" />
+            </a>
+            <a
+              href="http://www.instagram.com/clarksonsblog"
+              rel="noreferrer noopener"
+            >
+              <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" />{" "}
+            </a>
           </div>
         </div>
       </div>
