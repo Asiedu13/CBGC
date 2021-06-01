@@ -12,6 +12,18 @@ const mailjet = require("node-mailjet").connect(
   "1964780d5c9f1f69ba6ff5d649c24864"
 );
 
+function ensureAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+    next();
+  } else {
+    req.flash("info", "You must be logged in to see this page.");
+    // res.json(res.redirect("/login"));
+  }
+}
+
+// app.use(ensureAuthenticated());
+
+
 // passport.use(
 //   new LocalStrategy(function (username, password, done) {
 //     Users.findOne({ username }, function (err, user) {
@@ -45,7 +57,7 @@ router.route("/").get((req, res) => {
 
 // ----------- Add user --------------
 
-router.route("/include").post(
+router.route("/include", ).post(
   (req, res, next) => {
     // newUser
     //   .save()
@@ -88,30 +100,30 @@ router.route("/include").post(
 // });
 
 //--------------- Login user --------------
-// router.route("/login").post(function (req, res, next) {
-//   console.log(req.body.password);
-//   passport.authenticate("local", function (err, user, info) {
-//     if (err) return next(err);
-//     if (!user) {
-//       return res.json(info);
-//     }
-//     if (!user.password) return res.json({ msg: "invalid password" });
-//     req.logIn(user, function (err) {
-//       if (err) return next(err);
-//       return res.json({ msg: { msg: "user found", user: user._id } });
-//     });
-//   })(req, res, next);
-// });
+router.route("/login").post(function (req, res, next) {
+  console.log(req.body.password);
+  passport.authenticate("local", function (err, user, info) {
+    if (err) return next(err);
+    if (!user) {
+      return res.json(info);
+    }
+    if (!user.password) return res.json({ msg: "invalid password" });
+    req.logIn(user, function (err) {
+      if (err) return next(err);
+      return res.json({ msg: { msg: "user found", user: user._id } });
+    });
+  })(req, res, next);
+});
 
-router.route("/login").post(
-  passport.authenticate("login", {
-    // successRedirect: "/",
-    // failureRedirect: "/login",
-    failureFlash: true,
-  }), (req, res)=> {
-    res.json({msg: "Success"})
-  }
-);
+// router.route("/login").post(
+//   passport.authenticate("login", {
+//     // successRedirect: "/",
+//     // failureRedirect: "/login",
+//     failureFlash: true,
+//   }), (req, res)=> {
+//     res.json({msg: "Success"})
+//   }
+// );
 
 router.route("/logout").post(() => {
   router.get("/logout", function (req, res) {
