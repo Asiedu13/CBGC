@@ -38,7 +38,7 @@ export default function Elaboration() {
             </header>
             <p>
               Clarkson's counsel is here to take a few minutes of your day to
-              create recognizance of your hard work and your mental health.
+              create cognizance of your hard work and your mental health.
               Don't loose yourself to the world. Self love is priority.
             </p>
 
