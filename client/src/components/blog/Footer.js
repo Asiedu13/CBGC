@@ -36,15 +36,22 @@ function Footer() {
           {" "}
           <FontAwesomeIcon icon={["fa", "copyright"]} /> Clarksons {year}{" "}
         </li>
-        <li className="footer__elem__child">+233 344 32 099 </li>
+        <li className="footer__elem__child">+233204087721 </li>
         <li className="footer__elem__child">Clarksonsblog@gmail.com</li>
         {/* <li className="footer__elem__child">P.O.Box AT 1486</li> */}
 
         <div className="footer__elem__socialmedia">
           {/* <p>Follow Us:</p> */}
+          <a href="http://www.twitter.com/clarksonsblog" rel="noreferrer noopener"> 
           <FontAwesomeIcon icon={["fab", "twitter"]} size="2x" />
+          </a>
+
+          <a href="http://www.facebook.com/clarksonsblog" rel="noreferrer noopener">
           <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" />
+          </a>
+          <a href="http://www.instagram.com/clarksonsblog" rel="noreferrer noopener">
           <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" />
+          </a>
         </div>
       </div>
     </section>

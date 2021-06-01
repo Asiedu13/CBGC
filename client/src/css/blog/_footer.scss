@@ -29,6 +29,10 @@
     align-items: center;
     margin-top: 30px;
     margin-bottom: 5px;
+    a {
+      text-decoration: none;
+      color: grey;
+    }
     @include border(red);
     @include desktop {
       margin-bottom: 0px;
@@ -49,6 +53,11 @@
       padding: 1rem;
       flex-direction: row;
       justify-content: space-around;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
     }
   }
 }
