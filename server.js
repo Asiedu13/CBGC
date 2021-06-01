@@ -48,7 +48,7 @@ let connectMongoDb = async () => {
 
 connectMongoDb();
 
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "client/build/public")));
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/client/build/public/index.html"));
 });
