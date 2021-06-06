@@ -21,6 +21,9 @@
     color: grey;
     background: $primary;
     border-radius: 5px;
+    @include smallerPhones {
+      padding: 1rem;
+    }
     .quote {
       @include border(green);
       height: fit-content;
@@ -28,11 +31,17 @@
       background: #f4f4f4;
       position: absolute;
       z-index: 100;
+      
       p {
-        position:relative;
+        position: relative;
         left: 100px;
         width: 80%;
 
+        @include smallerPhones{
+          left: 50px;
+          font-size: 20px;
+          padding: 1rem;
+        }
       }
 
       @include desktop {
@@ -42,12 +51,12 @@
         background: #f4f4f4;
         position: absolute;
         z-index: 100;
-        
-      p {
-        position: relative;
-        left: 100px;
-        width: 90%;
-      }
+
+        p {
+          position: relative;
+          left: 100px;
+          width: 90%;
+        }
       }
 
       #q-left {

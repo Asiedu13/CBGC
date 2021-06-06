@@ -67,14 +67,29 @@
   img {
     height: 500px;
     position: absolute;
+    @include smallerPhones {
+      height: 200px;
+    }
   }
   #shopper {
     right: 20px;
+    @include smallerPhones {
+      top: 140px;
+      right: -30px;
+    }
   }
   #reader {
     left: 50px;
+    @include smallerPhones {
+      top: 40px;
+      right: 30px;
+    }
   }
   #reader {
     left: 50px;
+    @include smallerPhones {
+      top: 40px;
+      right: 30px;
+    }
   }
 }

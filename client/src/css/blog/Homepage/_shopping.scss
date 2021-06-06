@@ -5,6 +5,9 @@
   overflow: hidden;
   transition: All 1s ease forwards;
   @include border(pink);
+  @include smallerPhones {
+    height: 500px;
+  }
 
   .shop-section-2 {
     width: inherit;
@@ -22,6 +25,13 @@
     position: relative;
     left: 50px;
     margin-left: 100px;
+    @include smallerPhones {
+      position: relative;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+    }
 
     @include desktop {
       width: 500px;
@@ -50,8 +60,7 @@
       color: $red;
       @include desktop {
         width: 500px;
-      height: 150px;
-        
+        height: 150px;
       }
     }
   }
@@ -73,6 +82,9 @@
     @include desktop {
       position: relative;
       left: 0px;
+    }
+    @include smallerPhones{
+      display: none;
     }
 
     img {

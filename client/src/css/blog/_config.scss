@@ -5,7 +5,7 @@ $primary: #21209c;
 $red: #23120b;
 
 @mixin border($color) {
-  border: 2px solid transparent;
+  border: 2px solid $color;
 }
 
 @mixin shadow($color) {
@@ -35,7 +35,11 @@ $red: #23120b;
 
 $tablet-width: 768px;
 $desktop-width: 1024px;
-
+@mixin smallerPhones {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
 @mixin phone {
   @media (min-width: 376px) and (max-width: #{$tablet-width - 1}) {
     @content;

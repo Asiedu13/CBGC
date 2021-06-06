@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import reader from "../../../pics/standing-reading.svg";
 import shopper from "../../../pics/shopping.svg";
 import talker from "../../../pics/getting-coffee.svg";
@@ -7,10 +7,12 @@ import Pulse from "react-reveal/Pulse";
 import Jello from "react-reveal/Jello";
 import { Link } from "react-router-dom";
 
-class Header extends React.PureComponent {
+class Header extends Component {
   render() {
     return (
       <section className="header">
+
+        {/* Header Main Content */}
         <div className="header-main">
           <h1>Blog, Counsel and Shop</h1>
           <p className="header__slogan">
@@ -22,11 +24,14 @@ class Header extends React.PureComponent {
             <button type="button">Sign Up</button>
           </Link>
         </div>
+
+        {/* Header Illustrations */}
         <div className="header-illustration">
           <Pulse>
             <img
               id="shopper"
               src={shopper}
+              
               alt="a person shopping at the mall"
             />
           </Pulse>

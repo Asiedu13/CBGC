@@ -10,7 +10,9 @@ export default class Posts extends Component {
             return (
               <section key={item._id}>
                 <div className="options">
-                  <button onClick={()=>this.props.deletePost(item._id)}>Delete</button>
+                  <button onClick={() => this.props.deletePost(item._id)}>
+                    Delete
+                  </button>
                 </div>
                 <Items key={item._id} article={item} />
               </section>
