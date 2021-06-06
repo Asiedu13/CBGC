@@ -60,6 +60,7 @@ export class ArticlesBody extends Component {
         />
 
         {/* General */}
+        
         <ArticlesBox>{DbArt}</ArticlesBox>
       </div>
     );
