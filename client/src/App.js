@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { RegistrationProvider } from "./Contexts/RegistrationContext";
 import { getArticles, sendMail, modifyDisplay, postArticle,  deletePost } from "./actions/index";
+import Loader from './components/blog/Util/Loader';
 const HomePage = lazy(() => import("./components/blog/HomePage"));
 const Article = lazy(() => import("./components/blog/ArticlesPage"));
 const Reader = lazy(() => import("./components/blog/Reader"));
@@ -42,7 +43,7 @@ class App extends Component {
         <Suspense
           fallback={
             <div className="loader">
-              <p>Clarkson's...</p>
+              <Loader />
             </div>
           }
         >
@@ -75,7 +76,7 @@ class App extends Component {
                 />
                 <Route path="/reader/:id" component={Reader} />
                 <Route path="/register/" component={SignUp} />
-                <Route path="/adminPanel" render={(props) => <AdminPage {...props} deletePost = {this.onDeletePost} articles={this.props.articles.articles} onModDisplay={this.onModDisplay} comp={this.props.articles.comp || "Posts"} onPostArticle={this.onPostArticle}  msg={this.props.articles.msg} />  } /> 
+                <Route path="/adminPage" render={(props) => <AdminPage {...props} deletePost = {this.onDeletePost} articles={this.props.articles.articles} onModDisplay={this.onModDisplay} comp={this.props.articles.comp || "Posts"} onPostArticle={this.onPostArticle}  msg={this.props.articles.msg} />  } /> 
                 <Route path="/user_rights" component={Policies} />
                 
                 </RegistrationProvider>

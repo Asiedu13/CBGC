@@ -27,7 +27,7 @@
     margin-left: 100px;
     @include smallerPhones {
       position: relative;
-      left: 0;
+      left: 7px;
       display: flex;
       flex-direction: column;
       margin-left: 10px;

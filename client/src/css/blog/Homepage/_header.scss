@@ -33,9 +33,12 @@
       font-size: 0.9rem;
       position: relative;
       color: $red;
-
       z-index: 10;
       @include border(blue);
+
+      @include smallerPhones {
+        padding: .5rem;
+      }
     }
     button {
       height: 70px;

@@ -5,7 +5,7 @@ $primary: #21209c;
 $red: #23120b;
 
 @mixin border($color) {
-  border: 2px solid transparent;
+  border: 2px solid $color;
 }
 
 @mixin shadow($color) {

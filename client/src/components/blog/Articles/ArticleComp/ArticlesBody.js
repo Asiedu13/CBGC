@@ -21,11 +21,11 @@ export class ArticlesBody extends Component {
 
   handleModifications = (val) => {
     switch (val) {
-      case "\[a-zA-Z]\i":
+      case "[a-zA-Z]i":
         console.log("Hmmm");
         break;
       default:
-        console.log("Default")
+        console.log("Default");
         break;
     }
   };
