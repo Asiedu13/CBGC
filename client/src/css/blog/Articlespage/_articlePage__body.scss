@@ -71,8 +71,8 @@
     @include border(green);
 
     .item {
-      width: 500px;
-      height: 300px;
+      width: 355px;
+      height: 266px;
       margin: 10px 0;
       border-radius: 2px;
       display: flex;
@@ -142,7 +142,6 @@
               @include border(#fff);
               h3 {
                 font-size: 1rem;
-                
               }
               span {
                 font-size: 0.8rem;

@@ -48,21 +48,13 @@ export default class Image extends Component {
               encType="multipart/form-data"
               // action="http://localhost:5000/api/articles/img"
             >
-              <input
-                type="file"
-                onChange={this.fileChange}
-              />
+              <input type="file" onChange={this.fileChange} />
             </form>
           </section>
         </section>
-              <section className="flow">
-                <button
-                onClick={this.props.postArticle}
-                >
-                  {" "}
-                  Post Article{" "}
-                </button>
-              </section>
+        <section className="flow">
+          <button onClick={this.props.postArticle}> Post Article </button>
+        </section>
       </section>
     );
   }
