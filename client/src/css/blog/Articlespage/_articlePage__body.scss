@@ -76,7 +76,7 @@
       margin: 10px 0;
       border-radius: 2px;
       display: flex;
-      flex-direction: column ;
+      flex-direction: column;
       justify-content: flex-start;
       cursor: pointer;
       background: $background;
@@ -88,11 +88,16 @@
       border-width: 5px;
       position: relative;
 
+      @include smallerPhones {
+        width: 400px;
+        height: 250px;
+      }
+
       &:hover {
         border-left: 2px solid $primary;
         border-width: 5px;
       }
-      
+
       &__image {
         height: 100%;
         width: 100%;
@@ -108,7 +113,7 @@
           width: 100%;
         }
       }
-      
+
       &__main {
         width: 100%;
         height: 250px;
@@ -137,6 +142,7 @@
               @include border(#fff);
               h3 {
                 font-size: 1rem;
+                
               }
               span {
                 font-size: 0.8rem;
@@ -163,6 +169,10 @@
             text-overflow: ellipsis;
             text-decoration: none;
             @include border(red);
+
+            @include smallerPhones {
+              font-size: 1.5rem;
+            }
           }
           h3 {
             font-size: 0.8rem;
@@ -173,8 +183,12 @@
           }
           article {
             width: inherit;
-            height: 70px;
+            height: 50px;
             overflow: hidden;
+
+            @include smallerPhones {
+              font-size: 1rem;
+            }
           }
           p {
             @include border(red);
@@ -199,8 +213,7 @@
           }
         }
       }
-      
-      
+
       @include desktop {
         width: 1000px;
         height: 300px;
@@ -235,101 +248,98 @@
             width: 100%;
           }
         }
-        
-      &__main {
-        width: 50%;
-        height: 250px;
 
-        // background: blue;
-        .meta-data {
-          @include border(red);
-          &-main {
-            display: flex;
-            flex-direction: row;
+        &__main {
+          width: 50%;
+          height: 250px;
 
-            &-avatar {
-              img {
-                height: 50px;
-                width: 50px;
-                border-radius: 50px;
-              }
-            }
-            &-text {
-              // text-align: center;
+          // background: blue;
+          .meta-data {
+            @include border(red);
+            &-main {
               display: flex;
-              flex-direction: column;
-              justify-content: center;
-              color: $primary;
-              // padding: .4rem;
-              @include border(#fff);
-              h3 {
-                font-size: 1rem;
+              flex-direction: row;
+
+              &-avatar {
+                img {
+                  height: 50px;
+                  width: 50px;
+                  border-radius: 50px;
+                }
               }
-              span {
-                font-size: 0.8rem;
+              &-text {
+                // text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: $primary;
+                // padding: .4rem;
+                @include border(#fff);
+                h3 {
+                  font-size: 1rem;
+                }
+                span {
+                  font-size: 0.8rem;
+                }
               }
             }
           }
-        }
-        &__desc {
-          @include border(brown);
-          padding: 1rem;
-          display: flex;
-          height: fit-content;
-          flex-direction: column;
-          text-decoration: none;
-          justify-content: flex-start;
+          &__desc {
+            @include border(brown);
+            padding: 1rem;
+            display: flex;
+            height: fit-content;
+            flex-direction: column;
+            text-decoration: none;
+            justify-content: flex-start;
 
-          h2 {
-            word-wrap: break-word;
-            color: black;
-            height: 55px;
-            font-weight: 100;
-            font-size: 2.5rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            text-decoration: none;
-            @include border(red);
+            h2 {
+              word-wrap: break-word;
+              color: black;
+              height: 55px;
+              font-weight: 100;
+              font-size: 2.5rem;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              text-decoration: none;
+              @include border(red);
+            }
+            h3 {
+              font-size: 0.8rem;
+              text-decoration: none;
+              font-weight: 100;
+              color: orange;
+              @include border(violet);
+            }
+            article {
+              width: inherit;
+              height: 70px;
+              overflow: hidden;
+            }
+            p {
+              @include border(red);
+              overflow: hidden;
+              text-overflow: ellipsis;
+              height: 90px;
+              color: black;
+              font-weight: 100;
+            }
           }
-          h3 {
-            font-size: 0.8rem;
-            text-decoration: none;
-            font-weight: 100;
-            color: orange;
-            @include border(violet);
-          }
-          article {
+          &__read__link {
             width: inherit;
-            height: 70px;
-            overflow: hidden;
-          }
-          p {
+            height: 40px;
             @include border(red);
-            overflow: hidden;
-            text-overflow: ellipsis;
-            height: 90px;
-            color: black;
-            font-weight: 100;
-          }
-        }
-        &__read__link {
-          width: inherit;
-          height: 40px;
-          @include border(red);
-          button {
-            background: none;
-            color: $primary;
-            width: 140px;
-            border: none;
-            padding: 0.5rem;
-            cursor: pointer;
+            button {
+              background: none;
+              color: $primary;
+              width: 140px;
+              border: none;
+              padding: 0.5rem;
+              cursor: pointer;
+            }
           }
         }
       }
-      }
-
-
-      
     }
   }
 }

@@ -80,6 +80,18 @@
           align-items: center;
           justify-content: center;
           @include border(blue);
+
+          #back {
+            width: 100px;
+            height: 60px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            &:hover {
+              border-bottom: 2px solid gold;
+            }
+
+          }
         }
       }
       &__right {

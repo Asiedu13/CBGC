@@ -5,6 +5,7 @@
 }
 @import "config";
 @import "utilities";
+@import "spinner";
 @import "nav";
 @import "Homepage/header";
 @import "Homepage/Paragraph1";
@@ -98,10 +99,6 @@ body {
       animation-delay: 0.6s;
     }
   }
-
-  // --------------------------
-
-  // -----------------------------
 
   .bounce {
     animation: "bounce 5s ease forwards";

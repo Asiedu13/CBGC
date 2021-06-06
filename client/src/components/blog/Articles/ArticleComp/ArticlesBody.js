@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ArticleNav from "./ArticleNav";
 import Item from "./Items";
 import { ArticlesBox } from "./ArticlesBox";
-
+import Spinner from '../../Util/Spinner';
 export class ArticlesBody extends Component {
   constructor(props) {
     super();
@@ -49,7 +49,7 @@ export class ArticlesBody extends Component {
           );
         })
       ) : (
-        <p className="no-articles">No articles here</p>
+        <p className="no-articles"> <Spinner /> </p>
       );
     return (
       <div>

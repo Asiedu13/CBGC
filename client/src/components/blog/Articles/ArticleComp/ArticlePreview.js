@@ -4,7 +4,7 @@ import img2 from "../../../../pics/attachment_77327090.png";
 import Button from "../../Util/Button";
 import { Link } from "react-router-dom";
 import { getMarkdownText } from "../../Util/convertToHTML";
-
+import Spinner from '../../Util/Spinner'
 export default class ArticlePreview extends Component {
   constructor(props) {
     super();
@@ -19,7 +19,7 @@ export default class ArticlePreview extends Component {
     console.log("unmounted");
   }
   componentDidMount() {
-    console.log(this.state.currentlyReading)
+    console.log(this.state.currentlyReading);
     let pathId = window.location.pathname.split("/");
     let path = `http://localhost:5000/api/articles/short/${pathId[2]}?limit=205`;
     fetch(path)
@@ -58,15 +58,16 @@ export default class ArticlePreview extends Component {
               <div className="pre__part__middle__header">
                 <h2 className="title">{this.state.title}</h2>
               </div>
-              <article dangerouslySetInnerHTML={getMarkdownText(shortened)} />
+              {<article dangerouslySetInnerHTML={getMarkdownText(shortened)} /> || <Spinner /> }
 
               <div className="pre__part__middle__buttons">
                 <Link to={`/reader/${this.state.id}`}>
                   <Button label="continue..." importance="high" />
                 </Link>
-                {/* <Link to={`/articles`}>
-                  <Button label="back" />
-                </Link> */}
+                <Link to={`/articles`}>
+                  {/* <Button label="back" /> */}
+                  <button id="back">back</button>
+                </Link>
               </div>
             </div>
 
