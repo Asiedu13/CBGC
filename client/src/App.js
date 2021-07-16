@@ -76,7 +76,8 @@ class App extends Component {
                 />
                 <Route path="/reader/:id" component={Reader} />
                 <Route path="/register/" component={SignUp} />
-                <Route path="/adminPage" render={(props) => <AdminPage {...props} deletePost = {this.onDeletePost} articles={this.props.articles.articles} onModDisplay={this.onModDisplay} comp={this.props.articles.comp || "Posts"} onPostArticle={this.onPostArticle}  msg={this.props.articles.msg} />  } /> 
+                <Route  exact path="/adminPage" render={(props) => (<AdminPage {...props} deletePost = {this.onDeletePost} articles={this.props.articles.articles} onModDisplay={this.onModDisplay} comp={this.props.articles.comp || "Posts"} onPostArticle={this.onPostArticle}  msg={this.props.articles.msg} /> ) } /> 
+                <Route path="/adminPage" component={AdminPage} />
                 <Route path="/user_rights" component={Policies} />
                 
                 </RegistrationProvider>
