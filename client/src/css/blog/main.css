@@ -818,7 +818,7 @@
         border: none;
         padding-left: 1rem;
         cursor: pointer;
-        color: #21209c;
+        color: black;
         width: 500px;
         padding: 1rem;
         outline: none;
@@ -1780,6 +1780,8 @@
       border: 2px solid transparent; }
       .person__social > div a {
         color: grey; }
+        .person__social > div a:hover {
+          color: #4d4d4d; }
 
 .mailBox {
   width: 50vw;
@@ -1860,7 +1862,7 @@
       position: relative;
       width: 20px;
       height: 20px;
-      transition: all .2s ease-in-out;
+      transition: all 0.2s ease-in-out;
       border: 2px solid transparent; }
       .mailBox__footer .mailBin:hover {
         color: #ff6666;

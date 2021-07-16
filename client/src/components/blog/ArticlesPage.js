@@ -37,6 +37,7 @@ class Articles extends React.Component {
         />
         <ArticlePreview
           style={
+          
             this.state.currentArticle.length > 1
               ? { display: "flex" }
               : { display: "none" }

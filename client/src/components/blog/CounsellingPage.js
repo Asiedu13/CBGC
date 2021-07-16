@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Header } from "./Util/Header";
 import Person from "./CounselPageComp/Person";
 import Mail from "./CounselPageComp/Mail";
+import Conversation  from "../../pics/getting-coffee.svg";
 
 export default class CounsellingPage extends Component {
   constructor() {
@@ -20,7 +21,11 @@ export default class CounsellingPage extends Component {
   render() {
     return (
       <section>
-        <Header firstHeaderName="Clarksons" secondHeaderName="Counsel" />
+        <Header
+          firstHeaderName="Clarksons"
+          secondHeaderName="Counsel"
+          illustration={Conversation}
+        />
 
         <section className="counsel__main">
           <header className="counsel__main__header">

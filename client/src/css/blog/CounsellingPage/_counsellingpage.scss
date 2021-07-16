@@ -71,7 +71,7 @@
       i {
         font-size: 15px;
         color: grey;
-        font-style:normal;
+        font-style: normal;
       }
       h3 {
         font-size: 2rem;
@@ -122,6 +122,9 @@
 
       a {
         color: grey;
+        &:hover {
+          color: darken(grey, 20%);
+        }
       }
     }
   }
@@ -226,7 +229,7 @@
       position: relative;
       width: 20px;
       height: 20px;
-      transition: all .2s ease-in-out;
+      transition: all 0.2s ease-in-out;
       @include border(red);
 
       &:hover {
