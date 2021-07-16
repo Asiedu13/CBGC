@@ -66,15 +66,6 @@ app.get("*", (req, res) => {
 // app.get("*", (req, res) => {
 //   res.sendFile(path.resolve(__dirname + "/client/build/public/index.html"));
 // });
-// try {
   app.listen(PORT, (err) => {
     console.log(`Server started on port: ${PORT}`);
   });
-// } catch (err) {
-  // console.log(`The error ${err}`);
-// } finally {
-  // app.listen(PORT, (err) => {
-
-  //   console.log(`Server started on port: ${PORT}`);
-  // });
-// }
