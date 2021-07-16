@@ -38,7 +38,10 @@ export default class CounsellingPage extends Component {
               <h2>Mail Sent</h2>
             </div>
           ) : this.state.showMailDialog ? (
-            <Mail onHideMailDialog={this.toggleMailDialog} onSendMail={this.props.onSendMail} />
+            <Mail
+              onHideMailDialog={this.toggleMailDialog}
+              onSendMail={this.props.onSendMail}
+            />
           ) : (
             " "
           )}

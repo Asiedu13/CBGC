@@ -68,13 +68,21 @@
     & > div {
       @include border(blue);
       padding: 1rem;
+      i {
+        font-size: 15px;
+        color: grey;
+        font-style:normal;
+      }
       h3 {
         font-size: 2rem;
         color: grey;
       }
       p {
         width: 350px;
+        height: 160px;
         color: grey;
+        overflow-y: scroll;
+        @include border(orange);
       }
       .buttons {
         margin-top: 30px;
@@ -135,6 +143,7 @@
   z-index: 300;
   overflow: auto;
   background: #fff;
+  border-radius: 5px;
 
   &__menubar {
     display: flex;
@@ -212,6 +221,19 @@
     padding: 1rem;
     position: absolute;
     bottom: 0px;
+    @include border(red);
+    .mailBin {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      transition: all .2s ease-in-out;
+      @include border(red);
+
+      &:hover {
+        color: lighten(red, 20%);
+        transform: scale(1.2, 1.2);
+      }
+    }
     button {
       width: 70px;
       height: 40px;

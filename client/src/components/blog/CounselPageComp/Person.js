@@ -12,7 +12,7 @@ export default function Person(props) {
         <div>
           <div>
             <h3>Clarkson Acheampong</h3>
-            <p>@clarksonacheampong</p>
+            <i>@clarksonacheampong</i>
           </div>
           <div>
             <p>
@@ -27,7 +27,6 @@ export default function Person(props) {
               <button onClick={() => props.onShowMailDialog()}> Mail me</button>
             </div>
           </div>
-          foote
         </div>
         {/* // Social Media */}
         <div className="person__social">

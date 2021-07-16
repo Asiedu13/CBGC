@@ -1737,12 +1737,19 @@
     .person__info > div {
       border: 2px solid transparent;
       padding: 1rem; }
+      .person__info > div i {
+        font-size: 15px;
+        color: grey;
+        font-style: normal; }
       .person__info > div h3 {
         font-size: 2rem;
         color: grey; }
       .person__info > div p {
         width: 350px;
-        color: grey; }
+        height: 160px;
+        color: grey;
+        overflow-y: scroll;
+        border: 2px solid transparent; }
       .person__info > div .buttons {
         margin-top: 30px; }
         .person__info > div .buttons button {
@@ -1788,7 +1795,8 @@
   left: 30%;
   z-index: 300;
   overflow: auto;
-  background: #fff; }
+  background: #fff;
+  border-radius: 5px; }
   .mailBox__menubar {
     display: flex;
     flex-direction: row;
@@ -1846,7 +1854,17 @@
     height: 50px;
     padding: 1rem;
     position: absolute;
-    bottom: 0px; }
+    bottom: 0px;
+    border: 2px solid transparent; }
+    .mailBox__footer .mailBin {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      transition: all .2s ease-in-out;
+      border: 2px solid transparent; }
+      .mailBox__footer .mailBin:hover {
+        color: #ff6666;
+        transform: scale(1.2, 1.2); }
     .mailBox__footer button {
       width: 70px;
       height: 40px;
@@ -2079,6 +2097,12 @@ body {
       padding: 0 15px;
       line-height: 100px;
       animation: jumb 2s infinite; }
+
+@keyframes freeFall {
+  50% {
+    transform: scale(1.4, 1.4); }
+  100% {
+    transform: scale(1.2, 1.2); } }
 
 @keyframes jumb {
   0% {

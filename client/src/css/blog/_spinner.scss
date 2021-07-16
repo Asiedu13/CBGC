@@ -1,0 +1,22 @@
+/* Spinner 5 starts here */
+.spinner5 {
+  animation: spinnerFive 1s linear infinite;
+  border: solid 1.5em #4db6ac;
+  border-right: solid 1.5em transparent;
+  border-left: solid 1.5em transparent;
+  border-radius: 100%;
+  width: 0;
+  height: 0;
+
+  @keyframes spinnerFive {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(60deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
