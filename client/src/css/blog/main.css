@@ -993,6 +993,9 @@
             width: 50%;
             border-radius: 4px 4px 0 0;
             background: rgba(255, 255, 255, 0.322);
+            background-image: url("../../pics/undraw_Specs_re_546x.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
             position: relative;
             filter: blur(0);
             border: 2px solid transparent; }
