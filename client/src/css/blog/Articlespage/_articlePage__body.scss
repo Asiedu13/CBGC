@@ -224,7 +224,7 @@
         cursor: pointer;
         background: $background;
         border-top: 5px solid #663399;
-        transition: all 0.5s ease-in;
+        transition: all 0.1s ease-in;
         @include border(brown);
         border-top: 1px solid #000;
         border-bottom: 1px solid #000;
@@ -233,12 +233,13 @@
         &:hover {
           border-right: 2px solid $primary;
           border-width: 1px;
+          background: rgba(255, 255, 255, 0.322);
         }
         &__image {
           height: 100%;
           width: 50%;
           border-radius: 4px 4px 0 0;
-          background: $secondary;
+          background: rgba(255, 255, 255, 0.322);;
           position: relative;
           filter: blur(0);
           @include border(green);
