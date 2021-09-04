@@ -5,8 +5,14 @@ import "./css/blog/main.css";
 import { connect } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { RegistrationProvider } from "./Contexts/RegistrationContext";
-import { getArticles, sendMail, modifyDisplay, postArticle,  deletePost } from "./actions/index";
-import Loader from './components/blog/Util/Loader';
+import {
+  getArticles,
+  sendMail,
+  modifyDisplay,
+  postArticle,
+  deletePost,
+} from "./actions/index";
+import Loader from "./components/blog/Util/Loader";
 const HomePage = lazy(() => import("./components/blog/HomePage"));
 const Article = lazy(() => import("./components/blog/ArticlesPage"));
 const Reader = lazy(() => import("./components/blog/Reader"));
@@ -27,15 +33,15 @@ class App extends Component {
   };
   onModDisplay = (comp) => {
     this.props.dispatch(modifyDisplay(comp));
-  }
+  };
   onPostArticle = (params) => {
     // do something
-    this.props.dispatch(postArticle(params))
-  }
+    this.props.dispatch(postArticle(params));
+  };
   onDeletePost = (id) => {
-    this.props.dispatch(deletePost(id))
-  }
- 
+    this.props.dispatch(deletePost(id));
+  };
+
   render() {
     console.log(this.props);
     return (
@@ -70,17 +76,30 @@ class App extends Component {
                       onShowMailDialog={this.onShowMailDialog}
                       onSendMail={this.onSendMail}
                       showMailDialog={this.props.showMailDialog}
-                      verifiedMail = {this.props.mailSent}
+                      verifiedMail={this.props.mailSent}
                     />
                   )}
                 />
                 <Route path="/reader/:id" component={Reader} />
                 <Route path="/register/" component={SignUp} />
-                <Route  exact path="/adminPage" render={(props) => (<AdminPage {...props} deletePost = {this.onDeletePost} articles={this.props.articles.articles} onModDisplay={this.onModDisplay} comp={this.props.articles.comp || "Posts"} onPostArticle={this.onPostArticle}  msg={this.props.articles.msg} /> ) } /> 
+                <Route
+                  exact
+                  path="/adminPage"
+                  render={(props) => (
+                    <AdminPage
+                      {...props}
+                      deletePost={this.onDeletePost}
+                      articles={this.props.articles.articles}
+                      onModDisplay={this.onModDisplay}
+                      comp={this.props.articles.comp || "Posts"}
+                      onPostArticle={this.onPostArticle}
+                      msg={this.props.articles.msg}
+                    />
+                  )}
+                />
                 <Route path="/adminPage" component={AdminPage} />
                 <Route path="/user_rights" component={Policies} />
-                
-                </RegistrationProvider>
+              </RegistrationProvider>
               {/* 404 page goes here */}
             </Switch>
             <Route exact path="/articles/:id" component={Preview} />

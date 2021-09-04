@@ -43,7 +43,7 @@ router.route("/short").get((req, res) => {
           likes: article.likes,
           haveRead: article.haveRead,
           tags: article.tags,
-          img: article.img,
+          imgUrl: article.imgUrl,
         };
       });
       res.json(modified).status(200);
@@ -74,7 +74,7 @@ router.route("/short/:id").get((req, res) => {
         likes: data.likes,
         haveRead: data.haveRead,
         tags: data.tags,
-        img: data.img,
+        imgUrl: data.imgUrl || 0,
       };
       res.json(modified).status(200);
     })
@@ -114,6 +114,7 @@ router.route("/defined/:num").get((req, res) => {
           likes: article.likes,
           haveRead: article.haveRead,
           tags: article.tags,
+          imgUrl: article.imgUrl || 0
         };
       });
       res.json(modified).status(200);

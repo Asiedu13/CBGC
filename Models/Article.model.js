@@ -11,7 +11,7 @@ const ArticleSchema = new Schema(
     content: { type: String },
     likes: { type: Number, trim: true },
     comments: { type: Array },
-    img: { type: String },
+    imgUrl: { type: String },
     published: Boolean,
     nOfViews: Number,
     nOfLikes: Number,
@@ -21,7 +21,6 @@ const ArticleSchema = new Schema(
     createdAt: { type: Date, default: Date.now },
     // createdFromIp: Number,
     
-
   },
   { timeStamps: true }
 );
