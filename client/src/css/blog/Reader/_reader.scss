@@ -92,7 +92,7 @@
       @include border(blue);
 
       .item {
-        width: 1000px;
+        width: 800px;
         height: 300px;
         margin: 10px auto;
         border-radius: 2px;
@@ -103,19 +103,14 @@
         background: $background;
         border-top: 5px solid #663399;
         transition: all 0.5s ease-in;
-        // box-shadow: 2px 12px 15px 1px lighten($background, 15%);
         @include border(brown);
-        border-top: 2px solid $secondary;
-        border-bottom: 2px solid $secondary;
-        border-width: 5px;
-  
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        border-width: 1px;
         &:hover {
-          border-left: 2px solid $primary;
-          border-width: 5px;
-  
-          // box-shadow: 2px 12px 15px 1px lighten(rgb(52, 91, 175), 40%);
+          border-right: 2px solid $primary;
+          border-width: 1px;
         }
-  
         &__image {
           height: 100%;
           width: 50%;
@@ -141,6 +136,7 @@
   
               &-avatar {
                 img{
+                  margin: 10px;
                   height: 50px;
                   width: 50px;
                   border-radius: 50px;

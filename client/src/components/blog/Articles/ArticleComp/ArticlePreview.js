@@ -33,7 +33,7 @@ export default class ArticlePreview extends Component {
           title: data.title,
           id: pathId[2],
           currentlyReading: shortSum,
-          img: data.img,
+          img: data.imgUrl,
         });
       });
   }
@@ -49,7 +49,7 @@ export default class ArticlePreview extends Component {
             <div className="pre__part pre__part__left">
               <img src={img} alt="polygon" className="part__left__imgs poly" />
               <img
-                src={img2}
+                src={this.state.img}
                 alt="article cover"
                 className="part__left__imgs any"
               />
@@ -62,7 +62,7 @@ export default class ArticlePreview extends Component {
 
               <div className="pre__part__middle__buttons">
                 <Link to={`/reader/${this.state.id}`}>
-                  <Button label="continue..." importance="high" />
+                  <Button label="read" importance="high" />
                 </Link>
                 <Link to={`/articles`}>
                   {/* <Button label="back" /> */}

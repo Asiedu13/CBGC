@@ -1,8 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { getMarkdownText } from "../../Util/convertToHTML";
-// import articleImg from '../../../../pics/undraw_well_done_i2wr.svg'
-import articleImg2 from '../../../../pics/undraw_happy_birthday_s72n.svg'
+import articleImg2 from '../../../../pics/clarksonLogo.webp'
 
 class Item extends React.Component {
   render() {

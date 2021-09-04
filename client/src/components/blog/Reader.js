@@ -4,6 +4,7 @@ import imgs from "../../pics/feeling-blue.svg";
 import Item from "./Articles/ArticleComp/Items";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Spinner from './Util/Spinner'
 
 export default class Reader extends Component {
   constructor(props) {
@@ -40,7 +41,7 @@ export default class Reader extends Component {
         this.setState({
           title: data.title,
           currentlyReading: data.content,
-          img: data.img,
+          img: data.imgUrl,
           author: data.author,
         });
       });
@@ -83,12 +84,12 @@ export default class Reader extends Component {
               </Link>
             );
           })
-        : "Nothing to see here ";
+        : <Spinner />
 
     return (
       <section className="reader">
         <div className="reader__meta">
-          <img alt="article cover" src={imgs} />
+          <img alt="article cover" src={this.state.img} />
           <div className="reader__meta__desc">
             <div className="reader__meta__desc__navigation">
               <FontAwesomeIcon
