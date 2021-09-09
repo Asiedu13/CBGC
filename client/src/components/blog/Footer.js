@@ -37,7 +37,7 @@ function Footer() {
           <FontAwesomeIcon icon={["fa", "copyright"]} /> Clarksons {year}{" "}
         </li>
         <li className="footer__elem__child">+233204087721 </li>
-        <li className="footer__elem__child">Clarksonsblog@gmail.com</li>
+        <li className="footer__elem__child">clarksonsblog@gmail.com</li>
         {/* <li className="footer__elem__child">P.O.Box AT 1486</li> */}
 
         <div className="footer__elem__socialmedia">

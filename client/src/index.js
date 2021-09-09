@@ -53,11 +53,14 @@ import {
   faAddressBook,
   faTimes,
   faTrash,
+  faShareAlt,
+  
 } from "@fortawesome/free-solid-svg-icons";
 // import {faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 library.add(
   fab,
   faTrash,
+  faShareAlt,
   faAddressBook,
   faCheckSquare,
   faCoffee,
@@ -83,6 +86,7 @@ library.add(
   faArrowRight,
   faArrowLeft,
   faTimes
+
 );
 const store = createStore(articlesReducer, applyMiddleware(thunk));
 ReactDom.render(

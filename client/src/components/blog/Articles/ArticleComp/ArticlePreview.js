@@ -43,11 +43,10 @@ export default class ArticlePreview extends Component {
 
     return (
       <div style={this.props.style}>
-        <section className="article__preview__maincon">
+        <section className="article__preview__maincon" >
           <section className="article__preview__maincon__pre"></section>
           <section className="article__preview__maincon__items">
-            <div className="pre__part pre__part__left">
-              <img src={img} alt="polygon" className="part__left__imgs poly" />
+            <div className="pre__part pre__part__left" style={{backgroundImage: `url(${this.state.img})`}}>
               <img
                 src={this.state.img}
                 alt="article cover"

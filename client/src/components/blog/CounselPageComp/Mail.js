@@ -21,8 +21,6 @@ class Mail extends Component {
       subject: "",
       mailbody: "",
     });
-
-
   };
   onSubmit = (e) => {
     console.log(this.state);
@@ -70,7 +68,11 @@ class Mail extends Component {
         {/* Footer */}
         <section className="mailBox__footer">
           <button onClick={this.onSubmit}>Send</button>
-          <FontAwesomeIcon icon={["fa", "trash"]} onClick={this.reset} class="mailBin" />
+          <FontAwesomeIcon
+            icon={["fa", "trash"]}
+            onClick={this.reset}
+            class="mailBin"
+          />
         </section>
       </section>
     );

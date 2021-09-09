@@ -29,8 +29,57 @@
       display: flex;
       flex-direction: column;
       // background: #fff;
+      .outlets {
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem 0;
+        @include border(green);
+        hr {
+          background-color: grey;
+          height: 1px;
+          border: 0;
+        }
+        .tags {
+          padding: 1rem 0;
+          span {
+            border: 1px solid black;
+            padding: 0.5rem;
+            margin-right: 5px;
+          }
+        }
 
-      .reader__main__content{
+        .social_media {
+          display: flex;
+          justify-content: space-between;
+          &_icons {
+            width: 200px;
+            @include border(orange);
+            display: flex;
+            justify-content: space-around;
+            a {
+              color: #000;
+              font-size: 25px;
+              &:hover {
+                color: grey;
+              }
+            }
+          }
+          .mainTag {
+            @include border(red);
+            h4 {
+              font-size: 20px;
+            }
+          }
+        }
+        .theOtherContent {
+          width: 200px;
+          display: flex;
+          justify-content: space-evenly;
+        }
+      }
+      .reader__main__content {
         @include border(red);
         width: 700px;
 
@@ -44,7 +93,7 @@
         i {
           font-style: italic;
         }
-        b{
+        b {
           font-weight: bold;
         }
       }
@@ -62,7 +111,8 @@
           border: none;
           color: grey;
           cursor: pointer;
-          &:hover, &:focus {
+          &:hover,
+          &:focus {
             color: lighten(grey, 10%);
           }
         }
@@ -125,17 +175,16 @@
         &__main {
           width: 50%;
           height: 250px;
-          
-          
+
           // background: blue;
           .meta-data {
             @include border(red);
             &-main {
               display: flex;
               flex-direction: row;
-  
+
               &-avatar {
-                img{
+                img {
                   margin: 10px;
                   height: 50px;
                   width: 50px;
@@ -154,7 +203,7 @@
                   font-size: 1rem;
                 }
                 span {
-                  font-size:.8rem;
+                  font-size: 0.8rem;
                 }
               }
             }
@@ -167,7 +216,7 @@
             flex-direction: column;
             text-decoration: none;
             justify-content: flex-start;
-  
+
             h2 {
               word-wrap: break-word;
               color: black;
@@ -186,7 +235,7 @@
               color: orange;
               @include border(violet);
             }
-            article{
+            article {
               width: inherit;
               height: 70px;
               overflow: hidden;
@@ -211,11 +260,10 @@
               border: none;
               padding: 0.5rem;
               cursor: pointer;
-              
             }
           }
         }
       }
-       }
+    }
   }
 }

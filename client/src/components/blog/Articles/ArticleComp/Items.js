@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { getMarkdownText } from "../../Util/convertToHTML";
 import articleImg2 from '../../../../pics/clarksonLogo.webp'
+import dummyImg from "../../../../pics/undraw_Specs_re_546x.svg"
 
 class Item extends React.Component {
   render() {
@@ -15,7 +16,7 @@ class Item extends React.Component {
           <img
             className="img"
             alt="article-ref-pic"
-            src={this.props.article.imgUrl}
+            src={this.props.article.imgUrl || dummyImg}
           />
         </div>
         <div className="item__main">
