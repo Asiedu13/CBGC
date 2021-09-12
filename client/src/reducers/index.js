@@ -10,7 +10,7 @@ export default function articlesReducer(state = initialState, action) {
   let newState;
   switch (action.type) {
     case "GET_ARTICLES":
-      console.log(action.payload.articles)
+      console.log(action.payload.articles);
       return {
         ...state,
         isLoading: false,

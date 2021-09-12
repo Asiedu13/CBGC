@@ -52,9 +52,9 @@ export default class SignUp extends Component {
           "http://localhost:5000/api/users/include",
           validateState,
           "POST"
-        )
-        fetched.then((confirmation) => {
-          if (confirmation === "ok") {
+        ).then((confirmation) => {
+          console.log(confirmation)
+          if (confirmation == "ok") {
             console.log("User created successfully");
           } else {
             console.log(`Error`);
@@ -73,11 +73,10 @@ export default class SignUp extends Component {
         "http://localhost:5000/api/users/login",
         validateState,
         "POST"
-      )
-      fetched.then((confirmation) => {
+      ).then((confirmation) => {
         if (confirmation) {
           console.log(confirmation);
-          window.location = "/me";
+          // window.location = "/me";
         } else {
           console.log(`Error`);
         }

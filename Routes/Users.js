@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const Users = require("../Models/User.model");
-const passport = require("passport");
-// const LocalStrategy = require("passport-local").Strategy;
+const passport = require("passport"),
+  LocalStrategy = require("passport-local").Strategy;
 
 // const mailjet = require("node-mailjet").connect(
 //   "d19ff10670ba0da73fc4b377d15d36e3",
@@ -20,29 +20,35 @@ function ensureAuthenticated(req, res, next) {
     // res.json(res.redirect("/login"));
   }
 }
-
 // app.use(ensureAuthenticated());
+passport.use(
+  new LocalStrategy(
+    {
+      usernameField: "email",
+      passwordField: "password",
+    },
+    function (email, password, done) {
+      User.findOne({ email, password }, (err, user) => {
+        if (err) {
+          return done(err);
+        }
+        if (!user) {
+          return done(null, false, { message: "Incorrect email" });
+        }
 
+        if (!user.password === password) {
+          return done(null, false, { message: "Incorrect password" });
+        }
 
-// passport.use(
-//   new LocalStrategy(function (username, password, done) {
-//     Users.findOne({ username }, function (err, user) {
-//       console.log(user.password == password);
-//       if (err) {
-//         return done(err);
-//       }
-//       if (!user) return done(null, false, { message: "Incorrect username" });
-//       console.log(user);
-//       if (user.password !== password) {
-//         return done(null, false, { message: "Incorrect password" });
-//       }
-//       passport.serializeUser(function (user, done) {
-//         return done(null, user.id);
-//       });
-//       return done(null, user);
-//     });
-//   })
-// );
+        return done(null, user);
+      });
+
+      passport.serializeUser(function (user, done) {
+        done(null, user.id);
+      });
+    }
+  )
+);
 
 // ------------ Get all users ------------
 router.route("/").get((req, res) => {
@@ -100,19 +106,26 @@ router.route("/include", ).post(
 // });
 
 //--------------- Login user --------------
-router.route("/login").post(function (req, res, next) {
-  console.log(req.body.password);
-  passport.authenticate("local", function (err, user, info) {
-    if (err) return next(err);
-    if (!user) {
-      return res.json(info);
-    }
-    if (!user.password) return res.json({ msg: "invalid password" });
-    req.logIn(user, function (err) {
-      if (err) return next(err);
-      return res.json({ msg: { msg: "user found", user: user._id } });
-    });
-  })(req, res, next);
+// router.route("/login").post(function (req, res, next) {
+//   console.log(req.body.password);
+//   passport.authenticate("local", function (err, user, info) {
+//     if (err) return next(err);
+//     if (!user) {
+//       return res.json(info);
+//     }
+//     if (!user.password) return res.json({ msg: "invalid password" });
+//     req.logIn(user, function (err) {
+//       if (err) return next(err);
+//       return res.json({ msg: { msg: "user found", user: user._id } });
+//     });
+//   })(req, res, next);
+// });
+
+router.route("/login").post(passport.authenticate("local"), (req, res) => {
+  // res.set("Access-Control-Allow-Origin", "*");
+  // if(err) res.json(err)
+  res.send(req.user);
+  console.log(req.user);
 });
 
 // router.route("/login").post(

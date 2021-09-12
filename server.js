@@ -16,15 +16,24 @@ app.use(cors());
 app.use(express.json());
 require("dotenv").config();
 app.use(cookieParser());
-app.use(session({
- secret: "TKRv0IJs=HYqrvagQ#&!F!%V]Ww/4KiVs$s,<<MX",
- resave: true,
- saveUninitialized: true
-}));
+app.use(
+  session({
+    secret: "TKRv0IJs=HYqrvagQ#&!F!%V]Ww/4KiVs$s,<<MX",
+    resave: true,
+    saveUninitialized: true,
+  })
+);
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Headers', 'Origin,X-Requested-    With,content-type,Accept,content-type,application/json');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS,     PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
 const uri = process.env.db_URI;
 let connection = mongoose.connection;
 
@@ -59,13 +68,13 @@ app.use(express.static(path.join(__dirname, "client/build")));
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/client/build/public/index.html"));
 });
- 
+
 // setUpPassport();
 
 // app.use(express.static(path.resolve(__dirname, "client/public")));
 // app.get("*", (req, res) => {
 //   res.sendFile(path.resolve(__dirname + "/client/build/public/index.html"));
 // });
-  app.listen(PORT, (err) => {
-    console.log(`Server started on port: ${PORT}`);
-  });
+app.listen(PORT, (err) => {
+  console.log(`Server started on port: ${PORT}`);
+});
